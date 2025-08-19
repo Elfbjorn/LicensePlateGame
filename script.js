@@ -2,30 +2,7 @@ const stateSelect = document.getElementById("stateSelect");
 const submitBtn = document.getElementById("submitBtn");
 const result = document.getElementById("result");
 
-// Full list of state/territory filenames (without .json)
-const stateFiles = [
-  "alabama", "alaska", "american_samoa", "arizona", "arkansas", "california",
-  "colorado", "commonwealth_of_the_northern_mariana_islands", "connecticut",
-  "delaware", "district_of_columbia", "florida", "georgia", "guam", "hawaii",
-  "idaho", "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
-  "maine", "maryland", "massachusetts", "michigan", "minnesota", "mississippi",
-  "missouri", "montana", "nebraska", "nevada", "new_hampshire", "new_jersey",
-  "new_mexico", "new_york", "north_carolina", "north_dakota", "ohio",
-  "oklahoma", "oregon", "pennsylvania", "puerto_rico", "rhode_island",
-  "south_carolina", "south_dakota", "tennessee", "texas",
-  "united_states_virgin_islands", "utah", "vermont", "virginia",
-  "washington", "west_virginia", "wisconsin", "wyoming"
-];
-
-// Populate dropdown
-stateFiles.forEach(state => {
-  const option = document.createElement("option");
-  option.value = state;
-  option.textContent = state.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-  stateSelect.appendChild(option);
-});
-
-// Haversine formula for great-circle distance
+// Haversine formula to calculate great-circle distance in miles
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 3958.8; // Earth radius in miles
   const toRad = deg => deg * Math.PI / 180;
@@ -38,7 +15,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// Filter and sample boundary points for performance
+// Filter and sample boundary points to improve performance
 function getNearbyPoints(coords, userLat, userLon, sampleRate = 10) {
   const latMin = userLat - 5;
   const latMax = userLat + 5;
@@ -69,6 +46,13 @@ submitBtn.addEventListener("click", () => {
     result.textContent = "Please select a state or territory.";
     return;
   }
+
+  if (!navigator.geolocation) {
+    result.textContent = "Geolocation not supported.";
+    return;
+  }
+
+  result.textContent = "Locating...";
 
   navigator.geolocation.getCurrentPosition(pos => {
     const { latitude, longitude } = pos.coords;
