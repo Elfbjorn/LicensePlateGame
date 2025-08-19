@@ -50,6 +50,8 @@ const stateCache = {};
 async function checkProximity(stateName, userLat, userLon) {
   if (!stateCache[stateName]) {
     const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
+    console.log("Fetching:", filePath);
+
     const response = await fetch(filePath);
     if (!response.ok) throw new Error(`Failed to load ${filePath}`);
     stateCache[stateName] = await response.json();
