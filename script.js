@@ -56,7 +56,8 @@ submitBtn.addEventListener("click", () => {
 
   navigator.geolocation.getCurrentPosition(pos => {
     const { latitude, longitude } = pos.coords;
-    alert(latitude, longitude);
+    alert(latitude);
+    alert(longitude)l
 
     fetch(`state_jsons/${selectedState}.json`)
       .then(res => res.json())
