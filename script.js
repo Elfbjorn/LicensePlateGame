@@ -39,9 +39,12 @@ function getClosestDistance(points, userLat, userLon) {
 }
 
 // Main function to load JSON and compute distance
-async function checkProximity(stateFile, userLat, userLon) {
+async function checkProximity(stateName, userLat, userLon) {
+  const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
+
   try {
-    const response = await fetch("./state_jsons/" + stateFile);
+    const response = await fetch(filePath);
+    if (!response.ok) throw new Error(`Failed to load ${filePath}: ${response.status}`);
     const data = await response.json();
 
     const points = extractPoints(data);
@@ -56,11 +59,11 @@ async function checkProximity(stateFile, userLat, userLon) {
     console.log(`Closest point to ${data.state}:`, point);
     console.log(`Distance: ${miles.toFixed(2)} miles`);
   } catch (err) {
-    console.error("Error loading or parsing JSON:", err);
+    console.error("Error loading or parsing JSON:", err.message);
   }
 }
 
 // Example usage: replace with actual geolocation
 const userLat = 39.2673;
 const userLon = -76.7983;
-checkProximity("alabama.json", userLat, userLon);
+checkProximity("Alabama", userLat, userLon);
