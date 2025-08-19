@@ -171,6 +171,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const resetButton = document.getElementById("resetBtn");
+
+resetButton.addEventListener("click", () => {
+  if (confirm("Are you sure you want to reset the log? This cannot be undone.")) {
+    localStorage.removeItem("plateLog");
+    renderTable({});
+  }
+});
+
   // Initial render
   renderTable(loadPlateLog());
 });
