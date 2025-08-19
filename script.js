@@ -56,14 +56,18 @@ submitBtn.addEventListener("click", () => {
 
   navigator.geolocation.getCurrentPosition(pos => {
     const { latitude, longitude } = pos.coords;
-    alert(latitude);
-    alert(longitude)l
 
     fetch(`state_jsons/${selectedState}.json`)
       .then(res => res.json())
       .then(data => {
-        const points = Array.isArray(data.coordinates) ? data.coordinates : [];
-        const nearby = getNearbyPoints(points, latitude, longitude, 10);
+        const rawPoints = Array.isArray(data.coordinates) ? data.coordinates : [];
+        const points = rawPoints.filter(([lat, lon]) =>
+          typeof lat === "number" && typeof lon === "number"
+        );
+        const nearby = points; // skip filtering for now
+
+        //const points = Array.isArray(data.coordinates) ? data.coordinates : [];
+        //const nearby = getNearbyPoints(points, latitude, longitude, 10);
         const minDistance = calculateMinDistance(latitude, longitude, nearby);
         result.textContent = `Minimum distance to ${selectedState.replace(/_/g, " ")}: ${minDistance.toFixed(1)} miles`;
       })
