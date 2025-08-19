@@ -75,23 +75,37 @@ const stateCache = {};
 
 async function checkProximity(stateName, userLat, userLon) {
   try {
+    console.log(`Checking proximity for ${stateName}...`);
+    
     if (!stateCache[stateName]) {
       const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
       console.log("Fetching:", filePath);
 
       const response = await fetch(filePath);
-      if (!response.ok) throw new Error(`Failed to load ${filePath}: ${response.status}`);
-      stateCache[stateName] = await response.json();
+      if (!response.ok) {
+        throw new Error(`Failed to load ${filePath}: ${response.status} ${response.statusText}`);
+      }
+      
+      const jsonData = await response.json();
+      stateCache[stateName] = jsonData;
+      console.log(`Cached data for ${stateName}:`, jsonData);
     }
+    
     const points = extractPoints(stateCache[stateName]);
+    console.log(`Extracted ${points.length} points for ${stateName}`);
+    
     if (points.length === 0) {
-      console.warn(`No points found for ${stateName}`);
-      return null;
+      console.warn(`No valid points found for ${stateName}`);
+      throw new Error(`No geographic data available for ${stateName}`);
     }
-    return getClosestDistance(points, userLat, userLon);
+    
+    const distance = getClosestDistance(points, userLat, userLon);
+    console.log(`Calculated distance for ${stateName}: ${distance} miles`);
+    
+    return distance;
   } catch (error) {
     console.error(`Error in checkProximity for ${stateName}:`, error);
-    return null;
+    throw error; // Re-throw to let the caller handle it
   }
 }
 
@@ -189,7 +203,153 @@ function renderTable(log) {
   result.innerHTML = html;
 }
 
-// Main interaction
+// Enhanced geolocation with multiple fallback strategies
+async function getLocationWithFallback() {
+  const strategies = [
+    // Strategy 1: High accuracy, fresh position
+    () => new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject, {
+        enableHighAccuracy: true,
+        timeout: 8000,
+        maximumAge: 0 // Always get fresh position
+      });
+    }),
+    
+    // Strategy 2: Lower accuracy, fresh position
+    () => new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject, {
+        enableHighAccuracy: false,
+        timeout: 12000,
+        maximumAge: 0 // Always get fresh position
+      });
+    }),
+    
+    // Strategy 3: Allow cached position as last resort
+    () => new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject, {
+        enableHighAccuracy: false,
+        timeout: 15000,
+        maximumAge: 60000 // Accept 1-minute old position only as fallback
+      });
+    })
+  ];
+
+  for (let i = 0; i < strategies.length; i++) {
+    try {
+      console.log(`Trying geolocation strategy ${i + 1}...`);
+      const position = await strategies[i]();
+      console.log(`Strategy ${i + 1} succeeded:`, position.coords.latitude, position.coords.longitude);
+      return position.coords;
+    } catch (error) {
+      console.log(`Strategy ${i + 1} failed:`, error.message);
+      if (i === strategies.length - 1) {
+        throw new Error(`All geolocation strategies failed. Last error: ${error.message}`);
+      }
+      // Add small delay between attempts
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+  }
+}
+
+// Process location coordinates
+async function processLocation(latitude, longitude, stateName) {
+  try {
+    console.log("Processing location:", latitude, ",", longitude, "for state:", stateName);
+    
+    // Clear any previous error states
+    const button = document.getElementById("submitBtn");
+    button.disabled = true;
+    button.textContent = "Processing...";
+    
+    const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+    console.log("Location label:", label, ", Current state:", currentState);
+
+    const miles = (stateName === currentState)
+      ? 0
+      : await checkProximity(stateName, latitude, longitude);
+
+    if (typeof miles !== "number") {
+      throw new Error("Could not calculate distance to selected state");
+    }
+
+    // Get the geojson for map rendering
+    const geoJson = stateCache[stateName]?.geojson || null;
+    
+    // Update the map
+    renderMap(latitude, longitude, geoJson);
+
+    // Update the log and table
+    const log = updatePlateLog(stateName, label, miles);
+    renderTable(log);
+
+    // Show success message
+    const stateLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    alert(`Success! You are ${miles.toFixed(0)} miles from ${stateLabel}.`);
+    
+    // Reset the form
+    document.getElementById("stateSelect").value = "";
+    
+  } catch (error) {
+    console.error("Error processing location:", error);
+    throw error;
+  }
+}
+
+// Handle manual location input
+async function handleManualLocation(stateName) {
+  const locationInput = prompt(
+    "Enter your location:\n\n" +
+    "Examples:\n" +
+    "• New York, NY\n" +
+    "• 10001\n" +
+    "• 40.7128, -74.0060"
+  );
+  
+  if (!locationInput) return;
+
+  try {
+    // Check if input looks like coordinates (lat, lng)
+    const coordMatch = locationInput.match(/^(-?\d+\.?\d*),\s*(-?\d+\.?\d*)$/);
+    if (coordMatch) {
+      const lat = parseFloat(coordMatch[1]);
+      const lng = parseFloat(coordMatch[2]);
+      if (Math.abs(lat) <= 90 && Math.abs(lng) <= 180) {
+        await processLocation(lat, lng, stateName);
+        return;
+      }
+    }
+
+    // Otherwise, try to geocode the address
+    const coords = await geocodeAddress(locationInput);
+    await processLocation(coords.lat, coords.lng, stateName);
+    
+  } catch (error) {
+    alert("Could not find that location. Please try again with a different format.");
+    console.error("Manual location error:", error);
+  }
+}
+
+// Geocode an address to coordinates
+async function geocodeAddress(address) {
+  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}&limit=1`;
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Geocoding failed: ${response.status}`);
+    
+    const data = await response.json();
+    if (data.length === 0) {
+      throw new Error("Location not found");
+    }
+    
+    return {
+      lat: parseFloat(data[0].lat),
+      lng: parseFloat(data[0].lon)
+    };
+  } catch (error) {
+    throw new Error(`Failed to geocode address: ${error.message}`);
+  }
+}
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
@@ -210,50 +370,35 @@ document.addEventListener("DOMContentLoaded", () => {
     button.disabled = true;
     button.textContent = "Getting location...";
 
-    navigator.geolocation.getCurrentPosition(async pos => {
-      try {
-        const { latitude, longitude } = pos.coords;
-        console.log("Lat/Lng:", latitude, ",", longitude);
-        
-        const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
-        console.log("Label:", label, ", State:", currentState);
-
-        const miles = (stateName === currentState)
-          ? 0
-          : await checkProximity(stateName, latitude, longitude);
-
-        if (typeof miles !== "number") {
-          alert("Could not calculate distance. Please try again.");
-          return;
+    // Try multiple geolocation strategies
+    try {
+      const position = await getLocationWithFallback();
+      await processLocation(position.latitude, position.longitude, stateName);
+    } catch (error) {
+      console.error("All geolocation methods failed:", error);
+      
+      // Offer manual location input as fallback
+      const useManual = confirm(
+        "Automatic location detection failed. Would you like to enter your location manually?\n\n" +
+        "You can enter either:\n" +
+        "• City, State (e.g., 'New York, NY')\n" +
+        "• ZIP code (e.g., '10001')\n" +
+        "• Latitude, Longitude (e.g., '40.7128, -74.0060')"
+      );
+      
+      if (useManual) {
+        try {
+          await handleManualLocation(stateName);
+        } catch (manualError) {
+          console.error("Manual location failed:", manualError);
+          alert("Failed to process manual location. Please try again.");
         }
-
-        const geoJson = stateCache[stateName]?.geojson || null;
-        renderMap(latitude, longitude, geoJson);
-
-        const log = updatePlateLog(stateName, label, miles);
-        renderTable(log);
-
-        // Show success message
-        alert(`Success! You are ${miles.toFixed(0)} miles from ${stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())}.`);
-        
-      } catch (error) {
-        console.error("Error processing location:", error);
-        alert("An error occurred while processing your location. Please try again.");
-      } finally {
-        // Reset button state
-        button.disabled = false;
-        button.textContent = "Submit";
       }
-    }, err => {
-      console.error("Geolocation error:", err);
-      alert("Geolocation error: " + err.message);
+    } finally {
+      // Always reset button state
       button.disabled = false;
       button.textContent = "Submit";
-    }, {
-      enableHighAccuracy: true,
-      timeout: 10000,
-      maximumAge: 60000
-    });
+    }
   });
 
   document.getElementById("resetBtn").addEventListener("click", () => {
@@ -280,25 +425,48 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderMap(userLat, userLon, stateGeoJson) {
   // Clear existing map if it exists
   const mapContainer = document.getElementById('map');
-  mapContainer.innerHTML = '';
-
-  const map = L.map('map').setView([userLat, userLon], 6);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  L.marker([userLat, userLon]).addTo(map)
-    .bindPopup("You are here")
-    .openPopup();
-
-  if (stateGeoJson) {
-    L.geoJSON(stateGeoJson, {
-      style: {
-        color: "#3498db",
-        weight: 2,
-        fillOpacity: 0.1
-      }
-    }).addTo(map);
+  
+  // Completely destroy any existing Leaflet map instance
+  if (window.currentMap) {
+    try {
+      window.currentMap.remove();
+      window.currentMap = null;
+    } catch (e) {
+      console.log("Error removing existing map:", e);
+    }
   }
+  
+  // Clear the container HTML
+  mapContainer.innerHTML = '';
+  
+  // Add a small delay to ensure DOM is ready
+  setTimeout(() => {
+    try {
+      const map = L.map('map').setView([userLat, userLon], 6);
+      
+      // Store reference for cleanup
+      window.currentMap = map;
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.marker([userLat, userLon]).addTo(map)
+        .bindPopup("You are here")
+        .openPopup();
+
+      if (stateGeoJson) {
+        L.geoJSON(stateGeoJson, {
+          style: {
+            color: "#3498db",
+            weight: 2,
+            fillOpacity: 0.1
+          }
+        }).addTo(map);
+      }
+    } catch (error) {
+      console.error("Error creating map:", error);
+      mapContainer.innerHTML = '<p style="padding: 20px; text-align: center;">Map could not be loaded</p>';
+    }
+  }, 100);
 }
