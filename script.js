@@ -92,6 +92,10 @@ function updatePlateLog(stateName, locationLabel, miles) {
   return log;
 }
 
+function getTotalScore(log) {
+  return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
+}
+
 // Render table
 function renderTable(log) {
   const result = document.getElementById("result");
@@ -116,7 +120,7 @@ function renderTable(log) {
       <tr>
         <td>${label}</td>
         <td>${location}</td>
-        <td>${miles.toFixed(0)}</td>
+        <td>${miles.toFixed(0)} <button class="removeBtn" data-state="${state}">Remove</button></td>
       </tr>
     `;
   }
@@ -132,6 +136,13 @@ function renderTable(log) {
     </tbody>
   </table>
   `;
+
+
+  const totalScore = getTotalScore(log).toFixed(0);
+
+html += `
+  <tr><td colspan="3"><strong>Total Score:</strong> ${totalScore} miles</td></tr>
+`;
 
   result.innerHTML = html;
 }
@@ -171,13 +182,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const resetButton = document.getElementById("resetBtn");
-
-resetButton.addEventListener("click", () => {
-  if (confirm("Are you sure you want to reset the log? This cannot be undone.")) {
+  document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("Are you sure you want to reset the entire log? This cannot be undone.")) {
     localStorage.removeItem("plateLog");
     renderTable({});
   }
+});
+
+  document.querySelectorAll(".removeBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const state = btn.getAttribute("data-state");
+    const log = loadPlateLog();
+    delete log[state];
+    savePlateLog(log);
+    renderTable(log);
+  });
 });
 
   // Initial render
