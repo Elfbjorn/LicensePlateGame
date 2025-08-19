@@ -66,6 +66,11 @@ submitBtn.addEventListener("click", () => {
         );
         const nearby = points; // skip filtering for now
 
+        console.log("User location:", latitude, longitude);
+
+        console.log("First boundary point:", nearby[0]);
+
+        
         //const points = Array.isArray(data.coordinates) ? data.coordinates : [];
         //const nearby = getNearbyPoints(points, latitude, longitude, 10);
         const minDistance = calculateMinDistance(latitude, longitude, nearby);
