@@ -39,20 +39,19 @@ function getClosestDistance(points, userLat, userLon) {
   return minDist;
 }
 
-// Load JSON and compute distance
+// Cached JSON loader
+const stateCache = {};
+
 async function checkProximity(stateName, userLat, userLon) {
-  const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
-  try {
+  if (!stateCache[stateName]) {
+    const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
     const response = await fetch(filePath);
     if (!response.ok) throw new Error(`Failed to load ${filePath}`);
-    const data = await response.json();
-    const points = extractPoints(data);
-    if (points.length === 0) return null;
-    return getClosestDistance(points, userLat, userLon);
-  } catch (err) {
-    console.error("Error loading JSON:", err.message);
-    return null;
+    stateCache[stateName] = await response.json();
   }
+  const points = extractPoints(stateCache[stateName]);
+  if (points.length === 0) return null;
+  return getClosestDistance(points, userLat, userLon);
 }
 
 // Reverse geocode
@@ -99,8 +98,15 @@ function getTotalScore(log) {
 // Render table
 function renderTable(log) {
   const result = document.getElementById("result");
-  const entries = Object.entries(log)
-    .sort(([a], [b]) => a.localeCompare(b));
+  const entries = Object.entries(log).sort(([a], [b]) => a.localeCompare(b));
+
+  const progressBar = document.getElementById("progressBar");
+  const progressText = document.getElementById("progressText");
+  const loggedCount = Object.keys(log).length;
+
+  progressBar.value = loggedCount;
+  progressText.textContent = `${loggedCount} of 50 states logged`;
+
 
   let html = `
     <table>
@@ -133,16 +139,10 @@ function renderTable(log) {
 
   html += `
       <tr><td colspan="3"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
+      <tr><td colspan="3"><strong>Total Score:</strong> ${getTotalScore(log).toFixed(0)} miles</td></tr>
     </tbody>
   </table>
   `;
-
-
-  const totalScore = getTotalScore(log).toFixed(0);
-
-html += `
-  <tr><td colspan="3"><strong>Total Score:</strong> ${totalScore} miles</td></tr>
-`;
 
   result.innerHTML = html;
 }
@@ -163,17 +163,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navigator.geolocation.getCurrentPosition(async pos => {
       const { latitude, longitude } = pos.coords;
-
       const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
 
       const miles = (stateName === currentState)
         ? 0
         : await checkProximity(stateName, latitude, longitude);
 
+      
       if (typeof miles !== "number") {
         alert("Could not calculate distance.");
         return;
       }
+
+      const geoJson = stateCache[stateName]?.geojson || null;
+      renderMap(latitude, longitude, geoJson);
 
       const log = updatePlateLog(stateName, label, miles);
       renderTable(log);
@@ -183,22 +186,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("resetBtn").addEventListener("click", () => {
-  if (confirm("Are you sure you want to reset the entire log? This cannot be undone.")) {
-    localStorage.removeItem("plateLog");
-    renderTable({});
-  }
-});
-
-  document.querySelectorAll(".removeBtn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const state = btn.getAttribute("data-state");
-    const log = loadPlateLog();
-    delete log[state];
-    savePlateLog(log);
-    renderTable(log);
+    if (confirm("Are you sure you want to reset the entire log? This cannot be undone.")) {
+      localStorage.removeItem("plateLog");
+      renderTable({});
+    }
   });
-});
+
+  document.getElementById("result").addEventListener("click", e => {
+    if (e.target.classList.contains("removeBtn")) {
+      const state = e.target.getAttribute("data-state");
+      const log = loadPlateLog();
+      delete log[state];
+      savePlateLog(log);
+      renderTable(log);
+    }
+  });
 
   // Initial render
   renderTable(loadPlateLog());
 });
+
+function renderMap(userLat, userLon, stateGeoJson) {
+  const map = L.map('map').setView([userLat, userLon], 6);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.marker([userLat, userLon]).addTo(map)
+    .bindPopup("You are here")
+    .openPopup();
+
+  if (stateGeoJson) {
+    L.geoJSON(stateGeoJson, {
+      style: {
+        color: "#3498db",
+        weight: 2,
+        fillOpacity: 0.1
+      }
+    }).addTo(map);
+  }
+}
