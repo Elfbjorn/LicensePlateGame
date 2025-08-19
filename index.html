@@ -104,22 +104,20 @@ th {
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: table;
+  table {
     width: 100%;
+    overflow-x: auto;
   }
 
   th, td {
     padding: 10px;
     text-align: left;
-    position: static;
   }
 
   th::before, td::before {
     content: none;
   }
 }
-
     select, button {
     width: 100%;
     margin-bottom: 10px;
