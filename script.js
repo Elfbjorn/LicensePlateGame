@@ -60,10 +60,13 @@ submitBtn.addEventListener("click", () => {
     fetch(`state_jsons/${selectedState}.json`)
       .then(res => res.json())
       .then(data => {
-        const rawPoints = Array.isArray(data.coordinates) ? data.coordinates : [];
-        const points = rawPoints.filter(([lat, lon]) =>
-          typeof lat === "number" && typeof lon === "number"
-        );
+
+        const rawPoints = Array.isArray(data.border_points) ? data.border_points : [];
+        const points = rawPoints
+          .filter(p => typeof p.lat === "number" && typeof p.lng === "number")
+          .map(p => [p.lat, p.lng]); // convert to [lat, lon] format
+
+        
         const nearby = points; // skip filtering for now
 
         console.log("User location:", latitude, longitude);
