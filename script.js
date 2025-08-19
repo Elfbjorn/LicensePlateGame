@@ -41,7 +41,7 @@ function getClosestDistance(points, userLat, userLon) {
 // Main function to load JSON and compute distance
 async function checkProximity(stateFile, userLat, userLon) {
   try {
-    const response = await fetch(stateFile);
+    const response = await fetch("./state_jsons/" + stateFile);
     const data = await response.json();
 
     const points = extractPoints(data);
