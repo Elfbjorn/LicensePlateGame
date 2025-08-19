@@ -1,7 +1,7 @@
 // Haversine formula to calculate distance in miles
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = deg => (deg * Math.PI) / 180;
-  const R = 3958.8; // Earth radius in miles
+  const R = 3958.8;
 
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
@@ -25,17 +25,11 @@ function extractPoints(data) {
 // Find the closest border point to the user's location
 function getClosestDistance(points, userLat, userLon) {
   let minDist = Infinity;
-  let closestPoint = null;
-
   for (const [lat, lon] of points) {
     const dist = haversine(userLat, userLon, lat, lon);
-    if (dist < minDist) {
-      minDist = dist;
-      closestPoint = [lat, lon];
-    }
+    if (dist < minDist) minDist = dist;
   }
-
-  return { miles: minDist, point: closestPoint };
+  return minDist;
 }
 
 // Load JSON and compute distance
@@ -50,11 +44,26 @@ async function checkProximity(stateName, userLat, userLon) {
     const points = extractPoints(data);
     if (points.length === 0) return null;
 
-    const { miles } = getClosestDistance(points, userLat, userLon);
+    const miles = getClosestDistance(points, userLat, userLon);
     return miles;
   } catch (err) {
     console.error("Error loading or parsing JSON:", err.message);
     return null;
+  }
+}
+
+// Reverse geocode to get city/state
+async function getLocationLabel(lat, lon) {
+  const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const city = data.address.city || data.address.town || data.address.village || "";
+    const state = data.address.state || data.address.region || "";
+    return { label: `${city}, ${state}`, stateName: state.toLowerCase().replace(/\s+/g, "_") };
+  } catch (err) {
+    console.warn("Reverse geocoding failed:", err.message);
+    return { label: "Unknown location", stateName: "" };
   }
 }
 
@@ -64,21 +73,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("submitBtn");
   const result = document.getElementById("result");
 
-  const userLat = 39.2673;
-  const userLon = -76.7983;
-
   button.addEventListener("click", async () => {
     const stateName = select.value;
     if (!stateName) {
-      result.textContent = "Please select a state.";
+      result.innerHTML = "<tr><td colspan='3'>Please select a state.</td></tr>";
       return;
     }
 
-    const distance = await checkProximity(stateName, userLat, userLon);
-    if (typeof distance === "number") {
-      result.textContent = `Distance: ${distance.toFixed(2)} miles`;
-    } else {
-      result.textContent = "Could not calculate distance.";
+    if (!navigator.geolocation) {
+      result.innerHTML = "<tr><td colspan='3'>Geolocation not supported.</td></tr>";
+      return;
     }
+
+    navigator.geolocation.getCurrentPosition(async pos => {
+      const { latitude, longitude } = pos.coords;
+      const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+
+      const miles = (stateName === currentState)
+        ? 0
+        : await checkProximity(stateName, latitude, longitude);
+
+      const displayMiles = (typeof miles === "number") ? miles.toFixed(2) : "N/A";
+      const targetLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+      result.innerHTML = `
+        <tr><th>Your location</th><th>Lat/Lng</th><th>Miles from ${targetLabel}</th></tr>
+        <tr>
+          <td>${label}</td>
+          <td>${latitude.toFixed(4)}, ${longitude.toFixed(4)}</td>
+          <td>${displayMiles}</td>
+        </tr>
+      `;
+    }, err => {
+      result.innerHTML = `<tr><td colspan='3'>Geolocation error: ${err.message}</td></tr>`;
+    });
   });
 });
