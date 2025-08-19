@@ -38,7 +38,7 @@ function getClosestDistance(points, userLat, userLon) {
   return { miles: minDist, point: closestPoint };
 }
 
-// Main function to load JSON and compute distance
+// Load JSON and compute distance
 async function checkProximity(stateName, userLat, userLon) {
   const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
 
@@ -48,22 +48,37 @@ async function checkProximity(stateName, userLat, userLon) {
     const data = await response.json();
 
     const points = extractPoints(data);
-    console.log("Parsed points:", points);
+    if (points.length === 0) return null;
 
-    if (points.length === 0) {
-      console.error("No valid border points found.");
-      return;
-    }
-
-    const { miles, point } = getClosestDistance(points, userLat, userLon);
-    console.log(`Closest point to ${data.state}:`, point);
-    console.log(`Distance: ${miles.toFixed(2)} miles`);
+    const { miles } = getClosestDistance(points, userLat, userLon);
+    return miles;
   } catch (err) {
     console.error("Error loading or parsing JSON:", err.message);
+    return null;
   }
 }
 
-// Example usage: replace with actual geolocation
-const userLat = 39.2673;
-const userLon = -76.7983;
-checkProximity("Alabama", userLat, userLon);
+// DOM interaction
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("stateSelect");
+  const button = document.getElementById("submitBtn");
+  const result = document.getElementById("result");
+
+  const userLat = 39.2673;
+  const userLon = -76.7983;
+
+  button.addEventListener("click", async () => {
+    const stateName = select.value;
+    if (!stateName) {
+      result.textContent = "Please select a state.";
+      return;
+    }
+
+    const distance = await checkProximity(stateName, userLat, userLon);
+    if (typeof distance === "number") {
+      result.textContent = `Distance: ${distance.toFixed(2)} miles`;
+    } else {
+      result.textContent = "Could not calculate distance.";
+    }
+  });
+});
