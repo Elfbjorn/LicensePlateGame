@@ -184,7 +184,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navigator.geolocation.getCurrentPosition(async pos => {
       const { latitude, longitude } = pos.coords;
+      console.log("Lat/Lng:" + latitude + ", " + longitude);
       const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+      console.log("Label:" + label + ", State: " + currentState);
+      
 
       const miles = (stateName === currentState)
         ? 0
