@@ -84,13 +84,40 @@ th {
   color: #34495e;
 }
 
+    .removeBtn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  background-color: #c0392b;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  .container {
-    padding: 16px;
+  table, thead, tbody, th, td, tr {
+    display: table;
+    width: 100%;
   }
 
-  select, button {
+  th, td {
+    padding: 10px;
+    text-align: left;
+    position: static;
+  }
+
+  th::before, td::before {
+    content: none;
+  }
+}
+
+    select, button {
     width: 100%;
     margin-bottom: 10px;
   }
