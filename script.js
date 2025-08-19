@@ -8,20 +8,35 @@ const ALL_STATES = [
   "virginia","washington","west_virginia","wisconsin","wyoming", "american_samoa", 
   "commonwealth_of_the_northern_mariana_islands", "district_of_columbia", "guam", 
   "puerto_rico", "united_states_virgin_islands"
-
 ];
 
-// Extract lat/lng pairs
+// Extract lat/lng pairs from GeoJSON coordinates
 function extractPoints(data) {
-  if (!Array.isArray(data.border_points)) return [];
-  return data.border_points
-    .filter(p => typeof p.lat === "number" && typeof p.lng === "number")
-    .map(p => [p.lat, p.lng]);
+  if (!data.geojson || !data.geojson.coordinates) return [];
+  
+  const coordinates = data.geojson.coordinates;
+  const points = [];
+  
+  // Handle different GeoJSON geometry types
+  if (data.geojson.type === "Polygon") {
+    // For Polygon, coordinates[0] is the outer ring
+    for (const coord of coordinates[0]) {
+      points.push([coord[1], coord[0]]); // [lat, lng] - note the swap from [lng, lat]
+    }
+  } else if (data.geojson.type === "MultiPolygon") {
+    // For MultiPolygon, flatten all polygons
+    for (const polygon of coordinates) {
+      for (const coord of polygon[0]) { // polygon[0] is the outer ring
+        points.push([coord[1], coord[0]]); // [lat, lng] - note the swap from [lng, lat]
+      }
+    }
+  }
+  
+  return points;
 }
 
 // Find closest border point
 function getClosestDistance(points, userLat, userLon) {
-
   if (isNaN(userLat) || isNaN(userLon)) {
     console.warn("Invalid user coordinates:", userLat, userLon);
     return null;
@@ -36,7 +51,8 @@ function getClosestDistance(points, userLat, userLon) {
     if (dist < minDistance) minDistance = dist;
   }
 
-  return minDistance;
+  // Convert from kilometers to miles
+  return minDistance * 0.621371;
 }
 
 function haversine(lat1, lon1, lat2, lon2) {
@@ -54,24 +70,29 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-
-
-
 // Cached JSON loader
 const stateCache = {};
 
 async function checkProximity(stateName, userLat, userLon) {
-  if (!stateCache[stateName]) {
-    const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
-    console.log("Fetching:", filePath);
+  try {
+    if (!stateCache[stateName]) {
+      const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
+      console.log("Fetching:", filePath);
 
-    const response = await fetch(filePath);
-    if (!response.ok) throw new Error(`Failed to load ${filePath}`);
-    stateCache[stateName] = await response.json();
+      const response = await fetch(filePath);
+      if (!response.ok) throw new Error(`Failed to load ${filePath}: ${response.status}`);
+      stateCache[stateName] = await response.json();
+    }
+    const points = extractPoints(stateCache[stateName]);
+    if (points.length === 0) {
+      console.warn(`No points found for ${stateName}`);
+      return null;
+    }
+    return getClosestDistance(points, userLat, userLon);
+  } catch (error) {
+    console.error(`Error in checkProximity for ${stateName}:`, error);
+    return null;
   }
-  const points = extractPoints(stateCache[stateName]);
-  if (points.length === 0) return null;
-  return getClosestDistance(points, userLat, userLon);
 }
 
 // Reverse geocode
@@ -79,9 +100,10 @@ async function getLocationLabel(lat, lon) {
   const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
   try {
     const res = await fetch(url);
+    if (!res.ok) throw new Error(`Geocoding failed: ${res.status}`);
     const data = await res.json();
-    const city = data.address.city || data.address.town || data.address.village || "";
-    const state = data.address.state || data.address.region || "";
+    const city = data.address?.city || data.address?.town || data.address?.village || "";
+    const state = data.address?.state || data.address?.region || "";
     return { label: `${city}, ${state}`, stateName: state.toLowerCase().replace(/\s+/g, "_") };
   } catch (err) {
     console.warn("Reverse geocoding failed:", err.message);
@@ -128,7 +150,6 @@ function renderTable(log) {
   progressBar.value = loggedCount;
   progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
 
-
   let html = `
     <table>
       <thead>
@@ -173,39 +194,65 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
 
-  button.addEventListener("click", () => {
+  button.addEventListener("click", async () => {
     const stateName = select.value;
-    if (!stateName) return;
-
-    if (!navigator.geolocation) {
-      alert("Geolocation not supported.");
+    if (!stateName) {
+      alert("Please select a state first.");
       return;
     }
 
+    if (!navigator.geolocation) {
+      alert("Geolocation not supported by this browser.");
+      return;
+    }
+
+    // Show loading state
+    button.disabled = true;
+    button.textContent = "Getting location...";
+
     navigator.geolocation.getCurrentPosition(async pos => {
-      const { latitude, longitude } = pos.coords;
-      console.log("Lat/Lng:" + latitude + ", " + longitude);
-      const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
-      console.log("Label:" + label + ", State: " + currentState);
-      
+      try {
+        const { latitude, longitude } = pos.coords;
+        console.log("Lat/Lng:", latitude, ",", longitude);
+        
+        const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+        console.log("Label:", label, ", State:", currentState);
 
-      const miles = (stateName === currentState)
-        ? 0
-        : await checkProximity(stateName, latitude, longitude);
+        const miles = (stateName === currentState)
+          ? 0
+          : await checkProximity(stateName, latitude, longitude);
 
-      
-      if (typeof miles !== "number") {
-        alert("Could not calculate distance.");
-        return;
+        if (typeof miles !== "number") {
+          alert("Could not calculate distance. Please try again.");
+          return;
+        }
+
+        const geoJson = stateCache[stateName]?.geojson || null;
+        renderMap(latitude, longitude, geoJson);
+
+        const log = updatePlateLog(stateName, label, miles);
+        renderTable(log);
+
+        // Show success message
+        alert(`Success! You are ${miles.toFixed(0)} miles from ${stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())}.`);
+        
+      } catch (error) {
+        console.error("Error processing location:", error);
+        alert("An error occurred while processing your location. Please try again.");
+      } finally {
+        // Reset button state
+        button.disabled = false;
+        button.textContent = "Submit";
       }
-
-      const geoJson = stateCache[stateName]?.geojson || null;
-      renderMap(latitude, longitude, geoJson);
-
-      const log = updatePlateLog(stateName, label, miles);
-      renderTable(log);
     }, err => {
+      console.error("Geolocation error:", err);
       alert("Geolocation error: " + err.message);
+      button.disabled = false;
+      button.textContent = "Submit";
+    }, {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000
     });
   });
 
@@ -231,6 +278,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderMap(userLat, userLon, stateGeoJson) {
+  // Clear existing map if it exists
+  const mapContainer = document.getElementById('map');
+  mapContainer.innerHTML = '';
+
   const map = L.map('map').setView([userLat, userLon], 6);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
