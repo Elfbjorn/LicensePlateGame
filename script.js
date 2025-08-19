@@ -152,9 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navigator.geolocation.getCurrentPosition(async pos => {
       const { latitude, longitude } = pos.coords;
-      const { label } = await getLocationLabel(latitude, longitude);
 
-      const miles = (stateName === label.toLowerCase().replace(/\s+/g, "_"))
+      const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+
+      const miles = (stateName === currentState)
         ? 0
         : await checkProximity(stateName, latitude, longitude);
 
