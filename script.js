@@ -5,8 +5,13 @@ const ALL_STATES = [
   "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming"
+  "virginia","washington","west_virginia","wisconsin","wyoming", "american_samoa", 
+  "commonwealth_of_the_northern_mariana_islands", "district_of_columbia", "guam", 
+  "puerto_rico", "united_states_virgin_islands"
+
 ];
+
+
 
 // Haversine formula
 function haversine(lat1, lon1, lat2, lon2) {
@@ -103,9 +108,10 @@ function renderTable(log) {
   const progressBar = document.getElementById("progressBar");
   const progressText = document.getElementById("progressText");
   const loggedCount = Object.keys(log).length;
+  const totalCount = ALL_STATES.length;
 
   progressBar.value = loggedCount;
-  progressText.textContent = `${loggedCount} of 50 states logged`;
+  progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
 
 
   let html = `
