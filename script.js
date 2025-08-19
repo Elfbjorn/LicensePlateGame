@@ -93,19 +93,51 @@ document.addEventListener("DOMContentLoaded", () => {
         ? 0
         : await checkProximity(stateName, latitude, longitude);
 
+      const updatedMap = updateScore(stateName, miles);
+      const totalScore = getTotalScore(updatedMap).toFixed(2);
+
       const displayMiles = (typeof miles === "number") ? miles.toFixed(2) : "N/A";
       const targetLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
+
       result.innerHTML = `
-        <tr><th>Your location</th><th>Lat/Lng</th><th>Miles from ${targetLabel}</th></tr>
-        <tr>
-          <td>${label}</td>
-          <td>${latitude.toFixed(4)}, ${longitude.toFixed(4)}</td>
-          <td>${displayMiles}</td>
-        </tr>
+      <tr><th>Your location</th><th>Lat/Lng</th><th>Miles from ${targetLabel}</th></tr>
+      <tr>
+        <td>${label}</td>
+        <td>${latitude.toFixed(4)}, ${longitude.toFixed(4)}</td>
+        <td>${displayMiles}</td>
+      </tr>
+      <tr><td colspan="3"><strong>Total Score:</strong> ${totalScore} miles</td></tr>
       `;
     }, err => {
       result.innerHTML = `<tr><td colspan='3'>Geolocation error: ${err.message}</td></tr>`;
     });
   });
 });
+
+// Load scoreMap from localStorage or initialize
+function loadScoreMap() {
+  const raw = localStorage.getItem("scoreMap");
+  return raw ? JSON.parse(raw) : {};
+}
+
+// Save scoreMap to localStorage
+function saveScoreMap(map) {
+  localStorage.setItem("scoreMap", JSON.stringify(map));
+}
+
+// Update scoreMap with new distance
+function updateScore(stateName, miles) {
+  const map = loadScoreMap();
+  const prev = map[stateName] || 0;
+  if (miles > prev) {
+    map[stateName] = miles;
+    saveScoreMap(map);
+  }
+  return map;
+}
+
+// Calculate total score
+function getTotalScore(map) {
+  return Object.values(map).reduce((sum, val) => sum + val, 0);
+}
