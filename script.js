@@ -10,8 +10,16 @@ const ALL_STATES = [
   "puerto_rico", "united_states_virgin_islands"
 ];
 
-// Test with just a few states first
-const TEST_STATES = ["florida", "california", "texas", "new_york", "georgia"];
+// States that appear on the main US map
+const MAIN_MAP_STATES = [
+  "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
+  "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
+  "louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi",
+  "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
+  "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
+  "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
+];
 
 // Remote territories for sidebar
 const REMOTE_TERRITORIES = [
@@ -126,10 +134,10 @@ async function initializeMap() {
       maxZoom: 19
     }).addTo(currentMap);
     
-    console.log("Basic map created, loading test states...");
+    console.log("Basic map created, loading all states...");
     
-    // Load just a few states for testing
-    await loadTestStates();
+    // Load all main map states
+    await loadAllStates();
     
   } catch (error) {
     console.error("Error creating map:", error);
@@ -137,13 +145,36 @@ async function initializeMap() {
   }
 }
 
-async function loadTestStates() {
-  console.log("Loading test states:", TEST_STATES);
+async function loadAllStates() {
+  console.log("Loading all main map states:", MAIN_MAP_STATES.length, "states");
   
-  for (const stateName of TEST_STATES) {
+  // Load states in smaller batches to avoid overwhelming the browser
+  const batchSize = 8;
+  let loadedCount = 0;
+  
+  for (let i = 0; i < MAIN_MAP_STATES.length; i += batchSize) {
+    const batch = MAIN_MAP_STATES.slice(i, i + batchSize);
+    console.log(`Loading batch ${Math.floor(i/batchSize) + 1}: ${batch.join(', ')}`);
+    
+    await loadStateBatch(batch);
+    loadedCount += batch.length;
+    
+    console.log(`Loaded ${loadedCount}/${MAIN_MAP_STATES.length} states`);
+    
+    // Small delay between batches
+    await new Promise(resolve => setTimeout(resolve, 150));
+  }
+  
+  console.log("Finished loading all states. Map layers:", Object.keys(stateMapLayers));
+  
+  // Update colors based on current log
+  const log = loadPlateLog();
+  updateMapColors(log);
+}
+
+async function loadStateBatch(stateNames) {
+  for (const stateName of stateNames) {
     try {
-      console.log(`Loading ${stateName}...`);
-      
       if (!stateCache[stateName]) {
         const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
         const response = await fetch(filePath);
@@ -155,16 +186,13 @@ async function loadTestStates() {
         
         const data = await response.json();
         stateCache[stateName] = data;
-        console.log(`Successfully cached ${stateName}`, data);
       }
       
       if (stateCache[stateName] && stateCache[stateName].geojson && currentMap) {
-        console.log(`Adding ${stateName} to map...`);
-        
         const layer = L.geoJSON(stateCache[stateName].geojson, {
           style: {
             color: "#666",
-            weight: 2,
+            weight: 1,
             fillOpacity: 0.7,
             fillColor: "#e9ecef"
           }
@@ -172,22 +200,12 @@ async function loadTestStates() {
         
         layer.addTo(currentMap);
         stateMapLayers[stateName] = layer;
-        
-        console.log(`Successfully added ${stateName} to map`);
-      } else {
-        console.error(`Missing data for ${stateName}:`, stateCache[stateName]);
       }
       
     } catch (error) {
       console.error(`Could not load ${stateName}:`, error);
     }
   }
-  
-  console.log("Finished loading test states. Map layers:", Object.keys(stateMapLayers));
-  
-  // Update colors based on current log
-  const log = loadPlateLog();
-  updateMapColors(log);
 }
 
 function updateMapColors(log) {
