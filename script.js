@@ -98,6 +98,22 @@ async function checkProximity(stateName, userLat, userLon) {
     }
     
     const points = extractPoints(stateCache[stateName]);
+
+     // ADD THIS DEBUGGING
+    if (stateName === 'manitoba') {
+      console.log('Manitoba raw coordinates (first 5 points):');
+      console.log(points.slice(0, 5));
+      console.log('User location:', userLat, userLon);
+      
+      // Check if coordinates look reasonable for Manitoba
+      const firstPoint = points[0];
+      if (firstPoint) {
+        console.log('First Manitoba point:', firstPoint);
+        console.log('Manitoba lat range should be ~49-60, lng range should be ~-102 to -89');
+      }
+    }
+
+    
     if (points.length === 0) {
       throw new Error(`No geographic data available for ${stateName}`);
     }
