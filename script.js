@@ -147,6 +147,11 @@ function updatePlateLog(stateName, locationLabel, miles) {
   return log;
 }
 
+// Format number with commas (e.g., 1234 -> 1,234)
+function formatNumber(num) {
+  return Math.round(num).toLocaleString();
+}
+
 function getTotalScore(log) {
   return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
 }
@@ -171,7 +176,6 @@ function renderTable(log) {
           <th>License Plate</th>
           <th>Your Location</th>
           <th>Number of Miles</th>
-          <th>&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -183,8 +187,7 @@ function renderTable(log) {
       <tr>
         <td>${label}</td>
         <td>${location}</td>
-        <td>${miles.toFixed(0)}</td>
-        <td><button class="removeBtn" data-state="${state}">Remove</button></td>
+        <td>${formatNumber(miles)} <button class="removeBtn" data-state="${state}">Remove</button></td>
       </tr>
     `;
   }
@@ -197,7 +200,7 @@ function renderTable(log) {
 
   html += `
       <tr><td colspan="3"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
-      <tr><td colspan="3"><strong>Total Score:</strong> ${getTotalScore(log).toFixed(0)} miles</td></tr>
+      <tr><td colspan="3"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
     </tbody>
   </table>
   `;
@@ -301,7 +304,7 @@ async function processLocation(latitude, longitude, stateName) {
 
     // Show success message
     const stateLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    alert(`Success! You are ${miles.toFixed(0)} miles from ${stateLabel}.`);
+    alert(`Success! You are ${formatNumber(miles)} miles from ${stateLabel}.`);
     
     // Reset the form
     document.getElementById("stateSelect").value = "";
