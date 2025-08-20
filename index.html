@@ -20,8 +20,8 @@ body {
 
 /* Container */
 .container {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
   background: #fff;
   border-radius: 12px;
@@ -61,6 +61,110 @@ button:hover {
   background-color: #2980b9;
 }
 
+/* Map and territories layout */
+.map-section {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.main-map {
+  flex: 1;
+  min-height: 500px;
+}
+
+#map {
+  height: 500px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: #e8e8e8;
+}
+
+.territories-sidebar {
+  width: 250px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #ddd;
+}
+
+.territories-sidebar h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+
+.territory-item {
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.territory-item.logged {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: 500;
+}
+
+.territory-item.not-logged {
+  background: #fff;
+  color: #666;
+}
+
+/* Progress section */
+.progress-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 25px;
+  background: #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ced4da;
+}
+
+#progressBar {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+#progressBar::-webkit-progress-bar {
+  background-color: #e9ecef;
+  border-radius: 12px;
+}
+
+#progressBar::-webkit-progress-value {
+  background: linear-gradient(to right, #28a745, #20c997);
+  border-radius: 12px;
+}
+
+#progressBar::-moz-progress-bar {
+  background: linear-gradient(to right, #28a745, #20c997);
+  border-radius: 12px;
+}
+
 /* Table styles */
 table {
   width: 100%;
@@ -87,11 +191,11 @@ th {
   color: #34495e;
 }
 
-    .removeBtn {
+.removeBtn {
   margin-left: 8px;
   padding: 4px 8px;
   font-size: 0.8rem;
-      width: 100px;
+  width: 30px;
   background-color: #e74c3c;
   color: white;
   border: none;
@@ -103,8 +207,48 @@ th {
   background-color: #c0392b;
 }
 
+/* Legend */
+.map-legend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  font-size: 0.9em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.legend-color {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+  border: 1px solid #999;
+}
+
 /* Responsive tweaks */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .map-section {
+    flex-direction: column;
+  }
+  
+  .territories-sidebar {
+    width: 100%;
+  }
+  
+  .progress-stats {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
   table {
     width: 100%;
     overflow-x: auto;
@@ -115,92 +259,115 @@ th {
     text-align: left;
   }
 
-  th::before, td::before {
-    content: none;
-  }
-}
-    select, button {
+  select, button {
     width: 100%;
     margin-bottom: 10px;
   }
+}
   </style>
 </head>
 <body>
-  
-  <h1>License Plate Game</h1>
+  <div class="container">
+    <h1>License Plate Game</h1>
 
-  <div id="map" style="height: 400px; margin-top: 20px; border-radius: 8px;"></div>
+    <div class="progress-section">
+      <div class="progress-stats">
+        <div><strong>Progress:</strong></div>
+        <div id="progressText">0 of 56 plates logged</div>
+      </div>
+      <div class="progress-bar-container">
+        <progress id="progressBar" value="0" max="56"></progress>
+      </div>
+    </div>
 
-  <label for="stateSelect">Choose a state or territory:</label>
-  <select id="stateSelect">
-    <option value="">--Select--</option>
-<option value="alabama">Alabama</option>
-<option value="alaska">Alaska</option>
-<option value="american_samoa">American Samoa</option>
-<option value="arizona">Arizona</option>
-<option value="arkansas">Arkansas</option>
-<option value="california">California</option>
-<option value="colorado">Colorado</option>
-<option value="commonwealth_of_the_northern_mariana_islands">Commonwealth of the Northern Mariana Islands</option>
-<option value="connecticut">Connecticut</option>
-<option value="delaware">Delaware</option>
-<option value="district_of_columbia">District of Columbia</option>
-<option value="florida">Florida</option>
-<option value="georgia">Georgia</option>
-<option value="guam">Guam</option>
-<option value="hawaii">Hawaii</option>
-<option value="idaho">Idaho</option>
-<option value="illinois">Illinois</option>
-<option value="indiana">Indiana</option>
-<option value="iowa">Iowa</option>
-<option value="kansas">Kansas</option>
-<option value="kentucky">Kentucky</option>
-<option value="louisiana">Louisiana</option>
-<option value="maine">Maine</option>
-<option value="maryland">Maryland</option>
-<option value="massachusetts">Massachusetts</option>
-<option value="michigan">Michigan</option>
-<option value="minnesota">Minnesota</option>
-<option value="mississippi">Mississippi</option>
-<option value="missouri">Missouri</option>
-<option value="montana">Montana</option>
-<option value="nebraska">Nebraska</option>
-<option value="nevada">Nevada</option>
-<option value="new_hampshire">New Hampshire</option>
-<option value="new_jersey">New Jersey</option>
-<option value="new_mexico">New Mexico</option>
-<option value="new_york">New York</option>
-<option value="north_carolina">North Carolina</option>
-<option value="north_dakota">North Dakota</option>
-<option value="ohio">Ohio</option>
-<option value="oklahoma">Oklahoma</option>
-<option value="oregon">Oregon</option>
-<option value="pennsylvania">Pennsylvania</option>
-<option value="puerto_rico">Puerto Rico</option>
-<option value="rhode_island">Rhode Island</option>
-<option value="south_carolina">South Carolina</option>
-<option value="south_dakota">South Dakota</option>
-<option value="tennessee">Tennessee</option>
-<option value="texas">Texas</option>
-<option value="united_states_virgin_islands">United States Virgin Islands</option>
-<option value="utah">Utah</option>
-<option value="vermont">Vermont</option>
-<option value="virginia">Virginia</option>
-<option value="washington">Washington</option>
-<option value="west_virginia">West Virginia</option>
-<option value="wisconsin">Wisconsin</option>
-<option value="wyoming">Wyoming</option>
-  </select>
-  <button id="submitBtn">Submit</button>  <button id="resetBtn">Reset Log</button>
+    <label for="stateSelect">Choose a state or territory:</label>
+    <select id="stateSelect">
+      <option value="">--Select--</option>
+      <option value="alabama">Alabama</option>
+      <option value="alaska">Alaska</option>
+      <option value="american_samoa">American Samoa</option>
+      <option value="arizona">Arizona</option>
+      <option value="arkansas">Arkansas</option>
+      <option value="california">California</option>
+      <option value="colorado">Colorado</option>
+      <option value="commonwealth_of_the_northern_mariana_islands">Commonwealth of the Northern Mariana Islands</option>
+      <option value="connecticut">Connecticut</option>
+      <option value="delaware">Delaware</option>
+      <option value="district_of_columbia">District of Columbia</option>
+      <option value="florida">Florida</option>
+      <option value="georgia">Georgia</option>
+      <option value="guam">Guam</option>
+      <option value="hawaii">Hawaii</option>
+      <option value="idaho">Idaho</option>
+      <option value="illinois">Illinois</option>
+      <option value="indiana">Indiana</option>
+      <option value="iowa">Iowa</option>
+      <option value="kansas">Kansas</option>
+      <option value="kentucky">Kentucky</option>
+      <option value="louisiana">Louisiana</option>
+      <option value="maine">Maine</option>
+      <option value="maryland">Maryland</option>
+      <option value="massachusetts">Massachusetts</option>
+      <option value="michigan">Michigan</option>
+      <option value="minnesota">Minnesota</option>
+      <option value="mississippi">Mississippi</option>
+      <option value="missouri">Missouri</option>
+      <option value="montana">Montana</option>
+      <option value="nebraska">Nebraska</option>
+      <option value="nevada">Nevada</option>
+      <option value="new_hampshire">New Hampshire</option>
+      <option value="new_jersey">New Jersey</option>
+      <option value="new_mexico">New Mexico</option>
+      <option value="new_york">New York</option>
+      <option value="north_carolina">North Carolina</option>
+      <option value="north_dakota">North Dakota</option>
+      <option value="ohio">Ohio</option>
+      <option value="oklahoma">Oklahoma</option>
+      <option value="oregon">Oregon</option>
+      <option value="pennsylvania">Pennsylvania</option>
+      <option value="puerto_rico">Puerto Rico</option>
+      <option value="rhode_island">Rhode Island</option>
+      <option value="south_carolina">South Carolina</option>
+      <option value="south_dakota">South Dakota</option>
+      <option value="tennessee">Tennessee</option>
+      <option value="texas">Texas</option>
+      <option value="united_states_virgin_islands">United States Virgin Islands</option>
+      <option value="utah">Utah</option>
+      <option value="vermont">Vermont</option>
+      <option value="virginia">Virginia</option>
+      <option value="washington">Washington</option>
+      <option value="west_virginia">West Virginia</option>
+      <option value="wisconsin">Wisconsin</option>
+      <option value="wyoming">Wyoming</option>
+    </select>
+    <button id="submitBtn">Submit</button>
+    <button id="resetBtn">Reset Log</button>
 
-  <div id="progressContainer" style="margin-top: 20px;">
-    <label for="progressBar"><strong>Progress:</strong></label>
-    <progress id="progressBar" value="0" max="50" style="width: 100%; height: 20px;"></progress>
-    <div id="progressText" style="text-align: right; margin-top: 4px;"></div>
+    <div class="map-section">
+      <div class="main-map">
+        <div id="map"></div>
+        <div class="map-legend">
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #28a745;"></div>
+            <span>Found</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #e9ecef;"></div>
+            <span>Not Found</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="territories-sidebar">
+        <h3>Remote Territories</h3>
+        <div id="territoriesList">
+          <!-- Territories will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <table id="result"></table>
   </div>
-
-  
-  <table id="result"></table>
   
   <script src="script.js"></script>
 </body>
