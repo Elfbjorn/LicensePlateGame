@@ -146,7 +146,7 @@ async function initializeMap() {
     console.log("Creating basic map...");
     
     // Create simple map
-    currentMap = L.map('map').setView([39.8283, -98.5795], 4);
+    currentMap = L.map('map').setView([39.8283, -98.5795], 3);
     
     // Add gray background
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
