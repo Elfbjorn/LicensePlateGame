@@ -474,7 +474,7 @@ function renderTable(log) {
     .join(", ");
 
   html += `
-      <tr><td colspan="4"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
+      <tr><td colspan="4"><strong>Plates not yet logged:</strong> ${missingLabels}</td></tr>
       <tr><td colspan="4"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
     </tbody>
   </table>
