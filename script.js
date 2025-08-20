@@ -109,107 +109,6 @@ async function checkProximity(stateName, userLat, userLon) {
   }
 }
 
-// Reverse geocode
-async function getLocationLabel(lat, lon) {
-  const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Geocoding failed: ${res.status}`);
-    const data = await res.json();
-    const city = data.address?.city || data.address?.town || data.address?.village || "";
-    const state = data.address?.state || data.address?.region || "";
-    return { label: `${city}, ${state}`, stateName: state.toLowerCase().replace(/\s+/g, "_") };
-  } catch (err) {
-    console.warn("Reverse geocoding failed:", err.message);
-    return { label: "Unknown location", stateName: "" };
-  }
-}
-
-// Load plate log
-function loadPlateLog() {
-  const raw = localStorage.getItem("plateLog");
-  return raw ? JSON.parse(raw) : {};
-}
-
-// Save plate log
-function savePlateLog(log) {
-  localStorage.setItem("plateLog", JSON.stringify(log));
-}
-
-// Update log with max score
-function updatePlateLog(stateName, locationLabel, miles) {
-  const log = loadPlateLog();
-  const prev = log[stateName];
-  if (!prev || miles > prev.miles) {
-    log[stateName] = { location: locationLabel, miles };
-    savePlateLog(log);
-  }
-  return log;
-}
-
-// Format number with commas (e.g., 1234 -> 1,234)
-function formatNumber(num) {
-  return Math.round(num).toLocaleString();
-}
-
-function getTotalScore(log) {
-  return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
-}
-
-// Render table
-function renderTable(log) {
-  const result = document.getElementById("result");
-  const entries = Object.entries(log).sort(([a], [b]) => a.localeCompare(b));
-
-  const progressBar = document.getElementById("progressBar");
-  const progressText = document.getElementById("progressText");
-  const loggedCount = Object.keys(log).length;
-  const totalCount = ALL_STATES.length;
-
-  progressBar.value = loggedCount;
-  progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
-
-  let html = `
-    <table>
-      <thead>
-        <tr>
-          <th>License Plate</th>
-          <th>Your Location</th>
-          <th>Number of Miles</th>
-          <th>&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-  `;
-
-  for (const [state, { location, miles }] of entries) {
-    const label = state.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    html += `
-      <tr>
-        <td>${label}</td>
-        <td>${location}</td>
-        <td style="text-align:right;">${formatNumber(miles)}</td>
-        <td><button class="removeBtn" data-state="${state}">Remove</button></td>
-      </tr>
-    `;
-  }
-
-  const loggedStates = new Set(Object.keys(log));
-  const missingStates = ALL_STATES.filter(s => !loggedStates.has(s));
-  const missingLabels = missingStates
-    .map(s => s.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()))
-    .join(", ");
-
-  html += `
-      <tr><td colspan="3"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
-      <tr><td colspan="3"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
-    </tbody>
-  </table>
-  `;
-
-  result.innerHTML = html;
-}
-
 // Enhanced geolocation with mobile Safari specific handling
 async function getLocationWithFallback() {
   // Mobile Safari specific detection
@@ -372,6 +271,109 @@ async function geocodeAddress(address) {
     throw new Error(`Failed to geocode address: ${error.message}`);
   }
 }
+
+// Reverse geocode
+async function getLocationLabel(lat, lon) {
+  const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Geocoding failed: ${res.status}`);
+    const data = await res.json();
+    const city = data.address?.city || data.address?.town || data.address?.village || "";
+    const state = data.address?.state || data.address?.region || "";
+    return { label: `${city}, ${state}`, stateName: state.toLowerCase().replace(/\s+/g, "_") };
+  } catch (err) {
+    console.warn("Reverse geocoding failed:", err.message);
+    return { label: "Unknown location", stateName: "" };
+  }
+}
+
+// Load plate log
+function loadPlateLog() {
+  const raw = localStorage.getItem("plateLog");
+  return raw ? JSON.parse(raw) : {};
+}
+
+// Save plate log
+function savePlateLog(log) {
+  localStorage.setItem("plateLog", JSON.stringify(log));
+}
+
+// Update log with max score
+function updatePlateLog(stateName, locationLabel, miles) {
+  const log = loadPlateLog();
+  const prev = log[stateName];
+  if (!prev || miles > prev.miles) {
+    log[stateName] = { location: locationLabel, miles };
+    savePlateLog(log);
+  }
+  return log;
+}
+
+// Format number with commas (e.g., 1234 -> 1,234)
+function formatNumber(num) {
+  return Math.round(num).toLocaleString();
+}
+
+function getTotalScore(log) {
+  return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
+}
+
+// Render table
+function renderTable(log) {
+  const result = document.getElementById("result");
+  const entries = Object.entries(log).sort(([a], [b]) => a.localeCompare(b));
+
+  const progressBar = document.getElementById("progressBar");
+  const progressText = document.getElementById("progressText");
+  const loggedCount = Object.keys(log).length;
+  const totalCount = ALL_STATES.length;
+
+  progressBar.value = loggedCount;
+  progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
+
+  let html = `
+    <table>
+      <thead>
+        <tr>
+          <th>License Plate</th>
+          <th>Your Location</th>
+          <th style="text-align: right;">Miles</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  for (const [state, { location, miles }] of entries) {
+    const label = state.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    html += `
+      <tr>
+        <td>${label}</td>
+        <td>${location}</td>
+        <td style="text-align: right;">${formatNumber(miles)}</td>
+        <td><button class="removeBtn" data-state="${state}">X</button></td>
+      </tr>
+    `;
+  }
+
+  const loggedStates = new Set(Object.keys(log));
+  const missingStates = ALL_STATES.filter(s => !loggedStates.has(s));
+  const missingLabels = missingStates
+    .map(s => s.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()))
+    .join(", ");
+
+  html += `
+      <tr><td colspan="3"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
+      <tr><td colspan="3"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
+    </tbody>
+  </table>
+  `;
+
+  result.innerHTML = html;
+}
+
+// Main interaction
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
@@ -388,23 +390,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Check if we're on mobile Safari and show specific instructions
-    const isMobileSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    
-    if (isMobileSafari) {
-      // Show instructions for mobile Safari users
-      const proceed = confirm(
-        "Mobile Safari Location Tips:\n\n" +
-        "1. Make sure Location Services is enabled in iOS Settings\n" +
-        "2. Allow location access when prompted\n" +
-        "3. If it fails, try going to Settings > Safari > Location and set to 'Ask'\n" +
-        "4. Make sure you're not in Private Browsing mode\n\n" +
-        "Click OK to try getting your location..."
-      );
-      
-      if (!proceed) return;
-    }
-
     // Show loading state
     button.disabled = true;
     button.textContent = "Getting location...";
@@ -415,6 +400,9 @@ document.addEventListener("DOMContentLoaded", () => {
       await processLocation(position.latitude, position.longitude, stateName);
     } catch (error) {
       console.error("All geolocation methods failed:", error);
+      
+      // Check if we're on mobile Safari for better error messages
+      const isMobileSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
       
       let errorMessage = "Automatic location detection failed.";
       
