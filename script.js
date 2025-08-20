@@ -176,6 +176,7 @@ function renderTable(log) {
           <th>License Plate</th>
           <th>Your Location</th>
           <th>Number of Miles</th>
+          <th>&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -187,7 +188,8 @@ function renderTable(log) {
       <tr>
         <td>${label}</td>
         <td>${location}</td>
-        <td>${formatNumber(miles)} <button class="removeBtn" data-state="${state}">Remove</button></td>
+        <td style="text-align:right;">${formatNumber(miles)}</td>
+        <td><button class="removeBtn" data-state="${state}">Remove</button></td>
       </tr>
     `;
   }
