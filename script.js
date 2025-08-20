@@ -10,16 +10,8 @@ const ALL_STATES = [
   "puerto_rico", "united_states_virgin_islands"
 ];
 
-// States that appear on the main US map
-const MAIN_MAP_STATES = [
-  "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
-  "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
-  "louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi",
-  "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
-  "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
-  "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
-];
+// Test with just a few states first
+const TEST_STATES = ["florida", "california", "texas", "new_york", "georgia"];
 
 // Remote territories for sidebar
 const REMOTE_TERRITORIES = [
@@ -83,11 +75,13 @@ async function checkProximity(stateName, userLat, userLon) {
   try {
     if (!stateCache[stateName]) {
       const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
+      console.log(`Loading ${filePath}...`);
       const response = await fetch(filePath);
       if (!response.ok) {
         throw new Error(`Failed to load ${filePath}: ${response.status}`);
       }
       stateCache[stateName] = await response.json();
+      console.log(`Successfully loaded ${stateName}`);
     }
     
     const points = extractPoints(stateCache[stateName]);
@@ -102,14 +96,16 @@ async function checkProximity(stateName, userLat, userLon) {
   }
 }
 
-// Simplified map initialization - load states only when needed
+// Simple map initialization - just basic map first
 async function initializeMap() {
   const mapContainer = document.getElementById('map');
   
+  // Clear existing map
   if (currentMap) {
     try {
       currentMap.remove();
       currentMap = null;
+      stateMapLayers = {};
     } catch (e) {
       console.log("Error removing existing map:", e);
     }
@@ -118,60 +114,57 @@ async function initializeMap() {
   mapContainer.innerHTML = '';
   
   try {
-    // Create map with gray background
-    currentMap = L.map('map', {
-      zoomControl: true,
-      scrollWheelZoom: true,
-      doubleClickZoom: true,
-      dragging: true
-    }).setView([39.8283, -98.5795], 4);
+    console.log("Creating basic map...");
     
-    // Add a simple gray tile layer
+    // Create simple map
+    currentMap = L.map('map').setView([39.8283, -98.5795], 4);
+    
+    // Add gray background
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
       subdomains: 'abcd',
       maxZoom: 19
     }).addTo(currentMap);
     
-    // Load states gradually
-    loadStatesOnMap();
+    console.log("Basic map created, loading test states...");
+    
+    // Load just a few states for testing
+    await loadTestStates();
     
   } catch (error) {
     console.error("Error creating map:", error);
-    mapContainer.innerHTML = '<p style="padding: 20px; text-align: center;">Map could not be loaded</p>';
+    mapContainer.innerHTML = '<p style="padding: 20px; text-align: center; color: red;">Map could not be loaded. Check console for errors.</p>';
   }
 }
 
-async function loadStatesOnMap() {
-  // Load states in batches to avoid overwhelming the browser
-  const batchSize = 10;
-  for (let i = 0; i < MAIN_MAP_STATES.length; i += batchSize) {
-    const batch = MAIN_MAP_STATES.slice(i, i + batchSize);
-    await loadStateBatch(batch);
-    await new Promise(resolve => setTimeout(resolve, 100)); // Small delay between batches
-  }
+async function loadTestStates() {
+  console.log("Loading test states:", TEST_STATES);
   
-  // Update colors based on current log
-  const log = loadPlateLog();
-  updateMapColors(log);
-}
-
-async function loadStateBatch(stateNames) {
-  for (const stateName of stateNames) {
+  for (const stateName of TEST_STATES) {
     try {
+      console.log(`Loading ${stateName}...`);
+      
       if (!stateCache[stateName]) {
         const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
         const response = await fetch(filePath);
-        if (response.ok) {
-          stateCache[stateName] = await response.json();
+        
+        if (!response.ok) {
+          console.error(`Failed to load ${stateName}: ${response.status}`);
+          continue;
         }
+        
+        const data = await response.json();
+        stateCache[stateName] = data;
+        console.log(`Successfully cached ${stateName}`, data);
       }
       
       if (stateCache[stateName] && stateCache[stateName].geojson && currentMap) {
+        console.log(`Adding ${stateName} to map...`);
+        
         const layer = L.geoJSON(stateCache[stateName].geojson, {
           style: {
             color: "#666",
-            weight: 1,
+            weight: 2,
             fillOpacity: 0.7,
             fillColor: "#e9ecef"
           }
@@ -179,24 +172,38 @@ async function loadStateBatch(stateNames) {
         
         layer.addTo(currentMap);
         stateMapLayers[stateName] = layer;
+        
+        console.log(`Successfully added ${stateName} to map`);
+      } else {
+        console.error(`Missing data for ${stateName}:`, stateCache[stateName]);
       }
+      
     } catch (error) {
-      console.warn(`Could not load ${stateName}:`, error);
+      console.error(`Could not load ${stateName}:`, error);
     }
   }
+  
+  console.log("Finished loading test states. Map layers:", Object.keys(stateMapLayers));
+  
+  // Update colors based on current log
+  const log = loadPlateLog();
+  updateMapColors(log);
 }
 
 function updateMapColors(log) {
+  console.log("Updating map colors for log:", log);
   const loggedStates = new Set(Object.keys(log));
   
   for (const [stateName, layer] of Object.entries(stateMapLayers)) {
     if (layer) {
       const isLogged = loggedStates.has(stateName);
+      console.log(`${stateName}: ${isLogged ? 'LOGGED (green)' : 'not logged (gray)'}`);
+      
       layer.setStyle({
         fillColor: isLogged ? "#28a745" : "#e9ecef",
         fillOpacity: 0.7,
         color: "#666",
-        weight: 1
+        weight: 2
       });
     }
   }
@@ -204,6 +211,11 @@ function updateMapColors(log) {
 
 function updateTerritoriesSidebar(log) {
   const territoriesList = document.getElementById("territoriesList");
+  if (!territoriesList) {
+    console.error("territoriesList element not found");
+    return;
+  }
+  
   const loggedStates = new Set(Object.keys(log));
   
   let html = "";
@@ -270,11 +282,14 @@ async function getLocationWithFallback() {
 
 async function processLocation(latitude, longitude, stateName) {
   try {
+    console.log(`Processing location: ${latitude}, ${longitude} for ${stateName}`);
+    
     const button = document.getElementById("submitBtn");
     button.disabled = true;
     button.textContent = "Processing...";
     
     const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
+    console.log(`Location: ${label}, Current state: ${currentState}`);
     
     const miles = (stateName === currentState) ? 0 : await checkProximity(stateName, latitude, longitude);
     
@@ -401,8 +416,8 @@ function renderTable(log) {
   const loggedCount = Object.keys(log).length;
   const totalCount = ALL_STATES.length;
 
-  progressBar.value = loggedCount;
-  progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
+  if (progressBar) progressBar.value = loggedCount;
+  if (progressText) progressText.textContent = `${loggedCount} of ${totalCount} plates logged`;
 
   let html = `
     <table>
@@ -447,11 +462,16 @@ function renderTable(log) {
 
 // Main interaction
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM loaded, initializing app...");
+  
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
 
   // Initialize the map and territories sidebar
+  console.log("Initializing map...");
   initializeMap();
+  
+  console.log("Updating territories sidebar...");
   updateTerritoriesSidebar(loadPlateLog());
 
   button.addEventListener("click", async () => {
@@ -533,5 +553,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Initial render
+  console.log("Rendering initial table...");
   renderTable(loadPlateLog());
+  
+  console.log("App initialization complete");
 });
