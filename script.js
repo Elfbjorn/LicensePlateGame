@@ -10,6 +10,30 @@ const ALL_STATES = [
   "puerto_rico", "united_states_virgin_islands"
 ];
 
+// States that appear on the main US map
+const MAIN_MAP_STATES = [
+  "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
+  "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
+  "louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi",
+  "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
+  "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
+  "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
+];
+
+// Remote territories for sidebar
+const REMOTE_TERRITORIES = [
+  "american_samoa", 
+  "commonwealth_of_the_northern_mariana_islands", 
+  "guam", 
+  "puerto_rico", 
+  "united_states_virgin_islands"
+];
+
+// State layers for the map
+let stateMapLayers = {};
+let currentMap = null;
+
 // Extract lat/lng pairs from GeoJSON coordinates
 function extractPoints(data) {
   if (!data.geojson || !data.geojson.coordinates) return [];
@@ -193,15 +217,15 @@ async function processLocation(latitude, longitude, stateName) {
       throw new Error("Could not calculate distance to selected state");
     }
 
-    // Get the geojson for map rendering
-    const geoJson = stateCache[stateName]?.geojson || null;
-    
-    // Update the map
-    renderMap(latitude, longitude, geoJson);
-
     // Update the log and table
     const log = updatePlateLog(stateName, label, miles);
     renderTable(log);
+    
+    // Update the map to show the newly logged state
+    updateMapColors(log);
+    
+    // Update territories sidebar
+    updateTerritoriesSidebar(log);
 
     // Show success message
     const stateLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
@@ -319,6 +343,104 @@ function getTotalScore(log) {
   return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
 }
 
+// Initialize the US map with all states
+async function initializeMap() {
+  // Clear existing map if it exists
+  const mapContainer = document.getElementById('map');
+  
+  if (currentMap) {
+    try {
+      currentMap.remove();
+      currentMap = null;
+    } catch (e) {
+      console.log("Error removing existing map:", e);
+    }
+  }
+  
+  mapContainer.innerHTML = '';
+  
+  try {
+    // Create map centered on continental US
+    currentMap = L.map('map', {
+      zoomControl: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      dragging: false
+    }).setView([39.8283, -98.5795], 4);
+    
+    // Load and display all state boundaries
+    for (const stateName of MAIN_MAP_STATES) {
+      try {
+        if (!stateCache[stateName]) {
+          const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
+          const response = await fetch(filePath);
+          if (response.ok) {
+            stateCache[stateName] = await response.json();
+          }
+        }
+        
+        if (stateCache[stateName] && stateCache[stateName].geojson) {
+          const layer = L.geoJSON(stateCache[stateName].geojson, {
+            style: {
+              color: "#666",
+              weight: 1,
+              fillOpacity: 0.7,
+              fillColor: "#e9ecef"
+            }
+          });
+          
+          layer.addTo(currentMap);
+          stateMapLayers[stateName] = layer;
+        }
+      } catch (error) {
+        console.warn(`Could not load ${stateName}:`, error);
+      }
+    }
+    
+    // Update colors based on current log
+    const log = loadPlateLog();
+    updateMapColors(log);
+    
+  } catch (error) {
+    console.error("Error creating map:", error);
+    mapContainer.innerHTML = '<p style="padding: 20px; text-align: center;">Map could not be loaded</p>';
+  }
+}
+
+// Update map colors based on logged states
+function updateMapColors(log) {
+  const loggedStates = new Set(Object.keys(log));
+  
+  for (const [stateName, layer] of Object.entries(stateMapLayers)) {
+    if (layer) {
+      const isLogged = loggedStates.has(stateName);
+      layer.setStyle({
+        fillColor: isLogged ? "#28a745" : "#e9ecef",
+        fillOpacity: 0.7,
+        color: "#666",
+        weight: 1
+      });
+    }
+  }
+}
+
+// Update territories sidebar
+function updateTerritoriesSidebar(log) {
+  const territoriesList = document.getElementById("territoriesList");
+  const loggedStates = new Set(Object.keys(log));
+  
+  let html = "";
+  for (const territory of REMOTE_TERRITORIES) {
+    const isLogged = loggedStates.has(territory);
+    const displayName = territory.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    const className = isLogged ? "logged" : "not-logged";
+    
+    html += `<div class="territory-item ${className}">${displayName}</div>`;
+  }
+  
+  territoriesList.innerHTML = html;
+}
+
 // Render table
 function renderTable(log) {
   const result = document.getElementById("result");
@@ -361,152 +483,4 @@ function renderTable(log) {
   const missingStates = ALL_STATES.filter(s => !loggedStates.has(s));
   const missingLabels = missingStates
     .map(s => s.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()))
-    .join(", ");
-
-  html += `
-      <tr><td colspan="3"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
-      <tr><td colspan="3"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
-    </tbody>
-  </table>
-  `;
-
-  result.innerHTML = html;
-}
-
-// Main interaction
-document.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("stateSelect");
-  const button = document.getElementById("submitBtn");
-
-  button.addEventListener("click", async () => {
-    const stateName = select.value;
-    if (!stateName) {
-      alert("Please select a state first.");
-      return;
-    }
-
-    if (!navigator.geolocation) {
-      alert("Geolocation not supported by this browser.");
-      return;
-    }
-
-    // Show loading state
-    button.disabled = true;
-    button.textContent = "Getting location...";
-
-    // Try multiple geolocation strategies
-    try {
-      const position = await getLocationWithFallback();
-      await processLocation(position.latitude, position.longitude, stateName);
-    } catch (error) {
-      console.error("All geolocation methods failed:", error);
-      
-      // Check if we're on mobile Safari for better error messages
-      const isMobileSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      
-      let errorMessage = "Automatic location detection failed.";
-      
-      // Add specific error messages for common mobile Safari issues
-      if (isMobileSafari) {
-        if (error.message.includes("Code: 1")) {
-          errorMessage += "\n\nLocation access was denied. Please:\n1. Go to iOS Settings > Privacy & Security > Location Services\n2. Make sure Location Services is ON\n3. Find Safari and set it to 'While Using App'\n4. Reload this page and try again";
-        } else if (error.message.includes("Code: 2")) {
-          errorMessage += "\n\nLocation unavailable. Please:\n1. Make sure you have a good GPS/cellular signal\n2. Try moving to an area with better reception\n3. Make sure Location Services is enabled in iOS Settings";
-        } else if (error.message.includes("Code: 3")) {
-          errorMessage += "\n\nLocation request timed out. This often happens indoors or with poor signal.";
-        }
-      }
-      
-      // Offer manual location input as fallback
-      const useManual = confirm(
-        errorMessage + "\n\nWould you like to enter your location manually?\n\n" +
-        "You can enter either:\n" +
-        "• City, State (e.g., 'New York, NY')\n" +
-        "• ZIP code (e.g., '10001')\n" +
-        "• Latitude, Longitude (e.g., '40.7128, -74.0060')"
-      );
-      
-      if (useManual) {
-        try {
-          await handleManualLocation(stateName);
-        } catch (manualError) {
-          console.error("Manual location failed:", manualError);
-          alert("Failed to process manual location. Please try again.");
-        }
-      }
-    } finally {
-      // Always reset button state
-      button.disabled = false;
-      button.textContent = "Submit";
-    }
-  });
-
-  document.getElementById("resetBtn").addEventListener("click", () => {
-    if (confirm("Are you sure you want to reset the entire log? This cannot be undone.")) {
-      localStorage.removeItem("plateLog");
-      renderTable({});
-    }
-  });
-
-  document.getElementById("result").addEventListener("click", e => {
-    if (e.target.classList.contains("removeBtn")) {
-      const state = e.target.getAttribute("data-state");
-      const log = loadPlateLog();
-      delete log[state];
-      savePlateLog(log);
-      renderTable(log);
-    }
-  });
-
-  // Initial render
-  renderTable(loadPlateLog());
-});
-
-function renderMap(userLat, userLon, stateGeoJson) {
-  // Clear existing map if it exists
-  const mapContainer = document.getElementById('map');
-  
-  // Completely destroy any existing Leaflet map instance
-  if (window.currentMap) {
-    try {
-      window.currentMap.remove();
-      window.currentMap = null;
-    } catch (e) {
-      console.log("Error removing existing map:", e);
-    }
-  }
-  
-  // Clear the container HTML
-  mapContainer.innerHTML = '';
-  
-  // Add a small delay to ensure DOM is ready
-  setTimeout(() => {
-    try {
-      const map = L.map('map').setView([userLat, userLon], 6);
-      
-      // Store reference for cleanup
-      window.currentMap = map;
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-
-      L.marker([userLat, userLon]).addTo(map)
-        .bindPopup("You are here")
-        .openPopup();
-
-      if (stateGeoJson) {
-        L.geoJSON(stateGeoJson, {
-          style: {
-            color: "#3498db",
-            weight: 2,
-            fillOpacity: 0.1
-          }
-        }).addTo(map);
-      }
-    } catch (error) {
-      console.error("Error creating map:", error);
-      mapContainer.innerHTML = '<p style="padding: 20px; text-align: center;">Map could not be loaded</p>';
-    }
-  }, 100);
-}
+    .join(
