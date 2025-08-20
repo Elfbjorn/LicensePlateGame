@@ -7,7 +7,9 @@ const ALL_STATES = [
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
   "virginia","washington","west_virginia","wisconsin","wyoming", "american_samoa", 
   "commonwealth_of_the_northern_mariana_islands", "district_of_columbia", "guam", 
-  "puerto_rico", "united_states_virgin_islands"
+  "puerto_rico", "united_states_virgin_islands", "alberta", "british_columbia", "manitoba",
+  "new_brunswick", "newfoundland_and_labrador", "northwest_territories", "nova_scotia",
+  "nunavut", "ontario", "prince_edward_island", "quebec", "saskatchewan", "yukon"
 ];
 
 // States that appear on the main US map
@@ -18,7 +20,10 @@ const MAIN_MAP_STATES = [
   "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia",
+  "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador", 
+  "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island", 
+  "quebec", "saskatchewan", "yukon"
 ];
 
 // Remote territories for sidebar
