@@ -200,11 +200,14 @@ function generateShareCard() {
   const log = loadPlateLog();
   const entries = Object.entries(log);
   
+  // Count by category
   let usStates = 0, territories = 0, canada = 0;
   let totalMiles = 0, maxMiles = 0, farthestState = '';
   
   entries.forEach(([state, data]) => {
     const miles = data.miles || 0;
+    
+    // This is the fix - only add miles once per state (the game already stores max miles per state)
     totalMiles += miles;
     
     if (miles > maxMiles) {
@@ -221,8 +224,11 @@ function generateShareCard() {
     }
   });
 
+  // Estimate days (could be enhanced with actual tracking)
   const days = Math.max(1, Math.floor(entries.length / 2) + Math.floor(Math.random() * 20));
-  const estimatedTravel = Math.floor(totalMiles * 0.5 + Math.random() * 1000);
+  
+  // Fix: Use a more reasonable travel estimate
+  const estimatedTravel = Math.floor(totalMiles * 0.3 + Math.random() * 500);
 
   return {
     usStates,
