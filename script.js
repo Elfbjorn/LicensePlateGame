@@ -201,6 +201,23 @@ function initializeRandomColors() {
   const saved = localStorage.getItem('randomColorAssignments');
   if (saved) {
     randomColorAssignments = JSON.parse(saved);
+    
+    // Check if we need to add colors for any missing states/provinces
+    const colors = THEMES.random.colors;
+    let needsUpdate = false;
+    
+    for (const state of ALL_STATES) {
+      if (!randomColorAssignments[state]) {
+        randomColorAssignments[state] = colors[Math.floor(Math.random() * colors.length)];
+        needsUpdate = true;
+      }
+    }
+    
+    // Save updated assignments if we added new ones
+    if (needsUpdate) {
+      localStorage.setItem('randomColorAssignments', JSON.stringify(randomColorAssignments));
+    }
+    
   } else {
     // Generate random color assignments for all states
     const colors = THEMES.random.colors;
@@ -210,7 +227,6 @@ function initializeRandomColors() {
     localStorage.setItem('randomColorAssignments', JSON.stringify(randomColorAssignments));
   }
 }
-
 function getStateStyle(stateName, isLogged) {
   const theme = THEMES[currentTheme];
   
