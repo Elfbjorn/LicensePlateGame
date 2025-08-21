@@ -56,13 +56,13 @@ const THEMES = {
   classic: {
     name: "Classic",
     loggedColor: "#28a745",
-    unloggedColor: "#e9ecef",
+    unloggedColor: "#c8cacc",
     showLegend: true
   },
   random: {
     name: "Random Colors",
     colors: ["#007bff", "#dc3545", "#28a745", "#ffc107", "#6f42c1", "#fd7e14"],
-    unloggedColor: "#e9ecef",
+    unloggedColor: "#c8cacc",
     showLegend: false
   },
   flag: {
@@ -79,7 +79,7 @@ const THEMES = {
       white: "#ffffff",
       red_white: "canada_red_white"
     },
-    unloggedColor: "#e9ecef",
+    unloggedColor: "#c8cacc", // Previous color is #e9ecef
     showLegend: false
   }
 };
