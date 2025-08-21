@@ -86,23 +86,23 @@ const THEMES = {
 
 // State assignments for flag theme - US states and territories
 const US_FLAG_ASSIGNMENTS = {
-  // US States - mix of red, white, blue, stripes, and stars
-  "alabama": "red", "alaska": "blue", "arizona": "red", "arkansas": "red_stripes",
-  "california": "red", "colorado": "blue", "connecticut": "red_stripes", "delaware": "red_stripes",
-  "florida": "red", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
-  "illinois": "red_stripes", "indiana": "red_stripes", "iowa": "blue", "kansas": "blue",
-  "kentucky": "red", "louisiana": "red", "maine": "red_stripes", "maryland": "red_stripes",
+  // Add some white states
+  "alabama": "red", "alaska": "blue", "arizona": "white", "arkansas": "red_stripes",
+  "california": "red", "colorado": "blue", "connecticut": "white", "delaware": "red_stripes",
+  "florida": "white", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
+  "illinois": "red_stripes", "indiana": "white", "iowa": "blue", "kansas": "blue",
+  "kentucky": "red", "louisiana": "white", "maine": "red_stripes", "maryland": "red_stripes",
   "massachusetts": "red_stripes", "michigan": "blue", "minnesota": "blue", "mississippi": "red",
-  "missouri": "red", "montana": "blue", "nebraska": "blue", "nevada": "blue",
-  "new_hampshire": "red_stripes", "new_jersey": "red_stripes", "new_mexico": "red", "new_york": "red_stripes",
-  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "red",
+  "missouri": "red", "montana": "white", "nebraska": "blue", "nevada": "blue",
+  "new_hampshire": "red_stripes", "new_jersey": "white", "new_mexico": "red", "new_york": "red_stripes",
+  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "white",
   "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
-  "south_dakota": "blue", "tennessee": "red", "texas": "red", "utah": "blue",
-  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "red",
+  "south_dakota": "blue", "tennessee": "red", "texas": "white", "utah": "blue",
+  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "white",
   "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars",
   // US Territories - get US flag colors
   "american_samoa": "blue", "commonwealth_of_the_northern_mariana_islands": "red",
-  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "red"
+  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "white"
 };
 
 // Canadian flag assignments - red and white only
