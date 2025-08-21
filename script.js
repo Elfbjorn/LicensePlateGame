@@ -259,6 +259,8 @@ ${completionPercent}% Complete (${totalLogged}/69 regions)
 Join the challenge! #LicensePlateGame`;
 }
 
+// REPLACE the createShareCardHTML function with this fixed version
+
 function createShareCardHTML(data) {
   const totalLogged = data.usStates + data.territories + data.canada;
   const completionPercent = Math.round((totalLogged / 69) * 100);
@@ -266,11 +268,16 @@ function createShareCardHTML(data) {
   const territoryPercent = Math.round((data.territories / 5) * 100);
   const canadaPercent = Math.round((data.canada / 13) * 100);
 
+  // Format all numbers properly
+  const formattedTotalMiles = Math.round(data.totalMiles).toLocaleString();
+  const formattedMaxMiles = Math.round(data.maxMiles).toLocaleString();
+  const formattedEstTravel = Math.round(data.estimatedTravel).toLocaleString();
+
   return `
     <div class="share-card" style="width: 400px; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); overflow: hidden; margin: 20px auto; font-family: 'Segoe UI', Roboto, Arial, sans-serif;">
       <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; position: relative;">
         <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 600;">License Plate Challenge</h2>
-        <p style="margin: 0; opacity: 0.9; font-size: 16px;">${completionPercent}% Complete • ${data.totalMiles.toLocaleString()} Miles</p>
+        <p style="margin: 0; opacity: 0.9; font-size: 16px;">${completionPercent}% Complete • ${formattedTotalMiles} Miles</p>
         <div style="position: absolute; bottom: 5px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.7);">LicensePlateGame.com</div>
       </div>
       
@@ -309,7 +316,7 @@ function createShareCardHTML(data) {
           <div style="font-size: 12px; color: #666; font-weight: 500;">Farthest</div>
         </div>
         <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
-          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.maxMiles.toLocaleString()}</div>
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${formattedMaxMiles}</div>
           <div style="font-size: 12px; color: #666; font-weight: 500;">Max Miles</div>
         </div>
         <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
@@ -317,7 +324,7 @@ function createShareCardHTML(data) {
           <div style="font-size: 12px; color: #666; font-weight: 500;">Days</div>
         </div>
         <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
-          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.estimatedTravel.toLocaleString()}</div>
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${formattedEstTravel}</div>
           <div style="font-size: 12px; color: #666; font-weight: 500;">Est. Traveled</div>
         </div>
       </div>
@@ -328,7 +335,6 @@ function createShareCardHTML(data) {
     </div>
   `;
 }
-
 function showShareModal() {
   const data = generateShareCard();
   const shareCardHTML = createShareCardHTML(data);
