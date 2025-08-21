@@ -7,9 +7,7 @@ const ALL_STATES = [
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
   "virginia","washington","west_virginia","wisconsin","wyoming", "american_samoa", 
   "commonwealth_of_the_northern_mariana_islands", "district_of_columbia", "guam", 
-  "puerto_rico", "united_states_virgin_islands", "alberta", "british_columbia", "manitoba",
-  "new_brunswick", "newfoundland_and_labrador", "northwest_territories", "nova_scotia",
-  "nunavut", "ontario", "prince_edward_island", "quebec", "saskatchewan", "yukon"
+  "puerto_rico", "united_states_virgin_islands"
 ];
 
 // States that appear on the main US map
@@ -20,10 +18,7 @@ const MAIN_MAP_STATES = [
   "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia",
-  "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador", 
-  "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island", 
-  "quebec", "saskatchewan", "yukon"
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
 ];
 
 // Remote territories for sidebar
@@ -35,10 +30,71 @@ const REMOTE_TERRITORIES = [
   "united_states_virgin_islands"
 ];
 
+// Geographic center of US + Canada (approximately southern Manitoba/northern North Dakota)
+const MAP_CENTER = [50.0, -100.0];
+const MAP_ZOOM = 3;
+
+// Theme definitions
+const THEMES = {
+  classic: {
+    name: "Classic",
+    loggedColor: "#28a745",
+    unloggedColor: "#e9ecef",
+    showLegend: true
+  },
+  random: {
+    name: "Random Colors",
+    colors: ["#007bff", "#dc3545", "#28a745", "#ffc107", "#6f42c1", "#fd7e14"],
+    unloggedColor: "#e9ecef",
+    showLegend: false
+  },
+  flag: {
+    name: "Flag Colors",
+    patterns: {
+      red: "#dc3545",
+      white: "#ffffff",
+      blue: "#1e3a8a",
+      red_stripes: "red_white_stripes",
+      blue_stars: "blue_with_stars"
+    },
+    unloggedColor: "#e9ecef",
+    showLegend: false
+  }
+};
+
+// State assignments for flag theme
+const FLAG_ASSIGNMENTS = {
+  // Red states
+  "alabama": "red", "alaska": "blue", "arizona": "red", "arkansas": "red_stripes",
+  "california": "red", "colorado": "blue", "connecticut": "red_stripes", "delaware": "red_stripes",
+  "florida": "red", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
+  "illinois": "red_stripes", "indiana": "red_stripes", "iowa": "blue", "kansas": "blue",
+  "kentucky": "red", "louisiana": "red", "maine": "red_stripes", "maryland": "red_stripes",
+  "massachusetts": "red_stripes", "michigan": "blue", "minnesota": "blue", "mississippi": "red",
+  "missouri": "red", "montana": "blue", "nebraska": "blue", "nevada": "blue",
+  "new_hampshire": "red_stripes", "new_jersey": "red_stripes", "new_mexico": "red", "new_york": "red_stripes",
+  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "red",
+  "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
+  "south_dakota": "blue", "tennessee": "red", "texas": "red", "utah": "blue",
+  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "red",
+  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars"
+};
+
+// Random color assignments (persistent)
+let randomColorAssignments = {};
+
 // State layers for the map
 let stateMapLayers = {};
 let currentMap = null;
+let currentTheme = 'classic';
 const stateCache = {};
+
+// Function to recenter map
+function recenterMap() {
+  if (currentMap) {
+    currentMap.setView(MAP_CENTER, MAP_ZOOM);
+  }
+}
 
 // Extract lat/lng pairs from GeoJSON coordinates
 function extractPoints(data) {
@@ -88,32 +144,14 @@ async function checkProximity(stateName, userLat, userLon) {
   try {
     if (!stateCache[stateName]) {
       const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
-      console.log(`Loading ${filePath}...`);
       const response = await fetch(filePath);
       if (!response.ok) {
         throw new Error(`Failed to load ${filePath}: ${response.status}`);
       }
       stateCache[stateName] = await response.json();
-      console.log(`Successfully loaded ${stateName}`);
     }
     
     const points = extractPoints(stateCache[stateName]);
-
-     // ADD THIS DEBUGGING
-    if (stateName === 'manitoba') {
-      console.log('Manitoba raw coordinates (first 5 points):');
-      console.log(points.slice(0, 5));
-      console.log('User location:', userLat, userLon);
-      
-      // Check if coordinates look reasonable for Manitoba
-      const firstPoint = points[0];
-      if (firstPoint) {
-        console.log('First Manitoba point:', firstPoint);
-        console.log('Manitoba lat range should be ~49-60, lng range should be ~-102 to -89');
-      }
-    }
-
-    
     if (points.length === 0) {
       throw new Error(`No geographic data available for ${stateName}`);
     }
@@ -125,11 +163,189 @@ async function checkProximity(stateName, userLat, userLon) {
   }
 }
 
-// Simple map initialization - just basic map first
+// Theme functions
+function initializeRandomColors() {
+  const saved = localStorage.getItem('randomColorAssignments');
+  if (saved) {
+    randomColorAssignments = JSON.parse(saved);
+  } else {
+    // Generate random color assignments for all states
+    const colors = THEMES.random.colors;
+    for (const state of ALL_STATES) {
+      randomColorAssignments[state] = colors[Math.floor(Math.random() * colors.length)];
+    }
+    localStorage.setItem('randomColorAssignments', JSON.stringify(randomColorAssignments));
+  }
+}
+
+function getStateStyle(stateName, isLogged) {
+  const theme = THEMES[currentTheme];
+  
+  if (!isLogged) {
+    return {
+      fillColor: theme.unloggedColor,
+      fillOpacity: 0.7,
+      color: "#666",
+      weight: 1
+    };
+  }
+  
+  let fillColor, fillPattern;
+  
+  switch (currentTheme) {
+    case 'classic':
+      fillColor = theme.loggedColor;
+      break;
+      
+    case 'random':
+      fillColor = randomColorAssignments[stateName] || theme.colors[0];
+      break;
+      
+    case 'flag':
+      const assignment = FLAG_ASSIGNMENTS[stateName] || 'red';
+      if (assignment === 'red_stripes') {
+        fillColor = "#dc3545";
+        fillPattern = "url(#red-stripes)";
+      } else if (assignment === 'blue_stars') {
+        fillColor = "#1e3a8a";
+        fillPattern = "url(#blue-stars)";
+      } else {
+        fillColor = theme.patterns[assignment] || theme.patterns.red;
+      }
+      break;
+  }
+  
+  return {
+    fillColor: fillColor,
+    fillOpacity: 0.8,
+    color: "#666",
+    weight: 1
+  };
+}
+
+function createSVGPatterns() {
+  if (currentTheme !== 'flag') return;
+  
+  // Remove existing patterns
+  const existingSvg = document.querySelector('svg[data-patterns="true"]');
+  if (existingSvg) {
+    existingSvg.remove();
+  }
+  
+  // Create SVG patterns for flag theme
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.style.position = "absolute";
+  svg.style.width = "0";
+  svg.style.height = "0";
+  svg.setAttribute("data-patterns", "true");
+  
+  const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+  
+  // Red and white stripes pattern
+  const stripesPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
+  stripesPattern.setAttribute("id", "red-stripes");
+  stripesPattern.setAttribute("patternUnits", "userSpaceOnUse");
+  stripesPattern.setAttribute("width", "20");
+  stripesPattern.setAttribute("height", "20");
+  
+  const rect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect1.setAttribute("width", "20");
+  rect1.setAttribute("height", "10");
+  rect1.setAttribute("fill", "#dc3545");
+  
+  const rect2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect2.setAttribute("y", "10");
+  rect2.setAttribute("width", "20");
+  rect2.setAttribute("height", "10");
+  rect2.setAttribute("fill", "#ffffff");
+  
+  stripesPattern.appendChild(rect1);
+  stripesPattern.appendChild(rect2);
+  
+  // Blue with stars pattern
+  const starsPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
+  starsPattern.setAttribute("id", "blue-stars");
+  starsPattern.setAttribute("patternUnits", "userSpaceOnUse");
+  starsPattern.setAttribute("width", "30");
+  starsPattern.setAttribute("height", "30");
+  
+  const blueRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  blueRect.setAttribute("width", "30");
+  blueRect.setAttribute("height", "30");
+  blueRect.setAttribute("fill", "#1e3a8a");
+  
+  const star = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+  star.setAttribute("points", "15,5 18,12 25,12 20,17 22,24 15,20 8,24 10,17 5,12 12,12");
+  star.setAttribute("fill", "#ffffff");
+  
+  starsPattern.appendChild(blueRect);
+  starsPattern.appendChild(star);
+  
+  defs.appendChild(stripesPattern);
+  defs.appendChild(starsPattern);
+  svg.appendChild(defs);
+  
+  document.body.appendChild(svg);
+}
+
+function updateMapColors(log) {
+  const loggedStates = new Set(Object.keys(log));
+  
+  for (const [stateName, layer] of Object.entries(stateMapLayers)) {
+    if (layer) {
+      const isLogged = loggedStates.has(stateName);
+      const style = getStateStyle(stateName, isLogged);
+      layer.setStyle(style);
+    }
+  }
+  
+  // Update legend visibility
+  const legend = document.getElementById('mapLegend');
+  if (legend) {
+    legend.style.display = THEMES[currentTheme].showLegend ? 'block' : 'none';
+  }
+}
+
+function updateTerritoriesSidebar(log) {
+  const territoriesList = document.getElementById("territoriesList");
+  if (!territoriesList) return;
+  
+  const loggedStates = new Set(Object.keys(log));
+  
+  let html = "";
+  for (const territory of REMOTE_TERRITORIES) {
+    const isLogged = loggedStates.has(territory);
+    const displayName = territory.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    const className = isLogged ? "logged" : "not-logged";
+    
+    // Apply theme colors to territories too
+    let style = "";
+    if (isLogged) {
+      switch (currentTheme) {
+        case 'classic':
+          style = 'style="background-color: #d4edda; border-color: #28a745;"';
+          break;
+        case 'random':
+          const color = randomColorAssignments[territory] || THEMES.random.colors[0];
+          style = `style="background-color: ${color}; border-color: ${color}; color: white;"`;
+          break;
+        case 'flag':
+          // Territories get blue (flag field color)
+          style = 'style="background-color: #1e3a8a; border-color: #1e3a8a; color: white;"';
+          break;
+      }
+    }
+    
+    html += `<div class="territory-item ${className}" ${style}>${displayName}</div>`;
+  }
+  
+  territoriesList.innerHTML = html;
+}
+
+// Simplified map initialization
 async function initializeMap() {
   const mapContainer = document.getElementById('map');
   
-  // Clear existing map
   if (currentMap) {
     try {
       currentMap.remove();
@@ -143,21 +359,14 @@ async function initializeMap() {
   mapContainer.innerHTML = '';
   
   try {
-    console.log("Creating basic map...");
+    currentMap = L.map('map').setView(MAP_CENTER, MAP_ZOOM);
     
-    // Create simple map
-    currentMap = L.map('map').setView([39.8283, -98.5795], 3);
-    
-    // Add gray background
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
       subdomains: 'abcd',
       maxZoom: 19
     }).addTo(currentMap);
     
-    console.log("Basic map created, loading all states...");
-    
-    // Load all main map states
     await loadAllStates();
     
   } catch (error) {
@@ -167,28 +376,16 @@ async function initializeMap() {
 }
 
 async function loadAllStates() {
-  console.log("Loading all main map states:", MAIN_MAP_STATES.length, "states");
-  
-  // Load states in smaller batches to avoid overwhelming the browser
   const batchSize = 8;
   let loadedCount = 0;
   
   for (let i = 0; i < MAIN_MAP_STATES.length; i += batchSize) {
     const batch = MAIN_MAP_STATES.slice(i, i + batchSize);
-    console.log(`Loading batch ${Math.floor(i/batchSize) + 1}: ${batch.join(', ')}`);
-    
     await loadStateBatch(batch);
     loadedCount += batch.length;
-    
-    console.log(`Loaded ${loadedCount}/${MAIN_MAP_STATES.length} states`);
-    
-    // Small delay between batches
     await new Promise(resolve => setTimeout(resolve, 150));
   }
   
-  console.log("Finished loading all states. Map layers:", Object.keys(stateMapLayers));
-  
-  // Update colors based on current log
   const log = loadPlateLog();
   updateMapColors(log);
 }
@@ -211,12 +408,7 @@ async function loadStateBatch(stateNames) {
       
       if (stateCache[stateName] && stateCache[stateName].geojson && currentMap) {
         const layer = L.geoJSON(stateCache[stateName].geojson, {
-          style: {
-            color: "#666",
-            weight: 1,
-            fillOpacity: 0.7,
-            fillColor: "#e9ecef"
-          }
+          style: getStateStyle(stateName, false)
         });
         
         layer.addTo(currentMap);
@@ -227,45 +419,6 @@ async function loadStateBatch(stateNames) {
       console.error(`Could not load ${stateName}:`, error);
     }
   }
-}
-
-function updateMapColors(log) {
-  console.log("Updating map colors for log:", log);
-  const loggedStates = new Set(Object.keys(log));
-  
-  for (const [stateName, layer] of Object.entries(stateMapLayers)) {
-    if (layer) {
-      const isLogged = loggedStates.has(stateName);
-      console.log(`${stateName}: ${isLogged ? 'LOGGED (green)' : 'not logged (gray)'}`);
-      
-      layer.setStyle({
-        fillColor: isLogged ? "#28a745" : "#e9ecef",
-        fillOpacity: 0.7,
-        color: "#666",
-        weight: 2
-      });
-    }
-  }
-}
-
-function updateTerritoriesSidebar(log) {
-  const territoriesList = document.getElementById("territoriesList");
-  if (!territoriesList) {
-    console.error("territoriesList element not found");
-    return;
-  }
-  
-  const loggedStates = new Set(Object.keys(log));
-  
-  let html = "";
-  for (const territory of REMOTE_TERRITORIES) {
-    const isLogged = loggedStates.has(territory);
-    const displayName = territory.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    const className = isLogged ? "logged" : "not-logged";
-    html += `<div class="territory-item ${className}">${displayName}</div>`;
-  }
-  
-  territoriesList.innerHTML = html;
 }
 
 // Enhanced geolocation
@@ -321,14 +474,11 @@ async function getLocationWithFallback() {
 
 async function processLocation(latitude, longitude, stateName) {
   try {
-    console.log(`Processing location: ${latitude}, ${longitude} for ${stateName}`);
-    
     const button = document.getElementById("submitBtn");
     button.disabled = true;
     button.textContent = "Processing...";
     
     const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
-    console.log(`Location: ${label}, Current state: ${currentState}`);
     
     const miles = (stateName === currentState) ? 0 : await checkProximity(stateName, latitude, longitude);
     
@@ -345,6 +495,9 @@ async function processLocation(latitude, longitude, stateName) {
     alert(`Success! You are ${formatNumber(miles)} miles from ${stateLabel}.`);
     
     document.getElementById("stateSelect").value = "";
+    
+    // Recenter map after successful submission
+    setTimeout(recenterMap, 500);
     
   } catch (error) {
     console.error("Error processing location:", error);
@@ -490,7 +643,7 @@ function renderTable(log) {
     .join(", ");
 
   html += `
-      <tr><td colspan="4"><strong>Plates not yet logged:</strong> ${missingLabels}</td></tr>
+      <tr><td colspan="4"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
       <tr><td colspan="4"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
     </tbody>
   </table>
@@ -501,17 +654,38 @@ function renderTable(log) {
 
 // Main interaction
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded, initializing app...");
-  
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const themeSelect = document.getElementById("themeSelect");
+
+  // Initialize themes
+  initializeRandomColors();
+  
+  // Load saved theme
+  const savedTheme = localStorage.getItem('selectedTheme');
+  if (savedTheme && THEMES[savedTheme]) {
+    currentTheme = savedTheme;
+    themeSelect.value = currentTheme;
+  }
 
   // Initialize the map and territories sidebar
-  console.log("Initializing map...");
   initializeMap();
-  
-  console.log("Updating territories sidebar...");
   updateTerritoriesSidebar(loadPlateLog());
+
+  // Theme change handler
+  themeSelect.addEventListener("change", () => {
+    currentTheme = themeSelect.value;
+    localStorage.setItem('selectedTheme', currentTheme);
+    
+    // Create SVG patterns if needed
+    createSVGPatterns();
+    
+    // Update all colors
+    const log = loadPlateLog();
+    updateMapColors(log);
+    updateTerritoriesSidebar(log);
+  });
 
   button.addEventListener("click", async () => {
     const stateName = select.value;
@@ -569,13 +743,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("resetBtn").addEventListener("click", () => {
+  resetBtn.addEventListener("click", () => {
     if (confirm("Are you sure you want to reset the entire log? This cannot be undone.")) {
       localStorage.removeItem("plateLog");
       const emptyLog = {};
       renderTable(emptyLog);
       updateMapColors(emptyLog);
       updateTerritoriesSidebar(emptyLog);
+      
+      // Recenter map after reset
+      setTimeout(recenterMap, 500);
     }
   });
 
@@ -592,8 +769,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Initial render
-  console.log("Rendering initial table...");
   renderTable(loadPlateLog());
   
-  console.log("App initialization complete");
+  // Create initial SVG patterns
+  createSVGPatterns();
 });
