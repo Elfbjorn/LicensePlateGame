@@ -260,11 +260,12 @@ function generateShareCard() {
     uniqueLocations // for debugging
   };
 }
-function generateShareText(data) {
+function generateShareText() {
+  const data = generateShareCard();
   const totalLogged = data.usStates + data.territories + data.canada;
   const completionPercent = Math.round((totalLogged / 69) * 100);
   
-  return `🚗 My License Plate Challenge Progress! 🚗
+  return `🚗 My So Close So Far Progress! 🚗
 
 ${completionPercent}% Complete (${totalLogged}/69 regions)
 📍 US States: ${data.usStates}/51
@@ -274,9 +275,83 @@ ${completionPercent}% Complete (${totalLogged}/69 regions)
 🎯 Total Distance: ${data.totalMiles.toLocaleString()} miles
 🏁 Farthest Plate: ${data.farthestState}
 
-Join the challenge! #LicensePlateGame`;
+Join the challenge: ${window.location.href}`;
 }
 
+async function shareToFacebook() {
+  const text = generateShareText();
+  await copyToClipboard(text);
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+  window.open(url, '_blank', 'width=600,height=400');
+  alert('Caption copied! Paste it when sharing on Facebook.');
+}
+
+async function shareToInstagram() {
+  const text = generateShareText() + '\n\n#SoClosesoFar #LicensePlateGame #RoadTrip';
+  await copyToClipboard(text);
+  alert('Caption copied! Take a screenshot of the share card above and post to Instagram with the copied caption.');
+  window.open('https://www.instagram.com/', '_blank');
+}
+
+async function shareToX() {
+  const data = generateShareCard();
+  const text = `🚗 My So Close So Far progress: ${Math.round(((data.usStates + data.territories + data.canada) / 69) * 100)}% complete!\n\nFarthest plate: ${data.farthestState} (${data.maxMiles.toLocaleString()} miles!)\n\n${window.location.href}\n\n#SoClosesoFar`;
+  await copyToClipboard(text);
+  const url = `https://twitter.com/intent/tweet`;
+  window.open(url, '_blank', 'width=600,height=400');
+  alert('Tweet copied! Paste it when creating your tweet.');
+}
+
+async function shareToThreads() {
+  const text = generateShareText();
+  await copyToClipboard(text);
+  window.open('https://www.threads.net/', '_blank');
+  alert('Caption copied! Paste it when creating your Threads post.');
+}
+
+async function shareToReddit() {
+  const data = generateShareCard();
+  const totalLogged = data.usStates + data.territories + data.canada;
+  const completionPercent = Math.round((totalLogged / 69) * 100);
+  
+  const redditPost = `## My So Close So Far Challenge Progress! 🚗
+
+${completionPercent}% completion on this license plate spotting game!
+
+| Category | Progress |
+|----------|----------|
+| 🇺🇸 US States | ${data.usStates}/51 |
+| 🏝️ US Territories | ${data.territories}/5 |
+| 🍁 Canada | ${data.canada}/13 |
+
+**Farthest plate:** ${data.farthestState} (${data.maxMiles.toLocaleString()} miles away!)
+
+[Try the game here!](${window.location.href})`;
+
+  await copyToClipboard(redditPost);
+  window.open('https://www.reddit.com/submit', '_blank');
+  alert('Reddit post copied! Paste it when creating your post.');
+}
+
+async function copyShareText() {
+  const text = generateShareText();
+  await copyToClipboard(text);
+  alert('Share text copied to clipboard!');
+  document.querySelector('.share-modal')?.remove();
+}
+
+async function copyToClipboard(text) {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
+  } else {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+}
 // REPLACE the createShareCardHTML function with this fixed version
 
 function createShareCardHTML(data) {
@@ -294,7 +369,7 @@ function createShareCardHTML(data) {
   return `
     <div class="share-card" style="width: 400px; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); overflow: hidden; margin: 20px auto; font-family: 'Segoe UI', Roboto, Arial, sans-serif;">
       <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; position: relative;">
-        <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 600;">License Plate Challenge</h2>
+        <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 600;">So Close, So Far</h2>
         <p style="margin: 0; opacity: 0.9; font-size: 16px;">${completionPercent}% Complete • ${formattedTotalMiles} Miles</p>
         <div style="position: absolute; bottom: 5px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.7);">LicensePlateGame.com</div>
       </div>
@@ -356,7 +431,6 @@ function createShareCardHTML(data) {
 function showShareModal() {
   const data = generateShareCard();
   const shareCardHTML = createShareCardHTML(data);
-  const shareText = generateShareText(data);
   
   const modal = document.createElement('div');
   modal.style.cssText = `
@@ -378,13 +452,13 @@ function showShareModal() {
         
         <div style="margin: 20px 0; text-align: center;">
           <h4 style="margin-bottom: 15px; color: #2c3e50;">Choose Platform:</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
-            <button onclick="shareToFacebook('${encodeURIComponent(shareText)}')" style="background: #1877f2; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📘 Facebook</button>
-            <button onclick="shareToX('${encodeURIComponent(shareText)}')" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🔗 X (Twitter)</button>
-            <button onclick="shareToInstagram('${encodeURIComponent(shareText)}')" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📷 Instagram</button>
-            <button onclick="shareToThreads('${encodeURIComponent(shareText)}')" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🧵 Threads</button>
-            <button onclick="shareToReddit('${encodeURIComponent(shareText)}')" style="background: #ff4500; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🔴 Reddit</button>
-            <button onclick="copyShareText('${encodeURIComponent(shareText)}')" style="background: #6c757d; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📋 Copy Text</button>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <button onclick="shareToFacebook()" style="background: #1877f2; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-facebook-f"></i> Facebook</button>
+            <button onclick="shareToInstagram()" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-instagram"></i> Instagram</button>
+            <button onclick="shareToX()" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-x-twitter"></i> X</button>
+            <button onclick="shareToThreads()" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-threads"></i> Threads</button>
+            <button onclick="shareToReddit()" style="background: #ff4500; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-reddit-alien"></i> Reddit</button>
+            <button onclick="copyShareText()" style="background: #6c757d; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fas fa-clipboard"></i> Copy Text</button>
           </div>
         </div>
       </div>
@@ -395,53 +469,12 @@ function showShareModal() {
   document.body.appendChild(modal);
   
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.remove();
-    }
+    if (e.target === modal) modal.remove();
   });
 }
 
 // Social Media Sharing Functions
-function shareToFacebook(text) {
-  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${text}`;
-  window.open(url, '_blank', 'width=600,height=400');
-}
 
-function shareToX(text) {
-  const url = `https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(window.location.href)}`;
-  window.open(url, '_blank', 'width=600,height=400');
-}
-
-function shareToInstagram(text) {
-  copyShareText(text);
-  alert('Share text copied! Instagram doesn\'t support direct sharing, but you can paste this text into your Instagram story or post.');
-  window.open('https://www.instagram.com/', '_blank');
-}
-
-function shareToThreads(text) {
-  const url = `https://www.threads.net/intent/post?text=${text}`;
-  window.open(url, '_blank', 'width=600,height=400');
-}
-
-function shareToReddit(text) {
-  const title = 'My License Plate Challenge Progress!';
-  const url = `https://www.reddit.com/submit?title=${encodeURIComponent(title)}&text=${text}&url=${encodeURIComponent(window.location.href)}`;
-  window.open(url, '_blank', 'width=800,height=600');
-}
-
-function copyShareText(encodedText) {
-  const text = decodeURIComponent(encodedText);
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('Share text copied to clipboard!');
-      document.querySelector('.share-modal')?.remove();
-    }).catch(() => {
-      fallbackCopyText(text);
-    });
-  } else {
-    fallbackCopyText(text);
-  }
-}
 
 function fallbackCopyText(text) {
   const textArea = document.createElement('textarea');
@@ -624,8 +657,16 @@ function updateMapColors(log) {
       const style = getStateStyle(stateName, isLogged);
       layer.setStyle(style);
       
+      // SAFE popup update - check if popup exists first
       const displayName = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-      layer.getPopup().setContent(`<strong>${displayName}</strong><br>${isLogged ? 'Found!' : 'Not found yet'}`);
+      const popupContent = `<strong>${displayName}</strong><br>${isLogged ? 'Found!' : 'Not found yet'}`;
+      
+      if (layer.getPopup()) {
+        layer.getPopup().setContent(popupContent);
+      } else {
+        // Create popup if it doesn't exist
+        layer.bindPopup(popupContent);
+      }
     }
   }
 }
