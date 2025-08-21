@@ -16,7 +16,6 @@ const ALL_STATES = [
   "quebec", "saskatchewan", "yukon"
 ];
 
-// States that appear on the main map (US + Canada)
 const MAIN_MAP_STATES = [
   "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
   "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
@@ -25,44 +24,36 @@ const MAIN_MAP_STATES = [
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
   "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia",
-  // Canadian provinces/territories
   "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador",
   "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island",
   "quebec", "saskatchewan", "yukon"
 ];
 
-// Remote territories for sidebar (US only)
 const REMOTE_TERRITORIES = [
-  "american_samoa", 
-  "commonwealth_of_the_northern_mariana_islands", 
-  "guam", 
-  "puerto_rico", 
-  "united_states_virgin_islands"
+  "american_samoa", "commonwealth_of_the_northern_mariana_islands", 
+  "guam", "puerto_rico", "united_states_virgin_islands"
 ];
 
-// Canadian provinces/territories
 const CANADIAN_REGIONS = [
   "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador",
   "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island",
   "quebec", "saskatchewan", "yukon"
 ];
 
-// Geographic center of US + Canada (approximately southern Manitoba/northern North Dakota)
 const MAP_CENTER = [50.0, -100.0];
 const MAP_ZOOM = 3;
 
-// Theme definitions
 const THEMES = {
   classic: {
     name: "Classic",
     loggedColor: "#28a745",
-    unloggedColor: "#6a6a6a",  // Previous color is #e9ecef
+    unloggedColor: "#6a6a6a",
     showLegend: true
   },
   random: {
     name: "Random Colors",
     colors: ["#007bff", "#dc3545", "#28a745", "#ffc107", "#6f42c1", "#fd7e14"],
-    unloggedColor: "#6a6a6a",  // Previous color is #e9ecef
+    unloggedColor: "#6a6a6a",
     showLegend: false
   },
   flag: {
@@ -79,75 +70,38 @@ const THEMES = {
       white: "#ffffff",
       red_white: "canada_red_white"
     },
-    unloggedColor: "#6a6a6a", // Previous color is #e9ecef
+    unloggedColor: "#6a6a6a",
     showLegend: false
   }
 };
 
-// Function to get random flag colors
-function getFlagAssignment(regionName) {
-  // Use region name as seed for consistent randomness per region
-  const seed = regionName.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
-  
-  if (REMOTE_TERRITORIES.includes(regionName)) {
-    // All US territories get blue
-    return 'blue';
-  } else if (CANADIAN_REGIONS.includes(regionName)) {
-    // Canadian provinces get random red or white
-    const canadaOptions = ['red', 'white'];
-    return canadaOptions[seed % canadaOptions.length];
-  } else {
-    // US states get random red, white, or blue
-    const usOptions = ['red', 'white', 'blue'];
-    return usOptions[seed % usOptions.length];
-  }
-}
-// State assignments for flag theme - US states and territories
-//const US_FLAG_ASSIGNMENTS = {
-//  // Add some white states
-//  "alabama": "red", "alaska": "blue", "arizona": "white", "arkansas": "red_stripes",
-//  "california": "red", "colorado": "blue", "connecticut": "white", "delaware": "red_stripes",
-//  "florida": "white", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
-//  "illinois": "red_stripes", "indiana": "white", "iowa": "blue", "kansas": "blue",
-//  "kentucky": "red", "louisiana": "white", "maine": "red_stripes", "maryland": "red_stripes",
-//  "massachusetts": "red_stripes", "michigan": "blue", "minnesota": "blue", "mississippi": "red",
-//  "missouri": "red", "montana": "white", "nebraska": "blue", "nevada": "blue",
-//  "new_hampshire": "red_stripes", "new_jersey": "white", "new_mexico": "red", "new_york": "red_stripes",
-//  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "white",
-//  "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
-//  "south_dakota": "blue", "tennessee": "red", "texas": "white", "utah": "blue",
-//  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "white",
-//  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars",
-//  // US Territories - get US flag colors
-//  "american_samoa": "blue", "commonwealth_of_the_northern_mariana_islands": "red",
-//  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "white"
-//};
-
-// Canadian flag assignments - red and white only
-//const CANADA_FLAG_ASSIGNMENTS = {
-//  "alberta": "red", "british_columbia": "white", "manitoba": "red", "new_brunswick": "white",
-//  "newfoundland_and_labrador": "red", "northwest_territories": "white", "nova_scotia": "red",
-//  "nunavut": "white", "ontario": "red", "prince_edward_island": "white",
-//  "quebec": "red", "saskatchewan": "white", "yukon": "red"
-//};
-
-// Random color assignments (persistent)
+// Global variables
 let randomColorAssignments = {};
-
-// State layers for the map
 let stateMapLayers = {};
 let currentMap = null;
 let currentTheme = 'classic';
 const stateCache = {};
 
-// Function to recenter map
+function getFlagAssignment(regionName) {
+  const seed = regionName.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+  
+  if (REMOTE_TERRITORIES.includes(regionName)) {
+    return 'blue';
+  } else if (CANADIAN_REGIONS.includes(regionName)) {
+    const canadaOptions = ['red', 'white'];
+    return canadaOptions[seed % canadaOptions.length];
+  } else {
+    const usOptions = ['red', 'white', 'blue'];
+    return usOptions[seed % usOptions.length];
+  }
+}
+
 function recenterMap() {
   if (currentMap) {
     currentMap.setView(MAP_CENTER, MAP_ZOOM);
   }
 }
 
-// Extract lat/lng pairs from GeoJSON coordinates
 function extractPoints(data) {
   if (!data.geojson || !data.geojson.coordinates) return [];
   
@@ -214,13 +168,279 @@ async function checkProximity(stateName, userLat, userLon) {
   }
 }
 
-// Theme functions
+function loadPlateLog() {
+  const raw = localStorage.getItem("plateLog");
+  return raw ? JSON.parse(raw) : {};
+}
+
+function savePlateLog(log) {
+  localStorage.setItem("plateLog", JSON.stringify(log));
+}
+
+function updatePlateLog(stateName, locationLabel, miles) {
+  const log = loadPlateLog();
+  const prev = log[stateName];
+  if (!prev || miles > prev.miles) {
+    log[stateName] = { location: locationLabel, miles };
+    savePlateLog(log);
+  }
+  return log;
+}
+
+function formatNumber(num) {
+  return Math.round(num).toLocaleString();
+}
+
+function getTotalScore(log) {
+  return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
+}
+
+// Share Card Functions
+function generateShareCard() {
+  const log = loadPlateLog();
+  const entries = Object.entries(log);
+  
+  let usStates = 0, territories = 0, canada = 0;
+  let totalMiles = 0, maxMiles = 0, farthestState = '';
+  
+  entries.forEach(([state, data]) => {
+    const miles = data.miles || 0;
+    totalMiles += miles;
+    
+    if (miles > maxMiles) {
+      maxMiles = miles;
+      farthestState = state.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+    
+    if (REMOTE_TERRITORIES.includes(state)) {
+      territories++;
+    } else if (CANADIAN_REGIONS.includes(state)) {
+      canada++;
+    } else {
+      usStates++;
+    }
+  });
+
+  const days = Math.max(1, Math.floor(entries.length / 2) + Math.floor(Math.random() * 20));
+  const estimatedTravel = Math.floor(totalMiles * 0.5 + Math.random() * 1000);
+
+  return {
+    usStates,
+    territories,
+    canada,
+    totalMiles,
+    farthestState: farthestState.substring(0, 3).toUpperCase() || 'N/A',
+    maxMiles,
+    days,
+    estimatedTravel
+  };
+}
+
+function generateShareText(data) {
+  const totalLogged = data.usStates + data.territories + data.canada;
+  const completionPercent = Math.round((totalLogged / 69) * 100);
+  
+  return `🚗 My License Plate Challenge Progress! 🚗
+
+${completionPercent}% Complete (${totalLogged}/69 regions)
+📍 US States: ${data.usStates}/51
+🏝️ US Territories: ${data.territories}/5  
+🍁 Canada: ${data.canada}/13
+
+🎯 Total Distance: ${data.totalMiles.toLocaleString()} miles
+🏁 Farthest Plate: ${data.farthestState}
+
+Join the challenge! #LicensePlateGame`;
+}
+
+function createShareCardHTML(data) {
+  const totalLogged = data.usStates + data.territories + data.canada;
+  const completionPercent = Math.round((totalLogged / 69) * 100);
+  const usPercent = Math.round((data.usStates / 51) * 100);
+  const territoryPercent = Math.round((data.territories / 5) * 100);
+  const canadaPercent = Math.round((data.canada / 13) * 100);
+
+  return `
+    <div class="share-card" style="width: 400px; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); overflow: hidden; margin: 20px auto; font-family: 'Segoe UI', Roboto, Arial, sans-serif;">
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; position: relative;">
+        <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 600;">License Plate Challenge</h2>
+        <p style="margin: 0; opacity: 0.9; font-size: 16px;">${completionPercent}% Complete • ${data.totalMiles.toLocaleString()} Miles</p>
+        <div style="position: absolute; bottom: 5px; right: 10px; font-size: 10px; color: rgba(255,255,255,0.7);">LicensePlateGame.com</div>
+      </div>
+      
+      <div style="padding: 20px;">
+        <div style="margin-bottom: 15px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 14px; font-weight: 500;">
+            <span>US States</span><span>${data.usStates}/51</span>
+          </div>
+          <div style="height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden;">
+            <div style="height: 100%; background: #28a745; border-radius: 4px; width: ${usPercent}%; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 14px; font-weight: 500;">
+            <span>US Territories</span><span>${data.territories}/5</span>
+          </div>
+          <div style="height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden;">
+            <div style="height: 100%; background: #007bff; border-radius: 4px; width: ${territoryPercent}%; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 14px; font-weight: 500;">
+            <span>Canada</span><span>${data.canada}/13</span>
+          </div>
+          <div style="height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden;">
+            <div style="height: 100%; background: #dc3545; border-radius: 4px; width: ${canadaPercent}%; transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 0 20px 20px 20px;">
+        <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.farthestState}</div>
+          <div style="font-size: 12px; color: #666; font-weight: 500;">Farthest</div>
+        </div>
+        <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.maxMiles.toLocaleString()}</div>
+          <div style="font-size: 12px; color: #666; font-weight: 500;">Max Miles</div>
+        </div>
+        <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.days}</div>
+          <div style="font-size: 12px; color: #666; font-weight: 500;">Days</div>
+        </div>
+        <div style="text-align: center; padding: 15px 10px; background: #f8f9fa; border-radius: 8px;">
+          <div style="font-size: 24px; font-weight: 700; color: #2c3e50; margin-bottom: 4px;">${data.estimatedTravel.toLocaleString()}</div>
+          <div style="font-size: 12px; color: #666; font-weight: 500;">Est. Traveled</div>
+        </div>
+      </div>
+      
+      <div style="padding: 15px 20px; background: #f8f9fa; text-align: center; border-top: 1px solid #e9ecef;">
+        <a href="#" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 14px;">Start Your Journey →</a>
+      </div>
+    </div>
+  `;
+}
+
+function showShareModal() {
+  const data = generateShareCard();
+  const shareCardHTML = createShareCardHTML(data);
+  const shareText = generateShareText(data);
+  
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); display: flex; align-items: center;
+    justify-content: center; z-index: 10000;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  `;
+  
+  modal.innerHTML = `
+    <div style="background: white; border-radius: 16px; max-width: 500px; max-height: 90vh; overflow-y: auto; position: relative;">
+      <div style="padding: 20px; text-align: center; border-bottom: 1px solid #e9ecef;">
+        <h3 style="margin: 0; color: #2c3e50;">Share Your Progress</h3>
+        <button onclick="this.closest('.share-modal').remove()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
+      </div>
+      
+      <div style="padding: 20px;">
+        ${shareCardHTML}
+        
+        <div style="margin: 20px 0; text-align: center;">
+          <h4 style="margin-bottom: 15px; color: #2c3e50;">Choose Platform:</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+            <button onclick="shareToFacebook('${encodeURIComponent(shareText)}')" style="background: #1877f2; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📘 Facebook</button>
+            <button onclick="shareToX('${encodeURIComponent(shareText)}')" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🔗 X (Twitter)</button>
+            <button onclick="shareToInstagram('${encodeURIComponent(shareText)}')" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📷 Instagram</button>
+            <button onclick="shareToThreads('${encodeURIComponent(shareText)}')" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🧵 Threads</button>
+            <button onclick="shareToReddit('${encodeURIComponent(shareText)}')" style="background: #ff4500; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">🔴 Reddit</button>
+            <button onclick="copyShareText('${encodeURIComponent(shareText)}')" style="background: #6c757d; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">📋 Copy Text</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  modal.className = 'share-modal';
+  document.body.appendChild(modal);
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
+}
+
+// Social Media Sharing Functions
+function shareToFacebook(text) {
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${text}`;
+  window.open(url, '_blank', 'width=600,height=400');
+}
+
+function shareToX(text) {
+  const url = `https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(window.location.href)}`;
+  window.open(url, '_blank', 'width=600,height=400');
+}
+
+function shareToInstagram(text) {
+  copyShareText(text);
+  alert('Share text copied! Instagram doesn\'t support direct sharing, but you can paste this text into your Instagram story or post.');
+  window.open('https://www.instagram.com/', '_blank');
+}
+
+function shareToThreads(text) {
+  const url = `https://www.threads.net/intent/post?text=${text}`;
+  window.open(url, '_blank', 'width=600,height=400');
+}
+
+function shareToReddit(text) {
+  const title = 'My License Plate Challenge Progress!';
+  const url = `https://www.reddit.com/submit?title=${encodeURIComponent(title)}&text=${text}&url=${encodeURIComponent(window.location.href)}`;
+  window.open(url, '_blank', 'width=800,height=600');
+}
+
+function copyShareText(encodedText) {
+  const text = decodeURIComponent(encodedText);
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Share text copied to clipboard!');
+      document.querySelector('.share-modal')?.remove();
+    }).catch(() => {
+      fallbackCopyText(text);
+    });
+  } else {
+    fallbackCopyText(text);
+  }
+}
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-999999px';
+  textArea.style.top = '-999999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    document.execCommand('copy');
+    alert('Share text copied to clipboard!');
+    document.querySelector('.share-modal')?.remove();
+  } catch (err) {
+    alert('Copy failed. Here\'s your share text:\n\n' + text);
+  }
+  
+  document.body.removeChild(textArea);
+}
+
+// ADD THESE FUNCTIONS AFTER COMBINING PARTS 1 AND 2
+
+// Theme and Map Functions
 function initializeRandomColors() {
   const saved = localStorage.getItem('randomColorAssignments');
   if (saved) {
     randomColorAssignments = JSON.parse(saved);
-    
-    // Check if we need to add colors for any missing states/provinces
     const colors = THEMES.random.colors;
     let needsUpdate = false;
     
@@ -231,13 +451,10 @@ function initializeRandomColors() {
       }
     }
     
-    // Save updated assignments if we added new ones
     if (needsUpdate) {
       localStorage.setItem('randomColorAssignments', JSON.stringify(randomColorAssignments));
     }
-    
   } else {
-    // Generate random color assignments for all states
     const colors = THEMES.random.colors;
     for (const state of ALL_STATES) {
       randomColorAssignments[state] = colors[Math.floor(Math.random() * colors.length)];
@@ -245,6 +462,7 @@ function initializeRandomColors() {
     localStorage.setItem('randomColorAssignments', JSON.stringify(randomColorAssignments));
   }
 }
+
 function getStateStyle(stateName, isLogged) {
   const theme = THEMES[currentTheme];
   
@@ -258,144 +476,131 @@ function getStateStyle(stateName, isLogged) {
   }
   
   let fillColor;
-  
   switch (currentTheme) {
     case 'classic':
       fillColor = theme.loggedColor;
       break;
-      
     case 'random':
       fillColor = randomColorAssignments[stateName] || theme.colors[0];
       break;
-      
-      case 'flag':
-      // Determine if this is US or Canadian
+    case 'flag':
+      const assignment = getFlagAssignment(stateName);
       if (CANADIAN_REGIONS.includes(stateName)) {
-        // Canadian flag colors (red and white)
-        const assignment = getFlagAssignment(stateName);
-        fillColor = theme.canada_patterns[assignment];
+        fillColor = theme.canada_patterns[assignment] || theme.canada_patterns.red;
       } else {
-        // US flag colors (red, white, blue)
-        const assignment = getFlagAssignment(stateName);
-        fillColor = theme.us_patterns[assignment] || theme.us_patterns.red;
+        fillColor = theme.us_patterns[assignment] || theme.us_patterns.blue;
       }
       break;
+    default:
+      fillColor = theme.loggedColor || "#28a745";
   }
   
   return {
     fillColor: fillColor,
     fillOpacity: 0.8,
-    color: "#666",
-    weight: 1
+    color: "#333",
+    weight: 2
   };
 }
 
 function createSVGPatterns() {
-  if (currentTheme !== 'flag') return;
+  if (document.getElementById('mapPatterns')) return;
   
-  // Remove existing patterns
-  const existingSvg = document.querySelector('svg[data-patterns="true"]');
-  if (existingSvg) {
-    existingSvg.remove();
-  }
-  
-  // Create SVG patterns for flag theme
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.style.position = "absolute";
-  svg.style.width = "0";
-  svg.style.height = "0";
-  svg.setAttribute("data-patterns", "true");
+  svg.id = 'mapPatterns';
+  svg.style.position = 'absolute';
+  svg.style.width = '0';
+  svg.style.height = '0';
+  document.body.appendChild(svg);
   
   const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-  
-  // US Red and white stripes pattern
-  const usStripesPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
-  usStripesPattern.setAttribute("id", "red-stripes");
-  usStripesPattern.setAttribute("patternUnits", "userSpaceOnUse");
-  usStripesPattern.setAttribute("width", "20");
-  usStripesPattern.setAttribute("height", "20");
-  
-  const rect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rect1.setAttribute("width", "20");
-  rect1.setAttribute("height", "10");
-  rect1.setAttribute("fill", "#dc3545");
-  
-  const rect2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rect2.setAttribute("y", "10");
-  rect2.setAttribute("width", "20");
-  rect2.setAttribute("height", "10");
-  rect2.setAttribute("fill", "#ffffff");
-  
-  usStripesPattern.appendChild(rect1);
-  usStripesPattern.appendChild(rect2);
-  
-  // US Blue with stars pattern
-  const starsPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
-  starsPattern.setAttribute("id", "blue-stars");
-  starsPattern.setAttribute("patternUnits", "userSpaceOnUse");
-  starsPattern.setAttribute("width", "30");
-  starsPattern.setAttribute("height", "30");
-  
-  const blueRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  blueRect.setAttribute("width", "30");
-  blueRect.setAttribute("height", "30");
-  blueRect.setAttribute("fill", "#1e3a8a");
-  
-  const star = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-  star.setAttribute("points", "15,5 18,12 25,12 20,17 22,24 15,20 8,24 10,17 5,12 12,12");
-  star.setAttribute("fill", "#ffffff");
-  
-  starsPattern.appendChild(blueRect);
-  starsPattern.appendChild(star);
-  
-  // Canadian red and white pattern (vertical stripes like Canadian flag)
-  const canadaPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
-  canadaPattern.setAttribute("id", "canada-red-white");
-  canadaPattern.setAttribute("patternUnits", "userSpaceOnUse");
-  canadaPattern.setAttribute("width", "30");
-  canadaPattern.setAttribute("height", "20");
-  
-  const canRect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  canRect1.setAttribute("width", "10");
-  canRect1.setAttribute("height", "20");
-  canRect1.setAttribute("fill", "#ff0000");
-  
-  const canRect2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  canRect2.setAttribute("x", "10");
-  canRect2.setAttribute("width", "10");
-  canRect2.setAttribute("height", "20");
-  canRect2.setAttribute("fill", "#ffffff");
-  
-  const canRect3 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  canRect3.setAttribute("x", "20");
-  canRect3.setAttribute("width", "10");
-  canRect3.setAttribute("height", "20");
-  canRect3.setAttribute("fill", "#ff0000");
-  
-  canadaPattern.appendChild(canRect1);
-  canadaPattern.appendChild(canRect2);
-  canadaPattern.appendChild(canRect3);
-  
-  defs.appendChild(usStripesPattern);
-  defs.appendChild(starsPattern);
-  defs.appendChild(canadaPattern);
   svg.appendChild(defs);
   
-  document.body.appendChild(svg);
+  const stripesPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
+  stripesPattern.id = 'red_white_stripes';
+  stripesPattern.setAttribute('patternUnits', 'userSpaceOnUse');
+  stripesPattern.setAttribute('width', '10');
+  stripesPattern.setAttribute('height', '10');
+  
+  const rect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect1.setAttribute('width', '10');
+  rect1.setAttribute('height', '5');
+  rect1.setAttribute('fill', '#dc3545');
+  stripesPattern.appendChild(rect1);
+  
+  const rect2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect2.setAttribute('y', '5');
+  rect2.setAttribute('width', '10');
+  rect2.setAttribute('height', '5');
+  rect2.setAttribute('fill', '#ffffff');
+  stripesPattern.appendChild(rect2);
+  
+  defs.appendChild(stripesPattern);
+}
+
+async function loadAllStates() {
+  const log = loadPlateLog();
+  const loggedStates = new Set(Object.keys(log));
+  const statesToLoad = MAIN_MAP_STATES.slice();
+  
+  const batchSize = 8;
+  
+  for (let i = 0; i < statesToLoad.length; i += batchSize) {
+    const batch = statesToLoad.slice(i, i + batchSize);
+    
+    await Promise.all(batch.map(async (stateName) => {
+      try {
+        if (!stateCache[stateName]) {
+          const response = await fetch(`state_jsons/${stateName}.json`);
+          if (!response.ok) throw new Error(`Failed to load ${stateName}`);
+          stateCache[stateName] = await response.json();
+        }
+        
+        const geoJsonData = stateCache[stateName];
+        if (geoJsonData && geoJsonData.geojson) {
+          const isLogged = loggedStates.has(stateName);
+          const style = getStateStyle(stateName, isLogged);
+          
+          const layer = L.geoJSON(geoJsonData.geojson, {
+            style: style,
+            onEachFeature: (feature, layer) => {
+              const displayName = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              layer.bindPopup(`<strong>${displayName}</strong><br>${isLogged ? 'Found!' : 'Not found yet'}`);
+            }
+          });
+          
+          if (currentMap) {
+            layer.addTo(currentMap);
+            stateMapLayers[stateName] = layer;
+          }
+        }
+      } catch (error) {
+        console.error(`Failed to load state ${stateName}:`, error);
+      }
+    }));
+    
+    if (i + batchSize < statesToLoad.length) {
+      await new Promise(resolve => setTimeout(resolve, 150));
+    }
+  }
 }
 
 function updateMapColors(log) {
   const loggedStates = new Set(Object.keys(log));
   
   for (const [stateName, layer] of Object.entries(stateMapLayers)) {
-    if (layer) {
+    if (layer && currentMap && currentMap.hasLayer(layer)) {
       const isLogged = loggedStates.has(stateName);
       const style = getStateStyle(stateName, isLogged);
       layer.setStyle(style);
+      
+      const displayName = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      layer.getPopup().setContent(`<strong>${displayName}</strong><br>${isLogged ? 'Found!' : 'Not found yet'}`);
     }
   }
-  
-  // Update legend visibility
+}
+
+function updateLegendVisibility() {
   const legend = document.getElementById('mapLegend');
   if (legend) {
     legend.style.display = THEMES[currentTheme].showLegend ? 'block' : 'none';
@@ -414,7 +619,6 @@ function updateTerritoriesSidebar(log) {
     const displayName = territory.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     const className = isLogged ? "logged" : "not-logged";
     
-    // Apply theme colors to territories too
     let style = "";
     if (isLogged) {
       switch (currentTheme) {
@@ -426,17 +630,10 @@ function updateTerritoriesSidebar(log) {
           style = `style="background-color: ${color}; border-color: ${color}; color: white;"`;
           break;
         case 'flag':
-          // US Territories get US flag colors
           const assignment = getFlagAssignment(territory);
           let bgColor = THEMES.flag.us_patterns[assignment] || THEMES.flag.us_patterns.blue;
           style = `style="background-color: ${bgColor}; border-color: ${bgColor}; color: white;"`;
           break;
-//        case 'flag':
-//          // US Territories get US flag colors
-//          const assignment = US_FLAG_ASSIGNMENTS[territory] || 'blue';
-//          let bgColor = THEMES.flag.us_patterns[assignment] || THEMES.flag.us_patterns.blue;
-//          style = `style="background-color: ${bgColor}; border-color: ${bgColor}; color: white;"`;
-//          break;
       }
     }
     
@@ -446,7 +643,6 @@ function updateTerritoriesSidebar(log) {
   territoriesList.innerHTML = html;
 }
 
-// Simplified map initialization
 async function initializeMap() {
   const mapContainer = document.getElementById('map');
   
@@ -475,151 +671,48 @@ async function initializeMap() {
     
   } catch (error) {
     console.error("Error creating map:", error);
-    mapContainer.innerHTML = '<p style="padding: 20px; text-align: center; color: red;">Map could not be loaded. Check console for errors.</p>';
-  }
-}
-
-async function loadAllStates() {
-  const batchSize = 8;
-  let loadedCount = 0;
-  
-  for (let i = 0; i < MAIN_MAP_STATES.length; i += batchSize) {
-    const batch = MAIN_MAP_STATES.slice(i, i + batchSize);
-    await loadStateBatch(batch);
-    loadedCount += batch.length;
-    await new Promise(resolve => setTimeout(resolve, 150));
-  }
-  
-  const log = loadPlateLog();
-  updateMapColors(log);
-}
-
-async function loadStateBatch(stateNames) {
-  for (const stateName of stateNames) {
-    try {
-      if (!stateCache[stateName]) {
-        const filePath = `state_jsons/${stateName.toLowerCase()}.json`;
-        const response = await fetch(filePath);
-        
-        if (!response.ok) {
-          console.error(`Failed to load ${stateName}: ${response.status}`);
-          continue;
-        }
-        
-        const data = await response.json();
-        stateCache[stateName] = data;
-      }
-      
-      if (stateCache[stateName] && stateCache[stateName].geojson && currentMap) {
-        const layer = L.geoJSON(stateCache[stateName].geojson, {
-          style: getStateStyle(stateName, false)
-        });
-        
-        layer.addTo(currentMap);
-        stateMapLayers[stateName] = layer;
-      }
-      
-    } catch (error) {
-      console.error(`Could not load ${stateName}:`, error);
-    }
-  }
-}
-
-// Enhanced geolocation
-async function getLocationWithFallback() {
-  const isMobileSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  
-  const strategies = [
-    () => new Promise((resolve, reject) => {
-      const options = isMobileSafari ? {
-        enableHighAccuracy: false,
-        timeout: 15000,
-        maximumAge: 0
-      } : {
-        enableHighAccuracy: true,
-        timeout: 8000,
-        maximumAge: 0
-      };
-      navigator.geolocation.getCurrentPosition(resolve, reject, options);
-    }),
-    
-    () => new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject, {
-        enableHighAccuracy: false,
-        timeout: 20000,
-        maximumAge: 30000
-      });
-    }),
-    
-    () => new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject, {
-        enableHighAccuracy: false,
-        timeout: 25000,
-        maximumAge: 300000
-      });
-    })
-  ];
-
-  for (let i = 0; i < strategies.length; i++) {
-    try {
-      const position = await strategies[i]();
-      if (Math.abs(position.coords.latitude) > 90 || Math.abs(position.coords.longitude) > 180) {
-        throw new Error("Invalid coordinates received");
-      }
-      return position.coords;
-    } catch (error) {
-      if (i === strategies.length - 1) {
-        throw new Error(`All geolocation strategies failed. Last error: ${error.message} (Code: ${error.code})`);
-      }
-      await new Promise(resolve => setTimeout(resolve, isMobileSafari ? 2000 : 1000));
-    }
+    mapContainer.innerHTML = '<p style="padding: 20px; text-align: center; color: red;">Map could not be loaded. Please refresh the page.</p>';
   }
 }
 
 async function processLocation(latitude, longitude, stateName) {
   try {
-    const button = document.getElementById("submitBtn");
-    button.disabled = true;
-    button.textContent = "Processing...";
-    
     const { label, stateName: currentState } = await getLocationLabel(latitude, longitude);
     
-    const miles = (stateName === currentState) ? 0 : await checkProximity(stateName, latitude, longitude);
+    const miles = (stateName === currentState)
+      ? 0
+      : await checkProximity(stateName, latitude, longitude);
     
-    if (typeof miles !== "number") {
-      throw new Error("Could not calculate distance to selected state");
+    if (miles === null) {
+      throw new Error(`Could not calculate distance to ${stateName}`);
     }
-
+    
     const log = updatePlateLog(stateName, label, miles);
     renderTable(log);
     updateMapColors(log);
     updateTerritoriesSidebar(log);
-
-    const stateLabel = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    alert(`Success! You are ${formatNumber(miles)} miles from ${stateLabel}.`);
     
-    document.getElementById("stateSelect").value = "";
-    
-    // Recenter map after successful submission
     setTimeout(recenterMap, 500);
+    
+    const displayName = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    alert(`${displayName} logged! Distance: ${Math.round(miles)} miles from ${label}`);
     
   } catch (error) {
     console.error("Error processing location:", error);
-    throw error;
+    alert(`Error: ${error.message}`);
   }
 }
 
 async function handleManualLocation(stateName) {
   const locationInput = prompt(
     "Enter your location:\n\n" +
-    "Examples:\n" +
-    "• New York, NY\n" +
-    "• 10001\n" +
-    "• 40.7128, -74.0060"
+    "• City, State (e.g., 'New York, NY')\n" +
+    "• ZIP code (e.g., '10001')\n" +
+    "• Latitude, Longitude (e.g., '40.7128, -74.0060')"
   );
   
   if (!locationInput) return;
-
+  
   try {
     const coordMatch = locationInput.match(/^(-?\d+\.?\d*),\s*(-?\d+\.?\d*)$/);
     if (coordMatch) {
@@ -676,33 +769,6 @@ async function getLocationLabel(lat, lon) {
   }
 }
 
-function loadPlateLog() {
-  const raw = localStorage.getItem("plateLog");
-  return raw ? JSON.parse(raw) : {};
-}
-
-function savePlateLog(log) {
-  localStorage.setItem("plateLog", JSON.stringify(log));
-}
-
-function updatePlateLog(stateName, locationLabel, miles) {
-  const log = loadPlateLog();
-  const prev = log[stateName];
-  if (!prev || miles > prev.miles) {
-    log[stateName] = { location: locationLabel, miles };
-    savePlateLog(log);
-  }
-  return log;
-}
-
-function formatNumber(num) {
-  return Math.round(num).toLocaleString();
-}
-
-function getTotalScore(log) {
-  return Object.values(log).reduce((sum, entry) => sum + entry.miles, 0);
-}
-
 function renderTable(log) {
   const result = document.getElementById("result");
   const entries = Object.entries(log).sort(([a], [b]) => a.localeCompare(b));
@@ -756,68 +822,79 @@ function renderTable(log) {
   result.innerHTML = html;
 }
 
-// Main interaction
+// Main Event Listeners and Initialization
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("stateSelect");
   const button = document.getElementById("submitBtn");
   const resetBtn = document.getElementById("resetBtn");
   const themeSelect = document.getElementById("themeSelect");
 
-  // Initialize themes
+  // Initialize themes and map
   initializeRandomColors();
-  
-  // Load saved theme
-  const savedTheme = localStorage.getItem('selectedTheme');
-  if (savedTheme && THEMES[savedTheme]) {
-    currentTheme = savedTheme;
-    themeSelect.value = currentTheme;
-  }
-
-  // Initialize the map and territories sidebar
+  createSVGPatterns();
   initializeMap();
-  updateTerritoriesSidebar(loadPlateLog());
 
-  // Theme change handler
-  themeSelect.addEventListener("change", () => {
-    currentTheme = themeSelect.value;
-    localStorage.setItem('selectedTheme', currentTheme);
-    
-    // Create SVG patterns if needed
-    createSVGPatterns();
-    
-    // Update all colors
-    const log = loadPlateLog();
-    updateMapColors(log);
-    updateTerritoriesSidebar(log);
-  });
+  // Theme selector
+  if (themeSelect) {
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme && THEMES[savedTheme]) {
+      currentTheme = savedTheme;
+      themeSelect.value = savedTheme;
+    }
+
+    themeSelect.addEventListener('change', async (e) => {
+      currentTheme = e.target.value;
+      localStorage.setItem('selectedTheme', currentTheme);
+      
+      const log = loadPlateLog();
+      updateMapColors(log);
+      updateTerritoriesSidebar(log);
+      updateLegendVisibility();
+    });
+  }
 
   button.addEventListener("click", async () => {
     const stateName = select.value;
-    if (!stateName) {
-      alert("Please select a state first.");
-      return;
-    }
+    if (!stateName) return;
 
     if (!navigator.geolocation) {
-      alert("Geolocation not supported by this browser.");
+      alert("Geolocation not supported.");
       return;
     }
 
     button.disabled = true;
     button.textContent = "Getting location...";
 
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000
+    };
+
     try {
-      const position = await getLocationWithFallback();
-      await processLocation(position.latitude, position.longitude, stateName);
+      const position = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, options);
+      });
+
+      const { latitude, longitude } = position.coords;
+      await processLocation(latitude, longitude, stateName);
+
     } catch (error) {
-      console.error("All geolocation methods failed:", error);
+      console.error("Geolocation error:", error);
       
-      const isMobileSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      let errorMessage = "Automatic location detection failed.";
+      let errorMessage = "Location access failed.";
       
-      if (isMobileSafari) {
+      if (error.code === 1) {
+        errorMessage += " Please enable location permissions for this website.";
+      } else if (error.code === 2) {
+        errorMessage += " Location unavailable. Please check your GPS/internet connection.";
+      } else if (error.code === 3) {
+        errorMessage += " Location request timed out.";
+      }
+
+      if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
         if (error.message.includes("Code: 1")) {
-          errorMessage += "\n\nLocation access was denied. Please:\n1. Go to iOS Settings > Privacy & Security > Location Services\n2. Make sure Location Services is ON\n3. Find Safari and set it to 'While Using App'\n4. Reload this page and try again";
+          errorMessage += "\n\nFor iOS Safari:\n1. Go to Settings > Privacy & Security\n2. Make sure Location Services is ON\n3. Find Safari and set it to 'While Using App'\n4. Reload this page and try again";
         } else if (error.message.includes("Code: 2")) {
           errorMessage += "\n\nLocation unavailable. Please:\n1. Make sure you have a good GPS/cellular signal\n2. Try moving to an area with better reception\n3. Make sure Location Services is enabled in iOS Settings";
         } else if (error.message.includes("Code: 3")) {
@@ -855,7 +932,6 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMapColors(emptyLog);
       updateTerritoriesSidebar(emptyLog);
       
-      // Recenter map after reset
       setTimeout(recenterMap, 500);
     }
   });
@@ -872,9 +948,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Add Share button after progress bar
+  const progressContainer = document.getElementById("progressContainer");
+  if (progressContainer) {
+    const shareButton = document.createElement('button');
+    shareButton.textContent = 'Share Progress';
+    shareButton.style.cssText = `
+      margin-top: 10px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      width: 100%;
+    `;
+    shareButton.addEventListener('click', showShareModal);
+    progressContainer.appendChild(shareButton);
+  }
+
   // Initial render
-  renderTable(loadPlateLog());
-  
-  // Create initial SVG patterns
-  createSVGPatterns();
+  const initialLog = loadPlateLog();
+  renderTable(initialLog);
+  updateTerritoriesSidebar(initialLog);
+  updateLegendVisibility();
 });
