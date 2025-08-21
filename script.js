@@ -84,34 +84,52 @@ const THEMES = {
   }
 };
 
+// Function to get random flag colors
+function getFlagAssignment(regionName) {
+  // Use region name as seed for consistent randomness per region
+  const seed = regionName.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+  
+  if (REMOTE_TERRITORIES.includes(regionName)) {
+    // All US territories get blue
+    return 'blue';
+  } else if (CANADIAN_REGIONS.includes(regionName)) {
+    // Canadian provinces get random red or white
+    const canadaOptions = ['red', 'white'];
+    return canadaOptions[seed % canadaOptions.length];
+  } else {
+    // US states get random red, white, or blue
+    const usOptions = ['red', 'white', 'blue'];
+    return usOptions[seed % usOptions.length];
+  }
+}
 // State assignments for flag theme - US states and territories
-const US_FLAG_ASSIGNMENTS = {
-  // Add some white states
-  "alabama": "red", "alaska": "blue", "arizona": "white", "arkansas": "red_stripes",
-  "california": "red", "colorado": "blue", "connecticut": "white", "delaware": "red_stripes",
-  "florida": "white", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
-  "illinois": "red_stripes", "indiana": "white", "iowa": "blue", "kansas": "blue",
-  "kentucky": "red", "louisiana": "white", "maine": "red_stripes", "maryland": "red_stripes",
-  "massachusetts": "red_stripes", "michigan": "blue", "minnesota": "blue", "mississippi": "red",
-  "missouri": "red", "montana": "white", "nebraska": "blue", "nevada": "blue",
-  "new_hampshire": "red_stripes", "new_jersey": "white", "new_mexico": "red", "new_york": "red_stripes",
-  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "white",
-  "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
-  "south_dakota": "blue", "tennessee": "red", "texas": "white", "utah": "blue",
-  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "white",
-  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars",
-  // US Territories - get US flag colors
-  "american_samoa": "blue", "commonwealth_of_the_northern_mariana_islands": "red",
-  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "white"
-};
+//const US_FLAG_ASSIGNMENTS = {
+//  // Add some white states
+//  "alabama": "red", "alaska": "blue", "arizona": "white", "arkansas": "red_stripes",
+//  "california": "red", "colorado": "blue", "connecticut": "white", "delaware": "red_stripes",
+//  "florida": "white", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
+//  "illinois": "red_stripes", "indiana": "white", "iowa": "blue", "kansas": "blue",
+//  "kentucky": "red", "louisiana": "white", "maine": "red_stripes", "maryland": "red_stripes",
+//  "massachusetts": "red_stripes", "michigan": "blue", "minnesota": "blue", "mississippi": "red",
+//  "missouri": "red", "montana": "white", "nebraska": "blue", "nevada": "blue",
+//  "new_hampshire": "red_stripes", "new_jersey": "white", "new_mexico": "red", "new_york": "red_stripes",
+//  "north_carolina": "red_stripes", "north_dakota": "blue", "ohio": "blue", "oklahoma": "white",
+//  "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
+//  "south_dakota": "blue", "tennessee": "red", "texas": "white", "utah": "blue",
+//  "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "white",
+//  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars",
+//  // US Territories - get US flag colors
+//  "american_samoa": "blue", "commonwealth_of_the_northern_mariana_islands": "red",
+//  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "white"
+//};
 
 // Canadian flag assignments - red and white only
-const CANADA_FLAG_ASSIGNMENTS = {
-  "alberta": "red", "british_columbia": "white", "manitoba": "red", "new_brunswick": "white",
-  "newfoundland_and_labrador": "red", "northwest_territories": "white", "nova_scotia": "red",
-  "nunavut": "white", "ontario": "red", "prince_edward_island": "white",
-  "quebec": "red", "saskatchewan": "white", "yukon": "red"
-};
+//const CANADA_FLAG_ASSIGNMENTS = {
+//  "alberta": "red", "british_columbia": "white", "manitoba": "red", "new_brunswick": "white",
+//  "newfoundland_and_labrador": "red", "northwest_territories": "white", "nova_scotia": "red",
+//  "nunavut": "white", "ontario": "red", "prince_edward_island": "white",
+//  "quebec": "red", "saskatchewan": "white", "yukon": "red"
+//};
 
 // Random color assignments (persistent)
 let randomColorAssignments = {};
@@ -250,22 +268,16 @@ function getStateStyle(stateName, isLogged) {
       fillColor = randomColorAssignments[stateName] || theme.colors[0];
       break;
       
-    case 'flag':
+      case 'flag':
       // Determine if this is US or Canadian
       if (CANADIAN_REGIONS.includes(stateName)) {
         // Canadian flag colors (red and white)
-        const assignment = CANADA_FLAG_ASSIGNMENTS[stateName] || 'red';
+        const assignment = getFlagAssignment(stateName);
         fillColor = theme.canada_patterns[assignment];
       } else {
         // US flag colors (red, white, blue)
-        const assignment = US_FLAG_ASSIGNMENTS[stateName] || 'red';
-        if (assignment === 'red_stripes') {
-          fillColor = "#dc3545"; // Will be styled with stripes
-        } else if (assignment === 'blue_stars') {
-          fillColor = "#1e3a8a"; // Will be styled with stars
-        } else {
-          fillColor = theme.us_patterns[assignment] || theme.us_patterns.red;
-        }
+        const assignment = getFlagAssignment(stateName);
+        fillColor = theme.us_patterns[assignment] || theme.us_patterns.red;
       }
       break;
   }
@@ -415,10 +427,16 @@ function updateTerritoriesSidebar(log) {
           break;
         case 'flag':
           // US Territories get US flag colors
-          const assignment = US_FLAG_ASSIGNMENTS[territory] || 'blue';
+          const assignment = getFlagAssignment(territory);
           let bgColor = THEMES.flag.us_patterns[assignment] || THEMES.flag.us_patterns.blue;
           style = `style="background-color: ${bgColor}; border-color: ${bgColor}; color: white;"`;
           break;
+//        case 'flag':
+//          // US Territories get US flag colors
+//          const assignment = US_FLAG_ASSIGNMENTS[territory] || 'blue';
+//          let bgColor = THEMES.flag.us_patterns[assignment] || THEMES.flag.us_patterns.blue;
+//          style = `style="background-color: ${bgColor}; border-color: ${bgColor}; color: white;"`;
+//          break;
       }
     }
     
