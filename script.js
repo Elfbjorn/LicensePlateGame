@@ -1,16 +1,22 @@
 const ALL_STATES = [
+  // US States
   "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
   "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
   "louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi",
   "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming", "american_samoa", 
-  "commonwealth_of_the_northern_mariana_islands", "district_of_columbia", "guam", 
-  "puerto_rico", "united_states_virgin_islands"
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia",
+  // US Territories  
+  "american_samoa", "commonwealth_of_the_northern_mariana_islands", "guam", 
+  "puerto_rico", "united_states_virgin_islands",
+  // Canadian Provinces/Territories
+  "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador",
+  "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island",
+  "quebec", "saskatchewan", "yukon"
 ];
 
-// States that appear on the main US map
+// States that appear on the main map (US + Canada)
 const MAIN_MAP_STATES = [
   "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware",
   "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky",
@@ -18,16 +24,27 @@ const MAIN_MAP_STATES = [
   "missouri","montana","nebraska","nevada","new_hampshire","new_jersey","new_mexico",
   "new_york","north_carolina","north_dakota","ohio","oklahoma","oregon","pennsylvania",
   "rhode_island","south_carolina","south_dakota","tennessee","texas","utah","vermont",
-  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia"
+  "virginia","washington","west_virginia","wisconsin","wyoming", "district_of_columbia",
+  // Canadian provinces/territories
+  "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador",
+  "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island",
+  "quebec", "saskatchewan", "yukon"
 ];
 
-// Remote territories for sidebar
+// Remote territories for sidebar (US only)
 const REMOTE_TERRITORIES = [
   "american_samoa", 
   "commonwealth_of_the_northern_mariana_islands", 
   "guam", 
   "puerto_rico", 
   "united_states_virgin_islands"
+];
+
+// Canadian provinces/territories
+const CANADIAN_REGIONS = [
+  "alberta", "british_columbia", "manitoba", "new_brunswick", "newfoundland_and_labrador",
+  "northwest_territories", "nova_scotia", "nunavut", "ontario", "prince_edward_island",
+  "quebec", "saskatchewan", "yukon"
 ];
 
 // Geographic center of US + Canada (approximately southern Manitoba/northern North Dakota)
@@ -50,21 +67,26 @@ const THEMES = {
   },
   flag: {
     name: "Flag Colors",
-    patterns: {
+    us_patterns: {
       red: "#dc3545",
       white: "#ffffff",
       blue: "#1e3a8a",
       red_stripes: "red_white_stripes",
       blue_stars: "blue_with_stars"
     },
+    canada_patterns: {
+      red: "#ff0000",
+      white: "#ffffff",
+      red_white: "canada_red_white"
+    },
     unloggedColor: "#e9ecef",
     showLegend: false
   }
 };
 
-// State assignments for flag theme
-const FLAG_ASSIGNMENTS = {
-  // Red states
+// State assignments for flag theme - US states and territories
+const US_FLAG_ASSIGNMENTS = {
+  // US States - mix of red, white, blue, stripes, and stars
   "alabama": "red", "alaska": "blue", "arizona": "red", "arkansas": "red_stripes",
   "california": "red", "colorado": "blue", "connecticut": "red_stripes", "delaware": "red_stripes",
   "florida": "red", "georgia": "red_stripes", "hawaii": "blue", "idaho": "blue",
@@ -77,7 +99,18 @@ const FLAG_ASSIGNMENTS = {
   "oregon": "blue", "pennsylvania": "red_stripes", "rhode_island": "red_stripes", "south_carolina": "red_stripes",
   "south_dakota": "blue", "tennessee": "red", "texas": "red", "utah": "blue",
   "vermont": "red_stripes", "virginia": "red_stripes", "washington": "blue", "west_virginia": "red",
-  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars"
+  "wisconsin": "blue", "wyoming": "blue", "district_of_columbia": "blue_stars",
+  // US Territories - get US flag colors
+  "american_samoa": "blue", "commonwealth_of_the_northern_mariana_islands": "red",
+  "guam": "red_stripes", "puerto_rico": "blue", "united_states_virgin_islands": "red"
+};
+
+// Canadian flag assignments - red and white only
+const CANADA_FLAG_ASSIGNMENTS = {
+  "alberta": "red", "british_columbia": "white", "manitoba": "red", "new_brunswick": "white",
+  "newfoundland_and_labrador": "red", "northwest_territories": "white", "nova_scotia": "red",
+  "nunavut": "white", "ontario": "red", "prince_edward_island": "white",
+  "quebec": "red", "saskatchewan": "white", "yukon": "red"
 };
 
 // Random color assignments (persistent)
@@ -190,7 +223,7 @@ function getStateStyle(stateName, isLogged) {
     };
   }
   
-  let fillColor, fillPattern;
+  let fillColor;
   
   switch (currentTheme) {
     case 'classic':
@@ -202,15 +235,21 @@ function getStateStyle(stateName, isLogged) {
       break;
       
     case 'flag':
-      const assignment = FLAG_ASSIGNMENTS[stateName] || 'red';
-      if (assignment === 'red_stripes') {
-        fillColor = "#dc3545";
-        fillPattern = "url(#red-stripes)";
-      } else if (assignment === 'blue_stars') {
-        fillColor = "#1e3a8a";
-        fillPattern = "url(#blue-stars)";
+      // Determine if this is US or Canadian
+      if (CANADIAN_REGIONS.includes(stateName)) {
+        // Canadian flag colors (red and white)
+        const assignment = CANADA_FLAG_ASSIGNMENTS[stateName] || 'red';
+        fillColor = theme.canada_patterns[assignment];
       } else {
-        fillColor = theme.patterns[assignment] || theme.patterns.red;
+        // US flag colors (red, white, blue)
+        const assignment = US_FLAG_ASSIGNMENTS[stateName] || 'red';
+        if (assignment === 'red_stripes') {
+          fillColor = "#dc3545"; // Will be styled with stripes
+        } else if (assignment === 'blue_stars') {
+          fillColor = "#1e3a8a"; // Will be styled with stars
+        } else {
+          fillColor = theme.us_patterns[assignment] || theme.us_patterns.red;
+        }
       }
       break;
   }
@@ -241,12 +280,12 @@ function createSVGPatterns() {
   
   const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
   
-  // Red and white stripes pattern
-  const stripesPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
-  stripesPattern.setAttribute("id", "red-stripes");
-  stripesPattern.setAttribute("patternUnits", "userSpaceOnUse");
-  stripesPattern.setAttribute("width", "20");
-  stripesPattern.setAttribute("height", "20");
+  // US Red and white stripes pattern
+  const usStripesPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
+  usStripesPattern.setAttribute("id", "red-stripes");
+  usStripesPattern.setAttribute("patternUnits", "userSpaceOnUse");
+  usStripesPattern.setAttribute("width", "20");
+  usStripesPattern.setAttribute("height", "20");
   
   const rect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
   rect1.setAttribute("width", "20");
@@ -259,10 +298,10 @@ function createSVGPatterns() {
   rect2.setAttribute("height", "10");
   rect2.setAttribute("fill", "#ffffff");
   
-  stripesPattern.appendChild(rect1);
-  stripesPattern.appendChild(rect2);
+  usStripesPattern.appendChild(rect1);
+  usStripesPattern.appendChild(rect2);
   
-  // Blue with stars pattern
+  // US Blue with stars pattern
   const starsPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
   starsPattern.setAttribute("id", "blue-stars");
   starsPattern.setAttribute("patternUnits", "userSpaceOnUse");
@@ -281,8 +320,37 @@ function createSVGPatterns() {
   starsPattern.appendChild(blueRect);
   starsPattern.appendChild(star);
   
-  defs.appendChild(stripesPattern);
+  // Canadian red and white pattern (vertical stripes like Canadian flag)
+  const canadaPattern = document.createElementNS("http://www.w3.org/2000/svg", "pattern");
+  canadaPattern.setAttribute("id", "canada-red-white");
+  canadaPattern.setAttribute("patternUnits", "userSpaceOnUse");
+  canadaPattern.setAttribute("width", "30");
+  canadaPattern.setAttribute("height", "20");
+  
+  const canRect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  canRect1.setAttribute("width", "10");
+  canRect1.setAttribute("height", "20");
+  canRect1.setAttribute("fill", "#ff0000");
+  
+  const canRect2 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  canRect2.setAttribute("x", "10");
+  canRect2.setAttribute("width", "10");
+  canRect2.setAttribute("height", "20");
+  canRect2.setAttribute("fill", "#ffffff");
+  
+  const canRect3 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  canRect3.setAttribute("x", "20");
+  canRect3.setAttribute("width", "10");
+  canRect3.setAttribute("height", "20");
+  canRect3.setAttribute("fill", "#ff0000");
+  
+  canadaPattern.appendChild(canRect1);
+  canadaPattern.appendChild(canRect2);
+  canadaPattern.appendChild(canRect3);
+  
+  defs.appendChild(usStripesPattern);
   defs.appendChild(starsPattern);
+  defs.appendChild(canadaPattern);
   svg.appendChild(defs);
   
   document.body.appendChild(svg);
@@ -330,8 +398,10 @@ function updateTerritoriesSidebar(log) {
           style = `style="background-color: ${color}; border-color: ${color}; color: white;"`;
           break;
         case 'flag':
-          // Territories get blue (flag field color)
-          style = 'style="background-color: #1e3a8a; border-color: #1e3a8a; color: white;"';
+          // US Territories get US flag colors
+          const assignment = US_FLAG_ASSIGNMENTS[territory] || 'blue';
+          let bgColor = THEMES.flag.us_patterns[assignment] || THEMES.flag.us_patterns.blue;
+          style = `style="background-color: ${bgColor}; border-color: ${bgColor}; color: white;"`;
           break;
       }
     }
