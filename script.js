@@ -196,6 +196,8 @@ function getTotalScore(log) {
 }
 
 // Share Card Functions
+// REPLACE the generateShareCard function with this better version
+
 function generateShareCard() {
   const log = loadPlateLog();
   const entries = Object.entries(log);
@@ -204,16 +206,20 @@ function generateShareCard() {
   let usStates = 0, territories = 0, canada = 0;
   let totalMiles = 0, maxMiles = 0, farthestState = '';
   
+  // Track unique locations where plates were spotted
+  const spottingLocations = new Set();
+  
   entries.forEach(([state, data]) => {
     const miles = data.miles || 0;
-    
-    // This is the fix - only add miles once per state (the game already stores max miles per state)
     totalMiles += miles;
     
     if (miles > maxMiles) {
       maxMiles = miles;
       farthestState = state.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     }
+    
+    // Track where you spotted plates
+    spottingLocations.add(data.location);
     
     if (REMOTE_TERRITORIES.includes(state)) {
       territories++;
@@ -224,11 +230,23 @@ function generateShareCard() {
     }
   });
 
-  // Estimate days (could be enhanced with actual tracking)
-  const days = Math.max(1, Math.floor(entries.length / 2) + Math.floor(Math.random() * 20));
+  // Better estimated travel calculation
+  const uniqueLocations = spottingLocations.size;
+  let estimatedTravel;
   
-  // Fix: Use a more reasonable travel estimate
-  const estimatedTravel = Math.floor(totalMiles * 0.3 + Math.random() * 500);
+  if (uniqueLocations <= 1) {
+    // All plates spotted from one location (like your case)
+    estimatedTravel = Math.floor(entries.length * 5); // ~5 miles per plate hunt
+  } else if (uniqueLocations <= 3) {
+    // A few different locations (local area)
+    estimatedTravel = Math.floor(uniqueLocations * 25 + entries.length * 3);
+  } else {
+    // Multiple locations (road trip)
+    estimatedTravel = Math.floor(uniqueLocations * 100 + entries.length * 10);
+  }
+
+  // Realistic days calculation
+  const days = Math.max(1, Math.floor(entries.length / 3) + Math.floor(uniqueLocations * 0.5));
 
   return {
     usStates,
@@ -238,10 +256,10 @@ function generateShareCard() {
     farthestState: farthestState.substring(0, 3).toUpperCase() || 'N/A',
     maxMiles,
     days,
-    estimatedTravel
+    estimatedTravel,
+    uniqueLocations // for debugging
   };
 }
-
 function generateShareText(data) {
   const totalLogged = data.usStates + data.territories + data.canada;
   const completionPercent = Math.round((totalLogged / 69) * 100);
