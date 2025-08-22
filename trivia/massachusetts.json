@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Massachusetts?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Worcester", "Springfield", "Cambridge"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Massachusetts is nicknamed what?",
+    "correctAnswer": "The Bay State",
+    "options": ["The Bay State", "The Pilgrim State", "The Granite State", "The Green Mountain State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city is home to Harvard University?",
+    "correctAnswer": "Cambridge",
+    "options": ["Cambridge", "Boston", "Worcester", "Salem"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city is famous for its tea party in 1773?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Salem", "Plymouth", "Cambridge"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts island is a popular summer vacation destination?",
+    "correctAnswer": "Martha's Vineyard",
+    "options": ["Martha's Vineyard", "Nantucket", "Cape Cod", "Isles of Shoals"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Massachusetts is part of which US region?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city is known as the birthplace of basketball?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Boston", "Worcester", "Lowell"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city was a major center during the Salem Witch Trials?",
+    "correctAnswer": "Salem",
+    "options": ["Salem", "Boston", "Cambridge", "Plymouth"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts cape is known for its beaches and lighthouses?",
+    "correctAnswer": "Cape Cod",
+    "options": ["Cape Cod", "Cape Ann", "Cape Elizabeth", "Cape Sable"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts river flows through Boston?",
+    "correctAnswer": "Charles River",
+    "options": ["Charles River", "Connecticut River", "Merrimack River", "Mystic River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city is home to Fenway Park?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Cambridge", "Springfield", "Worcester"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts town is famous for Plymouth Rock?",
+    "correctAnswer": "Plymouth",
+    "options": ["Plymouth", "Salem", "Boston", "Concord"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts university is the oldest in the US?",
+    "correctAnswer": "Harvard University",
+    "options": ["Harvard University", "MIT", "Boston University", "Williams College"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city is known for its historical Freedom Trail?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Salem", "Concord", "Lexington"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city is home to MIT?",
+    "correctAnswer": "Cambridge",
+    "options": ["Cambridge", "Boston", "Worcester", "Lowell"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city was the site of the first American public school?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Concord", "Salem", "Cambridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city is known for its historic whaling industry?",
+    "correctAnswer": "New Bedford",
+    "options": ["New Bedford", "Boston", "Salem", "Gloucester"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city hosts the annual Head of the Charles Regatta?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Cambridge", "Lowell", "Springfield"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts island is known for lighthouses and colonial history?",
+    "correctAnswer": "Nantucket",
+    "options": ["Nantucket", "Martha's Vineyard", "Cape Cod", "Block Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city is home to the famous basketball museum?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Boston", "Cambridge", "Worcester"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city was central to the American Revolution?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Boston", "Salem", "Concord"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts city is known for its seafood and clam chowder?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Gloucester", "New Bedford", "Salem"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts city has Fenway Park, one of the oldest Major League Baseball stadiums?",
+    "correctAnswer": "Boston",
+    "options": ["Boston", "Cambridge", "Worcester", "Springfield"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Massachusetts town is famous for the Minute Man National Historical Park?",
+    "correctAnswer": "Concord",
+    "options": ["Concord", "Lexington", "Boston", "Salem"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Massachusetts cape is a popular whale-watching destination?",
+    "correctAnswer": "Cape Cod",
+    "options": ["Cape Cod", "Cape Ann", "Nantucket", "Martha's Vineyard"],
+    "difficulty": "2"
+  }
+]
+

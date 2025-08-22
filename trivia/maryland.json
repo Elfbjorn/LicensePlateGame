@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Maryland?",
+    "correctAnswer": "Annapolis",
+    "options": ["Annapolis", "Baltimore", "Rockville", "Frederick"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Maryland is nicknamed what?",
+    "correctAnswer": "The Old Line State",
+    "options": ["The Old Line State", "The Keystone State", "The Garden State", "The First State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maryland city is the largest by population?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Rockville", "Frederick"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Maryland is part of which US region?",
+    "correctAnswer": "Mid-Atlantic",
+    "options": ["Mid-Atlantic", "New England", "Southeast", "Midwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maryland city is home to the United States Naval Academy?",
+    "correctAnswer": "Annapolis",
+    "options": ["Annapolis", "Baltimore", "Rockville", "Frederick"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is known for its Inner Harbor and National Aquarium?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Rockville", "Frederick"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is famous for crab cakes?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Cambridge", "Ocean City"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maryland river flows into the Chesapeake Bay near Baltimore?",
+    "correctAnswer": "Patapsco River",
+    "options": ["Patapsco River", "Potomac River", "Susquehanna River", "Choptank River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city hosts the Preakness Stakes horse race?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Laurel", "Ocean City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is home to Fort McHenry, inspiration for the national anthem?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Frederick", "Cambridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maryland was one of the original 13 colonies.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only 12 colonies", "Only 14 colonies"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maryland city is known for its historic district of Fells Point?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Cambridge", "Ocean City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is a popular Atlantic coast beach destination?",
+    "correctAnswer": "Ocean City",
+    "options": ["Ocean City", "Baltimore", "Annapolis", "Cambridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is home to Johns Hopkins University?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Rockville", "Frederick"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city was a major shipbuilding hub during WWII?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Cambridge", "Salisbury"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city hosts the Maryland State Fair?",
+    "correctAnswer": "Timonium",
+    "options": ["Timonium", "Baltimore", "Annapolis", "Frederick"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland river forms part of the border with Virginia?",
+    "correctAnswer": "Potomac River",
+    "options": ["Potomac River", "Patapsco River", "Choptank River", "Susquehanna River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is known for Crabby Cakes and historic Lexington Market?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Cambridge", "Ocean City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is known for the Chesapeake Bay Maritime Museum?",
+    "correctAnswer": "St. Michaels",
+    "options": ["St. Michaels", "Baltimore", "Annapolis", "Cambridge"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city hosts the annual Maryland Renaissance Festival?",
+    "correctAnswer": "Crownsville",
+    "options": ["Crownsville", "Annapolis", "Baltimore", "Frederick"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city is home to Fort Howard and historic harbor defense?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Cambridge", "Rockville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city is famous for the Assateague Island wild ponies?",
+    "correctAnswer": "Ocean City",
+    "options": ["Ocean City", "Cambridge", "Baltimore", "Annapolis"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city is home to the Walters Art Museum?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Rockville", "Frederick"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is near the historic Antietam battlefield?",
+    "correctAnswer": "Sharpsburg",
+    "options": ["Sharpsburg", "Baltimore", "Annapolis", "Frederick"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maryland city is known for Patapsco Valley State Park?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Ellicott City", "Frederick"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maryland city is home to the Maryland Science Center?",
+    "correctAnswer": "Baltimore",
+    "options": ["Baltimore", "Annapolis", "Rockville", "Frederick"],
+    "difficulty": "2"
+  }
+]
+

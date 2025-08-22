@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of American Samoa?",
+    "correctAnswer": "Pago Pago",
+    "options": ["Pago Pago", "Tutuila", "Aunu'u", "Ta'u"],
+    "difficulty": "1"
+  },
+  {
+    "question": "American Samoa is located in which ocean?",
+    "correctAnswer": "Pacific Ocean",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+    "difficulty": "1"
+  },
+  {
+    "question": "American Samoa is a territory of which country?",
+    "correctAnswer": "United States",
+    "options": ["United States", "Samoa", "New Zealand", "Australia"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which island is the largest in American Samoa?",
+    "correctAnswer": "Tutuila",
+    "options": ["Tutuila", "Aunu'u", "Ta'u", "Ofu"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa is part of which island group?",
+    "correctAnswer": "Samoan Islands",
+    "options": ["Samoan Islands", "Fiji Islands", "Mariana Islands", "Marshall Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which mountain is the highest point in American Samoa?",
+    "correctAnswer": "Mount Matafao",
+    "options": ["Mount Matafao", "Mount Alava", "Mount Fao", "Mount Vaea"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa harbor is the main port of entry?",
+    "correctAnswer": "Pago Pago Harbor",
+    "options": ["Pago Pago Harbor", "Ofu Harbor", "Aunu'u Harbor", "Ta'u Harbor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa celebrates Flag Day in which month?",
+    "correctAnswer": "April",
+    "options": ["April", "July", "December", "January"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island is famous for coral reefs and diving?",
+    "correctAnswer": "Ofu Island",
+    "options": ["Ofu Island", "Tutuila", "Ta'u", "Aunu'u"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island hosts the National Park of American Samoa?",
+    "correctAnswer": "Tutuila, Ofu, and Ta'u",
+    "options": ["Tutuila, Ofu, and Ta'u", "Tutuila only", "Aunu'u only", "Ta'u only"],
+    "difficulty": "3"
+  },
+  {
+    "question": "American Samoa uses which currency?",
+    "correctAnswer": "United States Dollar",
+    "options": ["United States Dollar", "Samoan Tala", "Euro", "Australian Dollar"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The indigenous people of American Samoa are known as?",
+    "correctAnswer": "Samoans",
+    "options": ["Samoans", "Fijians", "Tongans", "Chamorros"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which American Samoa island is home to the airport?",
+    "correctAnswer": "Tutuila",
+    "options": ["Tutuila", "Ta'u", "Ofu", "Aunu'u"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa is located south of which US territory?",
+    "correctAnswer": "Guam",
+    "options": ["Guam", "Northern Mariana Islands", "Puerto Rico", "United States Virgin Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa festival celebrates culture, music, and dance?",
+    "correctAnswer": "Ava Ceremony and Flag Day",
+    "options": ["Ava Ceremony and Flag Day", "Carnival", "Samoa Arts Festival", "Pacific Heritage Week"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa has which type of climate?",
+    "correctAnswer": "Tropical",
+    "options": ["Tropical", "Desert", "Temperate", "Arctic"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which American Samoa island is known for its small size and close proximity to Tutuila?",
+    "correctAnswer": "Aunu'u",
+    "options": ["Aunu'u", "Ofu", "Ta'u", "Rose Atoll"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa is east of which country?",
+    "correctAnswer": "Samoa",
+    "options": ["Samoa", "Fiji", "Tonga", "Australia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island is least populated?",
+    "correctAnswer": "Rose Atoll",
+    "options": ["Rose Atoll", "Ta'u", "Aunu'u", "Ofu"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which American Samoa harbor is naturally one of the best deepwater harbors in the Pacific?",
+    "correctAnswer": "Pago Pago Harbor",
+    "options": ["Pago Pago Harbor", "Ofu Harbor", "Ta'u Harbor", "Aunu'u Harbor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island has volcanic mountains and rainforest?",
+    "correctAnswer": "Tutuila",
+    "options": ["Tutuila", "Ofu", "Ta'u", "Aunu'u"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island is the easternmost point of the territory?",
+    "correctAnswer": "Ta'u",
+    "options": ["Ta'u", "Tutuila", "Ofu", "Aunu'u"],
+    "difficulty": "2"
+  },
+  {
+    "question": "American Samoa participates in which international sporting event separately from the US?",
+    "correctAnswer": "Olympics",
+    "options": ["Olympics", "World Cup", "Commonwealth Games", "Pan American Games"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island is home to the territory’s National Park Visitor Center?",
+    "correctAnswer": "Tutuila",
+    "options": ["Tutuila", "Ofu", "Ta'u", "Aunu'u"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American Samoa island is known for traditional Samoan fale houses?",
+    "correctAnswer": "Tutuila",
+    "options": ["Tutuila", "Ofu", "Ta'u", "Aunu'u"],
+    "difficulty": "2"
+  }
+]
+

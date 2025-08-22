@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Maine?",
+    "correctAnswer": "Augusta",
+    "options": ["Augusta", "Portland", "Bangor", "Lewiston"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Maine is known as the largest producer of which seafood in the US?",
+    "correctAnswer": "Lobster",
+    "options": ["Lobster", "Crab", "Clams", "Oysters"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous lighthouse is located on the rocky coast of Maine?",
+    "correctAnswer": "Portland Head Light",
+    "options": ["Portland Head Light", "Bass Harbor Head Light", "Cape Neddick Light", "Pemaquid Point Light"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine city is the largest by population?",
+    "correctAnswer": "Portland",
+    "options": ["Portland", "Bangor", "Lewiston", "Augusta"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which national park is located in Maine?",
+    "correctAnswer": "Acadia National Park",
+    "options": ["Acadia National Park", "Yellowstone National Park", "Great Smoky Mountains National Park", "Shenandoah National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maine shares a border with which Canadian province?",
+    "correctAnswer": "New Brunswick",
+    "options": ["New Brunswick", "Quebec", "Nova Scotia", "Ontario"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous American author wrote stories set in Maine, including 'The Cider House Rules'?",
+    "correctAnswer": "John Irving",
+    "options": ["John Irving", "Stephen King", "Edgar Allan Poe", "Louisa May Alcott"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine town is famous for its annual lobster festival?",
+    "correctAnswer": "Rockland",
+    "options": ["Rockland", "Bar Harbor", "Portland", "Camden"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maine is part of which region of the US?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maine city is known for its historic shipbuilding industry?",
+    "correctAnswer": "Bath",
+    "options": ["Bath", "Portland", "Augusta", "Bangor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maine is famous for which kind of fruit used in pies and jams?",
+    "correctAnswer": "Wild blueberries",
+    "options": ["Wild blueberries", "Cranberries", "Apples", "Raspberries"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maine island is a popular summer destination and known for lobster fishing?",
+    "correctAnswer": "Mount Desert Island",
+    "options": ["Mount Desert Island", "Monhegan Island", "Isle au Haut", "Vinalhaven"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maine is known for having the most of which geographic feature along its coastline?",
+    "correctAnswer": "Lighthouses",
+    "options": ["Lighthouses", "Beaches", "Ports", "Docks"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine city hosts the annual Maine Lobster Festival?",
+    "correctAnswer": "Rockland",
+    "options": ["Rockland", "Portland", "Bar Harbor", "Bangor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine lake is one of the largest in New England?",
+    "correctAnswer": "Moosehead Lake",
+    "options": ["Moosehead Lake", "Sebago Lake", "Rangeley Lake", "Long Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous author known for horror stories lives in Bangor, Maine?",
+    "correctAnswer": "Stephen King",
+    "options": ["Stephen King", "John Irving", "H.P. Lovecraft", "Louisa May Alcott"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine forest is the largest contiguous forest in the Eastern United States?",
+    "correctAnswer": "North Maine Woods",
+    "options": ["North Maine Woods", "White Mountain National Forest", "Green Mountain National Forest", "Acadia Forest"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maine town is famous for its lobster piers and summer tourism?",
+    "correctAnswer": "Bar Harbor",
+    "options": ["Bar Harbor", "Rockland", "Camden", "Portland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine river is known for its salmon fishing?",
+    "correctAnswer": "Penobscot River",
+    "options": ["Penobscot River", "Kennebec River", "Androscoggin River", "Saco River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Maine is bordered by the Atlantic Ocean on which side?",
+    "correctAnswer": "East",
+    "options": ["East", "West", "North", "South"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Maine city is home to Bowdoin College?",
+    "correctAnswer": "Brunswick",
+    "options": ["Brunswick", "Augusta", "Portland", "Bangor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine island is known for its historic lighthouses and artist colonies?",
+    "correctAnswer": "Monhegan Island",
+    "options": ["Monhegan Island", "Mount Desert Island", "Vinalhaven", "Isle au Haut"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine festival celebrates wild blueberries?",
+    "correctAnswer": "Machias Wild Blueberry Festival",
+    "options": ["Machias Wild Blueberry Festival", "Portland Food Festival", "Bar Harbor Lobster Festival", "Rockland Seafood Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Maine city is known as the gateway to Acadia National Park?",
+    "correctAnswer": "Bar Harbor",
+    "options": ["Bar Harbor", "Rockland", "Portland", "Camden"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Maine city has a historic waterfront called the Old Port?",
+    "correctAnswer": "Portland",
+    "options": ["Portland", "Bangor", "Augusta", "Lewiston"],
+    "difficulty": "2"
+  }
+]
+

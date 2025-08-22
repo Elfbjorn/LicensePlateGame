@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Saskatchewan?",
+    "correctAnswer": "Regina",
+    "options": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Saskatchewan city is the largest by population?",
+    "correctAnswer": "Saskatoon",
+    "options": ["Regina", "Saskatoon", "Prince Albert", "Moose Jaw"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Saskatchewan is part of which Canadian region?",
+    "correctAnswer": "Prairies",
+    "options": ["Prairies", "Atlantic Canada", "Northern Canada", "Central Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which major river flows through Saskatoon?",
+    "correctAnswer": "South Saskatchewan River",
+    "options": ["North Saskatchewan River", "South Saskatchewan River", "Red River", "Assiniboine River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan crop is the province famous for producing?",
+    "correctAnswer": "Wheat",
+    "options": ["Potatoes", "Corn", "Wheat", "Barley"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Saskatchewan stadium is home to the Roughriders CFL team?",
+    "correctAnswer": "Mosaic Stadium",
+    "options": ["Mosaic Stadium", "Taylor Field", "Commonwealth Stadium", "BC Place"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan lake is known for its pink hue due to algae?",
+    "correctAnswer": "Quill Lake",
+    "options": ["Quill Lake", "Last Mountain Lake", "Lake Diefenbaker", "Reindeer Lake"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan city hosts the Western Development Museum?",
+    "correctAnswer": "Saskatoon",
+    "options": ["Regina", "Saskatoon", "Moose Jaw", "Prince Albert"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan city is home to the University of Regina?",
+    "correctAnswer": "Regina",
+    "options": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Saskatchewan-born musician is famous for 'Big League'?",
+    "correctAnswer": "Tom Cochrane",
+    "options": ["Tom Cochrane", "Shania Twain", "Neil Young", "Joni Mitchell"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan festival celebrates prairie culture and music?",
+    "correctAnswer": "Craven Country Jamboree",
+    "options": ["Folk Festival", "Craven Country Jamboree", "Jazz Festival", "Celtic Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan park is the largest provincial park?",
+    "correctAnswer": "Prince Albert National Park",
+    "options": ["Grasslands National Park", "Prince Albert National Park", "Nisbet Provincial Park", "Cypress Hills Provincial Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan river flows into Lake Winnipegosis?",
+    "correctAnswer": "Saskatchewan River",
+    "options": ["South Saskatchewan River", "North Saskatchewan River", "Saskatchewan River", "Red River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan city is known for its historic railway station and grain elevators?",
+    "correctAnswer": "Moose Jaw",
+    "options": ["Moose Jaw", "Saskatoon", "Regina", "Prince Albert"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan university is in Saskatoon and is famous for research?",
+    "correctAnswer": "University of Saskatchewan",
+    "options": ["University of Regina", "University of Saskatchewan", "Saskatchewan Polytechnic", "Lakehead University"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan Indigenous community is associated with the Cree and Saulteaux?",
+    "correctAnswer": "Plains Cree",
+    "options": ["Plains Cree", "Mi’kmaq", "Ojibwe", "Dene"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Saskatchewan city hosts the annual Queen City Ex fair?",
+    "correctAnswer": "Regina",
+    "options": ["Saskatoon", "Regina", "Moose Jaw", "Prince Albert"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Saskatchewan’s provincial flower is what?",
+    "correctAnswer": "Western Red Lily",
+    "options": ["Mayflower", "Western Red Lily", "Trillium", "Prairie Crocus"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan town is famous for the T.rex fossil discovery?",
+    "correctAnswer": "Eastend",
+    "options": ["Eastend", "Swift Current", "Moose Jaw", "Prince Albert"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Saskatchewan festival is dedicated to rodeo and western culture?",
+    "correctAnswer": "Calgary Stampede (note: in Alberta, Saskatchewan has similar smaller rodeos)",
+    "options": ["Calgary Stampede", "Moose Jaw Stampede", "Saskatoon Rodeo", "Regina Stampede"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan city is known as the 'Gateway to the North'?",
+    "correctAnswer": "Prince Albert",
+    "options": ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan lake is popular for sailing and recreation?",
+    "correctAnswer": "Last Mountain Lake",
+    "options": ["Lake Diefenbaker", "Last Mountain Lake", "Reindeer Lake", "Candle Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Saskatchewan city has a historic grain elevator museum?",
+    "correctAnswer": "Warman",
+    "options": ["Saskatoon", "Warman", "Regina", "Moose Jaw"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan river system provides hydroelectric power to the province?",
+    "correctAnswer": "Saskatchewan River System",
+    "options": ["Red River", "Saskatchewan River System", "South Saskatchewan River", "Nelson River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Saskatchewan community is famous for its annual Maple Creek Stampede?",
+    "correctAnswer": "Maple Creek",
+    "options": ["Maple Creek", "Regina", "Saskatoon", "Moose Jaw"],
+    "difficulty": "3"
+  }
+]
+

@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of California?",
+    "correctAnswer": "Sacramento",
+    "options": ["Sacramento", "Los Angeles", "San Francisco", "San Diego"],
+    "difficulty": "1"
+  },
+  {
+    "question": "California is nicknamed what?",
+    "correctAnswer": "The Golden State",
+    "options": ["The Golden State", "The Sunshine State", "The Silver State", "The Empire State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which city is the largest in California by population?",
+    "correctAnswer": "Los Angeles",
+    "options": ["Los Angeles", "San Diego", "San Jose", "San Francisco"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which California city is home to Hollywood?",
+    "correctAnswer": "Los Angeles",
+    "options": ["Los Angeles", "San Francisco", "San Diego", "Sacramento"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which California city is home to Stanford University?",
+    "correctAnswer": "Palo Alto",
+    "options": ["Palo Alto", "Berkeley", "Los Angeles", "San Diego"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California national park is home to the giant sequoia trees?",
+    "correctAnswer": "Sequoia National Park",
+    "options": ["Sequoia National Park", "Yosemite", "Joshua Tree", "Redwood National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is famous for the Golden Gate Bridge?",
+    "correctAnswer": "San Francisco",
+    "options": ["San Francisco", "Los Angeles", "San Diego", "Sacramento"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which California city hosts the Coachella music festival?",
+    "correctAnswer": "Indio",
+    "options": ["Indio", "Los Angeles", "Palm Springs", "San Diego"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is home to Disneyland?",
+    "correctAnswer": "Anaheim",
+    "options": ["Anaheim", "Los Angeles", "San Diego", "San Jose"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is home to the tech hub Silicon Valley?",
+    "correctAnswer": "San Jose",
+    "options": ["San Jose", "San Francisco", "Palo Alto", "Mountain View"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California desert is famous for its Joshua trees?",
+    "correctAnswer": "Mojave Desert",
+    "options": ["Mojave Desert", "Sonoran Desert", "Death Valley", "Colorado Desert"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is famous for Alcatraz Island?",
+    "correctAnswer": "San Francisco",
+    "options": ["San Francisco", "Los Angeles", "Oakland", "Sacramento"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is known for its wine country in Napa Valley?",
+    "correctAnswer": "Napa",
+    "options": ["Napa", "Santa Rosa", "Sonoma", "Healdsburg"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which California city is the center of the movie industry?",
+    "correctAnswer": "Los Angeles",
+    "options": ["Los Angeles", "San Diego", "San Francisco", "Hollywood"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California national park is famous for El Capitan and Half Dome?",
+    "correctAnswer": "Yosemite National Park",
+    "options": ["Yosemite National Park", "Sequoia National Park", "Joshua Tree", "Redwood National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which California city is home to the University of California, Berkeley?",
+    "correctAnswer": "Berkeley",
+    "options": ["Berkeley", "Los Angeles", "San Diego", "San Francisco"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is the state capital?",
+    "correctAnswer": "Sacramento",
+    "options": ["Sacramento", "Los Angeles", "San Francisco", "San Diego"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which California city is known for the boardwalk at Santa Cruz?",
+    "correctAnswer": "Santa Cruz",
+    "options": ["Santa Cruz", "Monterey", "San Diego", "Venice Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is near Lake Tahoe?",
+    "correctAnswer": "South Lake Tahoe",
+    "options": ["South Lake Tahoe", "Truckee", "Reno", "Bishop"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which California city hosts the annual Rose Parade?",
+    "correctAnswer": "Pasadena",
+    "options": ["Pasadena", "Los Angeles", "San Diego", "Santa Barbara"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is known for Silicon Valley tech companies?",
+    "correctAnswer": "San Jose",
+    "options": ["San Jose", "San Francisco", "Mountain View", "Palo Alto"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is home to Griffith Observatory?",
+    "correctAnswer": "Los Angeles",
+    "options": ["Los Angeles", "San Diego", "San Francisco", "Santa Monica"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city is near the Redwood National and State Parks?",
+    "correctAnswer": "Crescent City",
+    "options": ["Crescent City", "San Francisco", "Eureka", "Arcata"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which California city is famous for Hollywood Walk of Fame?",
+    "correctAnswer": "Los Angeles",
+    "options": ["Los Angeles", "San Francisco", "Santa Monica", "Hollywood"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which California city hosts the Monterey Jazz Festival?",
+    "correctAnswer": "Monterey",
+    "options": ["Monterey", "San Francisco", "Santa Barbara", "Los Angeles"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which California city is famous for Death Valley National Park?",
+    "correctAnswer": "Furnace Creek",
+    "options": ["Furnace Creek", "Las Vegas", "Baker", "Palm Springs"],
+    "difficulty": "3"
+  }
+]
+

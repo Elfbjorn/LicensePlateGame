@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of the Northern Mariana Islands?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Garapan"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The Northern Mariana Islands are located in which ocean?",
+    "correctAnswer": "Pacific Ocean",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The Northern Mariana Islands are a territory of which country?",
+    "correctAnswer": "United States",
+    "options": ["United States", "Philippines", "Japan", "Guam"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which island is the largest in the Northern Mariana Islands?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Anatahan"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The Northern Mariana Islands are part of which island chain?",
+    "correctAnswer": "Mariana Islands",
+    "options": ["Mariana Islands", "Caroline Islands", "Marshall Islands", "Philippine Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is known for WWII historic sites?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Pagan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is home to the former nuclear bomb launching site during WWII?",
+    "correctAnswer": "Tinian",
+    "options": ["Tinian", "Saipan", "Rota", "Anatahan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Northern Mariana Islands use which currency?",
+    "correctAnswer": "United States Dollar",
+    "options": ["United States Dollar", "Northern Mariana Peso", "Yen", "Philippine Peso"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is smallest by population?",
+    "correctAnswer": "Anatahan",
+    "options": ["Anatahan", "Rota", "Tinian", "Saipan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Northern Mariana Islands celebrates Commonwealth Day in which month?",
+    "correctAnswer": "January",
+    "options": ["January", "July", "March", "December"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is famous for diving and snorkeling?",
+    "correctAnswer": "Rota",
+    "options": ["Rota", "Saipan", "Tinian", "Anatahan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is closest to Guam?",
+    "correctAnswer": "Rota",
+    "options": ["Rota", "Saipan", "Tinian", "Pagan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "The Northern Mariana Islands are located east of which country?",
+    "correctAnswer": "Philippines",
+    "options": ["Philippines", "Japan", "China", "Indonesia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands harbor is the main port?",
+    "correctAnswer": "Saipan Harbor",
+    "options": ["Saipan Harbor", "Rota Harbor", "Tinian Harbor", "Anatahan Harbor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island has active volcanoes?",
+    "correctAnswer": "Pagan",
+    "options": ["Pagan", "Saipan", "Rota", "Tinian"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Northern Mariana Islands are a territory of the US but do not have voting rights in which election?",
+    "correctAnswer": "Presidential Election",
+    "options": ["Presidential Election", "Local Election", "Congressional Election", "Senate Election"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island was a Japanese colony before WWII?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Anatahan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is famous for the Grotto diving site?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Anatahan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Northern Mariana Islands are part of which US administrative category?",
+    "correctAnswer": "Commonwealth",
+    "options": ["Commonwealth", "Territory", "State", "District"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island has a unique limestone landscape called karst?",
+    "correctAnswer": "Rota",
+    "options": ["Rota", "Saipan", "Tinian", "Anatahan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is known for World War II memorial sites?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Rota", "Tinian", "Pagan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is home to the island’s international airport?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Tinian", "Rota", "Anatahan"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Northern Mariana Islands are north of which US territory?",
+    "correctAnswer": "Guam",
+    "options": ["Guam", "American Samoa", "Puerto Rico", "US Virgin Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is uninhabited due to volcanic activity?",
+    "correctAnswer": "Anatahan",
+    "options": ["Anatahan", "Saipan", "Tinian", "Rota"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Northern Mariana Islands island was used as a base to launch atomic bomb missions during WWII?",
+    "correctAnswer": "Tinian",
+    "options": ["Tinian", "Saipan", "Rota", "Pagan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Northern Mariana Islands island is known for sugarcane cultivation historically?",
+    "correctAnswer": "Saipan",
+    "options": ["Saipan", "Rota", "Tinian", "Anatahan"],
+    "difficulty": "2"
+  }
+]
+

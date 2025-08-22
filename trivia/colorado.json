@@ -1,0 +1,191 @@
+[
+  {
+    "question": "What is the capital city of Colorado?",
+    "correctAnswer": "Denver",
+    "options": ["Boulder", "Colorado Springs", "Denver", "Fort Collins"],
+    "difficulty": 1
+  },
+  {
+    "question": "Colorado is nicknamed the 'Centennial State.' Why?",
+    "correctAnswer": "It became a state in 1876, 100 years after the Declaration of Independence",
+    "options": [
+      "It has 100 peaks over 14,000 feet",
+      "It became a state in 1876, 100 years after the Declaration of Independence",
+      "It has 100 rivers",
+      "It was the 100th state to be founded"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which mountain range runs through central Colorado?",
+    "correctAnswer": "Rocky Mountains",
+    "options": ["Appalachian Mountains", "Rocky Mountains", "Sierra Nevada", "Cascade Range"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Colorado city is known as the 'Mile-High City'?",
+    "correctAnswer": "Denver",
+    "options": ["Boulder", "Colorado Springs", "Denver", "Fort Collins"],
+    "difficulty": 1
+  },
+  {
+    "question": "What is the tallest peak in Colorado?",
+    "correctAnswer": "Mount Elbert",
+    "options": ["Pikes Peak", "Mount Elbert", "Longs Peak", "Mount Massive"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado city hosts the famous Coors Brewery?",
+    "correctAnswer": "Golden",
+    "options": ["Denver", "Golden", "Boulder", "Colorado Springs"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado river flows through the Grand Canyon?",
+    "correctAnswer": "Colorado River",
+    "options": ["Arkansas River", "Colorado River", "South Platte River", "Rio Grande"],
+    "difficulty": 2
+  },
+  {
+    "question": "Colorado became a U.S. state in which year?",
+    "correctAnswer": "1876",
+    "options": ["1850", "1865", "1876", "1889"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Native American tribes are historically associated with Colorado?",
+    "correctAnswer": "Ute, Cheyenne, Arapaho",
+    "options": [
+      "Cherokee, Choctaw",
+      "Ute, Cheyenne, Arapaho",
+      "Sioux, Pawnee",
+      "Navajo, Apache"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Colorado city is home to the United States Air Force Academy?",
+    "correctAnswer": "Colorado Springs",
+    "options": ["Denver", "Colorado Springs", "Boulder", "Fort Collins"],
+    "difficulty": 2
+  },
+  {
+    "question": "Pikes Peak inspired which famous song and poem?",
+    "correctAnswer": "America the Beautiful",
+    "options": [
+      "This Land is Your Land",
+      "America the Beautiful",
+      "Home on the Range",
+      "Rocky Mountain High"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Colorado city is famous for its ski resorts and the nearby Rocky Mountains?",
+    "correctAnswer": "Aspen",
+    "options": ["Aspen", "Boulder", "Vail", "Steamboat Springs"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado city is the home of the Denver Nuggets and Colorado Rockies?",
+    "correctAnswer": "Denver",
+    "options": ["Boulder", "Denver", "Colorado Springs", "Fort Collins"],
+    "difficulty": 1
+  },
+  {
+    "question": "Colorado is the leading U.S. producer of which crop?",
+    "correctAnswer": "Sugar beets",
+    "options": ["Corn", "Potatoes", "Sugar beets", "Wheat"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which famous national park is located in northwestern Colorado?",
+    "correctAnswer": "Rocky Mountain National Park",
+    "options": [
+      "Grand Canyon National Park",
+      "Yellowstone National Park",
+      "Rocky Mountain National Park",
+      "Mesa Verde National Park"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado city is known for its vibrant tech industry and University of Colorado campus?",
+    "correctAnswer": "Boulder",
+    "options": ["Boulder", "Denver", "Colorado Springs", "Fort Collins"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado city hosts the National Western Stock Show annually?",
+    "correctAnswer": "Denver",
+    "options": ["Denver", "Greeley", "Fort Collins", "Boulder"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Durango & Silverton Narrow Gauge Railroad operates in which Colorado region?",
+    "correctAnswer": "San Juan Mountains",
+    "options": ["Rocky Mountains", "San Juan Mountains", "Front Range", "Medicine Bow Mountains"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Colorado city is famous for its red sandstone formations in a nearby park?",
+    "correctAnswer": "Colorado Springs",
+    "options": ["Denver", "Boulder", "Colorado Springs", "Fort Collins"],
+    "difficulty": 2
+  },
+  {
+    "question": "Colorado’s state flower is the Columbine. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Sometimes", "Depends on the region"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Colorado city is the gateway to Mesa Verde National Park?",
+    "correctAnswer": "Durango",
+    "options": ["Durango", "Grand Junction", "Pueblo", "Colorado Springs"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which U.S. president was born in Colorado?",
+    "correctAnswer": "None",
+    "options": ["Dwight D. Eisenhower", "Gerald Ford", "None", "Ronald Reagan"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Colorado river flows through Glenwood Canyon?",
+    "correctAnswer": "Colorado River",
+    "options": ["Arkansas River", "Colorado River", "South Platte River", "Yampa River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Colorado shares a border with how many U.S. states?",
+    "correctAnswer": "7",
+    "options": ["5", "6", "7", "8"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Colorado city is known for its hot springs and historic mining district?",
+    "correctAnswer": "Glenwood Springs",
+    "options": ["Glenwood Springs", "Aspen", "Boulder", "Durango"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Colorado city hosts the annual Great American Beer Festival?",
+    "correctAnswer": "Denver",
+    "options": ["Boulder", "Denver", "Fort Collins", "Colorado Springs"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Royal Gorge Bridge, once the highest suspension bridge in the U.S., is located near which Colorado town?",
+    "correctAnswer": "Canon City",
+    "options": ["Canon City", "Pueblo", "Glenwood Springs", "Colorado Springs"],
+    "difficulty": 3
+  },
+  {
+    "question": "Colorado’s state tree is the Colorado Blue Spruce. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in the mountains", "Only in the plains"],
+    "difficulty": 1
+  }
+]
+

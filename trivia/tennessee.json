@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Tennessee?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Tennessee is nicknamed what?",
+    "correctAnswer": "The Volunteer State",
+    "options": ["The Volunteer State", "The Bluegrass State", "The Magnolia State", "The Garden State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Tennessee city is the largest by population?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Tennessee is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Midwest", "Southwest", "Mid-Atlantic"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Tennessee city is known as the 'Home of the Blues'?",
+    "correctAnswer": "Memphis",
+    "options": ["Memphis", "Nashville", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is home to the Grand Ole Opry?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city hosts the Memphis in May Beale Street Music Festival?",
+    "correctAnswer": "Memphis",
+    "options": ["Memphis", "Nashville", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is home to the University of Tennessee?",
+    "correctAnswer": "Knoxville",
+    "options": ["Knoxville", "Nashville", "Memphis", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee river flows through Chattanooga?",
+    "correctAnswer": "Tennessee River",
+    "options": ["Tennessee River", "Mississippi River", "Cumberland River", "Hiawassee River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is home to Graceland?",
+    "correctAnswer": "Memphis",
+    "options": ["Memphis", "Nashville", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city hosts the Bonnaroo Music Festival?",
+    "correctAnswer": "Manchester",
+    "options": ["Manchester", "Nashville", "Memphis", "Chattanooga"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Tennessee city is known for the Ryman Auditorium?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is near the Great Smoky Mountains National Park?",
+    "correctAnswer": "Gatlinburg",
+    "options": ["Gatlinburg", "Knoxville", "Nashville", "Chattanooga"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Tennessee city hosts the Tennessee State Fair?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is known for Beale Street music district?",
+    "correctAnswer": "Memphis",
+    "options": ["Memphis", "Nashville", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is home to Belmont University?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is near Lookout Mountain?",
+    "correctAnswer": "Chattanooga",
+    "options": ["Chattanooga", "Nashville", "Memphis", "Knoxville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is known for Sun Studio recording studios?",
+    "correctAnswer": "Memphis",
+    "options": ["Memphis", "Nashville", "Knoxville", "Chattanooga"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Tennessee city is home to the Tennessee Aquarium?",
+    "correctAnswer": "Chattanooga",
+    "options": ["Chattanooga", "Nashville", "Memphis", "Knoxville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is known for the Country Music Hall of Fame?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city hosts the annual CMA Music Festival?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is near Reelfoot Lake?",
+    "correctAnswer": "Dyersburg",
+    "options": ["Dyersburg", "Memphis", "Nashville", "Chattanooga"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Tennessee city is home to Vanderbilt University?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Tennessee city is known for historic Fort Negley?",
+    "correctAnswer": "Nashville",
+    "options": ["Nashville", "Memphis", "Knoxville", "Chattanooga"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Tennessee city is near the Natchez Trace Parkway?",
+    "correctAnswer": "Franklin",
+    "options": ["Franklin", "Nashville", "Memphis", "Chattanooga"],
+    "difficulty": "3"
+  }
+]
+

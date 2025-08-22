@@ -1,0 +1,177 @@
+[
+  {
+    "question": "What is the capital city of Missouri?",
+    "correctAnswer": "Jefferson City",
+    "options": ["Jefferson City", "St. Louis", "Kansas City", "Springfield"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Missouri city is the largest by population?",
+    "correctAnswer": "Kansas City",
+    "options": ["Kansas City", "St. Louis", "Springfield", "Columbia"],
+    "difficulty": 1
+  },
+  {
+    "question": "Missouri is nicknamed:",
+    "correctAnswer": "The Show-Me State",
+    "options": ["The Show-Me State", "The Gateway State", "The Ozark State", "The Prairie State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous U.S. landmark in St. Louis is known as 'The Gateway to the West'?",
+    "correctAnswer": "Gateway Arch",
+    "options": ["Gateway Arch", "Missouri State Capitol", "Union Station", "Forest Park"],
+    "difficulty": 1
+  },
+  {
+    "question": "Missouri became a state in which year?",
+    "correctAnswer": "1821",
+    "options": ["1821", "1803", "1836", "1845"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river forms much of Missouri’s eastern border?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Mississippi River", "Missouri River", "Kansas River", "Arkansas River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is known for jazz and blues music history?",
+    "correctAnswer": "Kansas City",
+    "options": ["Kansas City", "St. Louis", "Springfield", "Columbia"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is home to the famous Anheuser-Busch Brewery?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Springfield", "Columbia"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is home to Washington University?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Columbia", "Springfield", "Kansas City"],
+    "difficulty": 2
+  },
+  {
+    "question": "Missouri’s state bird is:",
+    "correctAnswer": "Eastern Bluebird",
+    "options": ["Eastern Bluebird", "Cardinal", "Mockingbird", "American Robin"],
+    "difficulty": 1
+  },
+  {
+    "question": "Missouri’s state flower is:",
+    "correctAnswer": "Hawthorn",
+    "options": ["Hawthorn", "Rose", "Tulip", "Violet"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city hosts the annual Missouri State Fair?",
+    "correctAnswer": "Sedalia",
+    "options": ["Sedalia", "Jefferson City", "Columbia", "Springfield"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city is home to the University of Missouri?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "St. Louis", "Kansas City", "Springfield"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri river flows through Kansas City?",
+    "correctAnswer": "Missouri River",
+    "options": ["Missouri River", "Mississippi River", "Osage River", "Meramec River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri-born entertainer starred in 'The Nutty Professor' movies?",
+    "correctAnswer": "Jerry Lewis",
+    "options": ["Jerry Lewis", "Brad Pitt", "Sheryl Crow", "Mark Twain"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city is famous for the 'Loop' entertainment district?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Columbia", "Springfield"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city hosts the annual Kansas City Renaissance Festival?",
+    "correctAnswer": "Bonner Springs",
+    "options": ["Bonner Springs", "Kansas City", "St. Louis", "Columbia"],
+    "difficulty": 3
+  },
+  {
+    "question": "Missouri shares borders with how many states?",
+    "correctAnswer": "Eight",
+    "options": ["Seven", "Eight", "Six", "Nine"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is known for the Ozark National Scenic Riverways nearby?",
+    "correctAnswer": "Van Buren",
+    "options": ["Van Buren", "Springfield", "Branson", "Jefferson City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city is home to the National World War I Museum?",
+    "correctAnswer": "Kansas City",
+    "options": ["Kansas City", "St. Louis", "Springfield", "Columbia"],
+    "difficulty": 2
+  },
+  {
+    "question": "Missouri’s state tree is:",
+    "correctAnswer": "Flowering Dogwood",
+    "options": ["Flowering Dogwood", "Oak", "Maple", "Pine"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is associated with the blues and BBQ tradition?",
+    "correctAnswer": "Kansas City",
+    "options": ["Kansas City", "St. Louis", "Columbia", "Springfield"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city hosts the annual St. Louis International Film Festival?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Columbia", "Springfield"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is home to the historic Fox Theatre?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Columbia", "Springfield"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri river flows through the Ozarks region?",
+    "correctAnswer": "Current River",
+    "options": ["Current River", "Missouri River", "Osage River", "Meramec River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city is known for the historic Union Station?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Columbia", "Springfield"],
+    "difficulty": 2
+  },
+  {
+    "question": "Missouri is the birthplace of which famous author of 'The Adventures of Tom Sawyer'?",
+    "correctAnswer": "Mark Twain",
+    "options": ["Mark Twain", "Harper Lee", "F. Scott Fitzgerald", "Louisa May Alcott"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Missouri city is home to the City Museum, known for its playful architecture?",
+    "correctAnswer": "St. Louis",
+    "options": ["St. Louis", "Kansas City", "Columbia", "Springfield"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Missouri city is famous for Branson entertainment theaters and attractions?",
+    "correctAnswer": "Branson",
+    "options": ["Branson", "Kansas City", "St. Louis", "Springfield"],
+    "difficulty": 2
+  }
+]
+

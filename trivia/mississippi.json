@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Mississippi?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Biloxi", "Tupelo", "Hattiesburg"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Mississippi is nicknamed what?",
+    "correctAnswer": "The Magnolia State",
+    "options": ["The Magnolia State", "The Volunteer State", "The Bluegrass State", "The Pelican State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Mississippi city is the largest by population?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Gulfport", "Biloxi", "Hattiesburg"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Mississippi is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Midwest", "Southwest", "Mid-Atlantic"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Mississippi city is known for the blues music trail?",
+    "correctAnswer": "Clarksdale",
+    "options": ["Clarksdale", "Jackson", "Biloxi", "Tupelo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is the birthplace of Elvis Presley?",
+    "correctAnswer": "Tupelo",
+    "options": ["Tupelo", "Jackson", "Biloxi", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is home to the University of Mississippi?",
+    "correctAnswer": "Oxford",
+    "options": ["Oxford", "Jackson", "Biloxi", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is known for the Mississippi Gulf Coast casinos?",
+    "correctAnswer": "Biloxi",
+    "options": ["Biloxi", "Jackson", "Gulfport", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which river forms the western border of Mississippi?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Mississippi River", "Tombigbee River", "Pascagoula River", "Yazoo River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Mississippi city hosts the Mississippi State Fair?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Biloxi", "Tupelo", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is home to the Vicksburg National Military Park?",
+    "correctAnswer": "Vicksburg",
+    "options": ["Vicksburg", "Jackson", "Biloxi", "Tupelo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is near the Natchez Trace Parkway?",
+    "correctAnswer": "Natchez",
+    "options": ["Natchez", "Jackson", "Biloxi", "Tupelo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is home to Mississippi State University?",
+    "correctAnswer": "Starkville",
+    "options": ["Starkville", "Jackson", "Biloxi", "Oxford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is known for the Mississippi Petrified Forest?",
+    "correctAnswer": "Flora",
+    "options": ["Flora", "Jackson", "Biloxi", "Tupelo"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Mississippi city is home to the Elvis Presley Birthplace Museum?",
+    "correctAnswer": "Tupelo",
+    "options": ["Tupelo", "Jackson", "Biloxi", "Oxford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is near the Gulf Islands National Seashore?",
+    "correctAnswer": "Biloxi",
+    "options": ["Biloxi", "Jackson", "Gulfport", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city hosts the annual Crawfish Festival?",
+    "correctAnswer": "Biloxi",
+    "options": ["Biloxi", "Jackson", "Tupelo", "Hattiesburg"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Mississippi city is home to the Mississippi Museum of Art?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Biloxi", "Tupelo", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is near the Ross Barnett Reservoir?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Ridgeland", "Biloxi", "Oxford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is known for historic antebellum homes?",
+    "correctAnswer": "Natchez",
+    "options": ["Natchez", "Jackson", "Vicksburg", "Oxford"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Mississippi city hosts the annual Mississippi Book Festival?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Oxford", "Biloxi", "Tupelo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is home to the University of Southern Mississippi?",
+    "correctAnswer": "Hattiesburg",
+    "options": ["Hattiesburg", "Jackson", "Oxford", "Biloxi"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is near the Tombigbee National Forest?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Jackson", "Oxford", "Hattiesburg"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Mississippi city is home to the Old Capitol Museum?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Oxford", "Biloxi", "Natchez"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is near the Gulfport-Biloxi International Airport?",
+    "correctAnswer": "Gulfport",
+    "options": ["Gulfport", "Biloxi", "Jackson", "Hattiesburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Mississippi city is known for blues heritage and Delta culture?",
+    "correctAnswer": "Clarksdale",
+    "options": ["Clarksdale", "Jackson", "Tupelo", "Vicksburg"],
+    "difficulty": "3"
+  }
+]
+

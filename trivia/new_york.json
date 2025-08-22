@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of New York?",
+    "correctAnswer": "Albany",
+    "options": ["Albany", "New York City", "Buffalo", "Rochester"],
+    "difficulty": "1"
+  },
+  {
+    "question": "New York is nicknamed what?",
+    "correctAnswer": "The Empire State",
+    "options": ["The Empire State", "The Keystone State", "The Garden State", "The Constitution State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is the largest in the United States by population?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Buffalo", "Rochester", "Albany"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is known as the home of Broadway theaters?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Syracuse"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York waterfall is one of the most famous in the world?",
+    "correctAnswer": "Niagara Falls",
+    "options": ["Niagara Falls", "Cumberland Falls", "Horseshoe Falls", "Victoria Falls"],
+    "difficulty": "2"
+  },
+  {
+    "question": "New York is part of which US region?",
+    "correctAnswer": "Mid-Atlantic",
+    "options": ["Mid-Atlantic", "New England", "Southeast", "Midwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York lake is the largest by surface area in the state?",
+    "correctAnswer": "Lake Ontario",
+    "options": ["Lake Ontario", "Lake Erie", "Seneca Lake", "Cayuga Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is home to the United Nations Headquarters?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Syracuse"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York state park contains the famous Watkins Glen Gorge?",
+    "correctAnswer": "Watkins Glen State Park",
+    "options": ["Watkins Glen State Park", "Letchworth State Park", "Adirondack Park", "Harriman State Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New York city is nicknamed 'The Queen City'?",
+    "correctAnswer": "Buffalo",
+    "options": ["Buffalo", "Rochester", "Syracuse", "Albany"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York island is home to the Statue of Liberty?",
+    "correctAnswer": "Liberty Island",
+    "options": ["Liberty Island", "Ellis Island", "Manhattan Island", "Roosevelt Island"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York mountain range is part of the Appalachian Mountains?",
+    "correctAnswer": "Adirondack Mountains",
+    "options": ["Adirondack Mountains", "Catskill Mountains", "Green Mountains", "White Mountains"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York river forms part of the border with Canada?",
+    "correctAnswer": "St. Lawrence River",
+    "options": ["St. Lawrence River", "Hudson River", "Mohawk River", "Delaware River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is home to Cornell University?",
+    "correctAnswer": "Ithaca",
+    "options": ["Ithaca", "Albany", "Syracuse", "Rochester"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New York city hosts the annual Macy’s Thanksgiving Day Parade?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Rochester"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is famous for the financial district and Wall Street?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Syracuse"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is known for its baseball team the Yankees?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Buffalo", "Rochester", "Albany"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is home to the National Baseball Hall of Fame?",
+    "correctAnswer": "Cooperstown",
+    "options": ["Cooperstown", "New York City", "Buffalo", "Syracuse"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is the birthplace of Theodore Roosevelt?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Rochester"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is known for the Erie Canal?",
+    "correctAnswer": "Syracuse",
+    "options": ["Syracuse", "Albany", "Rochester", "Buffalo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is known for the Buffalo wings?",
+    "correctAnswer": "Buffalo",
+    "options": ["Buffalo", "Rochester", "Syracuse", "Albany"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is home to the Metropolitan Museum of Art?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Rochester"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York island hosts Ellis Island Immigration Museum?",
+    "correctAnswer": "Ellis Island",
+    "options": ["Ellis Island", "Liberty Island", "Manhattan Island", "Roosevelt Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New York city is famous for Times Square?",
+    "correctAnswer": "New York City",
+    "options": ["New York City", "Albany", "Buffalo", "Syracuse"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New York city is known as the city of lakes, including Onondaga Lake?",
+    "correctAnswer": "Syracuse",
+    "options": ["Syracuse", "Albany", "Buffalo", "Rochester"],
+    "difficulty": "2"
+  }
+]
+

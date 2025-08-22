@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Idaho?",
+    "correctAnswer": "Boise",
+    "options": ["Boise", "Idaho Falls", "Caldwell", "Twin Falls"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Idaho is nicknamed what?",
+    "correctAnswer": "The Gem State",
+    "options": ["The Gem State", "The Potato State", "The Treasure State", "The Silver State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which river forms part of the border between Idaho and Oregon?",
+    "correctAnswer": "Snake River",
+    "options": ["Snake River", "Columbia River", "Salmon River", "Payette River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Idaho is part of which US region?",
+    "correctAnswer": "West",
+    "options": ["West", "Midwest", "Southwest", "Pacific"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Idaho city is the largest by population?",
+    "correctAnswer": "Boise",
+    "options": ["Boise", "Nampa", "Idaho Falls", "Caldwell"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Idaho city is home to Boise State University?",
+    "correctAnswer": "Boise",
+    "options": ["Boise", "Idaho Falls", "Pocatello", "Twin Falls"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Idaho is the top producer of which crop in the United States?",
+    "correctAnswer": "Potatoes",
+    "options": ["Potatoes", "Wheat", "Corn", "Barley"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Idaho national park is known for the Sawtooth Mountains?",
+    "correctAnswer": "Sawtooth National Recreation Area",
+    "options": ["Sawtooth National Recreation Area", "Yellowstone National Park", "Crater Lake National Park", "Grand Teton National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city hosts the annual Trailing of the Sheep Festival?",
+    "correctAnswer": "Hailey",
+    "options": ["Hailey", "Boise", "Coeur d'Alene", "Pocatello"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho river is famous for white-water rafting?",
+    "correctAnswer": "Salmon River",
+    "options": ["Salmon River", "Snake River", "Payette River", "Clearwater River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Idaho city is near Shoshone Falls, sometimes called the 'Niagara of the West'?",
+    "correctAnswer": "Twin Falls",
+    "options": ["Twin Falls", "Boise", "Idaho Falls", "Caldwell"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Idaho city is the site of the annual Winter Carnival?",
+    "correctAnswer": "McCall",
+    "options": ["McCall", "Boise", "Coeur d'Alene", "Sandpoint"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is home to the University of Idaho?",
+    "correctAnswer": "Moscow",
+    "options": ["Moscow", "Boise", "Pocatello", "Idaho Falls"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Idaho city is famous for its annual Basque Festival?",
+    "correctAnswer": "Boise",
+    "options": ["Boise", "Twin Falls", "Nampa", "Idaho Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near Hells Canyon, the deepest river gorge in North America?",
+    "correctAnswer": "Lewiston",
+    "options": ["Lewiston", "Boise", "Caldwell", "Idaho Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is home to the Idaho State Capitol building?",
+    "correctAnswer": "Boise",
+    "options": ["Boise", "Nampa", "Pocatello", "Idaho Falls"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Idaho city is near Priest Lake, a popular recreational area?",
+    "correctAnswer": "Sandpoint",
+    "options": ["Sandpoint", "Coeur d'Alene", "Boise", "Twin Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near Craters of the Moon National Monument?",
+    "correctAnswer": "Arco",
+    "options": ["Arco", "Boise", "Twin Falls", "Idaho Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near Lake Coeur d'Alene?",
+    "correctAnswer": "Coeur d'Alene",
+    "options": ["Coeur d'Alene", "Sandpoint", "Boise", "Lewiston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Idaho city is home to the annual Shoshone-Bannock Indian Festival?",
+    "correctAnswer": "Fort Hall",
+    "options": ["Fort Hall", "Boise", "Twin Falls", "Idaho Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near Bruneau Dunes State Park?",
+    "correctAnswer": "Bruneau",
+    "options": ["Bruneau", "Boise", "Twin Falls", "Caldwell"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is known for the historic 1906 St. Gertrude's Mission?",
+    "correctAnswer": "Cottonwood",
+    "options": ["Cottonwood", "Boise", "Moscow", "Lewiston"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Idaho city is known as the gateway to Sun Valley ski resort?",
+    "correctAnswer": "Ketchum",
+    "options": ["Ketchum", "Boise", "McCall", "Twin Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near the Weiser River Trail, a popular biking route?",
+    "correctAnswer": "Weiser",
+    "options": ["Weiser", "Boise", "Caldwell", "Twin Falls"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Idaho city is near the Sawtooth Wilderness area?",
+    "correctAnswer": "Stanley",
+    "options": ["Stanley", "Boise", "Twin Falls", "Idaho Falls"],
+    "difficulty": "3"
+  }
+]
+

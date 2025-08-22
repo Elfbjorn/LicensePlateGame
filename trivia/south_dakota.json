@@ -1,0 +1,181 @@
+[
+  {
+    "question": "What is the capital city of South Dakota?",
+    "correctAnswer": "Pierre",
+    "options": ["Sioux Falls", "Rapid City", "Pierre", "Aberdeen"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which South Dakota city is the largest by population?",
+    "correctAnswer": "Sioux Falls",
+    "options": ["Sioux Falls", "Rapid City", "Pierre", "Aberdeen"],
+    "difficulty": 1
+  },
+  {
+    "question": "South Dakota is famous for which massive mountain sculpture?",
+    "correctAnswer": "Mount Rushmore",
+    "options": ["Crazy Horse Memorial", "Mount Rushmore", "Black Hills Monument", "Badlands Sculpture"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which four U.S. presidents are carved into Mount Rushmore?",
+    "correctAnswer": "George Washington, Thomas Jefferson, Theodore Roosevelt, Abraham Lincoln",
+    "options": [
+      "George Washington, Thomas Jefferson, Theodore Roosevelt, Abraham Lincoln",
+      "George Washington, John Adams, Thomas Jefferson, James Madison",
+      "Abraham Lincoln, Ulysses S. Grant, Theodore Roosevelt, Franklin D. Roosevelt",
+      "George Washington, Abraham Lincoln, Thomas Jefferson, James Monroe"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "South Dakota is part of which region of the United States?",
+    "correctAnswer": "Midwest",
+    "options": ["Midwest", "South", "West", "Great Plains only"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which South Dakota national park is known for its sharply eroded buttes and pinnacles?",
+    "correctAnswer": "Badlands National Park",
+    "options": ["Custer State Park", "Badlands National Park", "Black Hills National Forest", "Wind Cave National Park"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Crazy Horse Memorial, still under construction, is located in which South Dakota range?",
+    "correctAnswer": "Black Hills",
+    "options": ["Badlands", "Black Hills", "Dakota Plains", "Sioux Mountains"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river runs through Pierre, the state capital of South Dakota?",
+    "correctAnswer": "Missouri River",
+    "options": ["Missouri River", "Mississippi River", "Cheyenne River", "James River"],
+    "difficulty": 2
+  },
+  {
+    "question": "South Dakota became a state in which year?",
+    "correctAnswer": "1889",
+    "options": ["1889", "1876", "1890", "1901"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Native American tribes have historic lands in South Dakota?",
+    "correctAnswer": "Lakota, Dakota, Nakota Sioux",
+    "options": [
+      "Lakota, Dakota, Nakota Sioux",
+      "Cherokee and Creek",
+      "Apache and Navajo",
+      "Ojibwe and Cree"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which South Dakota city is the gateway to Mount Rushmore?",
+    "correctAnswer": "Keystone",
+    "options": ["Rapid City", "Pierre", "Keystone", "Custer"],
+    "difficulty": 2
+  },
+  {
+    "question": "South Dakota is known for which annual event celebrating cattle and ranching?",
+    "correctAnswer": "Sturgis Motorcycle Rally",
+    "options": ["Sturgis Motorcycle Rally", "Rapid City Rodeo", "Pierre Cattle Show", "Black Hills Stampede"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which South Dakota lake is a popular recreational area and formed by the Missouri River?",
+    "correctAnswer": "Lake Oahe",
+    "options": ["Lake Oahe", "Lake Francis Case", "Big Stone Lake", "Lake Madison"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which South Dakota city is closest to Badlands National Park?",
+    "correctAnswer": "Wall",
+    "options": ["Rapid City", "Wall", "Pierre", "Custer"],
+    "difficulty": 2
+  },
+  {
+    "question": "South Dakota’s state flower is which of the following?",
+    "correctAnswer": "Pasque flower",
+    "options": ["Sunflower", "Prairie Rose", "Pasque flower", "Bluebonnet"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Homestake Mine in Lead, South Dakota was famous for mining which metal?",
+    "correctAnswer": "Gold",
+    "options": ["Silver", "Gold", "Copper", "Iron"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which South Dakota city hosts the annual Black Hills Powwow?",
+    "correctAnswer": "Rapid City",
+    "options": ["Pierre", "Rapid City", "Spearfish", "Custer"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which U.S. president’s face appears on Mount Rushmore first from the left?",
+    "correctAnswer": "George Washington",
+    "options": ["George Washington", "Thomas Jefferson", "Theodore Roosevelt", "Abraham Lincoln"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous cave system is a South Dakota national park?",
+    "correctAnswer": "Wind Cave National Park",
+    "options": ["Mammoth Cave", "Wind Cave National Park", "Jewel Cave National Monument", "Carlsbad Caverns"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which South Dakota city is home to the South Dakota School of Mines & Technology?",
+    "correctAnswer": "Rapid City",
+    "options": ["Pierre", "Rapid City", "Aberdeen", "Sioux Falls"],
+    "difficulty": 3
+  },
+  {
+    "question": "South Dakota’s state bird is the Ring-necked Pheasant. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in eastern SD", "Only in western SD"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which South Dakota city was the site of the Wounded Knee Massacre in 1890?",
+    "correctAnswer": "Pine Ridge",
+    "options": ["Rapid City", "Pine Ridge", "Pierre", "Custer"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which river forms part of the eastern border of South Dakota?",
+    "correctAnswer": "Missouri River",
+    "options": ["Mississippi River", "Missouri River", "Cheyenne River", "Red River"],
+    "difficulty": 2
+  },
+  {
+    "question": "South Dakota is the leading U.S. producer of which crop?",
+    "correctAnswer": "Sunflowers",
+    "options": ["Corn", "Soybeans", "Sunflowers", "Wheat"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which mountain range is located in western South Dakota?",
+    "correctAnswer": "Black Hills",
+    "options": ["Rocky Mountains", "Black Hills", "Badlands Hills", "Sierra Nevada"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which national memorial in South Dakota honors the Lakota leader?",
+    "correctAnswer": "Crazy Horse Memorial",
+    "options": ["Mount Rushmore", "Crazy Horse Memorial", "Little Bighorn Monument", "Tecumseh Memorial"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which South Dakota city is famous for Wall Drug Store?",
+    "correctAnswer": "Wall",
+    "options": ["Rapid City", "Wall", "Pierre", "Custer"],
+    "difficulty": 1
+  },
+  {
+    "question": "South Dakota is known for which traditional Native American craft?",
+    "correctAnswer": "Beadwork and quillwork",
+    "options": ["Pottery", "Beadwork and quillwork", "Basket weaving", "Wood carving"],
+    "difficulty": 3
+  }
+]
+

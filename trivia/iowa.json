@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Iowa?",
+    "correctAnswer": "Des Moines",
+    "options": ["Des Moines", "Cedar Rapids", "Davenport", "Iowa City"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Iowa is nicknamed what?",
+    "correctAnswer": "The Hawkeye State",
+    "options": ["The Hawkeye State", "The Cornhusker State", "The Buckeye State", "The Badger State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Iowa river forms part of the border with Illinois?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Mississippi River", "Des Moines River", "Cedar River", "Iowa River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Iowa is part of which US region?",
+    "correctAnswer": "Midwest",
+    "options": ["Midwest", "Southeast", "West", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Iowa city is the largest by population?",
+    "correctAnswer": "Des Moines",
+    "options": ["Des Moines", "Cedar Rapids", "Davenport", "Sioux City"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Iowa city hosts the Iowa State Fair?",
+    "correctAnswer": "Des Moines",
+    "options": ["Des Moines", "Cedar Rapids", "Ames", "Iowa City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Iowa university is located in Ames?",
+    "correctAnswer": "Iowa State University",
+    "options": ["Iowa State University", "University of Iowa", "Drake University", "Grinnell College"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Iowa city is home to the University of Iowa?",
+    "correctAnswer": "Iowa City",
+    "options": ["Iowa City", "Ames", "Des Moines", "Cedar Rapids"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Iowa city is known for the Field of Dreams movie site?",
+    "correctAnswer": "Dyersville",
+    "options": ["Dyersville", "Des Moines", "Cedar Rapids", "Davenport"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Iowa river runs through the city of Des Moines?",
+    "correctAnswer": "Des Moines River",
+    "options": ["Des Moines River", "Cedar River", "Mississippi River", "Iowa River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Iowa city hosts the National Czech & Slovak Museum & Library?",
+    "correctAnswer": "Cedar Rapids",
+    "options": ["Cedar Rapids", "Des Moines", "Davenport", "Dubuque"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is home to the Amana Colonies?",
+    "correctAnswer": "Amana",
+    "options": ["Amana", "Iowa City", "Des Moines", "Cedar Rapids"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is known for the historic Bridges of Madison County?",
+    "correctAnswer": "Winterset",
+    "options": ["Winterset", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is the birthplace of John Wayne?",
+    "correctAnswer": "Winterset",
+    "options": ["Winterset", "Des Moines", "Cedar Rapids", "Davenport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city hosts the Iowa Women's Hall of Fame?",
+    "correctAnswer": "Cedar Rapids",
+    "options": ["Cedar Rapids", "Des Moines", "Iowa City", "Davenport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is near Maquoketa Caves State Park?",
+    "correctAnswer": "Maquoketa",
+    "options": ["Maquoketa", "Dubuque", "Cedar Rapids", "Des Moines"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is home to the Herbert Hoover Presidential Library and Museum?",
+    "correctAnswer": "West Branch",
+    "options": ["West Branch", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city hosts the National Balloon Classic festival?",
+    "correctAnswer": "Indianola",
+    "options": ["Indianola", "Des Moines", "Cedar Rapids", "Davenport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is home to Grinnell College?",
+    "correctAnswer": "Grinnell",
+    "options": ["Grinnell", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is near the Loess Hills?",
+    "correctAnswer": "Sioux City",
+    "options": ["Sioux City", "Des Moines", "Council Bluffs", "Cedar Rapids"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is home to the Figge Art Museum?",
+    "correctAnswer": "Davenport",
+    "options": ["Davenport", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city hosts the annual RAGBRAI bike ride?",
+    "correctAnswer": "Des Moines (start/finish varies)",
+    "options": ["Des Moines", "Cedar Rapids", "Davenport", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is known for the Pella Tulip Festival?",
+    "correctAnswer": "Pella",
+    "options": ["Pella", "Des Moines", "Cedar Rapids", "Davenport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is home to Luther College?",
+    "correctAnswer": "Decorah",
+    "options": ["Decorah", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Iowa city is near the Herbert Hoover National Historic Site?",
+    "correctAnswer": "West Branch",
+    "options": ["West Branch", "Des Moines", "Cedar Rapids", "Iowa City"],
+    "difficulty": "3"
+  }
+]
+

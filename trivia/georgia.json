@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Georgia?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Georgia is nicknamed what?",
+    "correctAnswer": "The Peach State",
+    "options": ["The Peach State", "The Sunshine State", "The Tar Heel State", "The Magnolia State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Georgia city is the largest by population?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Georgia is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "New England"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Georgia city is known for being the birthplace of Martin Luther King Jr.?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city hosts the Masters Golf Tournament?",
+    "correctAnswer": "Augusta",
+    "options": ["Augusta", "Atlanta", "Savannah", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to the Georgia Institute of Technology?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Athens", "Savannah", "Augusta"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is known for its historic Savannah Historic District?",
+    "correctAnswer": "Savannah",
+    "options": ["Savannah", "Atlanta", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to the World of Coca-Cola museum?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia river flows through Atlanta?",
+    "correctAnswer": "Chattahoochee River",
+    "options": ["Chattahoochee River", "Savannah River", "Ocmulgee River", "Altamaha River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to the Hartsfield–Jackson Atlanta International Airport?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Georgia city is home to the Martin Luther King Jr. National Historic Site?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is famous for its coastal barrier islands like Tybee Island?",
+    "correctAnswer": "Savannah",
+    "options": ["Savannah", "Atlanta", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to the University of Georgia?",
+    "correctAnswer": "Athens",
+    "options": ["Athens", "Atlanta", "Savannah", "Augusta"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city hosted the 1996 Summer Olympics?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is famous for Stone Mountain Park?",
+    "correctAnswer": "Stone Mountain",
+    "options": ["Stone Mountain", "Atlanta", "Savannah", "Augusta"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Georgia city is known for the Fox Theatre?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to CNN Center?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to the Savannah College of Art and Design?",
+    "correctAnswer": "Savannah",
+    "options": ["Savannah", "Atlanta", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is famous for the Okefenokee Swamp nearby?",
+    "correctAnswer": "Waycross",
+    "options": ["Waycross", "Atlanta", "Savannah", "Augusta"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Georgia city is near the Appalachian Trail's southern terminus?",
+    "correctAnswer": "Dahlonega",
+    "options": ["Dahlonega", "Atlanta", "Savannah", "Athens"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Georgia city is known for its Vidalia onions?",
+    "correctAnswer": "Vidalia",
+    "options": ["Vidalia", "Atlanta", "Savannah", "Augusta"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is home to Lake Lanier?",
+    "correctAnswer": "Buford",
+    "options": ["Buford", "Atlanta", "Savannah", "Athens"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Georgia city is known for the Fox Theatre and Centennial Olympic Park?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Georgia city is famous for Coca-Cola, Delta Airlines, and Home Depot headquarters?",
+    "correctAnswer": "Atlanta",
+    "options": ["Atlanta", "Savannah", "Augusta", "Athens"],
+    "difficulty": "2"
+  }
+]
+

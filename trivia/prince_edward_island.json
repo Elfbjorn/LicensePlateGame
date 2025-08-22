@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Prince Edward Island?",
+    "correctAnswer": "Charlottetown",
+    "options": ["Charlottetown", "Summerside", "Souris", "Montague"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Prince Edward Island is the smallest province in Canada by what?",
+    "correctAnswer": "Land area",
+    "options": ["Population", "Land area", "GDP", "Number of cities"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous Canadian author wrote 'Anne of Green Gables'?",
+    "correctAnswer": "Lucy Maud Montgomery",
+    "options": ["Lucy Maud Montgomery", "Margaret Atwood", "Alice Munro", "Catherine Parr Traill"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which body of water surrounds Prince Edward Island?",
+    "correctAnswer": "Gulf of St. Lawrence",
+    "options": ["Atlantic Ocean", "Bay of Fundy", "Gulf of St. Lawrence", "Hudson Bay"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is the primary agricultural product of Prince Edward Island?",
+    "correctAnswer": "Potatoes",
+    "options": ["Potatoes", "Apples", "Wheat", "Blueberries"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Prince Edward Island is nicknamed what?",
+    "correctAnswer": "The Garden of the Gulf",
+    "options": ["The Garden of the Gulf", "The Maritimes Jewel", "Little Canada", "Emerald Isle"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which PEI festival celebrates music and culture in Charlottetown every summer?",
+    "correctAnswer": "PEI International Shellfish Festival",
+    "options": ["PEI International Shellfish Festival", "Celtic Colours Festival", "Island Music Festival", "Anne of Green Gables Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which famous body of water separates PEI from New Brunswick?",
+    "correctAnswer": "Northumberland Strait",
+    "options": ["Bay of Fundy", "Gulf of St. Lawrence", "Northumberland Strait", "Cabot Strait"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What is the name of PEI’s professional soccer team?",
+    "correctAnswer": "Atlético Ottawa (with PEI training base)",
+    "options": ["Charlottetown Islanders", "Prince Edward FC", "Atlético Ottawa", "Islanders United"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which PEI lighthouse is located at the tip of the north shore near North Rustico?",
+    "correctAnswer": "North Rustico Lighthouse",
+    "options": ["North Rustico Lighthouse", "Point Prim Lighthouse", "Cape Tryon Lighthouse", "East Point Lighthouse"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which famous Anne of Green Gables site can you visit in PEI?",
+    "correctAnswer": "Green Gables House",
+    "options": ["Green Gables House", "Anne’s Cottage", "Montgomery House", "Prince Edward Manor"],
+    "difficulty": "1"
+  },
+  {
+    "question": "PEI is connected to mainland Canada by which structure?",
+    "correctAnswer": "Confederation Bridge",
+    "options": ["Confederation Bridge", "Canso Causeway", "Macdonald Bridge", "Champlain Bridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which PEI city is known as the island’s second-largest and hosts a summer cultural festival?",
+    "correctAnswer": "Summerside",
+    "options": ["Charlottetown", "Souris", "Montague", "Summerside"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What type of fish is common in PEI waters and supports local aquaculture?",
+    "correctAnswer": "Oysters",
+    "options": ["Salmon", "Oysters", "Lobster", "Cod"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which PEI festival celebrates the story of Anne Shirley?",
+    "correctAnswer": "Anne of Green Gables Festival",
+    "options": ["Celtic Colours Festival", "Anne of Green Gables Festival", "Island Music Festival", "Heritage Days"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What is the main language spoken in PEI?",
+    "correctAnswer": "English",
+    "options": ["English", "French", "English and French", "Mi’kmaq"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which PEI beach is famous for red sand cliffs?",
+    "correctAnswer": "Cavendish Beach",
+    "options": ["Cavendish Beach", "North Rustico Beach", "Souris Beach", "East Point Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "PEI’s provincial flower is what?",
+    "correctAnswer": "Lady’s Slipper",
+    "options": ["Mayflower", "Lady’s Slipper", "Rose", "Lily"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which PEI city hosts the island’s annual lobster supper festival?",
+    "correctAnswer": "Souris",
+    "options": ["Souris", "Charlottetown", "Summerside", "Montague"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which PEI island region is known for its sand dunes and UNESCO Biosphere designation?",
+    "correctAnswer": "North Shore",
+    "options": ["South Shore", "North Shore", "East Point", "West Cape"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which body of water lies north of PEI?",
+    "correctAnswer": "Gulf of St. Lawrence",
+    "options": ["Atlantic Ocean", "Bay of Fundy", "Gulf of St. Lawrence", "Northumberland Strait"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which historic shipwreck off PEI is a tourist attraction?",
+    "correctAnswer": "HMS Shannon",
+    "options": ["HMS Shannon", "HMS Victory", "HMS Beagle", "HMS Bounty"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which type of traditional PEI cuisine is most celebrated?",
+    "correctAnswer": "Seafood",
+    "options": ["Beef", "Seafood", "Poutine", "Maple desserts"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which PEI town is a major ferry port to Nova Scotia?",
+    "correctAnswer": "Souris",
+    "options": ["Charlottetown", "Souris", "Summerside", "Montague"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Canadian musician has performed multiple times at PEI’s Charlottetown Festival?",
+    "correctAnswer": "Anne Murray",
+    "options": ["Celine Dion", "Shania Twain", "Anne Murray", "Leonard Cohen"],
+    "difficulty": "3"
+  }
+]
+

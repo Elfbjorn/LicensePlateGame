@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Connecticut?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Stamford", "Bridgeport"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Connecticut is nicknamed what?",
+    "correctAnswer": "The Constitution State",
+    "options": ["The Constitution State", "The Ocean State", "The Green Mountain State", "The Bay State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut city is home to Yale University?",
+    "correctAnswer": "New Haven",
+    "options": ["New Haven", "Hartford", "Stamford", "Bridgeport"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Connecticut is part of which US region?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut river flows through Hartford?",
+    "correctAnswer": "Connecticut River",
+    "options": ["Connecticut River", "Housatonic River", "Thames River", "Quinebaug River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut city is known for insurance companies and corporate headquarters?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Stamford", "Bridgeport"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Connecticut was one of the original 13 colonies.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only 12 colonies", "Only 14 colonies"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut city is famous for its maritime history and Mystic Seaport?",
+    "correctAnswer": "Mystic",
+    "options": ["Mystic", "New Haven", "Hartford", "Bridgeport"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city hosts the annual International Boat Show?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Bridgeport", "New Haven", "Hartford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city is known for its historic Gilded Age mansions?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Mystic", "Hartford", "Stamford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city is home to the Mark Twain House?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Bridgeport", "Stamford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Connecticut is known for which type of agricultural crop historically?",
+    "correctAnswer": "Tobacco",
+    "options": ["Tobacco", "Corn", "Apples", "Blueberries"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut town is famous for the Yale Bowl?",
+    "correctAnswer": "New Haven",
+    "options": ["New Haven", "Hartford", "Stamford", "Bridgeport"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city is known as the 'Insurance Capital of the World'?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Stamford", "Bridgeport"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut city is the largest by population?",
+    "correctAnswer": "Bridgeport",
+    "options": ["Bridgeport", "New Haven", "Hartford", "Stamford"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Connecticut city hosts the Connecticut Science Center?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Bridgeport", "Stamford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut river is famous for recreational boating?",
+    "correctAnswer": "Connecticut River",
+    "options": ["Connecticut River", "Housatonic River", "Thames River", "Quinebaug River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city is home to the Pequot Museum?",
+    "correctAnswer": "Mystic",
+    "options": ["Mystic", "Hartford", "New Haven", "Bridgeport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Connecticut town is known for its historic colonial homes in Litchfield County?",
+    "correctAnswer": "Litchfield",
+    "options": ["Litchfield", "Mystic", "Hartford", "Stamford"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Connecticut city is a hub for tech and corporate offices near New York City?",
+    "correctAnswer": "Stamford",
+    "options": ["Stamford", "Hartford", "Bridgeport", "New Haven"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut island is known for its beaches and lighthouse?",
+    "correctAnswer": "Falkner Island",
+    "options": ["Falkner Island", "Block Island", "Martha’s Vineyard", "Nantucket"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Connecticut was the site of which important colonial agreement?",
+    "correctAnswer": "Fundamental Orders of Connecticut",
+    "options": ["Fundamental Orders of Connecticut", "Mayflower Compact", "Massachusetts Bay Charter", "Rhode Island Charter"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Connecticut town is famous for Yale University’s art gallery?",
+    "correctAnswer": "New Haven",
+    "options": ["New Haven", "Hartford", "Stamford", "Bridgeport"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city has a historic downtown called Riverfront District?",
+    "correctAnswer": "Hartford",
+    "options": ["Hartford", "New Haven", "Bridgeport", "Stamford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut town hosts the annual Durham Fair, one of the largest in New England?",
+    "correctAnswer": "Durham",
+    "options": ["Durham", "Hartford", "New Haven", "Stamford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Connecticut city was a center of the American clockmaking industry?",
+    "correctAnswer": "Waterbury",
+    "options": ["Waterbury", "Hartford", "Bridgeport", "New Haven"],
+    "difficulty": "3"
+  }
+]
+

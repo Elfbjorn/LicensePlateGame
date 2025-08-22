@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Virginia?",
+    "correctAnswer": "Richmond",
+    "options": ["Richmond", "Virginia Beach", "Norfolk", "Alexandria"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Virginia is nicknamed what?",
+    "correctAnswer": "The Old Dominion",
+    "options": ["The Old Dominion", "The Tar Heel State", "The Volunteer State", "The Garden State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Virginia city is the largest by population?",
+    "correctAnswer": "Virginia Beach",
+    "options": ["Virginia Beach", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Virginia is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Virginia city is home to Colonial Williamsburg?",
+    "correctAnswer": "Williamsburg",
+    "options": ["Williamsburg", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is near Mount Vernon, George Washington's estate?",
+    "correctAnswer": "Alexandria",
+    "options": ["Alexandria", "Richmond", "Norfolk", "Virginia Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is known for the Norfolk Naval Base?",
+    "correctAnswer": "Norfolk",
+    "options": ["Norfolk", "Virginia Beach", "Richmond", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is home to the University of Virginia?",
+    "correctAnswer": "Charlottesville",
+    "options": ["Charlottesville", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia river flows through Richmond?",
+    "correctAnswer": "James River",
+    "options": ["James River", "Potomac River", "Rappahannock River", "Appomattox River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city hosts the annual Virginia State Fair?",
+    "correctAnswer": "Doswell",
+    "options": ["Doswell", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is famous for the Pentagon?",
+    "correctAnswer": "Arlington",
+    "options": ["Arlington", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is home to the Virginia Museum of Fine Arts?",
+    "correctAnswer": "Richmond",
+    "options": ["Richmond", "Virginia Beach", "Norfolk", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is near Shenandoah National Park?",
+    "correctAnswer": "Luray",
+    "options": ["Luray", "Charlottesville", "Richmond", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is known for historic Jamestown?",
+    "correctAnswer": "Jamestown",
+    "options": ["Jamestown", "Williamsburg", "Richmond", "Norfolk"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city hosts the annual Neptune Festival on the Atlantic coast?",
+    "correctAnswer": "Virginia Beach",
+    "options": ["Virginia Beach", "Norfolk", "Richmond", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is home to George Mason University?",
+    "correctAnswer": "Fairfax",
+    "options": ["Fairfax", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is known for the historic Appomattox Court House?",
+    "correctAnswer": "Appomattox",
+    "options": ["Appomattox", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is home to Virginia Tech?",
+    "correctAnswer": "Blacksburg",
+    "options": ["Blacksburg", "Charlottesville", "Richmond", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is near the Chesapeake Bay Bridge-Tunnel?",
+    "correctAnswer": "Virginia Beach",
+    "options": ["Virginia Beach", "Norfolk", "Richmond", "Alexandria"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Virginia city is known for the American Civil War battlefields nearby?",
+    "correctAnswer": "Manassas",
+    "options": ["Manassas", "Richmond", "Charlottesville", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is home to the Mariners' Museum?",
+    "correctAnswer": "Newport News",
+    "options": ["Newport News", "Richmond", "Norfolk", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is known for the historic Lexington College and Washington and Lee University?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Charlottesville", "Richmond", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is home to the historic Fort Monroe?",
+    "correctAnswer": "Hampton",
+    "options": ["Hampton", "Norfolk", "Richmond", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is home to Old Dominion University?",
+    "correctAnswer": "Norfolk",
+    "options": ["Norfolk", "Virginia Beach", "Richmond", "Alexandria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Virginia city is near the Skyline Drive scenic route?",
+    "correctAnswer": "Front Royal",
+    "options": ["Front Royal", "Charlottesville", "Richmond", "Alexandria"],
+    "difficulty": "3"
+  }
+]
+

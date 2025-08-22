@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Yukon?",
+    "correctAnswer": "Whitehorse",
+    "options": ["Whitehorse", "Dawson City", "Haines Junction", "Watson Lake"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Yukon is part of which Canadian region?",
+    "correctAnswer": "Northern Canada",
+    "options": ["Northern Canada", "Prairies", "Western Canada", "Atlantic Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous gold rush took place in Yukon in the late 1890s?",
+    "correctAnswer": "Klondike Gold Rush",
+    "options": ["Klondike Gold Rush", "Cariboo Gold Rush", "Fraser Gold Rush", "Porcupine Gold Rush"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Yukon river is famous for gold prospecting?",
+    "correctAnswer": "Yukon River",
+    "options": ["Yukon River", "Mackenzie River", "Fraser River", "Peace River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Yukon town was a key hub during the Klondike Gold Rush?",
+    "correctAnswer": "Dawson City",
+    "options": ["Whitehorse", "Dawson City", "Haines Junction", "Watson Lake"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which mountain range dominates southern Yukon?",
+    "correctAnswer": "Saint Elias Mountains",
+    "options": ["Saint Elias Mountains", "Rocky Mountains", "Coast Mountains", "Mackenzie Mountains"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon festival celebrates northern culture and heritage in February?",
+    "correctAnswer": "Yukon Sourdough Rendezvous",
+    "options": ["Yukon Sourdough Rendezvous", "Dawson City Music Festival", "Yukon Quest", "Northern Lights Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon trail is used for the famous dog sled race from Whitehorse to Fairbanks?",
+    "correctAnswer": "Yukon Quest Trail",
+    "options": ["Alaska Highway", "Chilkoot Trail", "Yukon Quest Trail", "Dempster Highway"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Yukon borders which U.S. state?",
+    "correctAnswer": "Alaska",
+    "options": ["Alaska", "Washington", "Montana", "Idaho"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Yukon river flows past Whitehorse?",
+    "correctAnswer": "Yukon River",
+    "options": ["Yukon River", "Alsek River", "Pelly River", "Teslin River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon park is famous for Tombstone Mountains and wildlife viewing?",
+    "correctAnswer": "Tombstone Territorial Park",
+    "options": ["Kluane National Park", "Tombstone Territorial Park", "Yukon Wildlife Preserve", "Nahanni National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon glacier-fed lake is the largest in the territory?",
+    "correctAnswer": "Kluane Lake",
+    "options": ["Kluane Lake", "Lake Laberge", "Tagish Lake", "Atlin Lake"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which long-distance highway connects Yukon to British Columbia and Alaska?",
+    "correctAnswer": "Alaska Highway",
+    "options": ["Alaska Highway", "Trans-Canada Highway", "Dempster Highway", "Yellowhead Highway"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Yukon mountain is Canada’s highest peak?",
+    "correctAnswer": "Mount Logan",
+    "options": ["Mount Logan", "Mount Saint Elias", "Mount Fairweather", "Mount Robson"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon river is famous for salmon runs?",
+    "correctAnswer": "Yukon River",
+    "options": ["Yukon River", "Teslin River", "Alsek River", "Pelly River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon community is famous for its gold dredges?",
+    "correctAnswer": "Dawson City",
+    "options": ["Whitehorse", "Dawson City", "Haines Junction", "Watson Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon festival celebrates winter sports and northern lifestyle?",
+    "correctAnswer": "Yukon Sourdough Rendezvous",
+    "options": ["Yukon Quest", "Yukon Sourdough Rendezvous", "Northern Lights Festival", "Frostbite Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon First Nations group is indigenous to the southern region?",
+    "correctAnswer": "Kwanlin Dün",
+    "options": ["Kwanlin Dün", "Tlingit", "Haida", "Inuvialuit"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Yukon highway leads north to the Arctic Circle?",
+    "correctAnswer": "Dempster Highway",
+    "options": ["Alaska Highway", "Dempster Highway", "Klondike Highway", "Silver Trail"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Yukon lake is known for recreational fishing and boating?",
+    "correctAnswer": "Tagish Lake",
+    "options": ["Tagish Lake", "Kluane Lake", "Lake Laberge", "Atlin Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Yukon’s provincial/territorial bird is what?",
+    "correctAnswer": "Common Raven",
+    "options": ["Common Raven", "Bald Eagle", "Willow Ptarmigan", "Gray Jay"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Yukon trail was used by gold prospectors in the Klondike Gold Rush?",
+    "correctAnswer": "Chilkoot Trail",
+    "options": ["Chilkoot Trail", "Dempster Highway", "Alaska Highway", "Klondike Highway"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon city is the northernmost on the Alaska Highway?",
+    "correctAnswer": "Whitehorse",
+    "options": ["Dawson City", "Whitehorse", "Watson Lake", "Haines Junction"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Yukon lake was named after a famous prospector?",
+    "correctAnswer": "Lake Laberge",
+    "options": ["Lake Laberge", "Kluane Lake", "Tagish Lake", "Atlin Lake"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Yukon river was a major transportation route during the gold rush?",
+    "correctAnswer": "Yukon River",
+    "options": ["Yukon River", "Pelly River", "Teslin River", "Alsek River"],
+    "difficulty": "2"
+  }
+]
+

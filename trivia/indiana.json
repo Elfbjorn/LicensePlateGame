@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Indiana?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Indiana is nicknamed what?",
+    "correctAnswer": "The Hoosier State",
+    "options": ["The Hoosier State", "The Buckeye State", "The Cornhusker State", "The Badger State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Indiana city is the largest by population?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Indiana is part of which US region?",
+    "correctAnswer": "Midwest",
+    "options": ["Midwest", "Southeast", "Mid-Atlantic", "Great Plains"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Indiana city hosts the Indianapolis 500 motor race?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is home to Notre Dame University?",
+    "correctAnswer": "South Bend",
+    "options": ["South Bend", "Indianapolis", "Bloomington", "Fort Wayne"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is known for the Fort Wayne Children's Zoo?",
+    "correctAnswer": "Fort Wayne",
+    "options": ["Fort Wayne", "Indianapolis", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is home to Purdue University?",
+    "correctAnswer": "West Lafayette",
+    "options": ["West Lafayette", "Indianapolis", "Bloomington", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is famous for the Indiana State Museum?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana river flows through Indianapolis?",
+    "correctAnswer": "White River",
+    "options": ["White River", "Ohio River", "Wabash River", "Tippecanoe River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is near Lake Michigan?",
+    "correctAnswer": "Gary",
+    "options": ["Gary", "Indianapolis", "Fort Wayne", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city hosts the annual Covered Bridge Festival?",
+    "correctAnswer": "Parke County",
+    "options": ["Parke County", "Indianapolis", "Fort Wayne", "South Bend"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is known for the Children's Museum of Indianapolis?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "South Bend", "Evansville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is home to the Soldiers' and Sailors' Monument?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "South Bend", "Evansville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is known for the Indianapolis Motor Speedway Museum?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is home to Indiana University?",
+    "correctAnswer": "Bloomington",
+    "options": ["Bloomington", "Indianapolis", "Fort Wayne", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is near the Hoosier National Forest?",
+    "correctAnswer": "Bloomington",
+    "options": ["Bloomington", "Indianapolis", "Evansville", "Fort Wayne"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is known for the historic Benjamin Harrison Presidential Site?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "South Bend", "Evansville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is known for its historic canal district?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is famous for the annual Indiana State Fair?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Indiana city is near the Wabash River?",
+    "correctAnswer": "Terre Haute",
+    "options": ["Terre Haute", "Indianapolis", "Fort Wayne", "South Bend"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is famous for the Indiana Black Expo State Fair?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is near Patoka Lake?",
+    "correctAnswer": "Jasper",
+    "options": ["Jasper", "Indianapolis", "Fort Wayne", "South Bend"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city is known for the Crown Hill Cemetery?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "South Bend", "Evansville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Indiana city hosts the annual Indy Jazz Fest?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Indianapolis", "Fort Wayne", "Evansville", "South Bend"],
+    "difficulty": "3"
+  }
+]
+

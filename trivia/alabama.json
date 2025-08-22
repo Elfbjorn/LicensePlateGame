@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Alabama?",
+    "correctAnswer": "Montgomery",
+    "options": ["Montgomery", "Birmingham", "Mobile", "Huntsville"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Alabama is nicknamed what?",
+    "correctAnswer": "The Heart of Dixie",
+    "options": ["The Heart of Dixie", "The Sunshine State", "The Magnolia State", "The Peach State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Alabama city is the largest by population?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Alabama is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Alabama city is known for the Space & Rocket Center?",
+    "correctAnswer": "Huntsville",
+    "options": ["Huntsville", "Birmingham", "Montgomery", "Mobile"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is famous for the civil rights movement and the Selma to Montgomery march?",
+    "correctAnswer": "Montgomery",
+    "options": ["Montgomery", "Birmingham", "Selma", "Mobile"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city hosts the annual Hangout Music Festival?",
+    "correctAnswer": "Gulf Shores",
+    "options": ["Gulf Shores", "Birmingham", "Montgomery", "Mobile"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is a historic port on the Gulf of Mexico?",
+    "correctAnswer": "Mobile",
+    "options": ["Mobile", "Birmingham", "Montgomery", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is known for its iron and steel industry history?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is home to the University of Alabama?",
+    "correctAnswer": "Tuscaloosa",
+    "options": ["Tuscaloosa", "Birmingham", "Montgomery", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city hosts the Robert Trent Jones Golf Trail?",
+    "correctAnswer": "Montgomery",
+    "options": ["Montgomery", "Birmingham", "Mobile", "Huntsville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama river flows through Montgomery?",
+    "correctAnswer": "Alabama River",
+    "options": ["Alabama River", "Tennessee River", "Coosa River", "Black Warrior River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is home to the Alabama Shakespeare Festival?",
+    "correctAnswer": "Montgomery",
+    "options": ["Montgomery", "Birmingham", "Mobile", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is known for its Civil Rights Institute?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Tuscaloosa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is near Gulf Shores and the beaches?",
+    "correctAnswer": "Orange Beach",
+    "options": ["Orange Beach", "Mobile", "Montgomery", "Birmingham"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama city is home to Red Mountain Park?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama city hosted the Saturn V rocket manufacturing?",
+    "correctAnswer": "Huntsville",
+    "options": ["Huntsville", "Birmingham", "Montgomery", "Mobile"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama city is near the Talladega Superspeedway?",
+    "correctAnswer": "Talladega",
+    "options": ["Talladega", "Birmingham", "Montgomery", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is known for Mardi Gras celebrations outside Louisiana?",
+    "correctAnswer": "Mobile",
+    "options": ["Mobile", "Birmingham", "Montgomery", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is home to the McWane Science Center?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is famous for its historic Civil Rights march from Selma to here?",
+    "correctAnswer": "Montgomery",
+    "options": ["Montgomery", "Birmingham", "Mobile", "Tuscaloosa"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama city is near the Appalachian Mountains' southern end?",
+    "correctAnswer": "Huntsville",
+    "options": ["Huntsville", "Birmingham", "Montgomery", "Mobile"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alabama city is home to the U.S. Space & Rocket Center?",
+    "correctAnswer": "Huntsville",
+    "options": ["Huntsville", "Montgomery", "Birmingham", "Mobile"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is famous for the Vulcan statue?",
+    "correctAnswer": "Birmingham",
+    "options": ["Birmingham", "Montgomery", "Mobile", "Huntsville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alabama city is home to the University of South Alabama?",
+    "correctAnswer": "Mobile",
+    "options": ["Mobile", "Birmingham", "Montgomery", "Huntsville"],
+    "difficulty": "2"
+  }
+]
+

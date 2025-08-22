@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Puerto Rico?",
+    "correctAnswer": "San Juan",
+    "options": ["San Juan", "Ponce", "Mayagüez", "Arecibo"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Puerto Rico is located in which body of water?",
+    "correctAnswer": "Caribbean Sea",
+    "options": ["Caribbean Sea", "Gulf of Mexico", "Atlantic Ocean", "Pacific Ocean"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico rainforest is one of the oldest in the Western Hemisphere?",
+    "correctAnswer": "El Yunque National Forest",
+    "options": ["El Yunque National Forest", "Guánica Forest", "Toro Negro Forest", "Carite Forest"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico fort is located in Old San Juan?",
+    "correctAnswer": "Castillo San Felipe del Morro",
+    "options": ["Castillo San Felipe del Morro", "Fortaleza del Conde", "El Fuerte de Ponce", "San Cristóbal"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico is a territory of which country?",
+    "correctAnswer": "United States",
+    "options": ["United States", "Spain", "France", "Mexico"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico festival celebrates salsa music?",
+    "correctAnswer": "Ponce Carnival",
+    "options": ["Ponce Carnival", "San Sebastián Street Festival", "La Campechada", "Festival de la Novilla"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico city is known as the 'Pearl of the South'?",
+    "correctAnswer": "Ponce",
+    "options": ["Ponce", "San Juan", "Mayagüez", "Caguas"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico landmark is a famous bioluminescent bay?",
+    "correctAnswer": "Mosquito Bay",
+    "options": ["Mosquito Bay", "Laguna Grande", "La Parguera", "Bahía de Jobos"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico city is known for its university, athletics, and port?",
+    "correctAnswer": "Mayagüez",
+    "options": ["Mayagüez", "San Juan", "Ponce", "Arecibo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico fort is the largest in San Juan?",
+    "correctAnswer": "Castillo San Cristóbal",
+    "options": ["Castillo San Cristóbal", "Castillo San Felipe del Morro", "El Fuerte de Ponce", "Fortaleza"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico is known for producing which tropical fruit?",
+    "correctAnswer": "Plantains",
+    "options": ["Plantains", "Mangoes", "Apples", "Cherries"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico city is home to the Arecibo Observatory?",
+    "correctAnswer": "Arecibo",
+    "options": ["Arecibo", "San Juan", "Mayagüez", "Ponce"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico celebrates its Constitution Day in which month?",
+    "correctAnswer": "July",
+    "options": ["July", "March", "September", "December"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico beach is famous for surfing?",
+    "correctAnswer": "Rincón",
+    "options": ["Rincón", "Isabela", "Culebra", "Vieques"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico uses which currency?",
+    "correctAnswer": "United States Dollar",
+    "options": ["United States Dollar", "Puerto Rican Peso", "Euro", "Canadian Dollar"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico forest has waterfalls, trails, and tropical wildlife?",
+    "correctAnswer": "El Yunque National Forest",
+    "options": ["El Yunque National Forest", "Guánica Forest", "Toro Negro Forest", "Carite Forest"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico festival is held in Old San Juan each January?",
+    "correctAnswer": "San Sebastián Street Festival",
+    "options": ["San Sebastián Street Festival", "Ponce Carnival", "La Campechada", "Festival de la Novilla"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico is located east of which country?",
+    "correctAnswer": "Dominican Republic",
+    "options": ["Dominican Republic", "Cuba", "Jamaica", "Venezuela"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico island is a famous tourist destination off the east coast?",
+    "correctAnswer": "Vieques",
+    "options": ["Vieques", "Culebra", "Mona Island", "Desecheo Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico city is home to the University of Puerto Rico’s main campus?",
+    "correctAnswer": "Rio Piedras",
+    "options": ["Rio Piedras", "San Juan", "Mayagüez", "Ponce"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Puerto Rico is known for which type of music genre?",
+    "correctAnswer": "Salsa",
+    "options": ["Salsa", "Reggae", "Country", "Bluegrass"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Puerto Rico river is the longest on the island?",
+    "correctAnswer": "Río de la Plata",
+    "options": ["Río de la Plata", "Río Grande de Loíza", "Río Culebrinas", "Río Guajataca"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico city is a hub for art, culture, and the historic district?",
+    "correctAnswer": "San Juan",
+    "options": ["San Juan", "Ponce", "Mayagüez", "Arecibo"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Puerto Rico celebrates its Discovery Day to commemorate the arrival of which explorer?",
+    "correctAnswer": "Christopher Columbus",
+    "options": ["Christopher Columbus", "Juan Ponce de León", "Hernán Cortés", "Amerigo Vespucci"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Puerto Rico bay is famous for its glowing bioluminescent waters?",
+    "correctAnswer": "Mosquito Bay",
+    "options": ["Mosquito Bay", "La Parguera", "Laguna Grande", "Bahía de Jobos"],
+    "difficulty": "2"
+  }
+]
+

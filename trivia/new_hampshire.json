@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of New Hampshire?",
+    "correctAnswer": "Concord",
+    "options": ["Concord", "Manchester", "Nashua", "Portsmouth"],
+    "difficulty": "1"
+  },
+  {
+    "question": "New Hampshire is nicknamed what?",
+    "correctAnswer": "The Granite State",
+    "options": ["The Granite State", "The Pine Tree State", "The Green Mountain State", "The Ocean State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Hampshire lake is one of the largest in the state?",
+    "correctAnswer": "Lake Winnipesaukee",
+    "options": ["Lake Winnipesaukee", "Squam Lake", "Lake Sunapee", "Lake Mascoma"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which mountain range runs through New Hampshire?",
+    "correctAnswer": "White Mountains",
+    "options": ["White Mountains", "Green Mountains", "Adirondacks", "Catskills"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Hampshire city is the largest by population?",
+    "correctAnswer": "Manchester",
+    "options": ["Manchester", "Concord", "Nashua", "Portsmouth"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Hampshire presidential primary is the first in the nation?",
+    "correctAnswer": "New Hampshire Primary",
+    "options": ["New Hampshire Primary", "Iowa Caucus", "South Carolina Primary", "Nevada Caucus"],
+    "difficulty": "1"
+  },
+  {
+    "question": "New Hampshire borders which Canadian province?",
+    "correctAnswer": "Quebec",
+    "options": ["Quebec", "Ontario", "New Brunswick", "Nova Scotia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire city is known for its seacoast and historic port?",
+    "correctAnswer": "Portsmouth",
+    "options": ["Portsmouth", "Concord", "Manchester", "Dover"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire ski area is famous for winter sports?",
+    "correctAnswer": "Mount Sunapee",
+    "options": ["Mount Sunapee", "Mount Washington", "Loon Mountain", "Cannon Mountain"],
+    "difficulty": "2"
+  },
+  {
+    "question": "New Hampshire’s state motto is what?",
+    "correctAnswer": "Live Free or Die",
+    "options": ["Live Free or Die", "Dirigo", "Industry", "Hope"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Hampshire river is known for its whitewater rapids?",
+    "correctAnswer": "Connecticut River",
+    "options": ["Connecticut River", "Merrimack River", "Pemigewasset River", "Saco River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire mountain is the highest peak in the Northeast?",
+    "correctAnswer": "Mount Washington",
+    "options": ["Mount Washington", "Mount Lafayette", "Mount Monadnock", "Mount Sunapee"],
+    "difficulty": "2"
+  },
+  {
+    "question": "New Hampshire produces which agricultural product prominently?",
+    "correctAnswer": "Maple syrup",
+    "options": ["Maple syrup", "Apples", "Blueberries", "Corn"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire city hosts the University of New Hampshire?",
+    "correctAnswer": "Durham",
+    "options": ["Durham", "Manchester", "Concord", "Portsmouth"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire town is known for tourist attractions on Lake Winnipesaukee?",
+    "correctAnswer": "Meredith",
+    "options": ["Meredith", "Conway", "Hanover", "Portsmouth"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire mountain range is known for hiking and the Appalachian Trail?",
+    "correctAnswer": "White Mountains",
+    "options": ["White Mountains", "Green Mountains", "Adirondacks", "Catskills"],
+    "difficulty": "2"
+  },
+  {
+    "question": "New Hampshire is part of which US region?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Hampshire city has a historic district called Strawbery Banke?",
+    "correctAnswer": "Portsmouth",
+    "options": ["Portsmouth", "Concord", "Manchester", "Nashua"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire island is known for summer tourism?",
+    "correctAnswer": "Isle of Shoals",
+    "options": ["Isle of Shoals", "Mount Desert Island", "Monhegan Island", "Block Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Hampshire river flows through Concord?",
+    "correctAnswer": "Merrimack River",
+    "options": ["Merrimack River", "Connecticut River", "Saco River", "Pemigewasset River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire city is known for its tech and manufacturing industries?",
+    "correctAnswer": "Manchester",
+    "options": ["Manchester", "Concord", "Nashua", "Portsmouth"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire mountain is notorious for extreme weather conditions?",
+    "correctAnswer": "Mount Washington",
+    "options": ["Mount Washington", "Mount Sunapee", "Mount Monadnock", "Mount Lafayette"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Hampshire town is famous for covered bridges?",
+    "correctAnswer": "Cornish",
+    "options": ["Cornish", "Hanover", "Meredith", "Portsmouth"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Hampshire state park is on Lake Winnipesaukee?",
+    "correctAnswer": "Ellacoya State Park",
+    "options": ["Ellacoya State Park", "Franconia Notch State Park", "Pawtuckaway State Park", "Bear Brook State Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Hampshire town is known for winter sports and Mount Washington Observatory?",
+    "correctAnswer": "North Conway",
+    "options": ["North Conway", "Meredith", "Hanover", "Portsmouth"],
+    "difficulty": "3"
+  }
+]
+

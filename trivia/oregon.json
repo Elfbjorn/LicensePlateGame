@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What is the capital city of Oklahoma?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Oklahoma City", "Tulsa", "Norman", "Lawton"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river forms much of Oklahoma's southern border with Texas?",
+    "correctAnswer": "Red River",
+    "options": ["Arkansas River", "Red River", "Canadian River", "Missouri River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Oklahoma became the 46th state of the United States in which year?",
+    "correctAnswer": "1907",
+    "options": ["1907", "1890", "1912", "1865"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president was born in Oklahoma?",
+    "correctAnswer": "None",
+    "options": ["Dwight D. Eisenhower", "Harry S. Truman", "Franklin D. Roosevelt", "None"],
+    "difficulty": 3
+  },
+  {
+    "question": "What is Oklahoma's official state bird?",
+    "correctAnswer": "Scissor-tailed Flycatcher",
+    "options": ["Western Meadowlark", "Scissor-tailed Flycatcher", "Northern Mockingbird", "Eastern Bluebird"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which city is the second-largest by population in Oklahoma?",
+    "correctAnswer": "Tulsa",
+    "options": ["Tulsa", "Norman", "Lawton", "Broken Arrow"],
+    "difficulty": 1
+  },
+  {
+    "question": "Oklahoma is nicknamed:",
+    "correctAnswer": "The Sooner State",
+    "options": ["The Sooner State", "The Land of Enchantment", "The Lone Star State", "The Evergreen State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Native American tribes are historically associated with Oklahoma?",
+    "correctAnswer": "Cherokee, Choctaw, Creek, Seminole, Chickasaw",
+    "options": [
+      "Cherokee, Choctaw, Creek, Seminole, Chickasaw",
+      "Navajo, Apache, Hopi, Zuni",
+      "Sioux, Cheyenne, Arapaho",
+      "Iroquois, Mohawk, Oneida, Seneca"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma city hosts the annual Red Earth Festival celebrating Native American culture?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Ponca City"],
+    "difficulty": 2
+  },
+  {
+    "question": "The state tree of Oklahoma is:",
+    "correctAnswer": "Redbud",
+    "options": ["Redbud", "Oak", "Maple", "Pine"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous Route 66 city is located in Oklahoma?",
+    "correctAnswer": "Tulsa",
+    "options": ["Oklahoma City", "Tulsa", "El Reno", "Chickasha"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma city is known as the 'Oil Capital of the World'?",
+    "correctAnswer": "Tulsa",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Enid"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma lake is one of the largest man-made lakes in the U.S.?",
+    "correctAnswer": "Lake Texoma",
+    "options": ["Lake Thunderbird", "Lake Eufaula", "Lake Texoma", "Grand Lake O' the Cherokees"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma city is home to the National Cowboy & Western Heritage Museum?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Tulsa", "Oklahoma City", "Lawton", "Norman"],
+    "difficulty": 2
+  },
+  {
+    "question": "Oklahoma shares a border with how many states?",
+    "correctAnswer": "Six",
+    "options": ["Four", "Five", "Six", "Seven"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous tornado-prone region is partially located in Oklahoma?",
+    "correctAnswer": "Tornado Alley",
+    "options": ["Dixie Alley", "Tornado Alley", "Thunder Alley", "Cyclone Belt"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which musical artist from Oklahoma is known for 'Oklahoma!' on Broadway?",
+    "correctAnswer": "Richard Rodgers",
+    "options": ["Richard Rodgers", "Woody Guthrie", "Garth Brooks", "Reba McEntire"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma city is home to the University of Oklahoma?",
+    "correctAnswer": "Norman",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Edmond"],
+    "difficulty": 1
+  },
+  {
+    "question": "What is the official state vegetable of Oklahoma?",
+    "correctAnswer": "Watermelon",
+    "options": ["Corn", "Tomato", "Watermelon", "Sweet Potato"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma city hosts the annual Mayfest, celebrating arts and culture?",
+    "correctAnswer": "Tulsa",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Broken Arrow"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma musician is considered the 'Father of American Folk Music'?",
+    "correctAnswer": "Woody Guthrie",
+    "options": ["Garth Brooks", "Woody Guthrie", "Reba McEntire", "Blake Shelton"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which national park in Oklahoma is known for its scenic mountains and trails?",
+    "correctAnswer": "Wichita Mountains Wildlife Refuge",
+    "options": [
+      "Wichita Mountains Wildlife Refuge",
+      "Red Rock Canyon",
+      "Arbuckle Mountains Park",
+      "Ozark National Forest"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma city is famous for its Bricktown entertainment district?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Enid"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Oklahoma state flag features a:",
+    "correctAnswer": "Osage warrior’s shield with olive and peace symbols",
+    "options": [
+      "Lone star",
+      "Osage warrior’s shield with olive and peace symbols",
+      "Bear in the mountains",
+      "Sun over plains"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma city hosts the annual International Finals Rodeo?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Tulsa", "Oklahoma City", "Lawton", "Norman"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma Native American festival features powwows, music, and cultural arts?",
+    "correctAnswer": "Red Earth Festival",
+    "options": ["Cherokee Fest", "Red Earth Festival", "Powwow Plains", "Sooner Celebration"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Oklahoma lake is famous for bass fishing competitions?",
+    "correctAnswer": "Lake Eufaula",
+    "options": ["Lake Texoma", "Lake Eufaula", "Grand Lake", "Lake Thunderbird"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Oklahoma city is home to the Oklahoma City Thunder NBA team?",
+    "correctAnswer": "Oklahoma City",
+    "options": ["Tulsa", "Oklahoma City", "Norman", "Edmond"],
+    "difficulty": 1
+  }
+]
+

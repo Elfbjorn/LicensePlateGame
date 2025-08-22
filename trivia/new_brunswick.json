@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of New Brunswick?",
+    "correctAnswer": "Fredericton",
+    "options": ["Moncton", "Saint John", "Fredericton", "Bathurst"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which bay in New Brunswick is famous for having the world’s highest tides?",
+    "correctAnswer": "Bay of Fundy",
+    "options": ["Bay of Fundy", "Chaleur Bay", "Northumberland Strait", "Georges Bay"],
+    "difficulty": "1"
+  },
+  {
+    "question": "New Brunswick is officially bilingual. What two languages are recognized?",
+    "correctAnswer": "English and French",
+    "options": ["English and French", "English and Spanish", "French and Spanish", "English only"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick city is the largest by population?",
+    "correctAnswer": "Moncton",
+    "options": ["Saint John", "Fredericton", "Moncton", "Bathurst"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which river is the longest in New Brunswick?",
+    "correctAnswer": "Saint John River",
+    "options": ["Saint John River", "Miramichi River", "Petitcodiac River", "Restigouche River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Brunswick city is known for the Reversing Rapids?",
+    "correctAnswer": "Saint John",
+    "options": ["Fredericton", "Saint John", "Moncton", "Miramichi"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick festival celebrates Acadian culture every August?",
+    "correctAnswer": "Tintamarre",
+    "options": ["Jazz Festival", "Acadian Festival", "Tintamarre", "Celtic Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What body of water lies to the east of New Brunswick?",
+    "correctAnswer": "Gulf of St. Lawrence",
+    "options": ["Bay of Fundy", "Atlantic Ocean", "Gulf of St. Lawrence", "Hudson Bay"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick island is known for its sand dunes and wildlife sanctuary?",
+    "correctAnswer": "Grand Manan Island",
+    "options": ["Campobello Island", "Grand Manan Island", "Shepody Island", "Miscou Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Brunswick-born singer had hits with 'Angel' and 'Love Me Now'?",
+    "correctAnswer": "Ria Mae",
+    "options": ["Ria Mae", "Shania Twain", "Celine Dion", "Alanis Morissette"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which famous bridge connects New Brunswick to Prince Edward Island?",
+    "correctAnswer": "Confederation Bridge",
+    "options": ["Confederation Bridge", "Canso Causeway", "Macdonald Bridge", "Champlain Bridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick city is home to the University of New Brunswick’s main campus?",
+    "correctAnswer": "Fredericton",
+    "options": ["Moncton", "Fredericton", "Saint John", "Bathurst"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick festival celebrates fiddle music and Acadian traditions?",
+    "correctAnswer": "Acadian Fiddle Festival",
+    "options": ["Acadian Fiddle Festival", "Jazz Festival", "Folk Festival", "Harvest Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "New Brunswick is part of which Canadian region?",
+    "correctAnswer": "Atlantic Canada",
+    "options": ["Prairies", "Atlantic Canada", "Central Canada", "Northern Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Brunswick national park is known for its cliffs and ocean views?",
+    "correctAnswer": "Fundy National Park",
+    "options": ["Fundy National Park", "Kouchibouguac National Park", "Cape Breton Highlands", "Forillon National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick city is famous for its historic Loyalist heritage?",
+    "correctAnswer": "Saint John",
+    "options": ["Moncton", "Fredericton", "Saint John", "Bathurst"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick river is famous for Atlantic salmon fishing?",
+    "correctAnswer": "Miramichi River",
+    "options": ["Saint John River", "Miramichi River", "Petitcodiac River", "Restigouche River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Brunswick island was home to President Franklin D. Roosevelt’s summer retreat?",
+    "correctAnswer": "Campobello Island",
+    "options": ["Grand Manan Island", "Campobello Island", "Miscou Island", "Shepody Island"],
+    "difficulty": "4"
+  },
+  {
+    "question": "New Brunswick is known for which primary natural resource industry?",
+    "correctAnswer": "Forestry",
+    "options": ["Fishing", "Mining", "Forestry", "Oil and Gas"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Canadian poet grew up in New Brunswick and wrote 'In Flanders Fields'?",
+    "correctAnswer": "John McCrae",
+    "options": ["Robert W. Service", "John McCrae", "Al Purdy", "E. J. Pratt"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Brunswick festival is celebrated in Moncton every summer with music and cultural events?",
+    "correctAnswer": "Moncton Music Festival",
+    "options": ["Moncton Music Festival", "Jazz Festival", "Acadian Festival", "Harvest Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is the primary French-speaking community in New Brunswick called?",
+    "correctAnswer": "Acadians",
+    "options": ["Québécois", "Acadians", "Franco-Ontarians", "Métis"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick bay is known for its sandy beaches and tidal bore?",
+    "correctAnswer": "Chignecto Bay",
+    "options": ["Bay of Fundy", "Chignecto Bay", "Northumberland Strait", "Shepody Bay"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Brunswick city has a prominent university called Crandall University?",
+    "correctAnswer": "Moncton",
+    "options": ["Fredericton", "Saint John", "Moncton", "Bathurst"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Brunswick national historic site preserves the history of the Loyalists?",
+    "correctAnswer": "Hampton Court Loyalist Settlement",
+    "options": ["Fort Beauséjour", "Hampton Court Loyalist Settlement", "Kings Landing", "Historic Acadian Village"],
+    "difficulty": "4"
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of South Carolina?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "Charleston", "Greenville", "Myrtle Beach"],
+    "difficulty": "1"
+  },
+  {
+    "question": "South Carolina is nicknamed what?",
+    "correctAnswer": "The Palmetto State",
+    "options": ["The Palmetto State", "The Magnolia State", "The Peach State", "The Sunshine State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which South Carolina city is the largest by population?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "1"
+  },
+  {
+    "question": "South Carolina is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "New England"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which South Carolina city is famous for historic plantations and waterfront district?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is home to the University of South Carolina?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "Charleston", "Greenville", "Spartanburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city hosts the Spoleto Festival USA?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is near Myrtle Beach, a popular Atlantic coast resort?",
+    "correctAnswer": "Myrtle Beach",
+    "options": ["Myrtle Beach", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is known for the historic Fort Sumter?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Myrtle Beach", "Greenville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is home to Clemson University?",
+    "correctAnswer": "Clemson",
+    "options": ["Clemson", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina river flows through Columbia?",
+    "correctAnswer": "Congaree River",
+    "options": ["Congaree River", "Savannah River", "Catawba River", "Edisto River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is known for historic architecture in downtown district?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city hosts the Carolina Renaissance Festival?",
+    "correctAnswer": "Clover",
+    "options": ["Clover", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is known for sweetgrass basket weaving tradition?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is near the historic Fort Moultrie?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Myrtle Beach", "Greenville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is known for its textile industry history?",
+    "correctAnswer": "Greenville",
+    "options": ["Greenville", "Charleston", "Columbia", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is home to the South Carolina State Museum?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "Charleston", "Greenville", "Spartanburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is near Hilton Head Island, a famous resort area?",
+    "correctAnswer": "Bluffton",
+    "options": ["Bluffton", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is famous for the Southern Living magazine influence?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "Charleston", "Greenville", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city hosts the annual Flowertown Festival?",
+    "correctAnswer": "Summerville",
+    "options": ["Summerville", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is home to Fort Jackson, the largest US Army basic training installation?",
+    "correctAnswer": "Columbia",
+    "options": ["Columbia", "Charleston", "Greenville", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city has the historic Old Exchange Building?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Columbia", "Greenville", "Myrtle Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is known for its scenic Blue Ridge Mountains nearby?",
+    "correctAnswer": "Greenville",
+    "options": ["Greenville", "Charleston", "Columbia", "Spartanburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which South Carolina city is famous for the Charleston Tea Garden?",
+    "correctAnswer": "Wadmalaw Island",
+    "options": ["Wadmalaw Island", "Charleston", "Columbia", "Myrtle Beach"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which South Carolina city is home to the Patriots Point Naval & Maritime Museum?",
+    "correctAnswer": "Mount Pleasant",
+    "options": ["Mount Pleasant", "Charleston", "Columbia", "Greenville"],
+    "difficulty": "3"
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the tallest mountain in the United States?",
+    "correctAnswer": "Denali",
+    "options": ["Mount Rainier", "Denali", "Mount Whitney", "Pikes Peak"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which U.S. city is nicknamed 'The Big Easy'?",
+    "correctAnswer": "New Orleans",
+    "options": ["Las Vegas", "Miami", "New Orleans", "Chicago"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The Golden Gate Bridge is located in which city?",
+    "correctAnswer": "San Francisco",
+    "options": ["Los Angeles", "Seattle", "San Francisco", "San Diego"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which U.S. state is the leading producer of potatoes?",
+    "correctAnswer": "Idaho",
+    "options": ["Maine", "Idaho", "Washington", "Wisconsin"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous American music festival took place in 1969 in upstate New York?",
+    "correctAnswer": "Woodstock",
+    "options": ["Coachella", "Woodstock", "Burning Man", "Lollapalooza"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What is the oldest university in the United States, founded in 1636?",
+    "correctAnswer": "Harvard",
+    "options": ["Harvard", "Yale", "Princeton", "William & Mary"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which U.S. city is known for deep-dish pizza?",
+    "correctAnswer": "Chicago",
+    "options": ["New York City", "Chicago", "Detroit", "Boston"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which American astronaut was the first to walk on the moon?",
+    "correctAnswer": "Neil Armstrong",
+    "options": ["Neil Armstrong", "Buzz Aldrin", "John Glenn", "Alan Shepard"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which U.S. state is the only one made up entirely of islands?",
+    "correctAnswer": "Hawaii",
+    "options": ["Alaska", "Hawaii", "Florida", "Rhode Island"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What U.S. city is home to the Rock & Roll Hall of Fame?",
+    "correctAnswer": "Cleveland",
+    "options": ["Detroit", "Cleveland", "Nashville", "Memphis"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American landmark is inscribed with 'Give me your tired, your poor, your huddled masses yearning to breathe free'?",
+    "correctAnswer": "Statue of Liberty",
+    "options": ["Statue of Liberty", "Lincoln Memorial", "Mount Rushmore", "Ellis Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What U.S. state is nicknamed 'The Sunshine State'?",
+    "correctAnswer": "Florida",
+    "options": ["California", "Arizona", "Florida", "Nevada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Route 66, the 'Mother Road,' originally ran between Chicago and what city?",
+    "correctAnswer": "Santa Monica",
+    "options": ["Las Vegas", "Santa Monica", "Houston", "New Orleans"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which U.S. president appears on the $2 bill?",
+    "correctAnswer": "Thomas Jefferson",
+    "options": ["George Washington", "Thomas Jefferson", "Alexander Hamilton", "Abraham Lincoln"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which U.S. city is known as 'Music City'?",
+    "correctAnswer": "Nashville",
+    "options": ["Austin", "New Orleans", "Nashville", "Memphis"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What U.S. national park is home to Old Faithful geyser?",
+    "correctAnswer": "Yellowstone",
+    "options": ["Yellowstone", "Yosemite", "Glacier", "Grand Canyon"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American sportscaster was famous for saying 'Do you believe in miracles?' during the 1980 Winter Olympics?",
+    "correctAnswer": "Al Michaels",
+    "options": ["Al Michaels", "Howard Cosell", "Bob Costas", "Jim McKay"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which U.S. state has the most national parks?",
+    "correctAnswer": "California",
+    "options": ["Alaska", "California", "Utah", "Colorado"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which movie set in California features a shark terrorizing a beach town?",
+    "correctAnswer": "Jaws",
+    "options": ["Jaws", "The Meg", "Sharknado", "Deep Blue Sea"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which iconic U.S. landmark is carved into Mount Rushmore?",
+    "correctAnswer": "Four U.S. Presidents",
+    "options": ["The Founding Fathers", "Four U.S. Presidents", "Civil War Generals", "Native American Leaders"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which U.S. city is famous for the Indy 500 auto race?",
+    "correctAnswer": "Indianapolis",
+    "options": ["Detroit", "Daytona Beach", "Indianapolis", "Charlotte"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which American TV show was set in the fictional town of Mayberry?",
+    "correctAnswer": "The Andy Griffith Show",
+    "options": ["The Brady Bunch", "The Andy Griffith Show", "Happy Days", "Leave It to Beaver"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What U.S. city is home to Broadway theaters?",
+    "correctAnswer": "New York City",
+    "options": ["Los Angeles", "Chicago", "New York City", "Boston"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is the only U.S. state with a royal palace?",
+    "correctAnswer": "Hawaii",
+    "options": ["California", "Hawaii", "Louisiana", "Florida"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which U.S. state is home to the Mall of America, one of the largest malls in the world?",
+    "correctAnswer": "Minnesota",
+    "options": ["Illinois", "New Jersey", "Minnesota", "Texas"],
+    "difficulty": "2"
+  }
+]
+

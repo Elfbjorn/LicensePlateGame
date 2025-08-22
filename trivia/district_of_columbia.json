@@ -1,0 +1,165 @@
+[
+  {
+    "question": "What year was Washington, D.C. established as the U.S. capital?",
+    "correctAnswer": "1790",
+    "options": ["1776", "1790", "1800", "1812"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river forms the eastern border of Washington, D.C.?",
+    "correctAnswer": "Potomac River",
+    "options": ["Potomac River", "Mississippi River", "Anacostia River", "James River"],
+    "difficulty": 1
+  },
+  {
+    "question": "The White House is located on which street?",
+    "correctAnswer": "1600 Pennsylvania Avenue NW",
+    "options": ["1600 Pennsylvania Avenue NW", "1000 Independence Ave", "1 Constitution Ave", "123 Capital St NW"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous obelisk commemorates George Washington?",
+    "correctAnswer": "Washington Monument",
+    "options": ["Washington Monument", "Lincoln Memorial", "Jefferson Memorial", "Capitol Obelisk"],
+    "difficulty": 1
+  },
+  {
+    "question": "The National Mall stretches between which two landmarks?",
+    "correctAnswer": "Capitol Building and Lincoln Memorial",
+    "options": ["Capitol Building and Lincoln Memorial", "White House and Washington Monument", "Smithsonian and Jefferson Memorial", "Lincoln Memorial and Jefferson Memorial"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous civil rights leader delivered the 'I Have a Dream' speech in D.C.?",
+    "correctAnswer": "Martin Luther King Jr.",
+    "options": ["Martin Luther King Jr.", "Malcolm X", "Rosa Parks", "Frederick Douglass"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which museum is part of the Smithsonian Institution and focuses on air and space history?",
+    "correctAnswer": "National Air and Space Museum",
+    "options": ["National Air and Space Museum", "National Museum of American History", "National Gallery of Art", "Hirshhorn Museum"],
+    "difficulty": 1
+  },
+  {
+    "question": "What is the tallest building in Washington, D.C.?",
+    "correctAnswer": "Washington Monument",
+    "options": ["Washington Monument", "Capital One Tower", "Old Post Office Tower", "National Cathedral"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president is buried at Arlington National Cemetery, located just across the Potomac River?",
+    "correctAnswer": "John F. Kennedy",
+    "options": ["John F. Kennedy", "Abraham Lincoln", "Franklin Roosevelt", "Theodore Roosevelt"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which D.C. neighborhood is known for jazz history and the U Street Corridor?",
+    "correctAnswer": "U Street",
+    "options": ["U Street", "Georgetown", "Capitol Hill", "Dupont Circle"],
+    "difficulty": 3
+  },
+  {
+    "question": "The Supreme Court of the United States is located on which street in D.C.?",
+    "correctAnswer": "1 First Street NE",
+    "options": ["1 First Street NE", "1600 Pennsylvania Avenue NW", "600 Maryland Ave SW", "1000 Constitution Ave NW"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which annual event in D.C. celebrates African American history and culture?",
+    "correctAnswer": "Martin Luther King Jr. Day Parade",
+    "options": ["Martin Luther King Jr. Day Parade", "Cherry Blossom Festival", "National Independence Day Parade", "Smithsonian Folklife Festival"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which D.C. memorial features 19 stainless steel columns honoring a U.S. president?",
+    "correctAnswer": "Franklin Delano Roosevelt Memorial",
+    "options": ["Franklin Delano Roosevelt Memorial", "Lincoln Memorial", "Jefferson Memorial", "Vietnam Veterans Memorial"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which U.S. landmark in D.C. is famous for its reflecting pool?",
+    "correctAnswer": "Lincoln Memorial",
+    "options": ["Lincoln Memorial", "Washington Monument", "Jefferson Memorial", "Capitol Building"],
+    "difficulty": 1
+  },
+  {
+    "question": "D.C. was originally part of which two states?",
+    "correctAnswer": "Maryland and Virginia",
+    "options": ["Maryland and Virginia", "Pennsylvania and Virginia", "Maryland and Delaware", "Virginia and Delaware"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which famous hotel in D.C. was a meeting place for journalists and politicians in the 20th century?",
+    "correctAnswer": "Willard Hotel",
+    "options": ["Willard Hotel", "Hay-Adams Hotel", "Watergate Hotel", "Mandarin Oriental"],
+    "difficulty": 4
+  },
+  {
+    "question": "The annual National Cherry Blossom Festival in D.C. commemorates the gift of cherry trees from which country?",
+    "correctAnswer": "Japan",
+    "options": ["Japan", "China", "South Korea", "Thailand"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which U.S. president was in office when the Jefferson Memorial was dedicated?",
+    "correctAnswer": "Franklin D. Roosevelt",
+    "options": ["Franklin D. Roosevelt", "Harry S. Truman", "Dwight D. Eisenhower", "Woodrow Wilson"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which neighborhood in D.C. is famous for its historic colonial-era architecture and waterfront?",
+    "correctAnswer": "Georgetown",
+    "options": ["Georgetown", "Dupont Circle", "Capitol Hill", "Adams Morgan"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which D.C. museum showcases American history and the original Star-Spangled Banner?",
+    "correctAnswer": "National Museum of American History",
+    "options": ["National Museum of American History", "National Air and Space Museum", "Smithsonian National Museum of Natural History", "Hirshhorn Museum"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president’s portrait is featured at the National Portrait Gallery in D.C.?",
+    "correctAnswer": "Multiple presidents, including George Washington",
+    "options": ["Multiple presidents, including George Washington", "Only Abraham Lincoln", "Only Thomas Jefferson", "Only Theodore Roosevelt"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which D.C. memorial honors U.S. military personnel who served in a 20th-century conflict in Southeast Asia?",
+    "correctAnswer": "Vietnam Veterans Memorial",
+    "options": ["Vietnam Veterans Memorial", "Korean War Memorial", "World War II Memorial", "Pentagon Memorial"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which landmark in D.C. hosts presidential inaugurations?",
+    "correctAnswer": "U.S. Capitol",
+    "options": ["U.S. Capitol", "White House", "Washington Monument", "Lincoln Memorial"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which D.C. neighborhood is known for embassies and international diplomacy?",
+    "correctAnswer": "Embassy Row / Massachusetts Avenue",
+    "options": ["Embassy Row / Massachusetts Avenue", "Georgetown", "Capitol Hill", "Adams Morgan"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which D.C. museum is dedicated to African American history and culture and opened in 2016?",
+    "correctAnswer": "National Museum of African American History and Culture",
+    "options": ["National Museum of African American History and Culture", "Smithsonian American Art Museum", "Hirshhorn Museum", "National Museum of the American Indian"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which D.C. memorial is dedicated to Franklin D. Roosevelt and features water features for each term of his presidency?",
+    "correctAnswer": "Franklin Delano Roosevelt Memorial",
+    "options": ["Franklin Delano Roosevelt Memorial", "Lincoln Memorial", "Jefferson Memorial", "Martin Luther King Jr. Memorial"],
+    "difficulty": 3
+  },
+  {
+    "question": "The U.S. Supreme Court in D.C. is located near which other landmark?",
+    "correctAnswer": "Capitol Building",
+    "options": ["Capitol Building", "White House", "Washington Monument", "Lincoln Memorial"],
+    "difficulty": 2
+  }
+]
+

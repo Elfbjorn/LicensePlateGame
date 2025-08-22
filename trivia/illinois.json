@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Illinois?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Chicago", "Peoria", "Rockford"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Illinois is nicknamed what?",
+    "correctAnswer": "The Prairie State",
+    "options": ["The Prairie State", "The Buckeye State", "The Cornhusker State", "The Garden State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Illinois city is the largest by population?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Illinois is part of which US region?",
+    "correctAnswer": "Midwest",
+    "options": ["Midwest", "Southeast", "Mid-Atlantic", "Great Plains"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Illinois city is home to the Willis Tower (Sears Tower)?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is known for Abraham Lincoln historic sites?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Chicago", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city hosts the Taste of Chicago festival?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is famous for deep-dish pizza?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois river flows through Peoria?",
+    "correctAnswer": "Illinois River",
+    "options": ["Illinois River", "Mississippi River", "Ohio River", "Chicago River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is home to Northwestern University?",
+    "correctAnswer": "Evanston",
+    "options": ["Evanston", "Chicago", "Springfield", "Peoria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is known for Route 66 starting point?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Joliet"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city hosts the Illinois State Fair?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Chicago", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is home to the Art Institute of Chicago?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is known as the 'Windy City'?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Illinois city is home to the Chicago Cubs and Wrigley Field?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is near Starved Rock State Park?",
+    "correctAnswer": "Ottawa",
+    "options": ["Ottawa", "Chicago", "Peoria", "Springfield"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is home to Southern Illinois University?",
+    "correctAnswer": "Carbondale",
+    "options": ["Carbondale", "Chicago", "Springfield", "Peoria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is known for the Chicago Theatre?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is home to the Museum of Science and Industry?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city hosts the Chicago Marathon?",
+    "correctAnswer": "Chicago",
+    "options": ["Chicago", "Springfield", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is near Cahokia Mounds State Historic Site?",
+    "correctAnswer": "Collinsville",
+    "options": ["Collinsville", "Chicago", "Springfield", "Peoria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is home to the University of Illinois at Urbana-Champaign?",
+    "correctAnswer": "Urbana-Champaign",
+    "options": ["Urbana-Champaign", "Chicago", "Springfield", "Peoria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is near the Shawnee National Forest?",
+    "correctAnswer": "Carbondale",
+    "options": ["Carbondale", "Chicago", "Springfield", "Peoria"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Illinois city is known for the Lincoln Home National Historic Site?",
+    "correctAnswer": "Springfield",
+    "options": ["Springfield", "Chicago", "Peoria", "Rockford"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Illinois city is near the Mississippi River?",
+    "correctAnswer": "Alton",
+    "options": ["Alton", "Chicago", "Peoria", "Springfield"],
+    "difficulty": "3"
+  }
+]
+

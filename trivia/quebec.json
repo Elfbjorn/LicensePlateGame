@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Quebec?",
+    "correctAnswer": "Quebec City",
+    "options": ["Montreal", "Quebec City", "Trois-Rivières", "Sherbrooke"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Quebec city is the largest in the province?",
+    "correctAnswer": "Montreal",
+    "options": ["Montreal", "Quebec City", "Laval", "Gatineau"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which winter festival in Quebec City is one of the largest and most famous in the world?",
+    "correctAnswer": "Carnaval de Québec",
+    "options": ["Carnaval de Québec", "Winterlude", "Ice Magic Festival", "Snow Days"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Canadian singer from Quebec is famous for 'My Heart Will Go On'?",
+    "correctAnswer": "Celine Dion",
+    "options": ["Celine Dion", "Shania Twain", "Alanis Morissette", "Avril Lavigne"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Quebec city hosted the 1976 Summer Olympics?",
+    "correctAnswer": "Montreal",
+    "options": ["Montreal", "Quebec City", "Ottawa", "Toronto"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is Quebec’s official language?",
+    "correctAnswer": "French",
+    "options": ["English", "French", "Both English and French", "Spanish"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which dessert made with maple syrup and snow is a traditional Quebec treat?",
+    "correctAnswer": "Tire sur la neige (Maple Taffy)",
+    "options": ["Beavertail", "Butter Tart", "Tire sur la neige (Maple Taffy)", "Nanaimo Bar"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Quebec hockey team has won the most Stanley Cups?",
+    "correctAnswer": "Montreal Canadiens",
+    "options": ["Montreal Canadiens", "Quebec Nordiques", "Toronto Maple Leafs", "Ottawa Senators"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Quebec dish is made of fries, cheese curds, and gravy?",
+    "correctAnswer": "Poutine",
+    "options": ["Tourtière", "Poutine", "Cretons", "Tarte au sucre"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The Château Frontenac hotel is a landmark in which city?",
+    "correctAnswer": "Quebec City",
+    "options": ["Montreal", "Quebec City", "Laval", "Trois-Rivières"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Quebec-born director created the films 'Arrival' and 'Dune'?",
+    "correctAnswer": "Denis Villeneuve",
+    "options": ["Denis Villeneuve", "Jean-Marc Vallée", "Xavier Dolan", "David Cronenberg"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which national park in Quebec is home to the Chic-Choc Mountains?",
+    "correctAnswer": "Gaspésie National Park",
+    "options": ["Banff", "Gaspésie National Park", "La Mauricie", "Mont-Tremblant"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Quebec singer-songwriter is known as the 'godfather of French-Canadian music'?",
+    "correctAnswer": "Félix Leclerc",
+    "options": ["Félix Leclerc", "Gilles Vigneault", "Robert Charlebois", "Jean-Pierre Ferland"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which famous circus company originated in Quebec?",
+    "correctAnswer": "Cirque du Soleil",
+    "options": ["Ringling Bros.", "Cirque du Soleil", "Big Apple Circus", "Cavalia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Quebec river is one of the longest in Canada?",
+    "correctAnswer": "St. Lawrence River",
+    "options": ["St. Lawrence River", "Ottawa River", "Saguenay River", "Richelieu River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is the name of the annual Montreal comedy festival that attracts comedians worldwide?",
+    "correctAnswer": "Just for Laughs",
+    "options": ["Just for Laughs", "Second City", "FunnyFest", "Comedy Now"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What UNESCO World Heritage Site is located in Old Quebec?",
+    "correctAnswer": "Historic District of Old Quebec",
+    "options": ["Historic District of Old Quebec", "Rideau Canal", "Lunenburg Old Town", "Banff National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Quebec hockey player was nicknamed 'Le Gros Bill'?",
+    "correctAnswer": "Jean Béliveau",
+    "options": ["Maurice Richard", "Guy Lafleur", "Jean Béliveau", "Patrick Roy"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Quebec island is the largest in the St. Lawrence River?",
+    "correctAnswer": "Île d’Orléans",
+    "options": ["Île d’Orléans", "Anticosti Island", "Île Jésus", "Îles de la Madeleine"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Quebec-born musician is known for the electronic album 'Play'?",
+    "correctAnswer": "Moby",
+    "options": ["Deadmau5", "Moby", "Kaytranada", "Grimes"],
+    "difficulty": "5"
+  },
+  {
+    "question": "Which Montreal baseball team relocated to Washington, D.C. in 2005?",
+    "correctAnswer": "Montreal Expos",
+    "options": ["Montreal Expos", "Toronto Blue Jays", "Ottawa Lynx", "Quebec Capitales"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which major international airport serves Montreal?",
+    "correctAnswer": "Montréal–Trudeau International Airport",
+    "options": ["Montréal–Trudeau International Airport", "Mirabel Airport", "Toronto Pearson International Airport", "Quebec City Jean Lesage International"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Quebec singer had a hit with 'Call Me Maybe'?",
+    "correctAnswer": "Carly Rae Jepsen",
+    "options": ["Carly Rae Jepsen", "Avril Lavigne", "Sarah McLachlan", "Alanis Morissette"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Quebec provincial park is famous for skiing in the Laurentians?",
+    "correctAnswer": "Mont-Tremblant",
+    "options": ["Whistler", "Mont-Tremblant", "Blue Mountain", "Le Massif"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What nickname is often given to Montreal because of its nightlife and culture?",
+    "correctAnswer": "The Paris of North America",
+    "options": ["The Paris of North America", "Hollywood North", "The Windy City", "The Big Easy"],
+    "difficulty": "3"
+  }
+]
+

@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the capital city of Kansas?",
+    "correctAnswer": "Topeka",
+    "options": ["Wichita", "Topeka", "Kansas City", "Lawrence"],
+    "difficulty": 1
+  },
+  {
+    "question": "Kansas is nicknamed the 'Sunflower State.' True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in spring", "Only in summer"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Kansas city is the largest by population?",
+    "correctAnswer": "Wichita",
+    "options": ["Topeka", "Lawrence", "Kansas City", "Wichita"],
+    "difficulty": 1
+  },
+  {
+    "question": "Kansas became a state in which year?",
+    "correctAnswer": "1861",
+    "options": ["1854", "1861", "1876", "1849"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which infamous period of violent conflict occurred in Kansas before the Civil War?",
+    "correctAnswer": "Bleeding Kansas",
+    "options": ["Bleeding Kansas", "Bloody Frontier", "Kansas Massacre", "Border Wars"],
+    "difficulty": 3
+  },
+  {
+    "question": "Kansas is part of which U.S. geographic region?",
+    "correctAnswer": "Great Plains",
+    "options": ["Midwest", "Great Plains", "Southwest", "Rocky Mountains"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president was born in Kansas?",
+    "correctAnswer": "Dwight D. Eisenhower",
+    "options": ["Dwight D. Eisenhower", "Harry Truman", "Herbert Hoover", "Ronald Reagan"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Wizard of Oz is famously associated with which Kansas city?",
+    "correctAnswer": "Kansas City",
+    "options": ["Topeka", "Lawrence", "Wichita", "Kansas City"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river forms part of the eastern border of Kansas?",
+    "correctAnswer": "Missouri River",
+    "options": ["Arkansas River", "Missouri River", "Kansas River", "Red River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas city is known for its aviation industry and is sometimes called the 'Air Capital of the World'?",
+    "correctAnswer": "Wichita",
+    "options": ["Topeka", "Wichita", "Overland Park", "Lawrence"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Native American tribes historically lived in Kansas?",
+    "correctAnswer": "Kansa, Osage, Pawnee, Cheyenne",
+    "options": [
+      "Cherokee and Choctaw",
+      "Kansa, Osage, Pawnee, Cheyenne",
+      "Sioux and Iroquois",
+      "Apache and Navajo"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "The geographic center of the contiguous United States is located near which Kansas town?",
+    "correctAnswer": "Lebanon",
+    "options": ["Hays", "Topeka", "Lawrence", "Lebanon"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Kansas city hosts the Kansas State Capitol building?",
+    "correctAnswer": "Topeka",
+    "options": ["Wichita", "Topeka", "Kansas City", "Lawrence"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Kansas city is home to the University of Kansas?",
+    "correctAnswer": "Lawrence",
+    "options": ["Topeka", "Lawrence", "Wichita", "Manhattan"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas river flows through the city of Wichita?",
+    "correctAnswer": "Arkansas River",
+    "options": ["Kansas River", "Missouri River", "Arkansas River", "Republican River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas city is famous for its sunflower fields and agricultural production?",
+    "correctAnswer": "Salina",
+    "options": ["Wichita", "Topeka", "Salina", "Lawrence"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Kansas landmark is a massive rock formation used by early pioneers as a guide?",
+    "correctAnswer": "Monument Rocks",
+    "options": ["Monument Rocks", "Chimney Rock", "Devils Tower", "Pawnee Rock"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Kansas city is the location of the Eisenhower Presidential Library, Museum, and Boyhood Home?",
+    "correctAnswer": "Abilene",
+    "options": ["Abilene", "Topeka", "Wichita", "Lawrence"],
+    "difficulty": 2
+  },
+  {
+    "question": "Kansas is known for producing which major crops?",
+    "correctAnswer": "Wheat and sorghum",
+    "options": ["Corn and soybeans", "Wheat and sorghum", "Rice and cotton", "Potatoes and barley"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas city hosts the annual Dodge City Days rodeo?",
+    "correctAnswer": "Dodge City",
+    "options": ["Dodge City", "Wichita", "Topeka", "Lawrence"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Kansas city was once known as the 'Cowboy Capital of the West'?",
+    "correctAnswer": "Dodge City",
+    "options": ["Dodge City", "Wichita", "Topeka", "Lawrence"],
+    "difficulty": 3
+  },
+  {
+    "question": "Kansas shares its eastern border with which state?",
+    "correctAnswer": "Missouri",
+    "options": ["Nebraska", "Missouri", "Oklahoma", "Colorado"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous explorer passed through Kansas on his expedition?",
+    "correctAnswer": "Lewis and Clark",
+    "options": ["Christopher Columbus", "Lewis and Clark", "John Cabot", "Hernando de Soto"],
+    "difficulty": 3
+  },
+  {
+    "question": "Kansas has the largest population of which type of natural feature?",
+    "correctAnswer": "Prairies",
+    "options": ["Lakes", "Prairies", "Mountains", "Deserts"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas city is home to the Kansas Speedway, a major NASCAR track?",
+    "correctAnswer": "Kansas City",
+    "options": ["Wichita", "Topeka", "Kansas City", "Lawrence"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Kansas landmark is a historic stop on the Santa Fe Trail?",
+    "correctAnswer": "Council Grove",
+    "options": ["Fort Riley", "Council Grove", "Pawnee Rock", "Dodge City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Kansas’s state bird is the Western Meadowlark. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in western Kansas", "Only in eastern Kansas"],
+    "difficulty": 1
+  },
+  {
+    "question": "Kansas’s state tree is the Cottonwood. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in urban areas", "Only in the mountains"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Kansas city is home to the largest collection of Native American art in the state?",
+    "correctAnswer": "Topeka",
+    "options": ["Wichita", "Topeka", "Lawrence", "Manhattan"],
+    "difficulty": 3
+  }
+]
+

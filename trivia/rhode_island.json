@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Rhode Island?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Rhode Island is nicknamed what?",
+    "correctAnswer": "The Ocean State",
+    "options": ["The Ocean State", "The Pine Tree State", "The Bay State", "The Granite State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Rhode Island city is famous for its historic mansions and Gilded Age architecture?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Providence", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Rhode Island is part of which US region?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Rhode Island city is home to Brown University?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Rhode Island is the smallest state by area in the US.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only east of the Mississippi", "Only west of the Mississippi"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Rhode Island city is known for the International Tennis Hall of Fame?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Providence", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island river flows through Providence?",
+    "correctAnswer": "Blackstone River",
+    "options": ["Blackstone River", "Connecticut River", "Merrimack River", "Taunton River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city is known for its historic Quonset huts?",
+    "correctAnswer": "North Kingstown",
+    "options": ["North Kingstown", "Providence", "Warwick", "Cranston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island island is popular for tourism and beaches?",
+    "correctAnswer": "Block Island",
+    "options": ["Block Island", "Narragansett", "Newport", "Conanicut Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city is known for its art schools and creative community?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city hosts the annual WaterFire festival?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Cranston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Rhode Island has more coastline per square mile than any other US state.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only tied with Maine", "Only tied with Massachusetts"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city was founded by Roger Williams?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city is home to the Rhode Island School of Design (RISD)?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city has a historic downtown called Thames Street?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Providence", "Warwick", "Cranston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city is known for sailing and yacht races?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Providence", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city is home to historic Fort Adams?",
+    "correctAnswer": "Newport",
+    "options": ["Newport", "Providence", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island city hosts the Rhode Island International Film Festival?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island bay is a major inlet of the Atlantic Ocean?",
+    "correctAnswer": "Narragansett Bay",
+    "options": ["Narragansett Bay", "Buzzards Bay", "Massachusetts Bay", "Long Island Sound"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Rhode Island was one of the original 13 colonies.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only 12 colonies", "Only 14 colonies"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Rhode Island city is the birthplace of the Industrial Revolution in America?",
+    "correctAnswer": "Pawtucket",
+    "options": ["Pawtucket", "Providence", "Warwick", "Newport"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Rhode Island city is known for water-based art installations and public performances?",
+    "correctAnswer": "Providence",
+    "options": ["Providence", "Newport", "Warwick", "Pawtucket"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Rhode Island island has a historic lighthouse and fishing village called Beavertail?",
+    "correctAnswer": "Jamestown",
+    "options": ["Jamestown", "Block Island", "Newport", "Conanicut Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Rhode Island was founded as a haven for which group?",
+    "correctAnswer": "Religious dissenters",
+    "options": ["Religious dissenters", "Quakers", "Puritans", "Pilgrims"],
+    "difficulty": "2"
+  }
+]
+

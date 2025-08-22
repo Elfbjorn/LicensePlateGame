@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Nova Scotia?",
+    "correctAnswer": "Halifax",
+    "options": ["Halifax", "Sydney", "Dartmouth", "Truro"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Nova Scotia is almost completely surrounded by which body of water?",
+    "correctAnswer": "Atlantic Ocean",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Hudson Bay", "Gulf of St. Lawrence"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous Canadian rock band originated in Halifax?",
+    "correctAnswer": "Sloan",
+    "options": ["Rush", "Sloan", "The Tragically Hip", "Barenaked Ladies"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is the famous Nova Scotia lighthouse often photographed near Peggy’s Cove?",
+    "correctAnswer": "Peggy’s Point Lighthouse",
+    "options": ["Cape Forchu Lighthouse", "Peggy’s Point Lighthouse", "Fisgard Lighthouse", "Point Prim Lighthouse"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia festival celebrates Celtic music every summer?",
+    "correctAnswer": "Celtic Colours International Festival",
+    "options": ["Halifax Jazz Festival", "Celtic Colours International Festival", "Acadian Festival", "Lobster Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is the primary economic activity in Nova Scotia historically?",
+    "correctAnswer": "Fishing",
+    "options": ["Fishing", "Forestry", "Mining", "Oil and Gas"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Nova Scotia is part of which Canadian region?",
+    "correctAnswer": "Atlantic Canada",
+    "options": ["Prairies", "Atlantic Canada", "Central Canada", "Northern Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which famous Canadian actor from Halifax starred in 'Trailer Park Boys'?",
+    "correctAnswer": "John Paul Tremblay",
+    "options": ["John Paul Tremblay", "Nathan Fillion", "Eugene Levy", "Rick Mercer"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia university is located in Halifax and is one of Canada’s oldest?",
+    "correctAnswer": "Dalhousie University",
+    "options": ["Acadia University", "Dalhousie University", "St. Francis Xavier University", "Mount Allison University"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia island is known for its high cliffs and lighthouse?",
+    "correctAnswer": "Cape Breton Island",
+    "options": ["Sable Island", "Cape Breton Island", "Grand Manan Island", "Prince Edward Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia national park is famous for the Cabot Trail?",
+    "correctAnswer": "Cape Breton Highlands National Park",
+    "options": ["Kejimkujik National Park", "Cape Breton Highlands National Park", "Fundy National Park", "Forillon National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What popular seafood is Nova Scotia famous for?",
+    "correctAnswer": "Lobster",
+    "options": ["Crab", "Lobster", "Shrimp", "Clams"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Nova Scotia city is known for its historic waterfront and Maritime Museum?",
+    "correctAnswer": "Halifax",
+    "options": ["Sydney", "Halifax", "Dartmouth", "Yarmouth"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Nova Scotia town hosts the annual Lobster Carnival?",
+    "correctAnswer": "Digby",
+    "options": ["Lunenburg", "Digby", "Truro", "Bridgewater"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Nova Scotia was originally colonized by which European country?",
+    "correctAnswer": "France",
+    "options": ["England", "France", "Spain", "Netherlands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which body of water separates Nova Scotia from New Brunswick?",
+    "correctAnswer": "Bay of Fundy",
+    "options": ["Gulf of St. Lawrence", "Bay of Fundy", "Northumberland Strait", "Atlantic Ocean"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia town is known for its colorful waterfront houses in Lunenburg?",
+    "correctAnswer": "Lunenburg",
+    "options": ["Halifax", "Lunenburg", "Wolfville", "Annapolis Royal"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nova Scotia musician is known for her folk-inspired songs, including 'Four Strong Winds'?",
+    "correctAnswer": "Anne Murray",
+    "options": ["Celine Dion", "Anne Murray", "Shania Twain", "Alanis Morissette"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Nova Scotia’s provincial flower is what?",
+    "correctAnswer": "Mayflower",
+    "options": ["Trillium", "Mayflower", "Rose", "Lily of the Valley"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nova Scotia town is famous for its annual Oyster Festival?",
+    "correctAnswer": "Pugwash",
+    "options": ["Pugwash", "Digby", "Lunenburg", "Wolfville"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is the name of the historic fort in Halifax built in 1749?",
+    "correctAnswer": "Citadel Hill",
+    "options": ["Citadel Hill", "Fort Louisbourg", "Fort Anne", "Fort Beauséjour"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous sea creature is associated with the folklore of Nova Scotia?",
+    "correctAnswer": "Sea Serpent",
+    "options": ["Loch Ness Monster", "Kraken", "Sea Serpent", "Mermaid"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Nova Scotia’s highest point is called what?",
+    "correctAnswer": "White Hill",
+    "options": ["White Hill", "Cape Breton Highlands", "Mount Uniacke", "Sugarloaf Mountain"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nova Scotia festival celebrates Celtic and Acadian music in Cape Breton?",
+    "correctAnswer": "Celtic Colours International Festival",
+    "options": ["Celtic Colours International Festival", "Halifax Jazz Festival", "Acadian Festival", "Lobster Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which body of water separates Nova Scotia from Newfoundland?",
+    "correctAnswer": "Cabot Strait",
+    "options": ["Cabot Strait", "Strait of Belle Isle", "Bay of Fundy", "Gulf of St. Lawrence"],
+    "difficulty": "3"
+  }
+]
+

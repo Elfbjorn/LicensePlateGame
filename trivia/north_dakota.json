@@ -1,0 +1,171 @@
+[
+  {
+    "question": "What is the capital city of North Dakota?",
+    "correctAnswer": "Bismarck",
+    "options": ["Bismarck", "Fargo", "Grand Forks", "Minot"],
+    "difficulty": 1
+  },
+  {
+    "question": "North Dakota is nicknamed:",
+    "correctAnswer": "The Peace Garden State",
+    "options": ["The Peace Garden State", "The Roughrider State", "The Prairie State", "The Badlands State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which North Dakota city is the largest by population?",
+    "correctAnswer": "Fargo",
+    "options": ["Fargo", "Bismarck", "Grand Forks", "Minot"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river forms part of North Dakota’s eastern border with Minnesota?",
+    "correctAnswer": "Red River of the North",
+    "options": ["Red River of the North", "Missouri River", "Snake River", "James River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which North Dakota city is known for hosting the Fargo AirSho and local arts scene?",
+    "correctAnswer": "Fargo",
+    "options": ["Fargo", "Bismarck", "Minot", "Grand Forks"],
+    "difficulty": 2
+  },
+  {
+    "question": "North Dakota became a state in what year?",
+    "correctAnswer": "1889",
+    "options": ["1889", "1876", "1890", "1901"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which national park is located in western North Dakota?",
+    "correctAnswer": "Theodore Roosevelt National Park",
+    "options": ["Theodore Roosevelt National Park", "Badlands National Park", "Glacier National Park", "Yellowstone National Park"],
+    "difficulty": 2
+  },
+  {
+    "question": "North Dakota is a leading U.S. producer of which crop?",
+    "correctAnswer": "Wheat",
+    "options": ["Wheat", "Corn", "Soybeans", "Barley"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president has a national park named after him in North Dakota?",
+    "correctAnswer": "Theodore Roosevelt",
+    "options": ["Theodore Roosevelt", "Abraham Lincoln", "Thomas Jefferson", "Franklin Roosevelt"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which North Dakota city is home to the University of North Dakota?",
+    "correctAnswer": "Grand Forks",
+    "options": ["Grand Forks", "Fargo", "Bismarck", "Minot"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river flows through Bismarck and is a major tributary of the Missouri River?",
+    "correctAnswer": "Missouri River",
+    "options": ["Missouri River", "Red River", "Snake River", "James River"],
+    "difficulty": 2
+  },
+  {
+    "question": "North Dakota’s state bird is:",
+    "correctAnswer": "Western Meadowlark",
+    "options": ["Western Meadowlark", "Mountain Bluebird", "American Robin", "Bald Eagle"],
+    "difficulty": 2
+  },
+  {
+    "question": "North Dakota’s state flower is:",
+    "correctAnswer": "Wild Prairie Rose",
+    "options": ["Wild Prairie Rose", "Sunflower", "Bluebonnet", "Goldenrod"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which North Dakota city is known as the 'Magic City' due to rapid growth from the railroad?",
+    "correctAnswer": "Minot",
+    "options": ["Minot", "Fargo", "Bismarck", "Grand Forks"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which historical trail passes through western North Dakota and commemorates a famous 19th-century route?",
+    "correctAnswer": "Lewis and Clark Trail",
+    "options": ["Lewis and Clark Trail", "Oregon Trail", "Santa Fe Trail", "Trail of Tears"],
+    "difficulty": 3
+  },
+  {
+    "question": "The Badlands in North Dakota are primarily located in which part of the state?",
+    "correctAnswer": "Western North Dakota",
+    "options": ["Western North Dakota", "Eastern North Dakota", "Central North Dakota", "Northern North Dakota"],
+    "difficulty": 2
+  },
+  {
+    "question": "North Dakota’s economy is heavily supported by which industry besides agriculture?",
+    "correctAnswer": "Oil and energy production",
+    "options": ["Oil and energy production", "Technology", "Automobile manufacturing", "Fishing"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which North Dakota city hosts an annual Norsk Høstfest, the largest Scandinavian festival in North America?",
+    "correctAnswer": "Minot",
+    "options": ["Minot", "Fargo", "Grand Forks", "Bismarck"],
+    "difficulty": 3
+  },
+  {
+    "question": "North Dakota is part of which geographic region of the U.S.?",
+    "correctAnswer": "Midwest / Great Plains",
+    "options": ["Midwest / Great Plains", "South", "Rocky Mountains", "Pacific Northwest"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river in North Dakota flows southward and joins the Missouri River near Bismarck?",
+    "correctAnswer": "James River",
+    "options": ["James River", "Red River", "Snake River", "Platte River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which city in North Dakota is home to the state’s largest annual fair, the North Dakota State Fair?",
+    "correctAnswer": "Minot",
+    "options": ["Minot", "Fargo", "Bismarck", "Grand Forks"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous political figure, nicknamed the 'Rough Rider', was from North Dakota?",
+    "correctAnswer": "Theodore Roosevelt",
+    "options": ["Theodore Roosevelt", "William McKinley", "Woodrow Wilson", "Calvin Coolidge"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which North Dakota city hosts the Fargo-Moorhead Symphony Orchestra?",
+    "correctAnswer": "Fargo",
+    "options": ["Fargo", "Grand Forks", "Bismarck", "Minot"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Native American tribe has a reservation that spans parts of North Dakota?",
+    "correctAnswer": "Sioux (Standing Rock, Spirit Lake, Turtle Mountain bands)",
+    "options": ["Sioux", "Cherokee", "Navajo", "Iroquois"],
+    "difficulty": 3
+  },
+  {
+    "question": "North Dakota’s license plates feature a silhouette of:",
+    "correctAnswer": "A bison",
+    "options": ["A bison", "A grizzly bear", "An eagle", "A buffalo tree"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which North Dakota city is home to the state capitol building with the tallest masonry building in the U.S.?",
+    "correctAnswer": "Bismarck",
+    "options": ["Bismarck", "Fargo", "Grand Forks", "Minot"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which U.S. President was born in a small North Dakota town and later became the youngest-ever female governor in the state?",
+    "correctAnswer": "This is a trick question; no U.S. president was born in ND. Consider governors like Heidi Heitkamp (senator) instead.",
+    "options": ["Heidi Heitkamp", "Theodore Roosevelt", "Lyndon B. Johnson", "No U.S. president"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which North Dakota town is famous for its Scandinavian heritage and is sometimes called the 'Little Norway of the West'?",
+    "correctAnswer": "Lidgerwood",
+    "options": ["Lidgerwood", "Minot", "Fargo", "Grand Forks"],
+    "difficulty": 4
+  }
+]
+

@@ -1,0 +1,183 @@
+[
+  {
+    "question": "What is the capital city of Michigan?",
+    "correctAnswer": "Lansing",
+    "options": ["Lansing", "Detroit", "Grand Rapids", "Ann Arbor"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Michigan city is the largest by population?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Grand Rapids", "Lansing", "Flint"],
+    "difficulty": 1
+  },
+  {
+    "question": "Michigan is nicknamed:",
+    "correctAnswer": "The Great Lakes State",
+    "options": ["The Wolverine State", "The Great Lakes State", "The Motor State", "The Mitten State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous U.S. automobile company was founded in Detroit?",
+    "correctAnswer": "Ford Motor Company",
+    "options": ["Chrysler", "General Motors", "Ford Motor Company", "Tesla"],
+    "difficulty": 2
+  },
+  {
+    "question": "Michigan is the only state to consist of two peninsulas. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in summer", "Only historically"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is home to the University of Michigan?",
+    "correctAnswer": "Ann Arbor",
+    "options": ["Ann Arbor", "East Lansing", "Lansing", "Grand Rapids"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Great Lake lies entirely within the United States but borders Michigan?",
+    "correctAnswer": "Lake Michigan",
+    "options": ["Lake Superior", "Lake Michigan", "Lake Huron", "Lake Erie"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is known as 'Motor City'?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Flint", "Lansing", "Grand Rapids"],
+    "difficulty": 1
+  },
+  {
+    "question": "What is the official state bird of Michigan?",
+    "correctAnswer": "American Robin",
+    "options": ["American Robin", "Cardinal", "Blue Jay", "Bald Eagle"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Michigan island is famous for its historic lighthouses and fudge?",
+    "correctAnswer": "Mackinac Island",
+    "options": ["Mackinac Island", "Beaver Island", "Isle Royale", "Drummond Island"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river separates Michigan from Canada near Detroit?",
+    "correctAnswer": "Detroit River",
+    "options": ["Detroit River", "St. Clair River", "Grand River", "Kalamazoo River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is home to the Henry Ford Museum?",
+    "correctAnswer": "Dearborn",
+    "options": ["Dearborn", "Detroit", "Flint", "Grand Rapids"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous music group originated in Detroit?",
+    "correctAnswer": "The Supremes",
+    "options": ["The Supremes", "The Beatles", "The Beach Boys", "The Jackson 5"],
+    "difficulty": 2
+  },
+  {
+    "question": "Michigan’s state tree is:",
+    "correctAnswer": "Eastern White Pine",
+    "options": ["Eastern White Pine", "Maple", "Oak", "Birch"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city hosts the annual ArtPrize competition?",
+    "correctAnswer": "Grand Rapids",
+    "options": ["Grand Rapids", "Detroit", "Ann Arbor", "Lansing"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is famous for the 'Big House' football stadium?",
+    "correctAnswer": "Ann Arbor",
+    "options": ["Ann Arbor", "East Lansing", "Lansing", "Detroit"],
+    "difficulty": 2
+  },
+  {
+    "question": "Michigan borders how many of the five Great Lakes?",
+    "correctAnswer": "Four",
+    "options": ["Three", "Four", "Five", "Two"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is known for cherries and hosts the National Cherry Festival?",
+    "correctAnswer": "Traverse City",
+    "options": ["Traverse City", "Grand Rapids", "Lansing", "Kalamazoo"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Michigan city is nicknamed 'Furniture City'?",
+    "correctAnswer": "Grand Rapids",
+    "options": ["Grand Rapids", "Detroit", "Kalamazoo", "Flint"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Michigan city is home to Michigan State University?",
+    "correctAnswer": "East Lansing",
+    "options": ["East Lansing", "Ann Arbor", "Lansing", "Flint"],
+    "difficulty": 1
+  },
+  {
+    "question": "Michigan produces the majority of which fruit in the U.S.?",
+    "correctAnswer": "Cherries",
+    "options": ["Apples", "Cherries", "Peaches", "Blueberries"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is known for its auto shows and car museums?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Flint", "Grand Rapids", "Ann Arbor"],
+    "difficulty": 2
+  },
+  {
+    "question": "Michigan became a state in which year?",
+    "correctAnswer": "1837",
+    "options": ["1837", "1820", "1850", "1845"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan island is part of a national park and is known for wolves?",
+    "correctAnswer": "Isle Royale",
+    "options": ["Isle Royale", "Mackinac Island", "Beaver Island", "Drummond Island"],
+    "difficulty": 3
+  },
+  {
+    "question": "Michigan’s state flower is:",
+    "correctAnswer": "Apple Blossom",
+    "options": ["Apple Blossom", "Violet", "Rose", "Lily"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is known for its Grand Circus Park and historic theaters?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Grand Rapids", "Ann Arbor", "Flint"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Michigan city hosts the annual Woodward Dream Cruise classic car event?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Flint", "Grand Rapids", "Ann Arbor"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan river runs through Grand Rapids?",
+    "correctAnswer": "Grand River",
+    "options": ["Grand River", "Detroit River", "Kalamazoo River", "St. Clair River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is home to the Gerald R. Ford Presidential Museum?",
+    "correctAnswer": "Grand Rapids",
+    "options": ["Grand Rapids", "Lansing", "Detroit", "Ann Arbor"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Michigan city is the site of the Motown Museum?",
+    "correctAnswer": "Detroit",
+    "options": ["Detroit", "Lansing", "Ann Arbor", "Flint"],
+    "difficulty": 2
+  }
+]
+

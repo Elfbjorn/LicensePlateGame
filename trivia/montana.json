@@ -1,0 +1,177 @@
+[
+  {
+    "question": "What is the capital city of Montana?",
+    "correctAnswer": "Helena",
+    "options": ["Helena", "Billings", "Missoula", "Bozeman"],
+    "difficulty": 1
+  },
+  {
+    "question": "Montana is nicknamed:",
+    "correctAnswer": "The Treasure State",
+    "options": ["The Treasure State", "Big Sky Country", "The Last Best Place", "The Golden State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which mountain range dominates western Montana?",
+    "correctAnswer": "Rocky Mountains",
+    "options": ["Rocky Mountains", "Appalachian Mountains", "Sierra Nevada", "Cascade Range"],
+    "difficulty": 2
+  },
+  {
+    "question": "Montana shares a border with which Canadian provinces?",
+    "correctAnswer": "British Columbia, Alberta, Saskatchewan",
+    "options": ["British Columbia, Alberta, Saskatchewan", "Ontario, Quebec, Manitoba", "Alberta, Manitoba, Yukon", "Quebec, Newfoundland, Nova Scotia"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which river is the longest in Montana?",
+    "correctAnswer": "Missouri River",
+    "options": ["Missouri River", "Yellowstone River", "Flathead River", "Clark Fork River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Montana city is known for the University of Montana?",
+    "correctAnswer": "Missoula",
+    "options": ["Missoula", "Bozeman", "Helena", "Billings"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous national park is located in northwestern Montana?",
+    "correctAnswer": "Glacier National Park",
+    "options": ["Glacier National Park", "Yellowstone National Park", "Rocky Mountain National Park", "Grand Teton National Park"],
+    "difficulty": 2
+  },
+  {
+    "question": "Montana became a state in what year?",
+    "correctAnswer": "1889",
+    "options": ["1889", "1865", "1876", "1896"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Montana city is the largest by population?",
+    "correctAnswer": "Billings",
+    "options": ["Billings", "Missoula", "Helena", "Bozeman"],
+    "difficulty": 1
+  },
+  {
+    "question": "Montana is often referred to by what slogan?",
+    "correctAnswer": "Big Sky Country",
+    "options": ["Big Sky Country", "Treasure State", "Last Best Place", "Sky High State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous actor grew up in Helena, Montana?",
+    "correctAnswer": "Gary Cooper",
+    "options": ["Gary Cooper", "Brad Pitt", "Tom Selleck", "Jeff Bridges"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city hosts the Montana State Fair?",
+    "correctAnswer": "Great Falls",
+    "options": ["Great Falls", "Helena", "Billings", "Bozeman"],
+    "difficulty": 3
+  },
+  {
+    "question": "The Little Bighorn Battlefield, famous for Custer’s Last Stand, is in which Montana county?",
+    "correctAnswer": "Big Horn County",
+    "options": ["Big Horn County", "Gallatin County", "Yellowstone County", "Cascade County"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which river runs through the city of Billings?",
+    "correctAnswer": "Yellowstone River",
+    "options": ["Yellowstone River", "Missouri River", "Clark Fork River", "Flathead River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Montana city is home to Montana State University?",
+    "correctAnswer": "Bozeman",
+    "options": ["Bozeman", "Missoula", "Helena", "Billings"],
+    "difficulty": 2
+  },
+  {
+    "question": "Montana’s state flower is:",
+    "correctAnswer": "Bitterroot",
+    "options": ["Bitterroot", "Sagebrush", "Poppy", "Bluebell"],
+    "difficulty": 2
+  },
+  {
+    "question": "Montana’s state bird is:",
+    "correctAnswer": "Western Meadowlark",
+    "options": ["Western Meadowlark", "Bald Eagle", "American Robin", "Mountain Bluebird"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous TV series filmed extensively in Montana?",
+    "correctAnswer": "Fargo",
+    "options": ["Fargo", "Yellowstone", "Breaking Bad", "Twin Peaks"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city is located near Flathead Lake?",
+    "correctAnswer": "Polson",
+    "options": ["Polson", "Missoula", "Helena", "Bozeman"],
+    "difficulty": 3
+  },
+  {
+    "question": "Montana is the ___ largest state by area in the U.S.",
+    "correctAnswer": "4th",
+    "options": ["4th", "3rd", "5th", "6th"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Montana city is known for the historic Copper King Mansion?",
+    "correctAnswer": "Helena",
+    "options": ["Helena", "Butte", "Billings", "Bozeman"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city hosts the annual Big Sky Documentary Film Festival?",
+    "correctAnswer": "Missoula",
+    "options": ["Missoula", "Bozeman", "Helena", "Billings"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city is famous for the mining history of Butte?",
+    "correctAnswer": "Butte",
+    "options": ["Butte", "Helena", "Billings", "Missoula"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Montana lake is the largest natural freshwater lake west of the Mississippi?",
+    "correctAnswer": "Flathead Lake",
+    "options": ["Flathead Lake", "Fort Peck Lake", "Lake Koocanusa", "Lake McDonald"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city has the historic Garnet Ghost Town nearby?",
+    "correctAnswer": "Missoula",
+    "options": ["Missoula", "Bozeman", "Helena", "Billings"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Montana city is known as the 'Queen City of the Rockies'?",
+    "correctAnswer": "Billings",
+    "options": ["Billings", "Helena", "Missoula", "Bozeman"],
+    "difficulty": 2
+  },
+  {
+    "question": "Montana borders how many U.S. states?",
+    "correctAnswer": "Three",
+    "options": ["Three", "Four", "Two", "Five"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous annual event takes place in Whitefish, Montana?",
+    "correctAnswer": "Whitefish Winter Carnival",
+    "options": ["Whitefish Winter Carnival", "Montana State Fair", "Helena Rodeo", "Missoula Film Festival"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Native American tribe has a large presence in Montana today?",
+    "correctAnswer": "Crow Nation",
+    "options": ["Crow Nation", "Navajo Nation", "Sioux Nation", "Cherokee Nation"],
+    "difficulty": 3
+  }
+]
+

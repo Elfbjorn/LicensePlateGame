@@ -1,0 +1,197 @@
+[
+  {
+    "question": "What is the capital city of Newfoundland and Labrador?",
+    "correctAnswer": "St. John's",
+    "options": ["Corner Brook", "St. John's", "Gander", "Labrador City"],
+    "difficulty": 1
+  },
+  {
+    "question": "Newfoundland and Labrador is the easternmost province of which country?",
+    "correctAnswer": "Canada",
+    "options": ["Canada", "United States", "France", "United Kingdom"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous ship sank off the coast of Newfoundland in 1912?",
+    "correctAnswer": "RMS Titanic",
+    "options": ["RMS Lusitania", "RMS Titanic", "HMS Bounty", "SS Edmund Fitzgerald"],
+    "difficulty": 1
+  },
+  {
+    "question": "Newfoundland and Labrador became a Canadian province in which year?",
+    "correctAnswer": "1949",
+    "options": ["1931", "1949", "1955", "1967"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which is the largest island of Newfoundland and Labrador?",
+    "correctAnswer": "Newfoundland",
+    "options": ["Labrador", "Newfoundland", "Fogo Island", "Bonavista Island"],
+    "difficulty": 2
+  },
+  {
+    "question": "The province of Newfoundland and Labrador is divided into how many main regions?",
+    "correctAnswer": "Two",
+    "options": ["Three", "Two", "Four", "One"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which indigenous peoples are native to Labrador?",
+    "correctAnswer": "Inuit and Innu",
+    "options": ["Inuit and Innu", "Cree and Ojibwe", "Mi’kmaq and Maliseet", "Haida and Tlingit"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which natural landmark in Newfoundland is known as the ‘Gros Morne’?",
+    "correctAnswer": "National Park",
+    "options": ["Mountain Range", "National Park", "River", "Harbor"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which ocean borders Newfoundland and Labrador to the east?",
+    "correctAnswer": "Atlantic Ocean",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Arctic Ocean", "Indian Ocean"],
+    "difficulty": 1
+  },
+  {
+    "question": "The Viking site at L’Anse aux Meadows is famous for being the:",
+    "correctAnswer": "Norse settlement in North America",
+    "options": [
+      "Oldest French colony",
+      "Norse settlement in North America",
+      "First British fort",
+      "First trading post"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which city is the second largest in Newfoundland and Labrador?",
+    "correctAnswer": "Corner Brook",
+    "options": ["Gander", "Corner Brook", "Happy Valley-Goose Bay", "Labrador City"],
+    "difficulty": 2
+  },
+  {
+    "question": "Newfoundland and Labrador is known for which traditional music style?",
+    "correctAnswer": "Folk and Celtic music",
+    "options": ["Jazz", "Rock", "Folk and Celtic music", "Hip Hop"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous cod fishing tradition is associated with Newfoundland and Labrador?",
+    "correctAnswer": "Salt cod industry",
+    "options": ["Salt cod industry", "Shrimp canning", "Lobster trapping", "Salmon smoking"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous lighthouse is located at Cape Spear?",
+    "correctAnswer": "Easternmost point lighthouse in North America",
+    "options": [
+      "Westernmost point lighthouse",
+      "Easternmost point lighthouse in North America",
+      "Tallest lighthouse in Canada",
+      "Oldest lighthouse in Labrador"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Newfoundland city is known for the colorful Jellybean Row houses?",
+    "correctAnswer": "St. John's",
+    "options": ["Corner Brook", "St. John's", "Gander", "Labrador City"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Canadian singer-songwriter hails from Newfoundland?",
+    "correctAnswer": "Great Big Sea (band) / Alan Doyle",
+    "options": [
+      "Celine Dion",
+      "Justin Bieber",
+      "Great Big Sea (band) / Alan Doyle",
+      "Shania Twain"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Canadian province is directly west of Newfoundland and Labrador across the Gulf of St. Lawrence?",
+    "correctAnswer": "Quebec",
+    "options": ["Nova Scotia", "New Brunswick", "Quebec", "Prince Edward Island"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous bay in Newfoundland was a major whaling area historically?",
+    "correctAnswer": "Bay of Exploits",
+    "options": ["Bay of Islands", "Bay of Exploits", "Bonavista Bay", "Placentia Bay"],
+    "difficulty": 3
+  },
+  {
+    "question": "Newfoundland and Labrador’s provincial flag features which two main elements?",
+    "correctAnswer": "Union Jack and golden lion",
+    "options": [
+      "Maple leaf and crown",
+      "Union Jack and golden lion",
+      "Fleur-de-lis and cross",
+      "Eagle and shield"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which unique ice formation occurs along the coasts of Labrador in winter?",
+    "correctAnswer": "Icebergs",
+    "options": ["Glaciers", "Icebergs", "Permafrost", "Frozen mud flats"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which industry was historically the most important to Newfoundland and Labrador’s economy?",
+    "correctAnswer": "Fishing",
+    "options": ["Forestry", "Mining", "Fishing", "Oil"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which body of water separates Newfoundland from mainland Canada?",
+    "correctAnswer": "Gulf of St. Lawrence",
+    "options": ["Hudson Bay", "Gulf of St. Lawrence", "Lake Superior", "Atlantic Ocean"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous explorer is credited with landing in Newfoundland in 1497?",
+    "correctAnswer": "John Cabot",
+    "options": ["Christopher Columbus", "John Cabot", "Jacques Cartier", "Henry Hudson"],
+    "difficulty": 3
+  },
+  {
+    "question": "Newfoundland and Labrador is the only province in Canada with a significant portion of its population speaking which first language?",
+    "correctAnswer": "English",
+    "options": ["French", "English", "Inuktitut", "Mi’kmaq"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which provincial park is located in western Newfoundland?",
+    "correctAnswer": "Gros Morne National Park",
+    "options": ["Terra Nova National Park", "Gros Morne National Park", "Bay du Nord Wilderness Park", "Jipujijkuei Kuespem Park"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which famous long-distance footpath crosses Newfoundland?",
+    "correctAnswer": "East Coast Trail",
+    "options": ["Cabot Trail", "East Coast Trail", "Trans Canada Trail", "Fundy Footpath"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which island in Newfoundland is known for its puffin colonies?",
+    "correctAnswer": "Bonavista Island",
+    "options": ["Fogo Island", "Bonavista Island", "Twillingate Island", "New World Island"],
+    "difficulty": 3
+  },
+  {
+    "question": "The provincial flower of Newfoundland and Labrador is which of the following?",
+    "correctAnswer": "Pitcher Plant",
+    "options": ["Rose", "Pitcher Plant", "Trillium", "Daffodil"],
+    "difficulty": 1
+  },
+  {
+    "question": "The provincial bird of Newfoundland and Labrador is which?",
+    "correctAnswer": "Atlantic Puffin",
+    "options": ["Canada Goose", "Blue Jay", "Atlantic Puffin", "Common Loon"],
+    "difficulty": 1
+  }
+]
+
