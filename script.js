@@ -428,6 +428,7 @@ function createShareCardHTML(data) {
     </div>
   `;
 }
+
 function showShareModal() {
   const data = generateShareCard();
   const shareCardHTML = createShareCardHTML(data);
@@ -452,13 +453,63 @@ function showShareModal() {
         
         <div style="margin: 20px 0; text-align: center;">
           <h4 style="margin-bottom: 15px; color: #2c3e50;">Choose Platform:</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <button onclick="shareToFacebook()" style="background: #1877f2; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-facebook-f"></i> Facebook</button>
-            <button onclick="shareToInstagram()" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-instagram"></i> Instagram</button>
-            <button onclick="shareToX()" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-x-twitter"></i> X</button>
-            <button onclick="shareToThreads()" style="background: #000000; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-threads"></i> Threads</button>
-            <button onclick="shareToReddit()" style="background: #ff4500; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fab fa-reddit-alien"></i> Reddit</button>
-            <button onclick="copyShareText()" style="background: #6c757d; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;"><i class="fas fa-clipboard"></i> Copy Text</button>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 240px; margin: 0 auto;">
+            
+            <button onclick="shareToFacebook()" title="Post to Facebook" style="
+              background: #1877f2; color: white; border: none; 
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s ease;
+            " onmouseover="this.style.background='#166fe5'" onmouseout="this.style.background='#1877f2'">
+              <i class="fab fa-facebook-f" style="font-size: 20px;"></i>
+            </button>
+            
+            <button onclick="shareToInstagram()" title="Share to Instagram" style="
+              background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+              color: white; border: none; 
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: opacity 0.2s ease;
+            " onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+              <i class="fab fa-instagram" style="font-size: 20px;"></i>
+            </button>
+            
+            <button onclick="shareToX()" title="Tweet" style="
+              background: #000000; color: white; border: none;
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s ease;
+            " onmouseover="this.style.background='#333'" onmouseout="this.style.background='#000'">
+              <i class="fab fa-x-twitter" style="font-size: 20px;"></i>
+            </button>
+            
+            <button onclick="shareToThreads()" title="Post to Threads" style="
+              background: #000000; color: white; border: none;
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s ease;
+            " onmouseover="this.style.background='#333'" onmouseout="this.style.background='#000'">
+              <i class="fab fa-threads" style="font-size: 20px;"></i>
+            </button>
+            
+            <button onclick="shareToReddit()" title="Post to Reddit" style="
+              background: #ff4500; color: white; border: none;
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s ease;
+            " onmouseover="this.style.background='#e63e00'" onmouseout="this.style.background='#ff4500'">
+              <i class="fab fa-reddit-alien" style="font-size: 20px;"></i>
+            </button>
+            
+            <button onclick="copyShareText()" title="Copy text" style="
+              background: #6c757d; color: white; border: none;
+              width: 50px; height: 50px; border-radius: 8px; cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s ease;
+            " onmouseover="this.style.background='#5a6268'" onmouseout="this.style.background='#6c757d'">
+              <i class="fas fa-clipboard" style="font-size: 20px;"></i>
+            </button>
+            
           </div>
         </div>
       </div>
