@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Trivia Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .game-setup {
+            text-align: center;
+        }
+
+        .game-mode-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .mode-button {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+        }
+
+        .mode-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+        }
+
+        .state-selector {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .state-dropdown {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .start-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .start-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .game-area {
+            display: none;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .question-counter {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .score {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #059669);
+            transition: width 0.3s ease;
+        }
+
+        .question-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            color: #374151;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .answer-button {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .answer-button:hover {
+            background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .answer-button.correct {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-color: #065f46;
+        }
+
+        .answer-button.incorrect {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            border-color: #991b1b;
+        }
+
+        .answer-button.disabled {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .feedback {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feedback.correct {
+            background: #dcfce7;
+            color: #166534;
+            border: 2px solid #bbf7d0;
+        }
+
+        .feedback.incorrect {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 2px solid #fecaca;
+        }
+
+        .next-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .next-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .game-complete {
+            display: none;
+            text-align: center;
+        }
+
+        .final-score {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #7c3aed;
+            margin: 20px 0;
+        }
+
+        .performance-message {
+            font-size: 1.3rem;
+            margin: 20px 0;
+            color: #374151;
+        }
+
+        .high-scores {
+            background: #f9fafb;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .high-scores h3 {
+            color: #374151;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .score-list {
+            list-style: none;
+        }
+
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .score-item:last-child {
+            border-bottom: none;
+        }
+
+        .score-rank {
+            font-weight: bold;
+            color: #7c3aed;
+        }
+
+        .play-again-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .play-again-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .celebration {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fbbf24;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .pulse {
+            animation: pulse 0.6s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .game-card {
+                padding: 20px;
+            }
+
+            .question {
+                font-size: 1.2rem;
+            }
+
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .question-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+        }
+
+        .loading::after {
+            content: "...";
+            animation: loading-dots 1.5s infinite;
+        }
+
+        @keyframes loading-dots {
+            0%, 20% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🌍 Geography Trivia</h1>
+            <p class="subtitle">Test your knowledge of states, provinces, and territories!</p>
+        </div>
+
+        <div class="game-card">
+            <!-- Game Setup Screen -->
+            <div class="game-setup" id="gameSetup">
+                <h2 style="margin-bottom: 20px; color: #374151;">Choose Your Challenge</h2>
+                
+                <div class="game-mode-selector">
+                    <button class="mode-button" data-mode="us">
+                        🇺🇸 United States<br>
+                        <small>All US states & territories</small>
+                    </button>
+                    <button class="mode-button" data-mode="canada">
+                        🇨🇦 Canada<br>
+                        <small>All provinces & territories</small>
+                    </button>
+                    <button class="mode-button" data-mode="state">
+                        📍 State/Province<br>
+                        <small>Focus on one region</small>
+                    </button>
+                </div>
+
+                <div class="state-selector" id="stateSelector">
+                    <select class="state-dropdown" id="stateDropdown">
+                        <option value="">Select a state or province...</option>
+                    </select>
+                </div>
+
+                <button class="start-button" id="startGame">Start Game</button>
+            </div>
+
+            <!-- Loading Screen -->
+            <div class="loading hidden" id="loadingScreen">
+                Loading questions
+            </div>
+
+            <!-- Game Area -->
+            <div class="game-area" id="gameArea">
+                <div class="question-header">
+                    <div class="question-counter" id="questionCounter">Question 1 of 20</div>
+                    <div class="score" id="scoreDisplay">Score: 0</div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question" id="questionText"></div>
+                    <div class="answers-grid" id="answersGrid"></div>
+                    <div class="feedback hidden" id="feedback"></div>
+                    <button class="next-button hidden" id="nextButton">Next Question</button>
+                </div>
+            </div>
+
+            <!-- Game Complete Screen -->
+            <div class="game-complete" id="gameComplete">
+                <h2>🎉 Game Complete!</h2>
+                <div class="final-score" id="finalScore">0</div>
+                <div class="performance-message" id="performanceMessage"></div>
+                
+                <div class="high-scores">
+                    <h3>🏆 Top 10 High Scores</h3>
+                    <ul class="score-list" id="scoreList"></ul>
+                </div>
+
+                <div>
+                    <button class="play-again-button" id="playAgainButton">Play Again</button>
+                    <button class="play-again-button" id="changeGameButton" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">Change Game Mode</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="celebration" id="celebration"></div>
+
+    <script>
+        class TriviaGame {
+            constructor() {
+                this.currentQuestion = 0;
+                this.score = 0;
+                this.questions = [];
+                this.gameMode = '';
+                this.selectedState = '';
+                this.answered = false;
+                this.totalQuestions = 20;
+                
+                this.initializeEventListeners();
+                this.loadHighScores();
+                this.populateStateDropdown();
+            }
+
+            initializeEventListeners() {
+                // Mode selection
+                document.querySelectorAll('.mode-button').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        this.selectMode(e.target.dataset.mode);
+                    });
+                });
+
+                // Start game
+                document.getElementById('startGame').addEventListener('click', () => {
+                    this.startGame();
+                });
+
+                // Next question
+                document.getElementById('nextButton').addEventListener('click', () => {
+                    this.nextQuestion();
+                });
+
+                // Play again
+                document.getElementById('playAgainButton').addEventListener('click', () => {
+                    this.resetGame();
+                });
+
+                // Change game mode
+                document.getElementById('changeGameButton').addEventListener('click', () => {
+                    this.showGameSetup();
+                });
+            }
+
+            populateStateDropdown() {
+                const dropdown = document.getElementById('stateDropdown');
+                
+                // US States and Territories
+                const usStates = [
+                    'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 
+                    'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 
+                    'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 
+                    'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new_hampshire', 
+                    'new_jersey', 'new_mexico', 'new_york', 'north_carolina', 'north_dakota', 'ohio', 
+                    'oklahoma', 'oregon', 'pennsylvania', 'rhode_island', 'south_carolina', 'south_dakota', 
+                    'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west_virginia', 
+                    'wisconsin', 'wyoming', 'washington_dc'
+                ];
+
+                const usTerritories = [
+                    'american_samoa', 'guam', 'northern_mariana_islands', 'puerto_rico', 'us_virgin_islands'
+                ];
+
+                const canadianProvinces = [
+                    'alberta', 'british_columbia', 'manitoba', 'new_brunswick', 'newfoundland_and_labrador',
+                    'northwest_territories', 'nova_scotia', 'nunavut', 'ontario', 'prince_edward_island',
+                    'quebec', 'saskatchewan', 'yukon'
+                ];
+
+                // Add US states
+                const usGroup = document.createElement('optgroup');
+                usGroup.label = 'United States';
+                usStates.forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = this.formatStateName(state);
+                    usGroup.appendChild(option);
+                });
+                dropdown.appendChild(usGroup);
+
+                // Add US territories
+                const territoryGroup = document.createElement('optgroup');
+                territoryGroup.label = 'US Territories';
+                usTerritories.forEach(territory => {
+                    const option = document.createElement('option');
+                    option.value = territory;
+                    option.textContent = this.formatStateName(territory);
+                    territoryGroup.appendChild(option);
+                });
+                dropdown.appendChild(territoryGroup);
+
+                // Add Canadian provinces
+                const canadaGroup = document.createElement('optgroup');
+                canadaGroup.label = 'Canada';
+                canadianProvinces.forEach(province => {
+                    const option = document.createElement('option');
+                    option.value = province;
+                    option.textContent = this.formatStateName(province);
+                    canadaGroup.appendChild(option);
+                });
+                dropdown.appendChild(canadaGroup);
+            }
+
+            formatStateName(name) {
+                return name.split('_').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ');
+            }
+
+            selectMode(mode) {
+                this.gameMode = mode;
+                
+                // Reset button styles
+                document.querySelectorAll('.mode-button').forEach(btn => {
+                    btn.style.opacity = '0.7';
+                });
+                
+                // Highlight selected button
+                document.querySelector(`[data-mode="${mode}"]`).style.opacity = '1';
+                
+                // Show/hide state selector
+                const stateSelector = document.getElementById('stateSelector');
+                if (mode === 'state') {
+                    stateSelector.style.display = 'block';
+                } else {
+                    stateSelector.style.display = 'none';
+                }
+            }
+
+            async startGame() {
+                if (!this.gameMode) {
+                    alert('Please select a game mode!');
+                    return;
+                }
+
+                if (this.gameMode === 'state' && !document.getElementById('stateDropdown').value) {
+                    alert('Please select a state or province!');
+                    return;
+                }
+
+                this.selectedState = document.getElementById('stateDropdown').value;
+                
+                // Show loading screen
+                this.showLoading();
+                
+                try {
+                    await this.loadQuestions();
+                    this.shuffleQuestions();
+                    this.showGameArea();
+                    this.displayQuestion();
+                } catch (error) {
+                    console.error('Error loading questions:', error);
+                    alert('Error loading questions. Please try again.');
+                    this.showGameSetup();
+                }
+            }
+
+            async loadQuestions() {
+                this.questions = [];
+                
+                if (this.gameMode === 'us') {
+                    await this.loadUSQuestions();
+                } else if (this.gameMode === 'canada') {
+                    await this.loadCanadaQuestions();
+                } else if (this.gameMode === 'state') {
+                    await this.loadStateQuestions();
+                }
+            }
+
+            async loadUSQuestions() {
+                const files = ['united_states.json'];
+                // Add random states for variety
+                const usStates = ['california', 'texas', 'florida', 'new_york', 'illinois', 'arizona', 'washington', 'nevada'];
+                const randomStates = this.getRandomElements(usStates, 3);
+                files.push(...randomStates.map(state => `${state}.json`));
+                
+                await this.loadQuestionsFromFiles(files);
+            }
+
+            async loadCanadaQuestions() {
+                const files = ['canada.json'];
+                const canadianProvinces = ['ontario', 'quebec', 'british_columbia', 'alberta', 'manitoba'];
+                const randomProvinces = this.getRandomElements(canadianProvinces, 3);
+                files.push(...randomProvinces.map(province => `${province}.json`));
+                
+                await this.loadQuestionsFromFiles(files);
+            }
+
+            async loadStateQuestions() {
+                const files = [this.selectedState + '.json'];
+                
+                // Add neighboring states/provinces for variety
+                const neighbors = this.getNeighboringRegions(this.selectedState);
+                if (neighbors.length > 0) {
+                    const randomNeighbors = this.getRandomElements(neighbors, Math.min(2, neighbors.length));
+                    files.push(...randomNeighbors.map(neighbor => `${neighbor}.json`));
+                }
+                
+                await this.loadQuestionsFromFiles(files);
+            }
+
+            getNeighboringRegions(region) {
+                const neighbors = {
+                    'california': ['nevada', 'arizona'],
+                    'texas': ['new_mexico', 'oklahoma', 'arkansas', 'louisiana'],
+                    'florida': ['georgia', 'alabama'],
+                    'new_york': ['pennsylvania', 'new_jersey', 'connecticut', 'massachusetts', 'vermont'],
+                    'illinois': ['wisconsin', 'indiana', 'iowa', 'missouri'],
+                    'ontario': ['quebec', 'manitoba'],
+                    'quebec': ['ontario', 'new_brunswick'],
+                    'british_columbia': ['alberta'],
+                    'alberta': ['british_columbia', 'saskatchewan'],
+                    // Add more as needed
+                };
+                
+                return neighbors[region] || [];
+            }
+
+            async loadQuestionsFromFiles(files) {
+                for (const file of files) {
+                    try {
+                        const response = await fetch(`/mini-games/trivia-game/${file}`);
+                        if (response.ok) {
+                            const questions = await response.json();
+                            this.questions.push(...questions);
+                        }
+                    } catch (error) {
+                        console.warn(`Could not load ${file}:`, error);
+                    }
+                }
+                
+                if (this.questions.length === 0) {
+                    throw new Error('No questions loaded');
+                }
+            }
+
+            getRandomElements(array, count) {
+                const shuffled = [...array].sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, count);
+            }
+
+            shuffleQuestions() {
+                this.questions = this.questions.sort(() => 0.5 - Math.random());
+                this.questions = this.questions.slice(0, this.totalQuestions);
+            }
+
+            displayQuestion() {
+                if (this.currentQuestion >= this.questions.length || this.currentQuestion >= this.totalQuestions) {
+                    this.endGame();
+                    return;
+                }
+
+                const question = this.questions[this.currentQuestion];
+                
+                // Update UI
+                document.getElementById('questionCounter').textContent = 
+                    `Question ${this.currentQuestion + 1} of ${this.totalQuestions}`;
+                document.getElementById('questionText').textContent = question.question;
+                document.getElementById('progressFill').style.width = 
+                    `${((this.currentQuestion) / this.totalQuestions) * 100}%`;
+
+                // Create answer buttons
+                const answersGrid = document.getElementById('answersGrid');
+                answersGrid.innerHTML = '';
+                
+                question.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.className = 'answer-button';
+                    button.textContent = option;
+                    button.addEventListener('click', () => this.selectAnswer(option, question.correctAnswer, button));
+                    answersGrid.appendChild(button);
+                });
+
+                // Reset state
+                this.answered = false;
+                document.getElementById('feedback').classList.add('hidden');
+                document.getElementById('nextButton').classList.add('hidden');
+            }
+
+            selectAnswer(selectedAnswer, correctAnswer, buttonElement) {
+                if (this.answered) return;
+                
+                this.answered = true;
+                const isCorrect = selectedAnswer === correctAnswer;
+                const buttons = document.querySelectorAll('.answer-button');
+                
+                // Disable all buttons
+                buttons.forEach(btn => btn.classList.add('disabled'));
+                
+                // Show correct/incorrect styling
+                buttons.forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('correct');
+                    } else if (btn === buttonElement && !isCorrect) {
+                        btn.classList.add('incorrect');
+                    }
+                });
+
+                // Update score
+                if (isCorrect) {
+                    const points = parseInt(this.questions[this.currentQuestion].difficulty) || 1;
+                    this.score += points;
+                    this.showFeedback(true, `Correct! +${points} points`);
+                    this.createCelebration();
+                } else {
+                    this.showFeedback(false, `Incorrect. The answer is: ${correctAnswer}`);
+                }
+
+                document.getElementById('scoreDisplay').textContent = `Score: ${this.score}`;
+                
+                // Show next button
+                setTimeout(() => {
+                    document.getElementById('nextButton').classList.remove('hidden');
+                }, 1000);
+            }
+
+            showFeedback(isCorrect, message) {
+                const feedback = document.getElementById('feedback');
+                feedback.textContent = message;
+                feedback.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+                feedback.classList.remove('hidden');
+                
+                // Add pulse animation
+                feedback.classList.add('pulse');
+                setTimeout(() => feedback.classList.remove('pulse'), 600);
+            }
+
+            createCelebration() {
+                const celebration = document.getElementById('celebration');
+                
+                // Create confetti
+                for (let i = 0; i < 20; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = ['#fbbf24', '#f59e0b', '#10b981', '#3b82f6', '#8b5cf6'][Math.floor(Math.random() * 5)];
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    celebration.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }
+            }
+
+            nextQuestion() {
+                this.currentQuestion++;
+                this.displayQuestion();
+            }
+
+            endGame() {
+                this.saveScore();
+                this.showGameComplete();
+            }
+
+            saveScore() {
+                const scores = this.getHighScores();
+                const gameType = this.gameMode === 'state' ? this.selectedState : this.gameMode;
+                const gameDate = new Date().toLocaleDateString();
+                
+                scores.push({
+                    score: this.score,
+                    gameType: gameType,
+                    date: gameDate,
+                    questions: this.currentQuestion
+                });
+                
+                // Sort by score and keep top 10
+                scores.sort((a, b) => b.score - a.score);
+                const topScores = scores.slice(0, 10);
+                
+                localStorage.setItem('triviaHighScores', JSON.stringify(topScores));
+            }
+
+            getHighScores() {
+                const saved = localStorage.getItem('triviaHighScores');
+                return saved ? JSON.parse(saved) : [];
+            }
+
+            loadHighScores() {
+                // Called on initialization to ensure scores exist
+                this.getHighScores();
+            }
+
+            displayHighScores() {
+                const scores = this.getHighScores();
+                const scoreList = document.getElementById('scoreList');
+                scoreList.innerHTML = '';
+                
+                if (scores.length === 0) {
+                    const noScores = document.createElement('li');
+                    noScores.className = 'score-item';
+                    noScores.innerHTML = '<span>No scores yet!</span><span>Play to set a record</span>';
+                    scoreList.appendChild(noScores);
+                    return;
+                }
+                
+                scores.forEach((score, index) => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'score-item';
+                    
+                    const gameTypeDisplay = this.formatStateName(score.gameType);
+                    
+                    listItem.innerHTML = `
+                        <span class="score-rank">#${index + 1}</span>
+                        <span>${score.score} pts</span>
+                        <span>${gameTypeDisplay}</span>
+                        <span>${score.date}</span>
+                    `;
+                    
+                    scoreList.appendChild(listItem);
+                });
+            }
+
+            getPerformanceMessage(score, totalPossibleScore) {
+                const percentage = (score / totalPossibleScore) * 100;
+                
+                if (percentage >= 90) return "🏆 Outstanding! You're a geography expert!";
+                if (percentage >= 80) return "🎉 Excellent work! Great knowledge!";
+                if (percentage >= 70) return "👏 Good job! You know your geography!";
+                if (percentage >= 60) return "👍 Not bad! Room for improvement!";
+                if (percentage >= 50) return "📚 Keep studying! You're getting there!";
+                return "🤔 Time to brush up on geography!";
+            }
+
+            resetGame() {
+                this.currentQuestion = 0;
+                this.score = 0;
+                this.questions = [];
+                this.answered = false;
+                
+                document.getElementById('scoreDisplay').textContent = 'Score: 0';
+                this.showGameSetup();
+            }
+
+            showGameSetup() {
+                document.getElementById('gameSetup').style.display = 'block';
+                document.getElementById('loadingScreen').classList.add('hidden');
+                document.getElementById('gameArea').style.display = 'none';
+                document.getElementById('gameComplete').style.display = 'none';
+                
+                // Reset mode selection
+                this.gameMode = '';
+                document.querySelectorAll('.mode-button').forEach(btn => {
+                    btn.style.opacity = '0.7';
+                });
+                document.getElementById('stateSelector').style.display = 'none';
+                document.getElementById('stateDropdown').value = '';
+            }
+
+            showLoading() {
+                document.getElementById('gameSetup').style.display = 'none';
+                document.getElementById('loadingScreen').classList.remove('hidden');
+                document.getElementById('gameArea').style.display = 'none';
+                document.getElementById('gameComplete').style.display = 'none';
+            }
+
+            showGameArea() {
+                document.getElementById('gameSetup').style.display = 'none';
+                document.getElementById('loadingScreen').classList.add('hidden');
+                document.getElementById('gameArea').style.display = 'block';
+                document.getElementById('gameComplete').style.display = 'none';
+            }
+
+            showGameComplete() {
+                document.getElementById('gameSetup').style.display = 'none';
+                document.getElementById('loadingScreen').classList.add('hidden');
+                document.getElementById('gameArea').style.display = 'none';
+                document.getElementById('gameComplete').style.display = 'block';
+                
+                // Calculate maximum possible score
+                const maxScore = this.questions.slice(0, this.totalQuestions)
+                    .reduce((sum, q) => sum + (parseInt(q.difficulty) || 1), 0);
+                
+                document.getElementById('finalScore').textContent = `${this.score} / ${maxScore}`;
+                document.getElementById('performanceMessage').textContent = 
+                    this.getPerformanceMessage(this.score, maxScore);
+                
+                this.displayHighScores();
+                
+                // Create celebration for high scores
+                const scores = this.getHighScores();
+                const isHighScore = scores.length === 0 || this.score > scores[scores.length - 1].score || scores.length < 10;
+                
+                if (isHighScore) {
+                    setTimeout(() => this.createCelebration(), 500);
+                }
+            }
+        }
+
+        // Initialize the game when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new TriviaGame();
+        });
+    </script>
+</body>
+</html>
