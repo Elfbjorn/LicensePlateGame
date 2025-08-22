@@ -36,12 +36,6 @@
     "difficulty": "1"
   },
   {
-    "question": "Which Alberta mountain is the tallest peak in the province?",
-    "correctAnswer": "Mount Columbia",
-    "options": ["Mount Columbia", "Mount Robson", "Mount Assiniboine", "Mount Alberta"],
-    "difficulty": "3"
-  },
-  {
     "question": "Which Alberta city hosts the University of Calgary?",
     "correctAnswer": "Calgary",
     "options": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"],
@@ -108,12 +102,6 @@
     "difficulty": "3"
   },
   {
-    "question": "Which Alberta festival celebrates multicultural arts in Edmonton?",
-    "correctAnswer": "Edmonton Heritage Festival",
-    "options": ["Edmonton Heritage Festival", "Calgary Stampede", "Edmonton Folk Festival", "Ice on Whyte"],
-    "difficulty": "3"
-  },
-  {
     "question": "Which Alberta town is home to Head-Smashed-In Buffalo Jump?",
     "correctAnswer": "Fort Macleod",
     "options": ["Fort Macleod", "Banff", "Calgary", "Medicine Hat"],
@@ -123,12 +111,6 @@
     "question": "Which Alberta lake is man-made and near Calgary for recreation?",
     "correctAnswer": "Glenmore Reservoir",
     "options": ["Glenmore Reservoir", "Sylvan Lake", "Bow Lake", "Pigeon Lake"],
-    "difficulty": "2"
-  },
-  {
-    "question": "Which Alberta city is famous for its oil sands industry near Fort McMurray?",
-    "correctAnswer": "Fort McMurray",
-    "options": ["Calgary", "Edmonton", "Fort McMurray", "Red Deer"],
     "difficulty": "2"
   },
   {
