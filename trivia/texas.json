@@ -1,0 +1,198 @@
+[
+  {
+    "question": "What is the capital city of Texas?",
+    "correctAnswer": "Austin",
+    "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which city is the largest by population in Texas?",
+    "correctAnswer": "Houston",
+    "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+    "difficulty": 1
+  },
+  {
+    "question": "Texas was an independent country before joining the United States. What was it called?",
+    "correctAnswer": "The Republic of Texas",
+    "options": [
+      "The Lone Star Nation",
+      "The Republic of Texas",
+      "The Texan Confederacy",
+      "The Texian Territory"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous battle in 1836 marked the fall of the Texian defenders to Mexican forces?",
+    "correctAnswer": "The Battle of the Alamo",
+    "options": [
+      "The Battle of San Jacinto",
+      "The Battle of the Alamo",
+      "The Siege of Goliad",
+      "The Battle of Gonzales"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river forms part of the southern border between Texas and Mexico?",
+    "correctAnswer": "Rio Grande",
+    "options": ["Colorado River", "Rio Grande", "Red River", "Sabine River"],
+    "difficulty": 1
+  },
+  {
+    "question": "Texas is nicknamed:",
+    "correctAnswer": "The Lone Star State",
+    "options": ["The Big State", "The Lone Star State", "The Republic State", "The Longhorn State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Texas city is famous for its live music scene, often called the 'Live Music Capital of the World'?",
+    "correctAnswer": "Austin",
+    "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which space center is located near Houston, Texas?",
+    "correctAnswer": "Johnson Space Center",
+    "options": [
+      "Kennedy Space Center",
+      "Johnson Space Center",
+      "Johnson Space Station",
+      "Houston Astronaut Center"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas city hosts the annual Houston Livestock Show and Rodeo?",
+    "correctAnswer": "Houston",
+    "options": ["Dallas", "Houston", "Fort Worth", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Texas is the second-largest state in the U.S. by area. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "It is the largest", "It is the third largest"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous Texan singer was known as the 'King of Country Music'?",
+    "correctAnswer": "George Strait",
+    "options": ["Willie Nelson", "George Strait", "Johnny Cash", "Beyoncé"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Texas city is home to the Alamo?",
+    "correctAnswer": "San Antonio",
+    "options": ["Houston", "Austin", "San Antonio", "Dallas"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Texas city is known for its annual South by Southwest (SXSW) festival?",
+    "correctAnswer": "Austin",
+    "options": ["Dallas", "Austin", "Houston", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas river runs through the city of Austin?",
+    "correctAnswer": "Colorado River",
+    "options": ["Rio Grande", "Red River", "Brazos River", "Colorado River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas city is the headquarters of Southwest Airlines?",
+    "correctAnswer": "Dallas",
+    "options": ["Austin", "Dallas", "Houston", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texan astronaut was the first American to orbit Earth?",
+    "correctAnswer": "John Glenn",
+    "options": ["Alan Shepard", "John Glenn", "Neil Armstrong", "Buzz Aldrin"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Texas city is known for its Space Center, rodeos, and port on the Gulf of Mexico?",
+    "correctAnswer": "Houston",
+    "options": ["Dallas", "Houston", "San Antonio", "Austin"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Texan singer-songwriter is known for 'On the Road Again'?",
+    "correctAnswer": "Willie Nelson",
+    "options": ["George Strait", "Willie Nelson", "Beyoncé", "Stevie Ray Vaughan"],
+    "difficulty": 2
+  },
+  {
+    "question": "Texas shares its borders with how many U.S. states?",
+    "correctAnswer": "Four",
+    "options": ["Three", "Four", "Five", "Six"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas city is famous for the Fort Worth Stockyards?",
+    "correctAnswer": "Fort Worth",
+    "options": ["Dallas", "Houston", "Fort Worth", "Austin"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas landmark is a series of limestone cliffs along the Rio Grande?",
+    "correctAnswer": "Big Bend",
+    "options": ["Guadalupe Mountains", "Big Bend", "Palo Duro Canyon", "Enchanted Rock"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Texas city is the birthplace of Beyoncé?",
+    "correctAnswer": "Houston",
+    "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas city is known as the 'Live Music Capital of the World' and the state capital?",
+    "correctAnswer": "Austin",
+    "options": ["Houston", "Dallas", "Austin", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Texas city hosts the State Fair of Texas annually?",
+    "correctAnswer": "Dallas",
+    "options": ["Houston", "Dallas", "Austin", "San Antonio"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Texas state flag features a single star. What is it commonly called?",
+    "correctAnswer": "The Lone Star Flag",
+    "options": ["The Lone Star Flag", "The Big Star Flag", "The Texan Flag", "The Republic Flag"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Texas river is famous for whitewater rafting near the city of San Marcos?",
+    "correctAnswer": "Guadalupe River",
+    "options": ["Colorado River", "Brazos River", "Guadalupe River", "Red River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Texas city is known for the historic San Jacinto Monument?",
+    "correctAnswer": "Houston",
+    "options": ["Houston", "Dallas", "San Antonio", "Austin"],
+    "difficulty": 2
+  },
+  {
+    "question": "Texas’s state flower is which of the following?",
+    "correctAnswer": "Bluebonnet",
+    "options": ["Bluebonnet", "Rose", "Magnolia", "Indian Paintbrush"],
+    "difficulty": 1
+  },
+  {
+    "question": "Texas’s state bird is the Northern Mockingbird. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in west Texas", "Only in east Texas"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Texas city is home to the Houston Museum of Natural Science?",
+    "correctAnswer": "Houston",
+    "options": ["Dallas", "Houston", "Austin", "San Antonio"],
+    "difficulty": 2
+  }
+]
+

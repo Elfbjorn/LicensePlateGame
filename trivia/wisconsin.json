@@ -1,0 +1,196 @@
+[
+  {
+    "question": "Which Great Lake borders Wisconsin to the east?",
+    "correctAnswer": "Lake Michigan",
+    "options": ["Lake Superior", "Lake Michigan", "Lake Huron", "Lake Erie"],
+    "difficulty": 1
+  },
+  {
+    "question": "Wisconsin is famously nicknamed what due to its dairy production?",
+    "correctAnswer": "America’s Dairyland",
+    "options": ["Cheese State", "America’s Dairyland", "Milk Capital", "The Dairy Empire"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which city is the capital of Wisconsin?",
+    "correctAnswer": "Madison",
+    "options": ["Milwaukee", "Green Bay", "Madison", "Eau Claire"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wisconsin city is the largest by population?",
+    "correctAnswer": "Milwaukee",
+    "options": ["Madison", "Green Bay", "Milwaukee", "Kenosha"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river forms much of the western border of Wisconsin?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Wisconsin River", "Mississippi River", "Fox River", "St. Croix River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Green Bay football team calls Wisconsin home?",
+    "correctAnswer": "Packers",
+    "options": ["Vikings", "Packers", "Bears", "Lions"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wisconsin city is known for its beer brewing heritage and Summerfest music festival?",
+    "correctAnswer": "Milwaukee",
+    "options": ["Madison", "Green Bay", "Milwaukee", "La Crosse"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Wisconsin Dells are famous for what type of attraction?",
+    "correctAnswer": "Water parks and rock formations",
+    "options": [
+      "Water parks and rock formations",
+      "Historic lighthouses",
+      "Ski resorts",
+      "Cheese factories"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Native American tribes are historically associated with Wisconsin?",
+    "correctAnswer": "Ho-Chunk, Menominee, Ojibwe, Potawatomi",
+    "options": [
+      "Cherokee and Choctaw",
+      "Ho-Chunk, Menominee, Ojibwe, Potawatomi",
+      "Sioux and Cheyenne",
+      "Iroquois Confederacy"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Wisconsin city hosts the Harley-Davidson Museum?",
+    "correctAnswer": "Milwaukee",
+    "options": ["Milwaukee", "Green Bay", "Eau Claire", "Madison"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous American architect designed the Monona Terrace community and convention center in Madison, Wisconsin?",
+    "correctAnswer": "Frank Lloyd Wright",
+    "options": ["Frank Lloyd Wright", "Louis Sullivan", "I.M. Pei", "Philip Johnson"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wisconsin is known for producing which type of cheese?",
+    "correctAnswer": "Cheddar",
+    "options": ["Brie", "Cheddar", "Gouda", "Feta"],
+    "difficulty": 1
+  },
+  {
+    "question": "The Apostle Islands National Lakeshore is located on which body of water?",
+    "correctAnswer": "Lake Superior",
+    "options": ["Lake Michigan", "Lake Superior", "Lake Huron", "Lake Erie"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wisconsin city is home to the Green Bay Packers’ stadium, Lambeau Field?",
+    "correctAnswer": "Green Bay",
+    "options": ["Madison", "Milwaukee", "Green Bay", "Kenosha"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which U.S. President was born in Wisconsin?",
+    "correctAnswer": "None",
+    "options": ["Herbert Hoover", "Ronald Reagan", "None", "Harry Truman"],
+    "difficulty": 4
+  },
+  {
+    "question": "The University of Wisconsin’s flagship campus is located in which city?",
+    "correctAnswer": "Madison",
+    "options": ["Milwaukee", "Madison", "Green Bay", "La Crosse"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wisconsin city is known for its historic railroad and riverboat tourism along the Mississippi?",
+    "correctAnswer": "La Crosse",
+    "options": ["La Crosse", "Eau Claire", "Green Bay", "Oshkosh"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wisconsin’s state bird is the American Robin. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Sometimes", "Only in summer"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wisconsin lake is the largest natural inland lake in the state?",
+    "correctAnswer": "Lake Winnebago",
+    "options": ["Lake Michigan", "Lake Superior", "Lake Winnebago", "Lake Mendota"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wisconsin was admitted as which number state in the U.S.?",
+    "correctAnswer": "30th",
+    "options": ["25th", "28th", "30th", "32nd"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which popular Wisconsin festival celebrates bratwurst and beer?",
+    "correctAnswer": "Oktoberfest in La Crosse",
+    "options": [
+      "Oktoberfest in La Crosse",
+      "Summerfest in Milwaukee",
+      "Cheese Days in Monroe",
+      "Polka Fest in Green Bay"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Wisconsin’s state motto is 'Forward.' What does it signify?",
+    "correctAnswer": "A commitment to progress and improvement",
+    "options": [
+      "A commitment to progress and improvement",
+      "The state bird flies forward",
+      "Historical military victories",
+      "Agricultural growth"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wisconsin city is famous for hosting EAA AirVenture, the world’s largest aviation event?",
+    "correctAnswer": "Oshkosh",
+    "options": ["Oshkosh", "Milwaukee", "Madison", "Green Bay"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wisconsin river flows through Wausau and La Crosse?",
+    "correctAnswer": "Wisconsin River",
+    "options": ["Mississippi River", "Wisconsin River", "Fox River", "Rock River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wisconsin city is known for Harley-Davidson headquarters and brewing history?",
+    "correctAnswer": "Milwaukee",
+    "options": ["Green Bay", "Madison", "Milwaukee", "Eau Claire"],
+    "difficulty": 2
+  },
+  {
+    "question": "Wisconsin’s Door County is famous for what type of tourist attraction?",
+    "correctAnswer": "Charming small towns and lighthouses",
+    "options": [
+      "Ski resorts and mountains",
+      "Charming small towns and lighthouses",
+      "Theme parks",
+      "Desert landscapes"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "The Packers’ Lambeau Field is located in which Wisconsin city?",
+    "correctAnswer": "Green Bay",
+    "options": ["Green Bay", "Milwaukee", "Madison", "Kenosha"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wisconsin city is home to the Harley-Davidson Museum?",
+    "correctAnswer": "Milwaukee",
+    "options": ["Milwaukee", "Green Bay", "Oshkosh", "Madison"],
+    "difficulty": 2
+  }
+]
+

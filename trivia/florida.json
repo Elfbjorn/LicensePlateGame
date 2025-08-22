@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Florida?",
+    "correctAnswer": "Tallahassee",
+    "options": ["Tallahassee", "Miami", "Orlando", "Jacksonville"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Florida is nicknamed what?",
+    "correctAnswer": "The Sunshine State",
+    "options": ["The Sunshine State", "The Peach State", "The Magnolia State", "The Tar Heel State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Florida city is the largest by population?",
+    "correctAnswer": "Jacksonville",
+    "options": ["Jacksonville", "Miami", "Orlando", "Tampa"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Florida is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Florida city is known for its theme parks including Disney World?",
+    "correctAnswer": "Orlando",
+    "options": ["Orlando", "Miami", "Tampa", "Jacksonville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is famous for the Miami Beach Art Deco Historic District?",
+    "correctAnswer": "Miami Beach",
+    "options": ["Miami Beach", "Miami", "Orlando", "Tampa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is home to the Kennedy Space Center?",
+    "correctAnswer": "Cape Canaveral",
+    "options": ["Cape Canaveral", "Orlando", "Tampa", "Miami"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is famous for the Everglades National Park nearby?",
+    "correctAnswer": "Miami",
+    "options": ["Miami", "Orlando", "Tampa", "Jacksonville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city hosts the annual Gasparilla Pirate Festival?",
+    "correctAnswer": "Tampa",
+    "options": ["Tampa", "Miami", "Jacksonville", "Orlando"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is a historic port and tourist destination on the Atlantic coast?",
+    "correctAnswer": "St. Augustine",
+    "options": ["St. Augustine", "Miami", "Jacksonville", "Tampa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is home to the University of Florida?",
+    "correctAnswer": "Gainesville",
+    "options": ["Gainesville", "Tallahassee", "Orlando", "Miami"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is near the Florida Keys and popular for snorkeling and diving?",
+    "correctAnswer": "Key West",
+    "options": ["Key West", "Miami", "Orlando", "Tampa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is known for its beaches like Clearwater Beach?",
+    "correctAnswer": "Clearwater",
+    "options": ["Clearwater", "Miami", "Tampa", "Orlando"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is near Daytona International Speedway?",
+    "correctAnswer": "Daytona Beach",
+    "options": ["Daytona Beach", "Orlando", "Tampa", "Miami"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is known for its historic district, Flagler College, and lighthouse?",
+    "correctAnswer": "St. Augustine",
+    "options": ["St. Augustine", "Miami", "Orlando", "Jacksonville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is home to Walt Disney World Resort?",
+    "correctAnswer": "Orlando",
+    "options": ["Orlando", "Miami", "Tampa", "Jacksonville"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Florida city hosts the annual Florida State Fair?",
+    "correctAnswer": "Tampa",
+    "options": ["Tampa", "Orlando", "Jacksonville", "Miami"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is the southernmost point of the continental US?",
+    "correctAnswer": "Key West",
+    "options": ["Key West", "Miami", "Naples", "Tampa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is home to the Salvador Dalí Museum?",
+    "correctAnswer": "St. Petersburg",
+    "options": ["St. Petersburg", "Tampa", "Miami", "Orlando"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Florida city is known for its space tourism attractions like Kennedy Space Center Visitor Complex?",
+    "correctAnswer": "Cape Canaveral",
+    "options": ["Cape Canaveral", "Orlando", "Miami", "Tampa"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Florida city is famous for being a retirement haven with numerous golf communities?",
+    "correctAnswer": "Sarasota",
+    "options": ["Sarasota", "Miami", "Orlando", "Tampa"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Florida city is near the Everglades and Biscayne National Parks?",
+    "correctAnswer": "Miami",
+    "options": ["Miami", "Orlando", "Tampa", "Jacksonville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is known for the Ringling Museum of Art?",
+    "correctAnswer": "Sarasota",
+    "options": ["Sarasota", "Miami", "Orlando", "Tampa"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Florida city hosts the Daytona 500 NASCAR race?",
+    "correctAnswer": "Daytona Beach",
+    "options": ["Daytona Beach", "Tampa", "Orlando", "Miami"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is known for its Cuban culture and Little Havana?",
+    "correctAnswer": "Miami",
+    "options": ["Miami", "Tampa", "Orlando", "Jacksonville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Florida city is home to the University of Central Florida?",
+    "correctAnswer": "Orlando",
+    "options": ["Orlando", "Miami", "Tampa", "Jacksonville"],
+    "difficulty": "2"
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of the United States Virgin Islands?",
+    "correctAnswer": "Charlotte Amalie",
+    "options": ["Charlotte Amalie", "Christiansted", "Frederiksted", "Cruz Bay"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The United States Virgin Islands are located in which body of water?",
+    "correctAnswer": "Caribbean Sea",
+    "options": ["Caribbean Sea", "Atlantic Ocean", "Gulf of Mexico", "Pacific Ocean"],
+    "difficulty": "1"
+  },
+  {
+    "question": "The United States Virgin Islands were formerly a colony of which country?",
+    "correctAnswer": "Denmark",
+    "options": ["Denmark", "Spain", "France", "Netherlands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which island is the largest in the US Virgin Islands?",
+    "correctAnswer": "Saint Croix",
+    "options": ["Saint Croix", "Saint Thomas", "Saint John", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is home to the capital, Charlotte Amalie?",
+    "correctAnswer": "Saint Thomas",
+    "options": ["Saint Thomas", "Saint John", "Saint Croix", "Water Island"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which US Virgin Islands island is known for the Virgin Islands National Park?",
+    "correctAnswer": "Saint John",
+    "options": ["Saint John", "Saint Thomas", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "US Virgin Islands are a territory of which country?",
+    "correctAnswer": "United States",
+    "options": ["United States", "Denmark", "United Kingdom", "France"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which US Virgin Islands beach is famous for soft white sand?",
+    "correctAnswer": "Trunk Bay",
+    "options": ["Trunk Bay", "Magens Bay", "Coki Point Beach", "Honeymoon Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands city hosts the annual Carnival celebration?",
+    "correctAnswer": "Charlotte Amalie",
+    "options": ["Charlotte Amalie", "Christiansted", "Frederiksted", "Cruz Bay"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is the southernmost?",
+    "correctAnswer": "Saint Croix",
+    "options": ["Saint Croix", "Saint Thomas", "Saint John", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island has the historic Fort Christian?",
+    "correctAnswer": "Saint Thomas",
+    "options": ["Saint Thomas", "Saint John", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "The US Virgin Islands are east of which US territory?",
+    "correctAnswer": "Puerto Rico",
+    "options": ["Puerto Rico", "Guam", "American Samoa", "Northern Mariana Islands"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which US Virgin Islands island is smallest in size?",
+    "correctAnswer": "Water Island",
+    "options": ["Water Island", "Saint John", "Saint Thomas", "Saint Croix"],
+    "difficulty": "2"
+  },
+  {
+    "question": "US Virgin Islands use which currency?",
+    "correctAnswer": "United States Dollar",
+    "options": ["United States Dollar", "US Virgin Peso", "Euro", "Danish Krone"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which US Virgin Islands island is known for snorkeling and coral reefs?",
+    "correctAnswer": "Saint John",
+    "options": ["Saint John", "Saint Thomas", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands festival celebrates music, art, and dance?",
+    "correctAnswer": "Carnival",
+    "options": ["Carnival", "St. John Festival", "Magens Bay Festival", "Virgin Islands Art Week"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is home to historic sugar plantations?",
+    "correctAnswer": "Saint Croix",
+    "options": ["Saint Croix", "Saint Thomas", "Saint John", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is closest to the British Virgin Islands?",
+    "correctAnswer": "Saint John",
+    "options": ["Saint John", "Saint Thomas", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "US Virgin Islands are located north of which country?",
+    "correctAnswer": "Venezuela",
+    "options": ["Venezuela", "Puerto Rico", "Dominican Republic", "Barbados"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands harbor is a major cruise port?",
+    "correctAnswer": "Charlotte Amalie Harbor",
+    "options": ["Charlotte Amalie Harbor", "Christiansted Harbor", "Frederiksted Harbor", "Cruz Bay Harbor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is known for the Annaberg Sugar Plantation ruins?",
+    "correctAnswer": "Saint John",
+    "options": ["Saint John", "Saint Thomas", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is known for Magens Bay?",
+    "correctAnswer": "Saint Thomas",
+    "options": ["Saint Thomas", "Saint John", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "US Virgin Islands are a territory of the US but have what voting rights in presidential elections?",
+    "correctAnswer": "No voting rights",
+    "options": ["No voting rights", "Full voting rights", "Partial voting rights", "Vote only in primaries"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island is famous for scuba diving and wall dives?",
+    "correctAnswer": "Saint John",
+    "options": ["Saint John", "Saint Thomas", "Saint Croix", "Water Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which US Virgin Islands island has the historic Fort Frederik?",
+    "correctAnswer": "Saint Croix",
+    "options": ["Saint Croix", "Saint Thomas", "Saint John", "Water Island"],
+    "difficulty": "2"
+  }
+]
+

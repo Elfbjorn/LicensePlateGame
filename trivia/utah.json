@@ -1,0 +1,191 @@
+[
+  {
+    "question": "Which desert covers much of western Utah?",
+    "correctAnswer": "Great Salt Lake Desert",
+    "options": ["Mojave Desert", "Great Salt Lake Desert", "Sonoran Desert", "Black Rock Desert"],
+    "difficulty": 2
+  },
+  {
+    "question": "Utah is famously home to which large saltwater lake?",
+    "correctAnswer": "Great Salt Lake",
+    "options": ["Lake Powell", "Great Salt Lake", "Bear Lake", "Lake Utah"],
+    "difficulty": 1
+  },
+  {
+    "question": "This national park in Utah is known for its massive sandstone arches.",
+    "correctAnswer": "Arches National Park",
+    "options": ["Zion National Park", "Bryce Canyon National Park", "Arches National Park", "Canyonlands National Park"],
+    "difficulty": 2
+  },
+  {
+    "question": "Utah became the 45th state of the U.S. in which year?",
+    "correctAnswer": "1896",
+    "options": ["1876", "1896", "1906", "1912"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which religious group is historically associated with Utah’s settlement?",
+    "correctAnswer": "The Church of Jesus Christ of Latter-day Saints (Mormons)",
+    "options": ["Puritans", "Quakers", "Mormons", "Shakers"],
+    "difficulty": 2
+  },
+  {
+    "question": "Salt Lake City hosted the Winter Olympics in which year?",
+    "correctAnswer": "2002",
+    "options": ["1998", "2002", "2006", "2010"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous canyon in Utah features steep red cliffs and is popular for hiking and rock climbing?",
+    "correctAnswer": "Zion Canyon",
+    "options": ["Grand Canyon", "Zion Canyon", "Antelope Canyon", "Canyonlands Canyon"],
+    "difficulty": 2
+  },
+  {
+    "question": "Utah shares its borders with how many U.S. states?",
+    "correctAnswer": "6",
+    "options": ["4", "5", "6", "7"],
+    "difficulty": 3
+  },
+  {
+    "question": "The Bonneville Salt Flats are located in which part of Utah?",
+    "correctAnswer": "Northwestern Utah",
+    "options": ["Southeastern Utah", "Southwestern Utah", "Northeastern Utah", "Northwestern Utah"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Utah city is home to the Sundance Film Festival?",
+    "correctAnswer": "Park City",
+    "options": ["Salt Lake City", "Provo", "St. George", "Park City"],
+    "difficulty": 2
+  },
+  {
+    "question": "Utah’s state bird is the California gull. What unusual event led to its designation?",
+    "correctAnswer": "Gulls ate a plague of crickets that threatened crops in 1848",
+    "options": [
+      "Gulls migrated unusually early one year",
+      "Gulls ate a plague of crickets that threatened crops in 1848",
+      "Gulls are native to all Utah lakes",
+      "Gulls are featured in the state flag"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Utah-based tech region is nicknamed 'Silicon Slopes'?",
+    "correctAnswer": "Provo–Salt Lake City area",
+    "options": ["Ogden", "Provo–Salt Lake City area", "St. George", "Park City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Utah’s state flower is the Sego Lily. Why is it significant?",
+    "correctAnswer": "It was used as food by early settlers during famine",
+    "options": [
+      "It grows only in Utah",
+      "It was used as food by early settlers during famine",
+      "It was discovered by Brigham Young",
+      "It blooms year-round"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Native American tribes have historical ties to Utah?",
+    "correctAnswer": "Ute, Navajo, Paiute, Goshute, Shoshone",
+    "options": [
+      "Cherokee and Choctaw",
+      "Sioux and Cheyenne",
+      "Ute, Navajo, Paiute, Goshute, Shoshone",
+      "Apache and Comanche"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Utah’s Canyonlands National Park is divided into how many districts?",
+    "correctAnswer": "Four",
+    "options": ["Two", "Three", "Four", "Five"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Utah city is the headquarters for the LDS Church?",
+    "correctAnswer": "Salt Lake City",
+    "options": ["Provo", "Salt Lake City", "Ogden", "St. George"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Utah ski resort is famous for having 'The Greatest Snow on Earth'?",
+    "correctAnswer": "Snowbird",
+    "options": ["Alta", "Snowbird", "Park City", "Deer Valley"],
+    "difficulty": 2
+  },
+  {
+    "question": "Utah is home to a famous geologic formation called Delicate Arch. In which park is it located?",
+    "correctAnswer": "Arches National Park",
+    "options": ["Zion National Park", "Bryce Canyon", "Arches National Park", "Capitol Reef National Park"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Utah State Capitol is located in which city?",
+    "correctAnswer": "Salt Lake City",
+    "options": ["Ogden", "Provo", "Salt Lake City", "St. George"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Utah lake is the deepest natural freshwater lake in the state?",
+    "correctAnswer": "Bear Lake",
+    "options": ["Great Salt Lake", "Bear Lake", "Utah Lake", "Mill Creek Reservoir"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Utah city is known for its historic Mormon pioneers’ heritage and Temple Square?",
+    "correctAnswer": "Salt Lake City",
+    "options": ["Ogden", "Provo", "Salt Lake City", "St. George"],
+    "difficulty": 1
+  },
+  {
+    "question": "Utah’s Bryce Canyon is famous for its unique rock formations called…",
+    "correctAnswer": "Hoodoos",
+    "options": ["Hoodoos", "Mesas", "Buttes", "Arches"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which popular national park in southern Utah features The Narrows hike through a slot canyon?",
+    "correctAnswer": "Zion National Park",
+    "options": ["Arches National Park", "Bryce Canyon", "Canyonlands", "Zion National Park"],
+    "difficulty": 3
+  },
+  {
+    "question": "Utah has a unique ecosystem in its west-central desert. Which plant is characteristic there?",
+    "correctAnswer": "Sagebrush",
+    "options": ["Saguaro Cactus", "Sagebrush", "Joshua Tree", "Creosote Bush"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Bonneville Salt Flats are famous for which type of racing event?",
+    "correctAnswer": "Land speed racing",
+    "options": ["Motorcycle motocross", "Land speed racing", "Drag boat racing", "Endurance off-road racing"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Utah city was the original capital of the Utah Territory?",
+    "correctAnswer": "Fillmore",
+    "options": ["Salt Lake City", "Provo", "Fillmore", "St. George"],
+    "difficulty": 4
+  },
+  {
+    "question": "Utah’s state tree is the Blue Spruce. Which of the following is true about it?",
+    "correctAnswer": "It is native to Utah and other Rocky Mountain regions",
+    "options": [
+      "It only grows in Utah",
+      "It is native to Utah and other Rocky Mountain regions",
+      "It was imported from Canada in 1900",
+      "It blooms with blue flowers in summer"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Utah lake is actually a reservoir rather than a natural lake?",
+    "correctAnswer": "Utah Lake",
+    "options": ["Bear Lake", "Utah Lake", "Great Salt Lake", "Deer Creek Reservoir"],
+    "difficulty": 2
+  }
+]
+

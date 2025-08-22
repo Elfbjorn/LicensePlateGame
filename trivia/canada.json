@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Canada?",
+    "correctAnswer": "Ottawa",
+    "options": ["Toronto", "Ottawa", "Montreal", "Vancouver"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian city hosts the annual Calgary Stampede?",
+    "correctAnswer": "Calgary",
+    "options": ["Calgary", "Edmonton", "Winnipeg", "Vancouver"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What is the national sport of Canada (winter)?",
+    "correctAnswer": "Ice Hockey",
+    "options": ["Ice Hockey", "Lacrosse", "Basketball", "Curling"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian singer is known as the 'Queen of Country Pop'?",
+    "correctAnswer": "Shania Twain",
+    "options": ["Celine Dion", "Shania Twain", "Alanis Morissette", "Anne Murray"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What large Canadian waterfall borders the U.S. and Canada?",
+    "correctAnswer": "Niagara Falls",
+    "options": ["Niagara Falls", "Athabasca Falls", "Montmorency Falls", "Takakkaw Falls"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian city hosted the 2010 Winter Olympics?",
+    "correctAnswer": "Vancouver",
+    "options": ["Calgary", "Montreal", "Vancouver", "Toronto"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What leaf is on the Canadian flag?",
+    "correctAnswer": "Maple",
+    "options": ["Oak", "Pine", "Maple", "Birch"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian province is officially bilingual (English and French)?",
+    "correctAnswer": "New Brunswick",
+    "options": ["Quebec", "Ontario", "New Brunswick", "Manitoba"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Canadian city is nicknamed 'Hollywood North' for its film industry?",
+    "correctAnswer": "Vancouver",
+    "options": ["Toronto", "Vancouver", "Montreal", "Calgary"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Canadian prime minister introduced the official flag of Canada in 1965?",
+    "correctAnswer": "Lester B. Pearson",
+    "options": ["Pierre Trudeau", "Lester B. Pearson", "John A. Macdonald", "Brian Mulroney"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Canadian singer is famous for the song 'My Heart Will Go On'?",
+    "correctAnswer": "Celine Dion",
+    "options": ["Celine Dion", "Shania Twain", "Sarah McLachlan", "Avril Lavigne"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian chain is famous for coffee and doughnuts?",
+    "correctAnswer": "Tim Hortons",
+    "options": ["Dunkin'", "Tim Hortons", "Country Style", "Starbucks"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian province is the largest by land area?",
+    "correctAnswer": "Quebec",
+    "options": ["Ontario", "Alberta", "Quebec", "British Columbia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Canadian pop star starred on 'Degrassi: The Next Generation' before a music career?",
+    "correctAnswer": "Drake",
+    "options": ["Justin Bieber", "Drake", "The Weeknd", "Shawn Mendes"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Canadian city is home to the CN Tower?",
+    "correctAnswer": "Toronto",
+    "options": ["Montreal", "Toronto", "Ottawa", "Vancouver"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Canada has two national sports. Ice Hockey is one. What is the other?",
+    "correctAnswer": "Lacrosse",
+    "options": ["Baseball", "Soccer", "Lacrosse", "Basketball"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Canadian province is home to the Bay of Fundy, known for having the highest tides in the world?",
+    "correctAnswer": "Nova Scotia",
+    "options": ["Prince Edward Island", "Nova Scotia", "Quebec", "Newfoundland"],
+    "difficulty": "4"
+  },
+  {
+    "question": "What is the most populous city in Canada?",
+    "correctAnswer": "Toronto",
+    "options": ["Toronto", "Montreal", "Vancouver", "Calgary"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian actor starred as Deadpool?",
+    "correctAnswer": "Ryan Reynolds",
+    "options": ["Ryan Reynolds", "Jim Carrey", "Seth Rogen", "Keanu Reeves"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which province joined Canada last, in 1949?",
+    "correctAnswer": "Newfoundland and Labrador",
+    "options": ["Manitoba", "Nunavut", "Newfoundland and Labrador", "Saskatchewan"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is Canada's national animal?",
+    "correctAnswer": "Beaver",
+    "options": ["Moose", "Beaver", "Loon", "Polar Bear"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian-born comedian was part of 'Saturday Night Live' and starred in 'Wayne’s World'?",
+    "correctAnswer": "Mike Myers",
+    "options": ["Jim Carrey", "Mike Myers", "Dan Aykroyd", "Martin Short"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which province is home to Banff National Park?",
+    "correctAnswer": "Alberta",
+    "options": ["British Columbia", "Alberta", "Saskatchewan", "Ontario"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Canadian was the first woman to win the Nobel Prize for Peace in 1945?",
+    "correctAnswer": "Emily Greene Balch",
+    "options": ["Emily Greene Balch", "Viola Desmond", "Agnes Macphail", "Adrienne Clarkson"],
+    "difficulty": "5"
+  },
+  {
+    "question": "What Canadian invention revolutionized sports by making play possible indoors on ice?",
+    "correctAnswer": "The ice hockey goalie mask",
+    "options": ["The hockey puck", "The Zamboni", "The ice hockey goalie mask", "The slapshot"],
+    "difficulty": "4"
+  }
+]
+

@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Vermont?",
+    "correctAnswer": "Montpelier",
+    "options": ["Montpelier", "Burlington", "Rutland", "St. Albans"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Vermont is nicknamed what?",
+    "correctAnswer": "The Green Mountain State",
+    "options": ["The Green Mountain State", "The Granite State", "The Pine Tree State", "The Ocean State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Vermont is famous for producing which sweet product?",
+    "correctAnswer": "Maple syrup",
+    "options": ["Maple syrup", "Honey", "Molasses", "Agave syrup"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Vermont city is the largest by population?",
+    "correctAnswer": "Burlington",
+    "options": ["Burlington", "Montpelier", "Rutland", "St. Albans"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Vermont lake is one of the largest in New England?",
+    "correctAnswer": "Lake Champlain",
+    "options": ["Lake Champlain", "Lake Memphremagog", "Lake Morey", "Lake Bomoseen"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Vermont borders which Canadian province?",
+    "correctAnswer": "Quebec",
+    "options": ["Quebec", "Ontario", "New Brunswick", "Nova Scotia"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont mountain range runs north to south through the state?",
+    "correctAnswer": "Green Mountains",
+    "options": ["Green Mountains", "White Mountains", "Adirondacks", "Catskills"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Vermont is part of which US region?",
+    "correctAnswer": "New England",
+    "options": ["New England", "Mid-Atlantic", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Vermont town is famous for ski resorts like Stowe?",
+    "correctAnswer": "Stowe",
+    "options": ["Stowe", "Burlington", "Montpelier", "Rutland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont city hosts the University of Vermont?",
+    "correctAnswer": "Burlington",
+    "options": ["Burlington", "Montpelier", "Rutland", "St. Albans"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Vermont river flows into Lake Champlain?",
+    "correctAnswer": "Winooski River",
+    "options": ["Winooski River", "Connecticut River", "Otter Creek", "Lamoille River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Vermont is famous for which type of cheese production?",
+    "correctAnswer": "Cheddar",
+    "options": ["Cheddar", "Brie", "Gouda", "Mozzarella"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont festival celebrates autumn foliage and crafts?",
+    "correctAnswer": "Vermont Maple Festival",
+    "options": ["Vermont Maple Festival", "Stowe Winter Carnival", "Champlain Valley Fair", "Rutland Halloween Parade"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont city has a historic covered bridge known as the Gold Brook Bridge?",
+    "correctAnswer": "Stowe",
+    "options": ["Stowe", "Montpelier", "Burlington", "Rutland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont town is famous for Ben & Jerry's ice cream factory?",
+    "correctAnswer": "Waterbury",
+    "options": ["Waterbury", "Burlington", "Stowe", "Montpelier"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont mountain is known for winter sports and hiking trails?",
+    "correctAnswer": "Mount Mansfield",
+    "options": ["Mount Mansfield", "Camel’s Hump", "Mount Ascutney", "Jay Peak"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont city hosts the annual Champlain Valley Fair?",
+    "correctAnswer": "Essex Junction",
+    "options": ["Essex Junction", "Burlington", "Montpelier", "Rutland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont town is known for artisanal cheese and farm-to-table dining?",
+    "correctAnswer": "Middlebury",
+    "options": ["Middlebury", "Stowe", "Montpelier", "Burlington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Vermont has more of which type of trees than most other US states?",
+    "correctAnswer": "Maple trees",
+    "options": ["Maple trees", "Pine trees", "Oak trees", "Birch trees"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont city is known for its historic town green and colonial buildings?",
+    "correctAnswer": "Montpelier",
+    "options": ["Montpelier", "Burlington", "Rutland", "St. Albans"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Vermont is famous for which fall activity?",
+    "correctAnswer": "Leaf peeping",
+    "options": ["Leaf peeping", "Apple picking", "Pumpkin carving", "Corn mazes"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Vermont river is famous for fishing and canoeing?",
+    "correctAnswer": "Connecticut River",
+    "options": ["Connecticut River", "Winooski River", "Otter Creek", "Lamoille River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont town is known for its historic ski resort at Killington?",
+    "correctAnswer": "Killington",
+    "options": ["Killington", "Stowe", "Burlington", "Montpelier"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Vermont town has a famous festival celebrating maple syrup each spring?",
+    "correctAnswer": "St. Johnsbury",
+    "options": ["St. Johnsbury", "Middlebury", "Waterbury", "Rutland"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Vermont city is home to a historic covered bridge festival?",
+    "correctAnswer": "Cornish",
+    "options": ["Cornish", "Stowe", "Montpelier", "Burlington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Vermont town is famous for the Bread and Puppet Theater?",
+    "correctAnswer": "Glover",
+    "options": ["Glover", "Montpelier", "Stowe", "Burlington"],
+    "difficulty": "3"
+  }
+]
+

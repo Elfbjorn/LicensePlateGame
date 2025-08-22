@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the capital city of Minnesota?",
+    "correctAnswer": "St. Paul",
+    "options": ["St. Paul", "Minneapolis", "Duluth", "Rochester"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Minnesota city is the largest by population?",
+    "correctAnswer": "Minneapolis",
+    "options": ["Minneapolis", "St. Paul", "Rochester", "Duluth"],
+    "difficulty": 1
+  },
+  {
+    "question": "Minnesota is nicknamed:",
+    "correctAnswer": "The North Star State",
+    "options": ["The North Star State", "The Land of 10,000 Lakes", "The Gopher State", "The Evergreen State"],
+    "difficulty": 1
+  },
+  {
+    "question": "How many lakes are there in Minnesota?",
+    "correctAnswer": "Over 10,000",
+    "options": ["Over 10,000", "About 5,000", "Over 20,000", "About 2,500"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous Minnesota musician was the star of 'Purple Rain'?",
+    "correctAnswer": "Prince",
+    "options": ["Prince", "Bob Dylan", "Tracy Chapman", "Randy Brecker"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota shares a border with how many U.S. states?",
+    "correctAnswer": "Four",
+    "options": ["Three", "Four", "Five", "Six"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river forms part of Minnesota's eastern border?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Minnesota River", "Mississippi River", "St. Croix River", "Red River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is home to the Mall of America?",
+    "correctAnswer": "Bloomington",
+    "options": ["Bloomington", "Minneapolis", "St. Paul", "Rochester"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city hosts the annual Winter Carnival?",
+    "correctAnswer": "St. Paul",
+    "options": ["St. Paul", "Minneapolis", "Duluth", "Rochester"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota became a state in which year?",
+    "correctAnswer": "1858",
+    "options": ["1858", "1848", "1865", "1870"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota’s state bird is:",
+    "correctAnswer": "Common Loon",
+    "options": ["Common Loon", "American Robin", "Cardinal", "Bald Eagle"],
+    "difficulty": 1
+  },
+  {
+    "question": "Minnesota’s state flower is:",
+    "correctAnswer": "Pink and White Lady’s Slipper",
+    "options": ["Pink and White Lady’s Slipper", "Rose", "Violet", "Daisy"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is famous for the Guthrie Theater?",
+    "correctAnswer": "Minneapolis",
+    "options": ["Minneapolis", "St. Paul", "Duluth", "Rochester"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota lake is the largest by surface area?",
+    "correctAnswer": "Lake Superior",
+    "options": ["Lake Superior", "Lake Mille Lacs", "Leech Lake", "Lake of the Woods"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota’s state tree is:",
+    "correctAnswer": "Red Pine",
+    "options": ["Red Pine", "Maple", "Oak", "Birch"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is known for hosting the Mayo Clinic?",
+    "correctAnswer": "Rochester",
+    "options": ["Rochester", "Minneapolis", "St. Paul", "Duluth"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota lake is known as the 'Inland Sea' due to its size?",
+    "correctAnswer": "Lake of the Woods",
+    "options": ["Lake of the Woods", "Lake Superior", "Leech Lake", "Mille Lacs Lake"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Minnesota city is known as the 'Gateway to the North'?",
+    "correctAnswer": "Duluth",
+    "options": ["Duluth", "Minneapolis", "St. Paul", "Bemidji"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Minnesota-born author wrote 'The Giver'?",
+    "correctAnswer": "Lois Lowry",
+    "options": ["Lois Lowry", "F. Scott Fitzgerald", "Laura Ingalls Wilder", "Toni Morrison"],
+    "difficulty": 3
+  },
+  {
+    "question": "Minnesota is known for producing which crop prominently?",
+    "correctAnswer": "Corn",
+    "options": ["Corn", "Soybeans", "Wheat", "Barley"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city hosts the annual Twin Cities Marathon?",
+    "correctAnswer": "Minneapolis/St. Paul",
+    "options": ["Minneapolis/St. Paul", "Rochester", "Duluth", "Bloomington"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota’s state motto is:",
+    "correctAnswer": "L'Étoile du Nord (The Star of the North)",
+    "options": [
+      "L'Étoile du Nord (The Star of the North)",
+      "Forward",
+      "Eureka",
+      "Live Free or Die"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Minnesota city is known for the Stone Arch Bridge?",
+    "correctAnswer": "Minneapolis",
+    "options": ["Minneapolis", "St. Paul", "Duluth", "Rochester"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is home to the Science Museum of Minnesota?",
+    "correctAnswer": "St. Paul",
+    "options": ["St. Paul", "Minneapolis", "Duluth", "Rochester"],
+    "difficulty": 2
+  },
+  {
+    "question": "Minnesota’s state fish is:",
+    "correctAnswer": "Walleye",
+    "options": ["Walleye", "Trout", "Bass", "Northern Pike"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is known for its Scandinavian heritage and festivals?",
+    "correctAnswer": "Minneapolis/St. Paul",
+    "options": ["Minneapolis/St. Paul", "Duluth", "Rochester", "Bemidji"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Minnesota river runs through Minneapolis?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Mississippi River", "Minnesota River", "St. Croix River", "Red River"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Minnesota city is famous for hosting the Renaissance Festival?",
+    "correctAnswer": "Shakopee",
+    "options": ["Shakopee", "Minneapolis", "St. Paul", "Duluth"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Minnesota city is home to the Hubert H. Humphrey Metrodome (former stadium)?",
+    "correctAnswer": "Minneapolis/St. Paul",
+    "options": ["Minneapolis/St. Paul", "Duluth", "Rochester", "Bloomington"],
+    "difficulty": 2
+  }
+]
+

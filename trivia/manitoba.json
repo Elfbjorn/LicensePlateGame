@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Manitoba?",
+    "correctAnswer": "Winnipeg",
+    "options": ["Winnipeg", "Brandon", "Thompson", "Steinbach"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which large lake in Manitoba is the largest in the province?",
+    "correctAnswer": "Lake Winnipeg",
+    "options": ["Lake Manitoba", "Lake Winnipeg", "Cedar Lake", "Lake Winnipegosis"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which festival in Winnipeg celebrates indigenous culture every summer?",
+    "correctAnswer": "Manito Ahbee Festival",
+    "options": ["Manito Ahbee Festival", "Folklorama", "Winnipeg Jazz Festival", "Festival du Voyageur"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Canadian band originated in Winnipeg?",
+    "correctAnswer": "The Guess Who",
+    "options": ["The Tragically Hip", "Rush", "The Guess Who", "Barenaked Ladies"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which winter festival in Winnipeg features snow sculptures and skating?",
+    "correctAnswer": "Festival du Voyageur",
+    "options": ["Festival du Voyageur", "Winterlude", "Ice Magic", "SnowDays"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Manitoba river flows through Winnipeg?",
+    "correctAnswer": "Red River",
+    "options": ["Assiniboine River", "Red River", "Saskatchewan River", "Nelson River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which provincial park in Manitoba is known for polar bear sightings?",
+    "correctAnswer": "Churchill Wildlife Management Area",
+    "options": ["Riding Mountain National Park", "Churchill Wildlife Management Area", "Whiteshell Provincial Park", "Duck Mountain Provincial Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba festival is North America’s largest multicultural festival?",
+    "correctAnswer": "Folklorama",
+    "options": ["Folklorama", "Festival du Voyageur", "Manito Ahbee Festival", "Winnipeg Jazz Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Manitoba is part of which Canadian region?",
+    "correctAnswer": "Prairies",
+    "options": ["Atlantic Canada", "Prairies", "Central Canada", "Northern Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which historic Winnipeg landmark is known for its architecture and public clock?",
+    "correctAnswer": "Union Station",
+    "options": ["Union Station", "The Forks", "Exchange District", "Esplanade Riel"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba university is located in Winnipeg?",
+    "correctAnswer": "University of Manitoba",
+    "options": ["University of Winnipeg", "University of Manitoba", "Brandon University", "Red River College"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous comedian was born in Winnipeg?",
+    "correctAnswer": "Martin Short",
+    "options": ["Martin Short", "Jim Carrey", "Mike Myers", "Seth Rogen"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which lake borders Manitoba and Ontario to the east?",
+    "correctAnswer": "Lake of the Woods",
+    "options": ["Lake Winnipeg", "Lake Manitoba", "Lake of the Woods", "Cedar Lake"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba city hosts the Royal Winnipeg Ballet?",
+    "correctAnswer": "Winnipeg",
+    "options": ["Brandon", "Winnipeg", "Thompson", "Steinbach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Manitoba river merges with the Red River at Winnipeg?",
+    "correctAnswer": "Assiniboine River",
+    "options": ["Saskatchewan River", "Nelson River", "Assiniboine River", "Churchill River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which historic Winnipeg district is known for preserved early 20th century architecture?",
+    "correctAnswer": "Exchange District",
+    "options": ["The Forks", "Exchange District", "Osborne Village", "St. Boniface"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba town is known as the polar bear capital of Canada?",
+    "correctAnswer": "Churchill",
+    "options": ["Winnipeg", "Churchill", "Thompson", "Brandon"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Manitoba festival celebrates French-Canadian culture?",
+    "correctAnswer": "Festival du Voyageur",
+    "options": ["Festival du Voyageur", "Folklorama", "Celtic Colours", "Jazz Winnipeg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Manitoba’s provincial bird is what?",
+    "correctAnswer": "Great Grey Owl",
+    "options": ["Canada Goose", "Great Grey Owl", "Common Loon", "Black-capped Chickadee"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba lake is famous for its freshwater jellyfish?",
+    "correctAnswer": "Clear Lake",
+    "options": ["Lake Winnipeg", "Lake Manitoba", "Clear Lake", "Cedar Lake"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which major industry historically shaped Manitoba’s economy?",
+    "correctAnswer": "Agriculture",
+    "options": ["Mining", "Fishing", "Agriculture", "Forestry"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Manitoba city is known for its Ukrainian cultural community?",
+    "correctAnswer": "Winnipeg",
+    "options": ["Brandon", "Winnipeg", "Thompson", "Steinbach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Manitoba national park is famous for its lakes and forests?",
+    "correctAnswer": "Riding Mountain National Park",
+    "options": ["Riding Mountain National Park", "Whiteshell Provincial Park", "Duck Mountain Provincial Park", "Wapusk National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Manitoba festival is dedicated to Indigenous arts and culture?",
+    "correctAnswer": "Manito Ahbee Festival",
+    "options": ["Folklorama", "Manito Ahbee Festival", "Festival du Voyageur", "Celtic Colours International Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Winnipeg museum is dedicated to human rights?",
+    "correctAnswer": "Canadian Museum for Human Rights",
+    "options": ["Manitoba Museum", "Canadian Museum for Human Rights", "Winnipeg Art Gallery", "Royal Manitoba Theatre Centre"],
+    "difficulty": "3"
+  }
+]
+

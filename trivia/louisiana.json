@@ -1,0 +1,176 @@
+[
+  {
+    "question": "What is the capital city of Louisiana?",
+    "correctAnswer": "Baton Rouge",
+    "options": ["New Orleans", "Baton Rouge", "Shreveport", "Lafayette"],
+    "difficulty": 1
+  },
+  {
+    "question": "Louisiana is known for which famous type of cuisine?",
+    "correctAnswer": "Cajun and Creole cuisine",
+    "options": ["Tex-Mex cuisine", "Cajun and Creole cuisine", "Southern barbecue", "New England seafood"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city is famous for its annual Mardi Gras celebrations?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "Lafayette", "New Orleans", "Shreveport"],
+    "difficulty": 1
+  },
+  {
+    "question": "Louisiana is bordered by which body of water to the south?",
+    "correctAnswer": "Gulf of Mexico",
+    "options": ["Atlantic Ocean", "Gulf of Mexico", "Mississippi River", "Lake Pontchartrain"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which river flows through New Orleans?",
+    "correctAnswer": "Mississippi River",
+    "options": ["Missouri River", "Red River", "Mississippi River", "Atchafalaya River"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city is known as the 'Crawfish Capital of the World'?",
+    "correctAnswer": "Breaux Bridge",
+    "options": ["Lafayette", "Shreveport", "Breaux Bridge", "Monroe"],
+    "difficulty": 2
+  },
+  {
+    "question": "Louisiana was named after which French king?",
+    "correctAnswer": "King Louis XIV",
+    "options": ["King Louis XIV", "King Louis XVI", "King Louis XIII", "King Francis I"],
+    "difficulty": 2
+  },
+  {
+    "question": "Louisiana became a U.S. state in which year?",
+    "correctAnswer": "1812",
+    "options": ["1803", "1812", "1820", "1798"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Louisiana city hosts the Jazz & Heritage Festival annually?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "New Orleans", "Lafayette", "Shreveport"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Louisiana swamp is famous for its unique wildlife and cypress trees?",
+    "correctAnswer": "Atchafalaya Basin",
+    "options": ["Everglades", "Atchafalaya Basin", "Mississippi Delta", "Bayou Lafourche"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which U.S. president was born in Louisiana?",
+    "correctAnswer": "Zachary Taylor",
+    "options": ["Andrew Jackson", "Zachary Taylor", "Bill Clinton", "James Monroe"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Louisiana city is famous for its Cajun music and Zydeco culture?",
+    "correctAnswer": "Lafayette",
+    "options": ["Shreveport", "Lafayette", "New Orleans", "Baton Rouge"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Louisiana city is the primary port on the Mississippi River?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "New Orleans", "Shreveport", "Lafayette"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous author from Louisiana wrote 'Interview with the Vampire'?",
+    "correctAnswer": "Anne Rice",
+    "options": ["Toni Morrison", "Anne Rice", "William Faulkner", "John Grisham"],
+    "difficulty": 3
+  },
+  {
+    "question": "Louisiana’s state bird is the Brown Pelican. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in coastal areas", "Only in the north"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city is known for its historic French Quarter?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "Lafayette", "New Orleans", "Shreveport"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city is home to Tulane University?",
+    "correctAnswer": "New Orleans",
+    "options": ["Shreveport", "Baton Rouge", "New Orleans", "Lafayette"],
+    "difficulty": 2
+  },
+  {
+    "question": "Louisiana was originally part of which European country’s territory?",
+    "correctAnswer": "France",
+    "options": ["Spain", "France", "Portugal", "Netherlands"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Louisiana city hosts the oldest cathedral in the U.S., St. Louis Cathedral?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "New Orleans", "Shreveport", "Lafayette"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Louisiana Purchase in 1803 included land that would become Louisiana and how many other current U.S. states?",
+    "correctAnswer": "15",
+    "options": ["10", "12", "15", "20"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Louisiana festival celebrates Cajun culture and music each year in Lafayette?",
+    "correctAnswer": "Festival International de Louisiane",
+    "options": [
+      "Jazz Fest",
+      "Festival International de Louisiane",
+      "Mardi Gras",
+      "Cajun Music Fest"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Louisiana river is the longest entirely within the state?",
+    "correctAnswer": "Red River",
+    "options": ["Mississippi River", "Red River", "Ouachita River", "Atchafalaya River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Louisiana city is famous for its Creole cuisine and beignets?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "Shreveport", "New Orleans", "Lafayette"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city hosts the annual Voodoo Music + Art Experience?",
+    "correctAnswer": "New Orleans",
+    "options": ["New Orleans", "Baton Rouge", "Shreveport", "Lafayette"],
+    "difficulty": 2
+  },
+  {
+    "question": "Louisiana’s state flower is the Magnolia. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in southern Louisiana", "Only in northern Louisiana"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Louisiana city was the site of the Battle of New Orleans during the War of 1812?",
+    "correctAnswer": "New Orleans",
+    "options": ["Baton Rouge", "Shreveport", "New Orleans", "Lafayette"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Louisiana city is known for its historic plantations along the Mississippi River?",
+    "correctAnswer": "St. Francisville",
+    "options": ["St. Francisville", "New Orleans", "Baton Rouge", "Lafayette"],
+    "difficulty": 3
+  },
+  {
+    "question": "Louisiana’s state tree is the Bald Cypress. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in the swamps", "Only in northern Louisiana"],
+    "difficulty": 1
+  }
+]
+

@@ -1,0 +1,192 @@
+[
+  {
+    "question": "Which U.S. state is home to the city of Seattle?",
+    "correctAnswer": "Washington",
+    "options": ["Oregon", "Washington", "Idaho", "Montana"],
+    "difficulty": 1
+  },
+  {
+    "question": "Washington is nicknamed the 'Evergreen State.' Why?",
+    "correctAnswer": "Because of its abundant evergreen forests",
+    "options": [
+      "Because of the state flag",
+      "Because of its abundant evergreen forests",
+      "Because it never snows there",
+      "Because of a famous evergreen tree in Olympia"
+    ],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous tech company was founded in Seattle?",
+    "correctAnswer": "Microsoft",
+    "options": ["Microsoft", "Amazon", "Boeing", "Apple"],
+    "difficulty": 2
+  },
+  {
+    "question": "Mount Rainier is the tallest peak in Washington. Approximately how tall is it?",
+    "correctAnswer": "14,411 feet",
+    "options": ["12,500 feet", "14,411 feet", "13,000 feet", "15,000 feet"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Washington city is famous for the Space Needle?",
+    "correctAnswer": "Seattle",
+    "options": ["Spokane", "Tacoma", "Seattle", "Olympia"],
+    "difficulty": 1
+  },
+  {
+    "question": "The Columbia River forms much of the border between Washington and which state?",
+    "correctAnswer": "Oregon",
+    "options": ["Idaho", "Oregon", "Montana", "California"],
+    "difficulty": 2
+  },
+  {
+    "question": "Washington’s state fruit is named after a popular variety of apple. Which one?",
+    "correctAnswer": "Apple",
+    "options": ["Pear", "Apple", "Cherry", "Peach"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Boeing Company was founded in which Washington city?",
+    "correctAnswer": "Seattle",
+    "options": ["Everett", "Seattle", "Tacoma", "Spokane"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Native American tribes have historical ties to the Pacific Northwest, including Washington?",
+    "correctAnswer": "Coast Salish, Yakama, Spokane, Nez Perce",
+    "options": [
+      "Cherokee, Choctaw",
+      "Sioux, Cheyenne",
+      "Coast Salish, Yakama, Spokane, Nez Perce",
+      "Navajo, Apache"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Washington city hosts the famous Pike Place Market?",
+    "correctAnswer": "Seattle",
+    "options": ["Spokane", "Seattle", "Tacoma", "Bellevue"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Washington city is the state capital?",
+    "correctAnswer": "Olympia",
+    "options": ["Seattle", "Spokane", "Tacoma", "Olympia"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous musician from Washington state is known for the grunge movement and the band Nirvana?",
+    "correctAnswer": "Kurt Cobain",
+    "options": ["Eddie Vedder", "Chris Cornell", "Kurt Cobain", "Macklemore"],
+    "difficulty": 3
+  },
+  {
+    "question": "Washington shares a border with which Canadian province?",
+    "correctAnswer": "British Columbia",
+    "options": ["Alberta", "Ontario", "British Columbia", "Quebec"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Washington city is known for its aerospace industry and large Boeing assembly plant?",
+    "correctAnswer": "Everett",
+    "options": ["Seattle", "Everett", "Tacoma", "Bellevue"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Washington state park features dramatic sea stacks and tide pools along the Pacific Coast?",
+    "correctAnswer": "Olympic National Park",
+    "options": ["Mount Rainier National Park", "Olympic National Park", "North Cascades National Park", "Deception Pass State Park"],
+    "difficulty": 3
+  },
+  {
+    "question": "Washington’s state flower is the coast rhododendron. What color are its blooms?",
+    "correctAnswer": "Pink",
+    "options": ["White", "Pink", "Purple", "Yellow"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Hoh Rainforest, one of the largest temperate rainforests in the U.S., is located in which national park?",
+    "correctAnswer": "Olympic National Park",
+    "options": ["Mount Rainier National Park", "Olympic National Park", "North Cascades National Park", "Glacier National Park"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which major river flows from Canada through eastern Washington into the Columbia River?",
+    "correctAnswer": "Spokane River",
+    "options": ["Snake River", "Spokane River", "Yakima River", "Columbia River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Washington city hosts the annual Seafair summer festival?",
+    "correctAnswer": "Seattle",
+    "options": ["Tacoma", "Spokane", "Seattle", "Everett"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which volcano in Washington is considered the most dangerous due to its proximity to populated areas?",
+    "correctAnswer": "Mount Rainier",
+    "options": ["Mount Adams", "Mount Baker", "Mount Rainier", "Glacier Peak"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which U.S. president was born in Washington state?",
+    "correctAnswer": "No U.S. president was born in Washington",
+    "options": [
+      "George Washington",
+      "Ronald Reagan",
+      "No U.S. president was born in Washington",
+      "Bill Clinton"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Washington city is known for the Museum of Flight and Boeing Field?",
+    "correctAnswer": "Seattle",
+    "options": ["Everett", "Seattle", "Tacoma", "Bellevue"],
+    "difficulty": 2
+  },
+  {
+    "question": "Washington is the leading U.S. producer of which crop?",
+    "correctAnswer": "Apples",
+    "options": ["Apples", "Cherries", "Potatoes", "Wheat"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Washington city is home to the University of Washington?",
+    "correctAnswer": "Seattle",
+    "options": ["Seattle", "Spokane", "Tacoma", "Olympia"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which mountain range runs through central Washington?",
+    "correctAnswer": "Cascade Range",
+    "options": ["Rocky Mountains", "Cascade Range", "Sierra Nevada", "Blue Mountains"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Washington city is the main port for trade with Asia?",
+    "correctAnswer": "Seattle",
+    "options": ["Seattle", "Tacoma", "Everett", "Olympia"],
+    "difficulty": 2
+  },
+  {
+    "question": "The North Cascades National Park is located in which part of Washington?",
+    "correctAnswer": "Northern Washington",
+    "options": ["Southern Washington", "Northern Washington", "Central Washington", "Eastern Washington"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Washington island is known for its lavender farms and art galleries?",
+    "correctAnswer": "San Juan Island",
+    "options": ["San Juan Island", "Whidbey Island", "Vashon Island", "Orcas Island"],
+    "difficulty": 3
+  },
+  {
+    "question": "Washington’s state insect is the Green Darner. What type of insect is it?",
+    "correctAnswer": "Dragonfly",
+    "options": ["Beetle", "Dragonfly", "Butterfly", "Moth"],
+    "difficulty": 2
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Ontario?",
+    "correctAnswer": "Toronto",
+    "options": ["Ottawa", "Toronto", "Hamilton", "London"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which major Canadian landmark is shared between Ontario and New York state?",
+    "correctAnswer": "Niagara Falls",
+    "options": ["Niagara Falls", "Hudson Bay", "Lake Superior", "St. Lawrence River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is the name of the NHL team based in Toronto?",
+    "correctAnswer": "Toronto Maple Leafs",
+    "options": ["Toronto Raptors", "Toronto Maple Leafs", "Ottawa Senators", "Buffalo Sabres"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What is the name of the tall communications and observation tower in downtown Toronto?",
+    "correctAnswer": "CN Tower",
+    "options": ["Space Needle", "CN Tower", "Sky Tower", "Prudential Tower"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Canadian music superstar was born in Stratford, Ontario, in 1994?",
+    "correctAnswer": "Justin Bieber",
+    "options": ["Shawn Mendes", "Justin Bieber", "Drake", "Avril Lavigne"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Ontario is home to which capital city of Canada?",
+    "correctAnswer": "Ottawa",
+    "options": ["Toronto", "Ottawa", "Montreal", "Kingston"],
+    "difficulty": "1"
+  },
+  {
+    "question": "What Ontario city is known as the 'Automotive Capital of Canada'?",
+    "correctAnswer": "Windsor",
+    "options": ["Windsor", "Oshawa", "Toronto", "Hamilton"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ontario city hosted the 2015 Pan American Games?",
+    "correctAnswer": "Toronto",
+    "options": ["Toronto", "Ottawa", "Hamilton", "Kingston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ontario-based author wrote the best-selling novel 'The Handmaid’s Tale'?",
+    "correctAnswer": "Margaret Atwood",
+    "options": ["Alice Munro", "Margaret Atwood", "Lucy Maud Montgomery", "Miriam Toews"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which university in Ontario is Canada’s oldest English-speaking university, founded in 1841?",
+    "correctAnswer": "Queen’s University",
+    "options": ["University of Toronto", "McMaster University", "Queen’s University", "York University"],
+    "difficulty": "4"
+  },
+  {
+    "question": "What Great Lake borders Toronto?",
+    "correctAnswer": "Lake Ontario",
+    "options": ["Lake Ontario", "Lake Erie", "Lake Huron", "Lake Superior"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Ontario’s cottage country, Muskoka, is known for what type of recreation?",
+    "correctAnswer": "Lakeside and boating vacations",
+    "options": ["Skiing", "Surfing", "Lakeside and boating vacations", "Mountain climbing"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ontario city is home to Canada’s Wonderland theme park?",
+    "correctAnswer": "Vaughan",
+    "options": ["Toronto", "Mississauga", "Vaughan", "Hamilton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What Ontario town is famous as the birthplace of hockey great Wayne Gretzky?",
+    "correctAnswer": "Brantford",
+    "options": ["London", "Brantford", "Windsor", "Sudbury"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ontario city is home to the Canadian National Exhibition (CNE), one of the largest fairs in North America?",
+    "correctAnswer": "Toronto",
+    "options": ["Hamilton", "Ottawa", "Toronto", "Kingston"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Ontario has the largest city in Canada. What is it?",
+    "correctAnswer": "Toronto",
+    "options": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Ontario’s Algonquin Park is famous for what outdoor activity?",
+    "correctAnswer": "Canoeing and camping",
+    "options": ["Canoeing and camping", "Surfing", "Downhill skiing", "Rock climbing"],
+    "difficulty": "2"
+  },
+  {
+    "question": "What Ontario city is nicknamed 'Steel City'?",
+    "correctAnswer": "Hamilton",
+    "options": ["Hamilton", "Sudbury", "Thunder Bay", "Sault Ste. Marie"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which iconic Canadian rock band originated in Kingston, Ontario?",
+    "correctAnswer": "The Tragically Hip",
+    "options": ["Rush", "The Tragically Hip", "Blue Rodeo", "Nickelback"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ontario airport is Canada’s busiest?",
+    "correctAnswer": "Toronto Pearson International Airport",
+    "options": ["Toronto Pearson International Airport", "Ottawa Macdonald-Cartier International", "Billy Bishop Toronto City Airport", "Hamilton International"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ontario mining town is nicknamed the 'Nickel Capital of the World'?",
+    "correctAnswer": "Sudbury",
+    "options": ["Sudbury", "Thunder Bay", "Sault Ste. Marie", "North Bay"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ontario city is known for its large Oktoberfest celebration?",
+    "correctAnswer": "Kitchener-Waterloo",
+    "options": ["London", "Kitchener-Waterloo", "Toronto", "Guelph"],
+    "difficulty": "4"
+  },
+  {
+    "question": "Which Ontario university is famous for its engineering program and co-op placements?",
+    "correctAnswer": "University of Waterloo",
+    "options": ["University of Waterloo", "McMaster University", "York University", "Ryerson University"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What major Canadian tech hub is often called 'Silicon Valley North' and is located in Ontario?",
+    "correctAnswer": "Kitchener-Waterloo",
+    "options": ["Toronto", "Ottawa", "Kitchener-Waterloo", "London"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Ontario shares a long border with which U.S. state?",
+    "correctAnswer": "New York",
+    "options": ["New York", "Michigan", "Ohio", "Pennsylvania"],
+    "difficulty": "2"
+  }
+]
+

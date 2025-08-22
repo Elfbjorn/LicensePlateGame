@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of Nunavut?",
+    "correctAnswer": "Iqaluit",
+    "options": ["Iqaluit", "Rankin Inlet", "Arviat", "Pangnirtung"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Nunavut is part of which Canadian region?",
+    "correctAnswer": "Northern Canada",
+    "options": ["Northern Canada", "Prairies", "Western Canada", "Atlantic Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which ocean borders Nunavut to the north?",
+    "correctAnswer": "Arctic Ocean",
+    "options": ["Arctic Ocean", "Atlantic Ocean", "Pacific Ocean", "Hudson Bay"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Nunavut island is the largest in the territory?",
+    "correctAnswer": "Baffin Island",
+    "options": ["Baffin Island", "Victoria Island", "Ellesmere Island", "Devon Island"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Nunavut community is famous for its Inuit art and sculptures?",
+    "correctAnswer": "Cape Dorset",
+    "options": ["Cape Dorset", "Iqaluit", "Rankin Inlet", "Arviat"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut national park is known for Auyuittuq Mountains and glaciers?",
+    "correctAnswer": "Auyuittuq National Park",
+    "options": ["Auyuittuq National Park", "Sirmilik National Park", "Quttinirpaaq National Park", "Ukkusiksalik National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut river is one of the longest and flows into Hudson Bay?",
+    "correctAnswer": "The Thelon River",
+    "options": ["The Thelon River", "Kugluktuk River", "Coppermine River", "Kivalliq River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut island is the northernmost permanently inhabited place in Canada?",
+    "correctAnswer": "Ellesmere Island",
+    "options": ["Ellesmere Island", "Baffin Island", "Victoria Island", "Devon Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut festival celebrates Inuit culture in Iqaluit each year?",
+    "correctAnswer": "Toonik Tyme Festival",
+    "options": ["Toonik Tyme Festival", "Frobisher Bay Days", "Nunavut Arts Festival", "Northern Lights Celebration"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut national park is located on Ellesmere Island?",
+    "correctAnswer": "Quttinirpaaq National Park",
+    "options": ["Quttinirpaaq National Park", "Auyuittuq National Park", "Sirmilik National Park", "Ukkusiksalik National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut body of water separates Baffin Island from Greenland?",
+    "correctAnswer": "Davis Strait",
+    "options": ["Davis Strait", "Hudson Strait", "Lancaster Sound", "Beaufort Sea"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut island is known for Arctic wildlife including polar bears and muskoxen?",
+    "correctAnswer": "Baffin Island",
+    "options": ["Baffin Island", "Devon Island", "Ellesmere Island", "Victoria Island"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut territory was created in 1999, separating from the Northwest Territories?",
+    "correctAnswer": "Nunavut",
+    "options": ["Nunavut", "Northwest Territories", "Yukon", "Nunavik"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut bay is famous for its narwhal population?",
+    "correctAnswer": "Foxe Basin",
+    "options": ["Foxe Basin", "Hudson Bay", "Baffin Bay", "Davis Strait"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut community is known as the 'Gateway to the Arctic National Wildlife Refuge'?",
+    "correctAnswer": "Pangnirtung",
+    "options": ["Pangnirtung", "Iqaluit", "Rankin Inlet", "Arviat"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut island is largely uninhabited and known for scientific research?",
+    "correctAnswer": "Devon Island",
+    "options": ["Devon Island", "Baffin Island", "Victoria Island", "Ellesmere Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut mountain is the highest peak on Baffin Island?",
+    "correctAnswer": "Mount Odin",
+    "options": ["Mount Odin", "Mount Asgard", "Barbeau Peak", "Mount Harper"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut sea lies to the north of Baffin Island?",
+    "correctAnswer": "Baffin Bay",
+    "options": ["Baffin Bay", "Hudson Bay", "Davis Strait", "Beaufort Sea"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut national park is known for fjords and glaciers on Baffin Island?",
+    "correctAnswer": "Sirmilik National Park",
+    "options": ["Sirmilik National Park", "Auyuittuq National Park", "Quttinirpaaq National Park", "Ukkusiksalik National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut lake is the largest entirely within the territory?",
+    "correctAnswer": "Lake Nettilling",
+    "options": ["Lake Nettilling", "Amadjuak Lake", "Clyde River Lake", "Lake Hazen"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut island is connected by ice roads to Baffin Island in winter?",
+    "correctAnswer": "Baffin Island’s smaller surrounding islands",
+    "options": ["Baffin Island’s smaller surrounding islands", "Devon Island", "Ellesmere Island", "Victoria Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut bird is a common Arctic species?",
+    "correctAnswer": "Snowy Owl",
+    "options": ["Snowy Owl", "Common Raven", "Bald Eagle", "Peregrine Falcon"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut marine mammal is commonly seen along the northern coast?",
+    "correctAnswer": "Beluga Whale",
+    "options": ["Beluga Whale", "Narwhal", "Bowhead Whale", "Orca"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Nunavut glacier is visible from the community of Pangnirtung?",
+    "correctAnswer": "Auyuittuq Glacier",
+    "options": ["Auyuittuq Glacier", "Bylot Glacier", "Barnes Ice Cap", "Milne Glacier"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Nunavut mountain is part of the Arctic Cordillera?",
+    "correctAnswer": "Barbeau Peak",
+    "options": ["Barbeau Peak", "Mount Odin", "Mount Asgard", "Mount Harper"],
+    "difficulty": "3"
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Arkansas?",
+    "correctAnswer": "Little Rock",
+    "options": ["Little Rock", "Fayetteville", "Fort Smith", "Hot Springs"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Arkansas is nicknamed what?",
+    "correctAnswer": "The Natural State",
+    "options": ["The Natural State", "The Diamond State", "The Razorback State", "The Land of Opportunity"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arkansas city is the largest by population?",
+    "correctAnswer": "Little Rock",
+    "options": ["Little Rock", "Fayetteville", "Fort Smith", "Jonesboro"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Arkansas is part of which US region?",
+    "correctAnswer": "South",
+    "options": ["South", "Midwest", "Southeast", "West"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arkansas national park is famous for its hot springs?",
+    "correctAnswer": "Hot Springs National Park",
+    "options": ["Hot Springs National Park", "Ouachita National Park", "Buffalo National River", "Crater of Diamonds State Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is home to the University of Arkansas?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Little Rock", "Jonesboro", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas river flows through Little Rock?",
+    "correctAnswer": "Arkansas River",
+    "options": ["Arkansas River", "Mississippi River", "White River", "Red River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arkansas city is known for the Crater of Diamonds State Park?",
+    "correctAnswer": "Murfreesboro",
+    "options": ["Murfreesboro", "Little Rock", "Fayetteville", "Hot Springs"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city hosts the annual Razorback football games?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Little Rock", "Fort Smith", "Jonesboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is famous for the Clinton Presidential Center?",
+    "correctAnswer": "Little Rock",
+    "options": ["Little Rock", "Fayetteville", "Fort Smith", "Hot Springs"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is known for the Ozark National Forest nearby?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Little Rock", "Hot Springs", "Fort Smith"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is near Mount Magazine, the highest point in the state?",
+    "correctAnswer": "Paris",
+    "options": ["Paris", "Fayetteville", "Little Rock", "Fort Smith"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is home to the Crystal Bridges Museum of American Art?",
+    "correctAnswer": "Bentonville",
+    "options": ["Bentonville", "Little Rock", "Fayetteville", "Hot Springs"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is near the Buffalo National River?",
+    "correctAnswer": "Harrison",
+    "options": ["Harrison", "Little Rock", "Fayetteville", "Jonesboro"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is known for its historic bathhouses?",
+    "correctAnswer": "Hot Springs",
+    "options": ["Hot Springs", "Little Rock", "Fayetteville", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city hosts the annual Walmart Shareholders Meeting?",
+    "correctAnswer": "Bentonville",
+    "options": ["Bentonville", "Little Rock", "Fayetteville", "Fort Smith"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is home to the Arkansas Repertory Theatre?",
+    "correctAnswer": "Little Rock",
+    "options": ["Little Rock", "Fayetteville", "Fort Smith", "Hot Springs"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is near the Pea Ridge National Military Park?",
+    "correctAnswer": "Rogers",
+    "options": ["Rogers", "Fayetteville", "Little Rock", "Fort Smith"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is known for the annual King Biscuit Blues Festival?",
+    "correctAnswer": "Helena-West Helena",
+    "options": ["Helena-West Helena", "Little Rock", "Fayetteville", "Jonesboro"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is near Lake Ouachita, a popular recreation area?",
+    "correctAnswer": "Hot Springs",
+    "options": ["Hot Springs", "Little Rock", "Fayetteville", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is home to the Little Rock Zoo?",
+    "correctAnswer": "Little Rock",
+    "options": ["Little Rock", "Fayetteville", "Hot Springs", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is near Blanchard Springs Caverns?",
+    "correctAnswer": "Mountain View",
+    "options": ["Mountain View", "Little Rock", "Fayetteville", "Hot Springs"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arkansas city is near the Ouachita Mountains?",
+    "correctAnswer": "Hot Springs",
+    "options": ["Hot Springs", "Little Rock", "Fayetteville", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is famous for its historic Fort Smith National Historic Site?",
+    "correctAnswer": "Fort Smith",
+    "options": ["Fort Smith", "Little Rock", "Fayetteville", "Hot Springs"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arkansas city is near Mount Nebo State Park?",
+    "correctAnswer": "Dardanelle",
+    "options": ["Dardanelle", "Little Rock", "Fayetteville", "Fort Smith"],
+    "difficulty": "3"
+  }
+]
+

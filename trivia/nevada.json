@@ -1,0 +1,183 @@
+[
+  {
+    "question": "What is the capital city of Nevada?",
+    "correctAnswer": "Carson City",
+    "options": ["Carson City", "Las Vegas", "Reno", "Henderson"],
+    "difficulty": 1
+  },
+  {
+    "question": "Nevada is famously nicknamed:",
+    "correctAnswer": "The Silver State",
+    "options": ["The Silver State", "The Golden State", "The Copper State", "The Treasure State"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Nevada city is known as 'Sin City'?",
+    "correctAnswer": "Las Vegas",
+    "options": ["Las Vegas", "Reno", "Carson City", "Henderson"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which large lake is partly located in Nevada and is the largest in the state by surface area?",
+    "correctAnswer": "Lake Tahoe",
+    "options": ["Lake Tahoe", "Pyramid Lake", "Lake Mead", "Walker Lake"],
+    "difficulty": 2
+  },
+  {
+    "question": "Nevada became a state in what year?",
+    "correctAnswer": "1864",
+    "options": ["1864", "1850", "1876", "1889"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which mountain range runs through western Nevada?",
+    "correctAnswer": "Sierra Nevada",
+    "options": ["Sierra Nevada", "Rocky Mountains", "Cascade Range", "Appalachian Mountains"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous desert covers much of Nevada?",
+    "correctAnswer": "Mojave Desert",
+    "options": ["Mojave Desert", "Sonoran Desert", "Great Basin Desert", "Chihuahuan Desert"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Nevada city is known as 'The Biggest Little City in the World'?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Henderson"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which U.S. city in Nevada is home to the famous Las Vegas Strip?",
+    "correctAnswer": "Las Vegas",
+    "options": ["Las Vegas", "Reno", "Henderson", "Carson City"],
+    "difficulty": 1
+  },
+  {
+    "question": "Nevada shares a border with how many U.S. states?",
+    "correctAnswer": "Five",
+    "options": ["Five", "Four", "Six", "Three"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Nevada city is known for hosting the annual Burning Man festival nearby?",
+    "correctAnswer": "Black Rock City (temporary city in the Black Rock Desert)",
+    "options": ["Black Rock City", "Reno", "Las Vegas", "Carson City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Nevada is the leading U.S. producer of which natural resource?",
+    "correctAnswer": "Silver",
+    "options": ["Silver", "Gold", "Copper", "Coal"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which famous Nevada dam created Lake Mead?",
+    "correctAnswer": "Hoover Dam",
+    "options": ["Hoover Dam", "Glen Canyon Dam", "Grand Coulee Dam", "Owyhee Dam"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Nevada city is closest to Lake Tahoe?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Henderson"],
+    "difficulty": 2
+  },
+  {
+    "question": "Nevada is part of which geographic region?",
+    "correctAnswer": "Western United States",
+    "options": ["Western United States", "Midwest", "South", "Pacific Northwest"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which famous event in Las Vegas was called 'The Strip’s first mega-resort opening'?",
+    "correctAnswer": "The opening of Caesars Palace",
+    "options": ["Caesars Palace", "Bellagio", "The Mirage", "MGM Grand"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Nevada city is known for its historic mining of Comstock Lode silver?",
+    "correctAnswer": "Virginia City",
+    "options": ["Virginia City", "Reno", "Las Vegas", "Carson City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Nevada state park features massive sand dunes?",
+    "correctAnswer": "Spooner Lake State Park",
+    "options": ["Spooner Lake State Park", "Valley of Fire State Park", "Red Rock Canyon", "Cathedral Gorge State Park"],
+    "difficulty": 3
+  },
+  {
+    "question": "Nevada’s state flower is:",
+    "correctAnswer": "Sagebrush",
+    "options": ["Sagebrush", "Bluebonnet", "Bitterroot", "California Poppy"],
+    "difficulty": 2
+  },
+  {
+    "question": "Nevada’s state bird is:",
+    "correctAnswer": "Mountain Bluebird",
+    "options": ["Mountain Bluebird", "Western Meadowlark", "American Robin", "Bald Eagle"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Nevada city is known for the 'Neon Museum'?",
+    "correctAnswer": "Las Vegas",
+    "options": ["Las Vegas", "Reno", "Carson City", "Henderson"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Nevada city hosts the National Championship Air Races annually?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Henderson"],
+    "difficulty": 2
+  },
+  {
+    "question": "The famous Area 51 is located in which desert in Nevada?",
+    "correctAnswer": "Nevada Test and Training Range (in the Groom Lake area, part of the Mojave Desert)",
+    "options": ["Mojave Desert", "Great Basin Desert", "Sonoran Desert", "Chihuahuan Desert"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which U.S. president signed Nevada into statehood?",
+    "correctAnswer": "Abraham Lincoln",
+    "options": ["Abraham Lincoln", "Ulysses S. Grant", "Andrew Johnson", "James Buchanan"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which river flows through northern Nevada and into Pyramid Lake?",
+    "correctAnswer": "Truckee River",
+    "options": ["Truckee River", "Carson River", "Colorado River", "Humboldt River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Nevada is home to which famous ski resort area near Lake Tahoe?",
+    "correctAnswer": "Heavenly Mountain Resort",
+    "options": ["Heavenly Mountain Resort", "Squaw Valley", "Mammoth Mountain", "Jackson Hole"],
+    "difficulty": 3
+  },
+  {
+    "question": "Nevada’s state nickname references which mineral?",
+    "correctAnswer": "Silver",
+    "options": ["Silver", "Gold", "Copper", "Platinum"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Nevada city was once a key stop on the Pony Express route?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Virginia City"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Nevada city is home to the National Automobile Museum?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Henderson"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Nevada city is known for the historic casinos along Virginia Street?",
+    "correctAnswer": "Reno",
+    "options": ["Reno", "Las Vegas", "Carson City", "Henderson"],
+    "difficulty": 2
+  }
+]
+

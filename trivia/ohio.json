@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Ohio?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cleveland", "Cincinnati", "Toledo"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Ohio is nicknamed what?",
+    "correctAnswer": "The Buckeye State",
+    "options": ["The Buckeye State", "The Hoosier State", "The Cornhusker State", "The Wolverine State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Ohio city is the largest by population?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cleveland", "Cincinnati", "Toledo"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Ohio is part of which US region?",
+    "correctAnswer": "Midwest",
+    "options": ["Midwest", "Southeast", "Mid-Atlantic", "Great Plains"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Ohio city is famous for the Rock and Roll Hall of Fame?",
+    "correctAnswer": "Cleveland",
+    "options": ["Cleveland", "Columbus", "Cincinnati", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to Ohio State University?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cincinnati", "Cleveland", "Dayton"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Ohio city is known for the Cincinnati chili and chili parlors?",
+    "correctAnswer": "Cincinnati",
+    "options": ["Cincinnati", "Columbus", "Cleveland", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city hosts the annual Dayton Air Show?",
+    "correctAnswer": "Dayton",
+    "options": ["Dayton", "Cincinnati", "Cleveland", "Columbus"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio river forms part of the state's southern border?",
+    "correctAnswer": "Ohio River",
+    "options": ["Ohio River", "Cuyahoga River", "Scioto River", "Great Miami River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to the Pro Football Hall of Fame?",
+    "correctAnswer": "Canton",
+    "options": ["Canton", "Cleveland", "Columbus", "Cincinnati"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is known for Cedar Point amusement park?",
+    "correctAnswer": "Sandusky",
+    "options": ["Sandusky", "Columbus", "Cincinnati", "Cleveland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is known as the 'Gem City'?",
+    "correctAnswer": "Dayton",
+    "options": ["Dayton", "Cincinnati", "Columbus", "Cleveland"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is known for historic German Village?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cincinnati", "Cleveland", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to the Cleveland Museum of Art?",
+    "correctAnswer": "Cleveland",
+    "options": ["Cleveland", "Columbus", "Cincinnati", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city hosts the Cincinnati Reds baseball team?",
+    "correctAnswer": "Cincinnati",
+    "options": ["Cincinnati", "Cleveland", "Columbus", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to the National Museum of the US Air Force?",
+    "correctAnswer": "Dayton",
+    "options": ["Dayton", "Columbus", "Cleveland", "Cincinnati"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ohio city is located along Lake Erie?",
+    "correctAnswer": "Cleveland",
+    "options": ["Cleveland", "Columbus", "Cincinnati", "Toledo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city hosts the Ohio State Fair?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cleveland", "Cincinnati", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to the Great American Ball Park?",
+    "correctAnswer": "Cincinnati",
+    "options": ["Cincinnati", "Columbus", "Cleveland", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is famous for its Cuyahoga River and historic industrial port?",
+    "correctAnswer": "Cleveland",
+    "options": ["Cleveland", "Columbus", "Cincinnati", "Toledo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is home to the Ohio Theatre and Ohio History Center?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cleveland", "Cincinnati", "Dayton"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ohio city is known for the Cleveland Metroparks Zoo?",
+    "correctAnswer": "Cleveland",
+    "options": ["Cleveland", "Columbus", "Cincinnati", "Dayton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is known as the birthplace of aviation?",
+    "correctAnswer": "Dayton",
+    "options": ["Dayton", "Cleveland", "Columbus", "Cincinnati"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Ohio city is near Hocking Hills State Park?",
+    "correctAnswer": "Logan",
+    "options": ["Logan", "Columbus", "Cincinnati", "Dayton"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Ohio city is famous for its Columbus Zoo and Aquarium?",
+    "correctAnswer": "Columbus",
+    "options": ["Columbus", "Cleveland", "Cincinnati", "Dayton"],
+    "difficulty": "2"
+  }
+]
+

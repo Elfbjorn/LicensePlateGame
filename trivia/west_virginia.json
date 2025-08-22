@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of West Virginia?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Morgantown", "Huntington", "Wheeling"],
+    "difficulty": "1"
+  },
+  {
+    "question": "West Virginia is nicknamed what?",
+    "correctAnswer": "The Mountain State",
+    "options": ["The Mountain State", "The Keystone State", "The Tar Heel State", "The Old Line State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which West Virginia city is the largest by population?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Morgantown", "Huntington", "Wheeling"],
+    "difficulty": "1"
+  },
+  {
+    "question": "West Virginia is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which West Virginia city is home to West Virginia University?",
+    "correctAnswer": "Morgantown",
+    "options": ["Morgantown", "Charleston", "Huntington", "Wheeling"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city hosts the annual Bridge Day festival?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia river flows through Charleston?",
+    "correctAnswer": "Kanawha River",
+    "options": ["Kanawha River", "Ohio River", "Potomac River", "Monongahela River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is near Harpers Ferry National Historical Park?",
+    "correctAnswer": "Harpers Ferry",
+    "options": ["Harpers Ferry", "Charleston", "Morgantown", "Wheeling"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is famous for the New River Gorge Bridge?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is known for coal mining history?",
+    "correctAnswer": "Bluefield",
+    "options": ["Bluefield", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is near Seneca Rocks?",
+    "correctAnswer": "Lewisburg",
+    "options": ["Lewisburg", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city hosts the Mountain State Forest Festival?",
+    "correctAnswer": "Elkins",
+    "options": ["Elkins", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is home to Marshall University?",
+    "correctAnswer": "Huntington",
+    "options": ["Huntington", "Charleston", "Morgantown", "Wheeling"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is known for the Capon Springs Resort?",
+    "correctAnswer": "Capon Springs",
+    "options": ["Capon Springs", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is home to the Clay Center for the Arts & Sciences?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Morgantown", "Huntington", "Wheeling"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is famous for whitewater rafting on the Gauley River?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is near the Monongahela National Forest?",
+    "correctAnswer": "Elkins",
+    "options": ["Elkins", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is home to Wheeling University?",
+    "correctAnswer": "Wheeling",
+    "options": ["Wheeling", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is known for the Greenbrier resort?",
+    "correctAnswer": "White Sulphur Springs",
+    "options": ["White Sulphur Springs", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is home to Oglebay Park?",
+    "correctAnswer": "Wheeling",
+    "options": ["Wheeling", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city hosts the West Virginia Blackwater Canyon Festival?",
+    "correctAnswer": "Davis",
+    "options": ["Davis", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is famous for the historic Trans-Allegheny Lunatic Asylum?",
+    "correctAnswer": "Weston",
+    "options": ["Weston", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is near Spruce Knob, the highest point in the state?",
+    "correctAnswer": "Davis",
+    "options": ["Davis", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which West Virginia city is known for the West Virginia State Capitol?",
+    "correctAnswer": "Charleston",
+    "options": ["Charleston", "Morgantown", "Huntington", "Wheeling"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which West Virginia city is home to the Appalachian String Band Music Festival?",
+    "correctAnswer": "Clifftop",
+    "options": ["Clifftop", "Charleston", "Morgantown", "Huntington"],
+    "difficulty": "3"
+  }
+]
+

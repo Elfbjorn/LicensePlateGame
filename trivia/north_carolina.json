@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of North Carolina?",
+    "correctAnswer": "Raleigh",
+    "options": ["Raleigh", "Charlotte", "Durham", "Greensboro"],
+    "difficulty": "1"
+  },
+  {
+    "question": "North Carolina is nicknamed what?",
+    "correctAnswer": "The Tar Heel State",
+    "options": ["The Tar Heel State", "The Old Line State", "The Peach State", "The Sunshine State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which North Carolina city is the largest by population?",
+    "correctAnswer": "Charlotte",
+    "options": ["Charlotte", "Raleigh", "Greensboro", "Durham"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which North Carolina city is home to the Research Triangle Park?",
+    "correctAnswer": "Durham",
+    "options": ["Durham", "Raleigh", "Charlotte", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "North Carolina is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Mid-Atlantic", "Midwest", "New England"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which North Carolina mountain range is famous for the Blue Ridge Parkway?",
+    "correctAnswer": "Appalachian Mountains",
+    "options": ["Appalachian Mountains", "Rocky Mountains", "Adirondack Mountains", "Great Smoky Mountains"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is known for NASCAR and banking industry?",
+    "correctAnswer": "Charlotte",
+    "options": ["Charlotte", "Raleigh", "Durham", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is home to Duke University?",
+    "correctAnswer": "Durham",
+    "options": ["Durham", "Raleigh", "Chapel Hill", "Charlotte"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is famous for the Wright brothers' first flight?",
+    "correctAnswer": "Kitty Hawk",
+    "options": ["Kitty Hawk", "Charlotte", "Raleigh", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is known for its barbecue style?",
+    "correctAnswer": "Raleigh",
+    "options": ["Raleigh", "Charlotte", "Durham", "Asheville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is home to the Biltmore Estate?",
+    "correctAnswer": "Asheville",
+    "options": ["Asheville", "Raleigh", "Charlotte", "Greensboro"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which North Carolina river flows through the capital, Raleigh?",
+    "correctAnswer": "Neuse River",
+    "options": ["Neuse River", "Cape Fear River", "Yadkin River", "Catawba River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city hosts the annual North Carolina State Fair?",
+    "correctAnswer": "Raleigh",
+    "options": ["Raleigh", "Charlotte", "Durham", "Greensboro"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which North Carolina city is known for its tobacco industry history?",
+    "correctAnswer": "Winston-Salem",
+    "options": ["Winston-Salem", "Charlotte", "Durham", "Raleigh"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina mountain is the highest peak in the state?",
+    "correctAnswer": "Mount Mitchell",
+    "options": ["Mount Mitchell", "Grandfather Mountain", "Clingmans Dome", "Pilot Mountain"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which North Carolina city is famous for the Outer Banks tourism?",
+    "correctAnswer": "Nags Head",
+    "options": ["Nags Head", "Charlotte", "Raleigh", "Asheville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is home to North Carolina State University?",
+    "correctAnswer": "Raleigh",
+    "options": ["Raleigh", "Durham", "Charlotte", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city has the NASCAR Hall of Fame?",
+    "correctAnswer": "Charlotte",
+    "options": ["Charlotte", "Raleigh", "Durham", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city hosts the North Carolina Museum of Art?",
+    "correctAnswer": "Raleigh",
+    "options": ["Raleigh", "Charlotte", "Durham", "Asheville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is home to the Blue Ridge Music Center?",
+    "correctAnswer": "Galax",
+    "options": ["Galax", "Asheville", "Charlotte", "Raleigh"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which North Carolina city is part of the Piedmont Triad?",
+    "correctAnswer": "Greensboro",
+    "options": ["Greensboro", "Charlotte", "Raleigh", "Durham"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is known for sweet potato production?",
+    "correctAnswer": "Fayetteville",
+    "options": ["Fayetteville", "Charlotte", "Raleigh", "Greensboro"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which North Carolina city hosts the International Whitewater Center?",
+    "correctAnswer": "Charlotte",
+    "options": ["Charlotte", "Raleigh", "Durham", "Asheville"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is near the Great Smoky Mountains National Park?",
+    "correctAnswer": "Asheville",
+    "options": ["Asheville", "Raleigh", "Charlotte", "Greensboro"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which North Carolina city is known for its historic Biltmore Village?",
+    "correctAnswer": "Asheville",
+    "options": ["Asheville", "Raleigh", "Charlotte", "Durham"],
+    "difficulty": "3"
+  }
+]
+

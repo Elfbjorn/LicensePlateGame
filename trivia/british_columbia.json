@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of British Columbia?",
+    "correctAnswer": "Victoria",
+    "options": ["Vancouver", "Victoria", "Kelowna", "Kamloops"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which BC city is the largest by population?",
+    "correctAnswer": "Vancouver",
+    "options": ["Victoria", "Vancouver", "Kelowna", "Surrey"],
+    "difficulty": "1"
+  },
+  {
+    "question": "British Columbia is part of which Canadian region?",
+    "correctAnswer": "Western Canada",
+    "options": ["Prairies", "Atlantic Canada", "Western Canada", "Northern Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which BC mountain range is famous for Whistler ski resort?",
+    "correctAnswer": "Coast Mountains",
+    "options": ["Rocky Mountains", "Coast Mountains", "Selkirk Mountains", "Monashee Mountains"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC festival celebrates jazz music in July in Vancouver?",
+    "correctAnswer": "Vancouver International Jazz Festival",
+    "options": ["Vancouver International Jazz Festival", "Vancouver Folk Music Festival", "Celebration of Light", "PNE Fair"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC island is home to Victoria?",
+    "correctAnswer": "Vancouver Island",
+    "options": ["Vancouver Island", "Gulf Islands", "Haida Gwaii", "Salt Spring Island"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which BC national park is famous for the Capilano Suspension Bridge?",
+    "correctAnswer": "Capilano River Regional Park",
+    "options": ["Capilano River Regional Park", "Garibaldi Provincial Park", "Pacific Rim National Park", "Yoho National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC river is famous for salmon fishing and runs through Vancouver?",
+    "correctAnswer": "Fraser River",
+    "options": ["Fraser River", "Columbia River", "Skeena River", "Thompson River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC mountain is the tallest in the province?",
+    "correctAnswer": "Mount Fairweather",
+    "options": ["Mount Fairweather", "Mount Waddington", "Mount Robson", "Mount Logan"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC festival celebrates fireworks annually over English Bay?",
+    "correctAnswer": "Celebration of Light",
+    "options": ["Celebration of Light", "Vancouver International Jazz Festival", "PNE Fair", "Cariboo Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which famous Canadian actor was born in Vancouver?",
+    "correctAnswer": "Ryan Reynolds",
+    "options": ["Ryan Reynolds", "Jim Carrey", "Michael J. Fox", "Keanu Reeves"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC city is home to the University of British Columbia?",
+    "correctAnswer": "Vancouver",
+    "options": ["Victoria", "Vancouver", "Kelowna", "Kamloops"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which BC island is famous for Butchart Gardens?",
+    "correctAnswer": "Vancouver Island",
+    "options": ["Vancouver Island", "Salt Spring Island", "Gulf Islands", "Haida Gwaii"],
+    "difficulty": "2"
+  },
+  {
+    "question": "BC’s provincial flower is what?",
+    "correctAnswer": "Pacific Dogwood",
+    "options": ["Pacific Dogwood", "Western Red Lily", "Trillium", "Mayflower"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC glacier can be visited near Whistler?",
+    "correctAnswer": "Blackcomb Glacier",
+    "options": ["Blackcomb Glacier", "Athabasca Glacier", "Columbia Glacier", "Robson Glacier"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC ski resort is world-famous and hosted events during the 2010 Winter Olympics?",
+    "correctAnswer": "Whistler Blackcomb",
+    "options": ["Sun Peaks", "Big White", "Whistler Blackcomb", "Revelstoke"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC island chain lies between Vancouver Island and the mainland?",
+    "correctAnswer": "Gulf Islands",
+    "options": ["Gulf Islands", "Haida Gwaii", "Discovery Islands", "Northern Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC festival celebrates folk music in Vancouver?",
+    "correctAnswer": "Vancouver Folk Music Festival",
+    "options": ["Vancouver Folk Music Festival", "Celebration of Light", "Vancouver International Jazz Festival", "Cariboo Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC national park is known for surfing beaches?",
+    "correctAnswer": "Pacific Rim National Park",
+    "options": ["Pacific Rim National Park", "Garibaldi Provincial Park", "Yoho National Park", "Mount Revelstoke National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC river is famous for whitewater rafting near Whistler?",
+    "correctAnswer": "Elaho River",
+    "options": ["Fraser River", "Elaho River", "Thompson River", "Skeena River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC city hosted Expo 86?",
+    "correctAnswer": "Vancouver",
+    "options": ["Victoria", "Vancouver", "Kelowna", "Kamloops"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC mountain pass connects the Interior to the Coast?",
+    "correctAnswer": "Coquihalla Pass",
+    "options": ["Coquihalla Pass", "Kicking Horse Pass", "Rogers Pass", "Crowsnest Pass"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC island is known for First Nations culture and Haida heritage?",
+    "correctAnswer": "Haida Gwaii",
+    "options": ["Vancouver Island", "Haida Gwaii", "Gulf Islands", "Salt Spring Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which BC city is nicknamed the 'City of Gardens'?",
+    "correctAnswer": "Victoria",
+    "options": ["Vancouver", "Victoria", "Kelowna", "Kamloops"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which BC highway runs from Vancouver to the Alaska border?",
+    "correctAnswer": "Alaska Highway",
+    "options": ["Trans-Canada Highway", "Sea-to-Sky Highway", "Alaska Highway", "Crowsnest Highway"],
+    "difficulty": "3"
+  }
+]
+

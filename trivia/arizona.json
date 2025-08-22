@@ -1,0 +1,159 @@
+[
+  {
+    "question": "What is the capital of Arizona?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Flagstaff", "Mesa"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Arizona is nicknamed what?",
+    "correctAnswer": "The Grand Canyon State",
+    "options": ["The Grand Canyon State", "The Copper State", "The Desert State", "The Sun State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arizona city is the largest by population?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Mesa", "Scottsdale"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Arizona is part of which US region?",
+    "correctAnswer": "West",
+    "options": ["West", "Southwest", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arizona natural landmark is one of the Seven Natural Wonders of the World?",
+    "correctAnswer": "Grand Canyon",
+    "options": ["Grand Canyon", "Sedona Red Rocks", "Monument Valley", "Saguaro National Park"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Arizona city is home to the University of Arizona?",
+    "correctAnswer": "Tucson",
+    "options": ["Tucson", "Phoenix", "Flagstaff", "Tempe"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city hosts the annual Fiesta Bowl college football game?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Mesa", "Scottsdale"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is known for its large population of saguaro cacti?",
+    "correctAnswer": "Tucson",
+    "options": ["Tucson", "Phoenix", "Flagstaff", "Yuma"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is home to the Heard Museum, focused on Native American art?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Mesa", "Flagstaff"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is famous for the Red Rocks and Chapel of the Holy Cross?",
+    "correctAnswer": "Sedona",
+    "options": ["Sedona", "Flagstaff", "Tucson", "Phoenix"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near the Meteor Crater, a well-preserved impact site?",
+    "correctAnswer": "Winslow",
+    "options": ["Winslow", "Flagstaff", "Tucson", "Phoenix"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near Oak Creek Canyon?",
+    "correctAnswer": "Sedona",
+    "options": ["Sedona", "Flagstaff", "Tucson", "Phoenix"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is known for hosting the Barrett-Jackson Collector Car Auction?",
+    "correctAnswer": "Scottsdale",
+    "options": ["Scottsdale", "Phoenix", "Mesa", "Tucson"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is home to Northern Arizona University?",
+    "correctAnswer": "Flagstaff",
+    "options": ["Flagstaff", "Tucson", "Phoenix", "Mesa"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is closest to the Petrified Forest National Park?",
+    "correctAnswer": "Holbrook",
+    "options": ["Holbrook", "Flagstaff", "Tucson", "Phoenix"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is home to the historic Route 66 landmark, the Wigwam Motel?",
+    "correctAnswer": "Holbrook",
+    "options": ["Holbrook", "Flagstaff", "Kingman", "Tucson"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is famous for its desert botanical gardens?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Mesa", "Scottsdale"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is known for the historic gold-mining town of Jerome nearby?",
+    "correctAnswer": "Prescott",
+    "options": ["Prescott", "Phoenix", "Flagstaff", "Tucson"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is home to Saguaro National Park?",
+    "correctAnswer": "Tucson",
+    "options": ["Tucson", "Phoenix", "Mesa", "Flagstaff"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Arizona city is home to the Heard Museum Guild Indian Fair & Market?",
+    "correctAnswer": "Phoenix",
+    "options": ["Phoenix", "Tucson", "Scottsdale", "Flagstaff"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near Lake Havasu, famous for the London Bridge?",
+    "correctAnswer": "Lake Havasu City",
+    "options": ["Lake Havasu City", "Phoenix", "Yuma", "Flagstaff"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is known for its annual gem and mineral shows?",
+    "correctAnswer": "Tucson",
+    "options": ["Tucson", "Phoenix", "Scottsdale", "Flagstaff"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near the historic mining town of Bisbee?",
+    "correctAnswer": "Bisbee",
+    "options": ["Bisbee", "Tucson", "Phoenix", "Flagstaff"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near the Mogollon Rim, a scenic cliff line?",
+    "correctAnswer": "Show Low",
+    "options": ["Show Low", "Flagstaff", "Sedona", "Phoenix"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is known for the annual Scottsdale Arabian Horse Show?",
+    "correctAnswer": "Scottsdale",
+    "options": ["Scottsdale", "Phoenix", "Mesa", "Tucson"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Arizona city is near the Grand Canyon South Rim entrance?",
+    "correctAnswer": "Tusayan",
+    "options": ["Tusayan", "Flagstaff", "Sedona", "Williams"],
+    "difficulty": "3"
+  }
+]
+

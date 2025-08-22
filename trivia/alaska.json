@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Alaska?",
+    "correctAnswer": "Juneau",
+    "options": ["Juneau", "Anchorage", "Fairbanks", "Sitka"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Alaska is nicknamed what?",
+    "correctAnswer": "The Last Frontier",
+    "options": ["The Last Frontier", "The Gem State", "The Land of 10,000 Lakes", "The Great North"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which is the largest city in Alaska by population?",
+    "correctAnswer": "Anchorage",
+    "options": ["Anchorage", "Juneau", "Fairbanks", "Sitka"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Alaska is part of which US region?",
+    "correctAnswer": "West",
+    "options": ["West", "Northwest", "Midwest", "Pacific"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which mountain is the tallest in North America and located in Alaska?",
+    "correctAnswer": "Denali",
+    "options": ["Denali", "Mount Rainier", "Mount McKinley", "Mount Foraker"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaskan city is home to the University of Alaska Fairbanks?",
+    "correctAnswer": "Fairbanks",
+    "options": ["Fairbanks", "Anchorage", "Juneau", "Sitka"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is known for the Iditarod Trail Sled Dog Race?",
+    "correctAnswer": "Anchorage",
+    "options": ["Anchorage", "Nome", "Fairbanks", "Juneau"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city was the capital before Juneau?",
+    "correctAnswer": "Sitka",
+    "options": ["Sitka", "Anchorage", "Fairbanks", "Kodiak"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska national park is home to the Hubbard Glacier?",
+    "correctAnswer": "Wrangell–St. Elias National Park and Preserve",
+    "options": ["Wrangell–St. Elias", "Denali National Park", "Kenai Fjords", "Glacier Bay"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is known as the 'Gateway to the Arctic'?",
+    "correctAnswer": "Barrow (Utqiaġvik)",
+    "options": ["Barrow (Utqiaġvik)", "Fairbanks", "Anchorage", "Nome"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska island is home to the Kodiak National Wildlife Refuge?",
+    "correctAnswer": "Kodiak Island",
+    "options": ["Kodiak Island", "Prince of Wales Island", "Baranof Island", "Afognak Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is near Denali National Park?",
+    "correctAnswer": "Healy",
+    "options": ["Healy", "Fairbanks", "Anchorage", "Talkeetna"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city hosts the annual Fur Rendezvous Festival?",
+    "correctAnswer": "Anchorage",
+    "options": ["Anchorage", "Fairbanks", "Juneau", "Sitka"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is closest to the Aleutian Islands?",
+    "correctAnswer": "Unalaska",
+    "options": ["Unalaska", "Anchorage", "Nome", "Kodiak"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is known for the Alaska Native Heritage Center?",
+    "correctAnswer": "Anchorage",
+    "options": ["Anchorage", "Juneau", "Fairbanks", "Sitka"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is famous for the Midnight Sun during summer?",
+    "correctAnswer": "Barrow (Utqiaġvik)",
+    "options": ["Barrow (Utqiaġvik)", "Fairbanks", "Anchorage", "Juneau"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is known for gold rush history?",
+    "correctAnswer": "Nome",
+    "options": ["Nome", "Anchorage", "Fairbanks", "Juneau"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is home to the Alaska SeaLife Center?",
+    "correctAnswer": "Seward",
+    "options": ["Seward", "Anchorage", "Juneau", "Kodiak"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is the southernmost in the state?",
+    "correctAnswer": "Ketchikan",
+    "options": ["Ketchikan", "Juneau", "Sitka", "Anchorage"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is famous for whale watching and totem poles?",
+    "correctAnswer": "Juneau",
+    "options": ["Juneau", "Sitka", "Ketchikan", "Anchorage"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is near Kenai Fjords National Park?",
+    "correctAnswer": "Seward",
+    "options": ["Seward", "Anchorage", "Kodiak", "Homer"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is the northernmost major city in the state?",
+    "correctAnswer": "Barrow (Utqiaġvik)",
+    "options": ["Barrow (Utqiaġvik)", "Fairbanks", "Nome", "Anchorage"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska island is the largest in the Aleutian chain?",
+    "correctAnswer": "Unimak Island",
+    "options": ["Unimak Island", "Kodiak Island", "Prince of Wales Island", "Baranof Island"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alaska city is near Mendenhall Glacier?",
+    "correctAnswer": "Juneau",
+    "options": ["Juneau", "Sitka", "Ketchikan", "Anchorage"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alaska city is known for sled dog racing?",
+    "correctAnswer": "Anchorage",
+    "options": ["Anchorage", "Fairbanks", "Nome", "Juneau"],
+    "difficulty": "2"
+  }
+]
+

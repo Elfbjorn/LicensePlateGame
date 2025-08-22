@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Guam?",
+    "correctAnswer": "Hagåtña",
+    "options": ["Hagåtña", "Dededo", "Tamuning", "Yigo"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Guam is located in which ocean?",
+    "correctAnswer": "Pacific Ocean",
+    "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Guam is a territory of which country?",
+    "correctAnswer": "United States",
+    "options": ["United States", "Spain", "Philippines", "Japan"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Guam village is the largest by population?",
+    "correctAnswer": "Dededo",
+    "options": ["Dededo", "Hagåtña", "Tamuning", "Yigo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam landmark is a popular cliff-diving and tourist spot?",
+    "correctAnswer": "Two Lovers Point",
+    "options": ["Two Lovers Point", "Tumon Bay", "Mount Lamlam", "Inarajan Natural Pool"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam is part of which island group in Micronesia?",
+    "correctAnswer": "Mariana Islands",
+    "options": ["Mariana Islands", "Caroline Islands", "Marshall Islands", "Philippine Islands"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam beach is famous for tourism and hotels?",
+    "correctAnswer": "Tumon Bay",
+    "options": ["Tumon Bay", "Inarajan Beach", "Gun Beach", "Fadian Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam mountain is the highest point on the island?",
+    "correctAnswer": "Mount Lamlam",
+    "options": ["Mount Lamlam", "Mount Almagosa", "Mount Jumullong Manglo", "Mount Jumullong"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam village is home to the Antonio B. Won Pat International Airport?",
+    "correctAnswer": "Tamuning",
+    "options": ["Tamuning", "Dededo", "Hagåtña", "Mangilao"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam celebrates Liberation Day in which month?",
+    "correctAnswer": "July",
+    "options": ["July", "May", "December", "March"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam is located east of which country?",
+    "correctAnswer": "Philippines",
+    "options": ["Philippines", "Japan", "China", "Indonesia"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which indigenous people are native to Guam?",
+    "correctAnswer": "Chamorro",
+    "options": ["Chamorro", "Samoan", "Filipino", "Micronesian"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Guam historic site commemorates World War II events?",
+    "correctAnswer": "War in the Pacific National Historical Park",
+    "options": ["War in the Pacific National Historical Park", "Two Lovers Point", "Fort Santa Agueda", "Pacific Memorial Museum"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam village is known for traditional weaving and crafts?",
+    "correctAnswer": "Inarajan",
+    "options": ["Inarajan", "Hagåtña", "Dededo", "Tamuning"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam uses which currency?",
+    "correctAnswer": "United States Dollar",
+    "options": ["United States Dollar", "Guamanian Peso", "Philippine Peso", "Yen"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Guam bay is popular for snorkeling and marine life?",
+    "correctAnswer": "Gun Beach",
+    "options": ["Gun Beach", "Tumon Bay", "Agat Bay", "Fadian Bay"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam village has a historic Spanish fort?",
+    "correctAnswer": "Hagåtña",
+    "options": ["Hagåtña", "Dededo", "Tamuning", "Yigo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam is located north of which island?",
+    "correctAnswer": "Papua New Guinea",
+    "options": ["Papua New Guinea", "Philippines", "New Zealand", "Micronesia"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Guam festival celebrates Chamorro culture?",
+    "correctAnswer": "Chamorro Village Festival",
+    "options": ["Chamorro Village Festival", "Liberation Day Festival", "Guam Music Festival", "Island Heritage Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam mountain range contains Mount Lamlam?",
+    "correctAnswer": "Mount Lamlam Range",
+    "options": ["Mount Lamlam Range", "Almagosa Range", "Mount Jumullong Range", "Central Guam Range"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Guam is a strategic location for which military branch?",
+    "correctAnswer": "United States Navy",
+    "options": ["United States Navy", "United States Air Force", "United States Army", "United States Marines"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam village is known for its natural pools and waterfalls?",
+    "correctAnswer": "Inarajan",
+    "options": ["Inarajan", "Dededo", "Tamuning", "Yigo"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam is part of which US congressional district?",
+    "correctAnswer": "At-large",
+    "options": ["At-large", "1st District", "2nd District", "Non-voting district"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Guam island is a popular dive site?",
+    "correctAnswer": "Cocos Island",
+    "options": ["Cocos Island", "Rota", "Tinian", "Saipan"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Guam has a tropical climate with which predominant feature?",
+    "correctAnswer": "Warm temperatures year-round",
+    "options": ["Warm temperatures year-round", "Snowy winters", "Dry desert conditions", "Seasonal monsoons only"],
+    "difficulty": "1"
+  }
+]
+

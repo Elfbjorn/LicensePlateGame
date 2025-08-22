@@ -1,0 +1,158 @@
+[
+  {
+    "question": "Which Kentucky city hosts the Lexington Legends minor league baseball team?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is known for the historic Ashland estate of Henry Clay?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is near the Daniel Boone National Forest?",
+    "correctAnswer": "Winchester",
+    "options": ["Winchester", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city hosts the annual Bourbon Festival?",
+    "correctAnswer": "Bardstown",
+    "options": ["Bardstown", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is home to Western Kentucky University?",
+    "correctAnswer": "Bowling Green",
+    "options": ["Bowling Green", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is near Lake Cumberland?",
+    "correctAnswer": "Somerset",
+    "options": ["Somerset", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is known for the historic Battle of Perryville site?",
+    "correctAnswer": "Perryville",
+    "options": ["Perryville", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is home to the Kentucky Horse Park?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is known for the Shaker Village of Pleasant Hill?",
+    "correctAnswer": "Harrodsburg",
+    "options": ["Harrodsburg", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city hosts the annual Kentucky Bourbon Classic?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bardstown"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is home to Rupp Arena?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is near Big South Fork National River and Recreation Area?",
+    "correctAnswer": "Harlan",
+    "options": ["Harlan", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  },
+  {
+    "question": "What is the capital of Kentucky?",
+    "correctAnswer": "Frankfort",
+    "options": ["Frankfort", "Louisville", "Lexington", "Bowling Green"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Kentucky is nicknamed what?",
+    "correctAnswer": "The Bluegrass State",
+    "options": ["The Bluegrass State", "The Volunteer State", "The Old Dominion", "The Hoosier State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Kentucky city is the largest by population?",
+    "correctAnswer": "Louisville",
+    "options": ["Louisville", "Lexington", "Frankfort", "Bowling Green"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Kentucky is part of which US region?",
+    "correctAnswer": "Southeast",
+    "options": ["Southeast", "Midwest", "Mid-Atlantic", "Southwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Kentucky city hosts the Kentucky Derby?",
+    "correctAnswer": "Louisville",
+    "options": ["Louisville", "Lexington", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is known for horse farms and the Kentucky Horse Park?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is the state capital?",
+    "correctAnswer": "Frankfort",
+    "options": ["Frankfort", "Louisville", "Lexington", "Bowling Green"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Kentucky city is near Mammoth Cave National Park?",
+    "correctAnswer": "Bowling Green",
+    "options": ["Bowling Green", "Louisville", "Lexington", "Frankfort"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is home to the University of Kentucky?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is known for bourbon distilleries on the Bourbon Trail?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bardstown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city hosts the annual Forecastle Festival?",
+    "correctAnswer": "Louisville",
+    "options": ["Louisville", "Lexington", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is near the Red River Gorge?",
+    "correctAnswer": "Lexington",
+    "options": ["Lexington", "Louisville", "Frankfort", "Bowling Green"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Kentucky city is home to the Muhammad Ali Center?",
+    "correctAnswer": "Louisville",
+    "options": ["Louisville", "Lexington", "Frankfort", "Bowling Green"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Kentucky city is known for historic Shaker Village?",
+    "correctAnswer": "Harrodsburg",
+    "options": ["Harrodsburg", "Lexington", "Louisville", "Frankfort"],
+    "difficulty": "3"
+  }
+]

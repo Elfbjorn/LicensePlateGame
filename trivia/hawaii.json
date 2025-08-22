@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Hawaii?",
+    "correctAnswer": "Honolulu",
+    "options": ["Honolulu", "Hilo", "Kailua", "Maui"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Hawaii is nicknamed what?",
+    "correctAnswer": "The Aloha State",
+    "options": ["The Aloha State", "The Pineapple State", "The Sunshine State", "The Island State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which island is home to the city of Honolulu?",
+    "correctAnswer": "Oahu",
+    "options": ["Oahu", "Maui", "Big Island", "Kauai"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Hawaii is part of which US region?",
+    "correctAnswer": "Pacific",
+    "options": ["Pacific", "Southeast", "Southwest", "Midwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Hawaiian island is the largest by land area?",
+    "correctAnswer": "Big Island (Hawaii)",
+    "options": ["Big Island (Hawaii)", "Oahu", "Maui", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is known as 'The Garden Isle'?",
+    "correctAnswer": "Kauai",
+    "options": ["Kauai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is home to Haleakalā National Park?",
+    "correctAnswer": "Maui",
+    "options": ["Maui", "Oahu", "Big Island (Hawaii)", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is home to Mauna Kea, the tallest mountain in the state?",
+    "correctAnswer": "Big Island (Hawaii)",
+    "options": ["Big Island (Hawaii)", "Oahu", "Maui", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian city is known for Pearl Harbor?",
+    "correctAnswer": "Honolulu",
+    "options": ["Honolulu", "Hilo", "Kailua", "Maui"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is known as 'The Valley Isle'?",
+    "correctAnswer": "Maui",
+    "options": ["Maui", "Oahu", "Kauai", "Big Island (Hawaii)"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian city hosts the annual Merrie Monarch Festival?",
+    "correctAnswer": "Hilo",
+    "options": ["Hilo", "Honolulu", "Kailua", "Maui"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is the wettest?",
+    "correctAnswer": "Kauai",
+    "options": ["Kauai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is the driest?",
+    "correctAnswer": "Maui",
+    "options": ["Maui", "Oahu", "Big Island (Hawaii)", "Kauai"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian city is famous for Waikiki Beach?",
+    "correctAnswer": "Honolulu",
+    "options": ["Honolulu", "Hilo", "Kailua", "Maui"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is home to Volcanoes National Park?",
+    "correctAnswer": "Big Island (Hawaii)",
+    "options": ["Big Island (Hawaii)", "Oahu", "Maui", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is known as 'The Friendly Isle'?",
+    "correctAnswer": "Lanai",
+    "options": ["Lanai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is home to Napali Coast State Wilderness Park?",
+    "correctAnswer": "Kauai",
+    "options": ["Kauai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is the most populous?",
+    "correctAnswer": "Oahu",
+    "options": ["Oahu", "Big Island (Hawaii)", "Maui", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is known as 'The Orchid Isle'?",
+    "correctAnswer": "Molokai",
+    "options": ["Molokai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian city is home to the Bishop Museum?",
+    "correctAnswer": "Honolulu",
+    "options": ["Honolulu", "Hilo", "Kailua", "Maui"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is known as 'The Pineapple Isle'?",
+    "correctAnswer": "Maui",
+    "options": ["Maui", "Oahu", "Kauai", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is the northernmost?",
+    "correctAnswer": "Kauai",
+    "options": ["Kauai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is home to the Waimea Canyon?",
+    "correctAnswer": "Kauai",
+    "options": ["Kauai", "Oahu", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Hawaiian island is known for surfing at the North Shore?",
+    "correctAnswer": "Oahu",
+    "options": ["Oahu", "Maui", "Big Island (Hawaii)", "Kauai"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Hawaiian island is the smallest of the main eight?",
+    "correctAnswer": "Kahoolawe",
+    "options": ["Kahoolawe", "Lanai", "Maui", "Big Island (Hawaii)"],
+    "difficulty": "4"
+  }
+]
+

@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital city of the Northwest Territories?",
+    "correctAnswer": "Yellowknife",
+    "options": ["Yellowknife", "Inuvik", "Hay River", "Fort Smith"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Northwest Territories is part of which Canadian region?",
+    "correctAnswer": "Northern Canada",
+    "options": ["Northern Canada", "Prairies", "Western Canada", "Atlantic Canada"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which NWT river is the largest by volume?",
+    "correctAnswer": "Mackenzie River",
+    "options": ["Mackenzie River", "Slave River", "Peace River", "Liard River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which NWT festival celebrates northern culture and indigenous heritage in July?",
+    "correctAnswer": "Folk on the Rocks",
+    "options": ["Folk on the Rocks", "Snowking Winter Festival", "Carnaval de Nord", "Arctic Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT national park is known for Nahanni River and Virginia Falls?",
+    "correctAnswer": "Nahanni National Park Reserve",
+    "options": ["Nahanni National Park Reserve", "Tuktut Nogait National Park", "Aulavik National Park", "Wood Buffalo National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT lake is the largest in the territory?",
+    "correctAnswer": "Great Bear Lake",
+    "options": ["Great Slave Lake", "Great Bear Lake", "Lac La Martre", "Artillery Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which northern indigenous group is prominent in the NWT?",
+    "correctAnswer": "Dene",
+    "options": ["Dene", "Inuit", "Cree", "Haida"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT river is known for Arctic char fishing?",
+    "correctAnswer": "Coppermine River",
+    "options": ["Mackenzie River", "Coppermine River", "Slave River", "Liard River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT town is famous for ice roads in winter?",
+    "correctAnswer": "Yellowknife",
+    "options": ["Yellowknife", "Inuvik", "Fort Smith", "Hay River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT park is known for polar bears?",
+    "correctAnswer": "Tuktut Nogait National Park",
+    "options": ["Tuktut Nogait National Park", "Nahanni National Park Reserve", "Aulavik National Park", "Wood Buffalo National Park"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT lake is known for its deep blue color and clarity?",
+    "correctAnswer": "Great Slave Lake",
+    "options": ["Great Bear Lake", "Great Slave Lake", "Lac La Martre", "Artillery Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT highway connects Yellowknife to Alberta?",
+    "correctAnswer": "Yellowknife Highway (Highway 3)",
+    "options": ["Dempster Highway", "Yellowknife Highway (Highway 3)", "Mackenzie Highway", "Tuktoyaktuk Highway"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT territory borders Nunavut to the east?",
+    "correctAnswer": "Nunavut",
+    "options": ["Yukon", "Alberta", "Nunavut", "British Columbia"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which NWT town is known as the 'Gateway to the Arctic'?",
+    "correctAnswer": "Inuvik",
+    "options": ["Yellowknife", "Inuvik", "Hay River", "Fort Smith"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT park is shared with Alberta and famous for bison?",
+    "correctAnswer": "Wood Buffalo National Park",
+    "options": ["Wood Buffalo National Park", "Nahanni National Park Reserve", "Tuktut Nogait National Park", "Aulavik National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT community is known for traditional Dene crafts and culture?",
+    "correctAnswer": "Fort Smith",
+    "options": ["Fort Smith", "Yellowknife", "Inuvik", "Hay River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT river flows into the Arctic Ocean?",
+    "correctAnswer": "Mackenzie River",
+    "options": ["Mackenzie River", "Coppermine River", "Slave River", "Liard River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT festival celebrates music and culture on Great Slave Lake?",
+    "correctAnswer": "Folk on the Rocks",
+    "options": ["Folk on the Rocks", "Snowking Winter Festival", "Carnaval de Nord", "Northern Lights Festival"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT highway leads north to the Arctic Ocean?",
+    "correctAnswer": "Dempster Highway",
+    "options": ["Dempster Highway", "Yellowknife Highway", "Mackenzie Highway", "Arctic Circle Road"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT lake is named after the Slave River system?",
+    "correctAnswer": "Great Slave Lake",
+    "options": ["Great Bear Lake", "Great Slave Lake", "Lac La Martre", "Artillery Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT bird is commonly seen in Yellowknife and the surrounding region?",
+    "correctAnswer": "Common Raven",
+    "options": ["Common Raven", "Bald Eagle", "Willow Ptarmigan", "Gray Jay"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT historic route was used by fur traders?",
+    "correctAnswer": "Mackenzie River Waterway",
+    "options": ["Mackenzie River Waterway", "Dempster Trail", "Arctic Highway", "Yellowknife Trail"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT town is a hub for mining and diamond exploration?",
+    "correctAnswer": "Yellowknife",
+    "options": ["Yellowknife", "Fort Smith", "Inuvik", "Hay River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which NWT river has the famous Alexandra Falls?",
+    "correctAnswer": "Hay River",
+    "options": ["Mackenzie River", "Hay River", "Coppermine River", "Liard River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which NWT lake is important for migratory birds?",
+    "correctAnswer": "Lac La Martre",
+    "options": ["Great Bear Lake", "Lac La Martre", "Great Slave Lake", "Artillery Lake"],
+    "difficulty": "2"
+  }
+]
+

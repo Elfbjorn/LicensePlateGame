@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Delaware?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Newark", "Middletown"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Delaware is nicknamed what?",
+    "correctAnswer": "The First State",
+    "options": ["The First State", "The Garden State", "The Keystone State", "The Constitution State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Delaware city is the largest by population?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Delaware was the first state to do what in US history?",
+    "correctAnswer": "Ratify the United States Constitution",
+    "options": ["Ratify the United States Constitution", "Establish a state university", "Found a national park", "Elect a governor"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Delaware is part of which US region?",
+    "correctAnswer": "Mid-Atlantic",
+    "options": ["Mid-Atlantic", "New England", "Southeast", "Midwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Delaware city is known for its corporate headquarters and business registrations?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is home to Delaware State University?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is home to the University of Delaware?",
+    "correctAnswer": "Newark",
+    "options": ["Newark", "Wilmington", "Dover", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware river forms part of the border with Pennsylvania and New Jersey?",
+    "correctAnswer": "Delaware River",
+    "options": ["Delaware River", "Christina River", "Susquehanna River", "Schuylkill River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Delaware city hosts the annual Firefly Music Festival?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Rehoboth Beach", "Newark"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Delaware was one of the original 13 colonies.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only 12 colonies", "Only 14 colonies"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Delaware beach town is popular for its boardwalk and family-friendly tourism?",
+    "correctAnswer": "Rehoboth Beach",
+    "options": ["Rehoboth Beach", "Bethany Beach", "Lewes", "Dewey Beach"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is home to the historic Dover Air Force Base?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is known for corporate law and tax-friendly regulations?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city has a historic district called Rodney Square?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city was a site of early Dutch and Swedish settlements?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Lewes"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Delaware city hosts the Delaware State Fair?",
+    "correctAnswer": "Harrington",
+    "options": ["Harrington", "Dover", "Wilmington", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is home to the Delaware Art Museum?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Middletown"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is known for the historic Old State House?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Newark", "Lewes"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city is near Cape Henlopen State Park?",
+    "correctAnswer": "Lewes",
+    "options": ["Lewes", "Rehoboth Beach", "Dover", "Wilmington"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Delaware is the second smallest US state by area.",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Third smallest", "Fourth smallest"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Delaware city has a historic ship called the Kalmar Nyckel?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Newark", "Lewes"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Delaware city hosts the annual Delaware Jazz Festival?",
+    "correctAnswer": "Wilmington",
+    "options": ["Wilmington", "Dover", "Rehoboth Beach", "Lewes"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Delaware city has the historic John Dickinson Plantation?",
+    "correctAnswer": "Dover",
+    "options": ["Dover", "Wilmington", "Newark", "Lewes"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Delaware city is the southernmost town in the state?",
+    "correctAnswer": "Lewes",
+    "options": ["Lewes", "Rehoboth Beach", "Dover", "Middletown"],
+    "difficulty": "2"
+  }
+]
+

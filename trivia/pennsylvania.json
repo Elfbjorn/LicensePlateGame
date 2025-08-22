@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of Pennsylvania?",
+    "correctAnswer": "Harrisburg",
+    "options": ["Harrisburg", "Philadelphia", "Pittsburgh", "Allentown"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Pennsylvania is nicknamed what?",
+    "correctAnswer": "The Keystone State",
+    "options": ["The Keystone State", "The Empire State", "The Garden State", "The Constitution State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is the largest by population?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Pittsburgh", "Allentown", "Harrisburg"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is home to the Liberty Bell?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Harrisburg", "Pittsburgh", "Lancaster"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is known for steel production and the Three Rivers?",
+    "correctAnswer": "Pittsburgh",
+    "options": ["Pittsburgh", "Philadelphia", "Allentown", "Harrisburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Pennsylvania is part of which US region?",
+    "correctAnswer": "Mid-Atlantic",
+    "options": ["Mid-Atlantic", "New England", "Midwest", "Southeast"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania town is famous for the Hershey chocolate factory?",
+    "correctAnswer": "Hershey",
+    "options": ["Hershey", "Lancaster", "York", "Reading"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is home to Carnegie Mellon University?",
+    "correctAnswer": "Pittsburgh",
+    "options": ["Pittsburgh", "Philadelphia", "Allentown", "State College"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is home to the Amish community in Lancaster County?",
+    "correctAnswer": "Lancaster",
+    "options": ["Lancaster", "Harrisburg", "Philadelphia", "Reading"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania river flows through Harrisburg?",
+    "correctAnswer": "Susquehanna River",
+    "options": ["Susquehanna River", "Delaware River", "Ohio River", "Schuylkill River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is famous for Independence Hall?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Harrisburg", "Pittsburgh", "Lancaster"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city hosts the Liberty Bell Center?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Harrisburg", "Pittsburgh", "Allentown"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is home to the Philadelphia Museum of Art and its famous 'Rocky Steps'?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Pittsburgh", "Harrisburg", "Lancaster"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is known for its sports teams, the Eagles and Phillies?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Pittsburgh", "Allentown", "Harrisburg"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is home to the Andy Warhol Museum?",
+    "correctAnswer": "Pittsburgh",
+    "options": ["Pittsburgh", "Philadelphia", "Allentown", "Harrisburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city hosts the annual Pennsylvania Farm Show?",
+    "correctAnswer": "Harrisburg",
+    "options": ["Harrisburg", "Philadelphia", "Pittsburgh", "Lancaster"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is known for its Liberty Bell and Independence Day celebrations?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Harrisburg", "Lancaster", "Reading"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is considered the birthplace of the United States?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Harrisburg", "Pittsburgh", "Lancaster"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is famous for its sports team, the Steelers?",
+    "correctAnswer": "Pittsburgh",
+    "options": ["Pittsburgh", "Philadelphia", "Allentown", "Harrisburg"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Pennsylvania city is known for the Pocono Mountains nearby?",
+    "correctAnswer": "Scranton",
+    "options": ["Scranton", "Philadelphia", "Harrisburg", "Pittsburgh"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Pennsylvania city is home to the Reading Terminal Market?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Pittsburgh", "Allentown", "Harrisburg"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city was a major center for coal mining?",
+    "correctAnswer": "Scranton",
+    "options": ["Scranton", "Philadelphia", "Harrisburg", "Pittsburgh"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Pennsylvania city is known for its historic trolley line called the 'Trolley Museum'?",
+    "correctAnswer": "Strasburg",
+    "options": ["Strasburg", "Philadelphia", "Lancaster", "Harrisburg"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Pennsylvania city hosts the Franklin Institute science museum?",
+    "correctAnswer": "Philadelphia",
+    "options": ["Philadelphia", "Pittsburgh", "Harrisburg", "Lancaster"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Pennsylvania city is known for the 'Pennsylvania Dutch' culture?",
+    "correctAnswer": "Lancaster",
+    "options": ["Lancaster", "Philadelphia", "Harrisburg", "Allentown"],
+    "difficulty": "2"
+  }
+]
+

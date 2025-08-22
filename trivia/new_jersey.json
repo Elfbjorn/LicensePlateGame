@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What is the capital of New Jersey?",
+    "correctAnswer": "Trenton",
+    "options": ["Trenton", "Newark", "Jersey City", "Camden"],
+    "difficulty": "1"
+  },
+  {
+    "question": "New Jersey is nicknamed what?",
+    "correctAnswer": "The Garden State",
+    "options": ["The Garden State", "The Pine Tree State", "The Keystone State", "The Empire State"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Jersey city is the largest by population?",
+    "correctAnswer": "Newark",
+    "options": ["Newark", "Jersey City", "Paterson", "Camden"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Jersey city is home to Princeton University?",
+    "correctAnswer": "Princeton",
+    "options": ["Princeton", "Newark", "Jersey City", "Trenton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is famous for the Jersey Shore boardwalks?",
+    "correctAnswer": "Atlantic City",
+    "options": ["Atlantic City", "Asbury Park", "Cape May", "Point Pleasant"],
+    "difficulty": "2"
+  },
+  {
+    "question": "New Jersey is part of which US region?",
+    "correctAnswer": "Mid-Atlantic",
+    "options": ["Mid-Atlantic", "New England", "Southeast", "Midwest"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Jersey river forms part of the border with Pennsylvania?",
+    "correctAnswer": "Delaware River",
+    "options": ["Delaware River", "Hudson River", "Passaic River", "Raritan River"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which New Jersey city is known for its historic role in the American Revolution at Princeton?",
+    "correctAnswer": "Princeton",
+    "options": ["Princeton", "Trenton", "Newark", "Camden"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city hosts the annual Miss America Pageant?",
+    "correctAnswer": "Atlantic City",
+    "options": ["Atlantic City", "Asbury Park", "Trenton", "Jersey City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is home to the Thomas Edison National Historical Park?",
+    "correctAnswer": "West Orange",
+    "options": ["West Orange", "Newark", "Princeton", "Camden"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is known for boardwalk games and casinos?",
+    "correctAnswer": "Atlantic City",
+    "options": ["Atlantic City", "Asbury Park", "Point Pleasant", "Cape May"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is famous for the Jersey Devil legend?",
+    "correctAnswer": "Pine Barrens",
+    "options": ["Pine Barrens", "Trenton", "Camden", "Newark"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Jersey city is home to Rutgers University?",
+    "correctAnswer": "New Brunswick",
+    "options": ["New Brunswick", "Princeton", "Trenton", "Newark"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is known for Revolutionary War battles?",
+    "correctAnswer": "Trenton",
+    "options": ["Trenton", "Princeton", "Newark", "Camden"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is famous for its diners and pizza culture?",
+    "correctAnswer": "Newark",
+    "options": ["Newark", "Jersey City", "Trenton", "Paterson"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey island is known for its beaches and lighthouses?",
+    "correctAnswer": "Sandy Hook",
+    "options": ["Sandy Hook", "Long Beach Island", "Barnegat Island", "Cape May Point"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is the gateway to the Statue of Liberty?",
+    "correctAnswer": "Jersey City",
+    "options": ["Jersey City", "Newark", "Hoboken", "Bayonne"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is known for Frank Sinatra's birthplace?",
+    "correctAnswer": "Hoboken",
+    "options": ["Hoboken", "Newark", "Jersey City", "Trenton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is famous for the Adventure Aquarium?",
+    "correctAnswer": "Camden",
+    "options": ["Camden", "Newark", "Jersey City", "Atlantic City"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city hosts the annual QuickChek New Jersey Festival of Ballooning?",
+    "correctAnswer": "Readington",
+    "options": ["Readington", "Trenton", "Asbury Park", "Atlantic City"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Jersey city is known for its historic lighthouse at Cape May?",
+    "correctAnswer": "Cape May",
+    "options": ["Cape May", "Atlantic City", "Long Beach Island", "Sandy Hook"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is known for the Hoboken Terminal transportation hub?",
+    "correctAnswer": "Hoboken",
+    "options": ["Hoboken", "Jersey City", "Newark", "Trenton"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is famous for the Princeton Plasma Physics Lab?",
+    "correctAnswer": "Princeton",
+    "options": ["Princeton", "New Brunswick", "Trenton", "Newark"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which New Jersey city hosts the Thomas Edison National Historical Park?",
+    "correctAnswer": "West Orange",
+    "options": ["West Orange", "Trenton", "Princeton", "Newark"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which New Jersey city is home to Liberty State Park?",
+    "correctAnswer": "Jersey City",
+    "options": ["Jersey City", "Newark", "Hoboken", "Bayonne"],
+    "difficulty": "2"
+  }
+]
+

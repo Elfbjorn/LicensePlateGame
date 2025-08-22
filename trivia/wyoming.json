@@ -1,0 +1,191 @@
+[
+  {
+    "question": "Which national park, established in 1872, is located in Wyoming and is the first national park in the U.S.?",
+    "correctAnswer": "Yellowstone National Park",
+    "options": ["Grand Teton National Park", "Yellowstone National Park", "Glacier National Park", "Rocky Mountain National Park"],
+    "difficulty": 1
+  },
+  {
+    "question": "What is the capital city of Wyoming?",
+    "correctAnswer": "Cheyenne",
+    "options": ["Cheyenne", "Casper", "Laramie", "Jackson"],
+    "difficulty": 1
+  },
+  {
+    "question": "Wyoming is nicknamed the 'Equality State.' Why?",
+    "correctAnswer": "It was the first state to grant women the right to vote",
+    "options": [
+      "Because of its balanced population",
+      "It was the first state to grant women the right to vote",
+      "It has equal numbers of men and women historically",
+      "It has two equally important cities"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which mountain range runs through northwestern Wyoming?",
+    "correctAnswer": "The Rocky Mountains",
+    "options": ["Appalachian Mountains", "Sierra Nevada", "The Rocky Mountains", "Cascade Range"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming city is famous for its annual Frontier Days rodeo?",
+    "correctAnswer": "Cheyenne",
+    "options": ["Casper", "Laramie", "Cheyenne", "Jackson"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Grand Teton National Park is located near which Wyoming town?",
+    "correctAnswer": "Jackson",
+    "options": ["Jackson", "Casper", "Cheyenne", "Laramie"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which river forms part of the border between Wyoming and Montana?",
+    "correctAnswer": "Yellowstone River",
+    "options": ["Snake River", "Yellowstone River", "Green River", "Platte River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wyoming was admitted to the Union as which numbered state?",
+    "correctAnswer": "44th",
+    "options": ["42nd", "43rd", "44th", "45th"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Native American tribes have historical ties to Wyoming?",
+    "correctAnswer": "Shoshone, Arapaho, Cheyenne",
+    "options": [
+      "Cherokee and Choctaw",
+      "Shoshone, Arapaho, Cheyenne",
+      "Sioux and Pawnee",
+      "Navajo and Apache"
+    ],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Wyoming landmark features a massive granite sculpture of four U.S. presidents?",
+    "correctAnswer": "Mount Rushmore",
+    "options": ["Grand Teton", "Mount Rushmore", "Devils Tower", "Medicine Bow Peak"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wyoming landmark is a monolithic igneous formation and the first U.S. national monument?",
+    "correctAnswer": "Devils Tower",
+    "options": ["Mount Rushmore", "Devils Tower", "Grand Teton", "Cloud Peak"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wyoming river is a major tributary of the Snake River and flows through Yellowstone National Park?",
+    "correctAnswer": "Yellowstone River",
+    "options": ["Snake River", "Yellowstone River", "Green River", "Powder River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wyoming is the least populous U.S. state. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Sometimes", "Depends on the year"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming city is home to the University of Wyoming?",
+    "correctAnswer": "Laramie",
+    "options": ["Cheyenne", "Casper", "Laramie", "Jackson"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Green River runs through southwestern Wyoming. What is it known for?",
+    "correctAnswer": "Famous trout fishing and whitewater rafting",
+    "options": [
+      "Gold mining",
+      "Famous trout fishing and whitewater rafting",
+      "Oil extraction",
+      "Sandstone cliffs"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wyoming city is known for being a gateway to Yellowstone National Park?",
+    "correctAnswer": "Jackson",
+    "options": ["Casper", "Jackson", "Cheyenne", "Laramie"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which U.S. president was born in Wyoming?",
+    "correctAnswer": "None",
+    "options": ["Gerald Ford", "None", "Ronald Reagan", "Harry Truman"],
+    "difficulty": 4
+  },
+  {
+    "question": "Which Wyoming landmark is known for unique rock spires called hoodoos?",
+    "correctAnswer": "Cody's Hoodoo formations",
+    "options": ["Devils Tower", "Grand Teton", "Cody's Hoodoo formations", "Medicine Bow Peak"],
+    "difficulty": 4
+  },
+  {
+    "question": "Wyoming is part of which geographic region of the United States?",
+    "correctAnswer": "Mountain West",
+    "options": ["Pacific Northwest", "Midwest", "Mountain West", "Great Plains"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming city is located near the southeastern border with Colorado?",
+    "correctAnswer": "Cheyenne",
+    "options": ["Casper", "Cheyenne", "Laramie", "Jackson"],
+    "difficulty": 2
+  },
+  {
+    "question": "The Wyoming state flag features which animal?",
+    "correctAnswer": "Bison",
+    "options": ["Bear", "Bison", "Eagle", "Elk"],
+    "difficulty": 1
+  },
+  {
+    "question": "Which Wyoming mountain is the highest peak in the state?",
+    "correctAnswer": "Gannett Peak",
+    "options": ["Grand Teton", "Cloud Peak", "Gannett Peak", "Devils Tower"],
+    "difficulty": 3
+  },
+  {
+    "question": "Which Wyoming city hosts the annual Cheyenne Frontier Days rodeo?",
+    "correctAnswer": "Cheyenne",
+    "options": ["Casper", "Cheyenne", "Jackson", "Laramie"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming river flows northward through the Wind River Basin?",
+    "correctAnswer": "Wind River",
+    "options": ["Wind River", "Green River", "Snake River", "Yellowstone River"],
+    "difficulty": 3
+  },
+  {
+    "question": "Wyoming is bordered by how many U.S. states?",
+    "correctAnswer": "6",
+    "options": ["4", "5", "6", "7"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming city is considered the cowboy capital of the state?",
+    "correctAnswer": "Cheyenne",
+    "options": ["Jackson", "Casper", "Cheyenne", "Laramie"],
+    "difficulty": 2
+  },
+  {
+    "question": "Which Wyoming landmark is famous for its geothermal features like geysers and hot springs?",
+    "correctAnswer": "Yellowstone National Park",
+    "options": [
+      "Grand Teton National Park",
+      "Yellowstone National Park",
+      "Devils Tower",
+      "Wind River Canyon"
+    ],
+    "difficulty": 3
+  },
+  {
+    "question": "Wyoming’s state tree is the Plains Cottonwood. True or False?",
+    "correctAnswer": "True",
+    "options": ["True", "False", "Only in northern Wyoming", "Only in southern Wyoming"],
+    "difficulty": 2
+  }
+]
+

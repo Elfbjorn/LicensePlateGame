@@ -1,0 +1,153 @@
+[
+  {
+    "question": "Which Alberta festival celebrates winter sports and ice sculpture?",
+    "correctAnswer": "Ice on Whyte",
+    "options": ["Ice on Whyte", "Calgary Stampede", "SnowDays", "Festival du Voyageur"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Alberta’s provincial flower is what?",
+    "correctAnswer": "Wild Rose",
+    "options": ["Wild Rose", "Prairie Crocus", "Mayflower", "Western Red Lily"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta town is known as the gateway to Banff National Park?",
+    "correctAnswer": "Banff",
+    "options": ["Banff", "Canmore", "Jasper", "Lake Louise"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta river is a tributary of the Saskatchewan River?",
+    "correctAnswer": "Bow River",
+    "options": ["Peace River", "Bow River", "Athabasca River", "Red Deer River"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta city is home to the Royal Tyrrell Museum?",
+    "correctAnswer": "Drumheller",
+    "options": ["Calgary", "Edmonton", "Drumheller", "Red Deer"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta city is famous for its skyline and oil industry headquarters?",
+    "correctAnswer": "Calgary",
+    "options": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Alberta mountain is the tallest peak in the province?",
+    "correctAnswer": "Mount Columbia",
+    "options": ["Mount Columbia", "Mount Robson", "Mount Assiniboine", "Mount Alberta"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta city hosts the University of Calgary?",
+    "correctAnswer": "Calgary",
+    "options": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"],
+    "difficulty": "1"
+  },
+  {
+    "question": "Which Alberta festival celebrates Celtic music?",
+    "correctAnswer": "Calgary Celtic Festival",
+    "options": ["Calgary Celtic Festival", "Calgary Stampede", "Ice on Whyte", "Edmonton Folk Festival"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta city hosts an annual folk music festival in Edmonton?",
+    "correctAnswer": "Edmonton Folk Festival",
+    "options": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta river flows through Edmonton?",
+    "correctAnswer": "North Saskatchewan River",
+    "options": ["North Saskatchewan River", "South Saskatchewan River", "Bow River", "Red Deer River"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta town is known for dinosaur fossils and badlands?",
+    "correctAnswer": "Drumheller",
+    "options": ["Drumheller", "Banff", "Jasper", "Medicine Hat"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta city is nicknamed the 'Festival City'?",
+    "correctAnswer": "Edmonton",
+    "options": ["Calgary", "Edmonton", "Red Deer", "Lethbridge"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta lake is a popular summer vacation spot near Edmonton?",
+    "correctAnswer": "Sylvan Lake",
+    "options": ["Sylvan Lake", "Lake Louise", "Bow Lake", "Pigeon Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta city is closest to the Canadian Rockies?",
+    "correctAnswer": "Canmore",
+    "options": ["Edmonton", "Calgary", "Canmore", "Banff"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta university is famous for petroleum engineering research?",
+    "correctAnswer": "University of Alberta",
+    "options": ["University of Calgary", "University of Alberta", "Mount Royal University", "Athabasca University"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta national park borders British Columbia?",
+    "correctAnswer": "Jasper National Park",
+    "options": ["Banff National Park", "Jasper National Park", "Waterton Lakes National Park", "Elk Island National Park"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta mountain pass connects Calgary to Banff?",
+    "correctAnswer": "Bow Valley Parkway",
+    "options": ["Bow Valley Parkway", "Icefields Parkway", "Kananaskis Pass", "Highwood Pass"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta festival celebrates multicultural arts in Edmonton?",
+    "correctAnswer": "Edmonton Heritage Festival",
+    "options": ["Edmonton Heritage Festival", "Calgary Stampede", "Edmonton Folk Festival", "Ice on Whyte"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta town is home to Head-Smashed-In Buffalo Jump?",
+    "correctAnswer": "Fort Macleod",
+    "options": ["Fort Macleod", "Banff", "Calgary", "Medicine Hat"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta lake is man-made and near Calgary for recreation?",
+    "correctAnswer": "Glenmore Reservoir",
+    "options": ["Glenmore Reservoir", "Sylvan Lake", "Bow Lake", "Pigeon Lake"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta city is famous for its oil sands industry near Fort McMurray?",
+    "correctAnswer": "Fort McMurray",
+    "options": ["Calgary", "Edmonton", "Fort McMurray", "Red Deer"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Alberta’s provincial bird is what?",
+    "correctAnswer": "Great Horned Owl",
+    "options": ["Great Horned Owl", "Peregrine Falcon", "Western Meadowlark", "Canada Goose"],
+    "difficulty": "3"
+  },
+  {
+    "question": "Which Alberta mountain town is famous for its hot springs?",
+    "correctAnswer": "Banff",
+    "options": ["Banff", "Jasper", "Canmore", "Lake Louise"],
+    "difficulty": "2"
+  },
+  {
+    "question": "Which Alberta glacier can be visited along the Icefields Parkway?",
+    "correctAnswer": "Athabasca Glacier",
+    "options": ["Columbia Glacier", "Athabasca Glacier", "Bow Glacier", "Peyto Glacier"],
+    "difficulty": "3"
+  }
+]
+
