@@ -1019,6 +1019,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Animation toggle
+  const animationToggle = document.getElementById("animationToggle");
+  if (animationToggle) {
+    // Load saved preference
+    const savedAnimation = localStorage.getItem('animationEnabled');
+    if (savedAnimation !== null) {
+      animationEnabled = savedAnimation === 'true';
+      animationToggle.checked = animationEnabled;
+    }
+
+    animationToggle.addEventListener('change', (e) => {
+      animationEnabled = e.target.checked;
+      localStorage.setItem('animationEnabled', animationEnabled.toString());
+    });
+  }
+
   button.addEventListener("click", async () => {
     const stateName = select.value;
     if (!stateName) return;
