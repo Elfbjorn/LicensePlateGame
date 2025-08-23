@@ -40,6 +40,9 @@ const CANADIAN_REGIONS = [
   "quebec", "saskatchewan", "yukon"
 ];
 
+let animationEnabled = true;
+let isAnimating = false;
+
 const MAP_CENTER = [50.0, -100.0];
 const MAP_ZOOM = 3;
 
@@ -99,6 +102,43 @@ function getFlagAssignment(regionName) {
 function recenterMap() {
   if (currentMap) {
     currentMap.setView(MAP_CENTER, MAP_ZOOM);
+  }
+}
+
+async function animateToState(stateName) {
+  if (!currentMap || isAnimating) return;
+  
+  isAnimating = true;
+  
+  try {
+    // Get the state layer
+    const stateLayer = stateMapLayers[stateName];
+    if (stateLayer) {
+      // Get bounds of the state
+      const bounds = stateLayer.getBounds();
+      
+      // Zoom to the state (1 second)
+      currentMap.fitBounds(bounds, { 
+        padding: [50, 50],
+        duration: 1.0
+      });
+      
+      // Wait 1 second, then zoom back out
+      setTimeout(() => {
+        currentMap.setView(MAP_CENTER, MAP_ZOOM, {
+          duration: 1.0
+        });
+        isAnimating = false;
+      }, 1000);
+    } else {
+      // Fallback if no layer found
+      setTimeout(recenterMap, 500);
+      isAnimating = false;
+    }
+  } catch (error) {
+    console.error("Animation error:", error);
+    setTimeout(recenterMap, 500);
+    isAnimating = false;
   }
 }
 
@@ -814,8 +854,11 @@ async function processLocation(latitude, longitude, stateName) {
     updateMapColors(log);
     updateTerritoriesSidebar(log);
     
-    setTimeout(recenterMap, 500);
-    
+if (animationEnabled && !isAnimating) {
+  animateToState(stateName);
+} else {
+  setTimeout(recenterMap, 500);
+}    
     const displayName = stateName.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     alert(`${displayName} logged! Distance: ${Math.round(miles)} miles from ${label}`);
     
@@ -823,6 +866,7 @@ async function processLocation(latitude, longitude, stateName) {
     console.error("Error processing location:", error);
     alert(`Error: ${error.message}`);
   }
+  document.getElementById("stateSelect").value = "";
 }
 
 async function handleManualLocation(stateName) {
@@ -935,7 +979,7 @@ function renderTable(log) {
     .join(", ");
 
   html += `
-      <tr><td colspan="4"><strong>States not yet logged:</strong> ${missingLabels}</td></tr>
+      <tr><td colspan="4"><strong>Plates not yet logged:</strong> ${missingLabels}</td></tr>
       <tr><td colspan="4"><strong>Total Score:</strong> ${formatNumber(getTotalScore(log))} miles</td></tr>
     </tbody>
   </table>
