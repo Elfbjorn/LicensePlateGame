@@ -926,9 +926,24 @@ async function getLocationLabel(lat, lon) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Geocoding failed: ${res.status}`);
     const data = await res.json();
-    const city = data.address?.city || data.address?.town || data.address?.village || "";
+
+    // Enhanced fallback strategy for location naming
+    const city = data.address?.city || data.address?.town || data.address?.village || data.address?.hamlet || "";
+    const county = data.address?.county || "";
     const state = data.address?.state || data.address?.region || "";
-    return { label: `${city}, ${state}`, stateName: state.toLowerCase().replace(/\s+/g, "_") };
+
+    // Build location label with fallbacks
+    let locationLabel;
+    if (city && state) {
+      locationLabel = `${city}, ${state}`;
+    } else if (county && state) {
+      locationLabel = `${county} County, ${state}`;
+    } else if (state) {
+      locationLabel = state;
+    } else {
+      locationLabel = `${lat.toFixed(3)}°, ${lon.toFixed(3)}°`;
+    }
+    return { label: locationLabel, stateName: state.toLowerCase().replace(/\s+/g, "_") };    
   } catch (err) {
     console.warn("Reverse geocoding failed:", err.message);
     return { label: "Unknown location", stateName: "" };
