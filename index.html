@@ -64,12 +64,13 @@ button:hover {
 /* Theme selector */
 .theme-selector {
   margin: 15px 0;
-  padding: 15px;
+  padding: 10px;
   background: #f8f9fa;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 0.9rem;
 }
-
+    
 .theme-selector label {
   font-weight: 600;
   margin-right: 10px;
@@ -79,6 +80,29 @@ button:hover {
   min-width: 200px;
 }
 
+.state-selector-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  border-radius: 8px;
+  border: 2px solid #2196f3;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.state-selector-section label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1565c0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.state-selector-section select {
+  border: 2px solid #2196f3;
+  font-size: 1rem;
+  min-width: 300px;
+}
+    
 /* Map and territories layout */
 .map-section {
   display: flex;
@@ -307,6 +331,7 @@ th {
       <input type="checkbox" id="animationToggle" checked style="margin-left: 5px;">
     </div>
 
+    <div class="state-selector-section">
     <label for="stateSelect">Choose a state, territory, or province:</label>
     <select id="stateSelect">
       <option value="">--Select--</option>
@@ -391,6 +416,7 @@ th {
     </select>
     <button id="submitBtn">Submit</button>
     <button id="resetBtn">Reset Log</button>
+    </div>
 
     <div class="map-section">
       <div class="main-map">
