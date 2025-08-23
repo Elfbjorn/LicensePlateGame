@@ -168,6 +168,17 @@
             color: #374151;
         }
 
+        .question-info {
+            margin-bottom: 30px;
+        }
+
+        .difficulty-indicator {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
         .answers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -458,7 +469,10 @@
                 </div>
 
                 <div class="question-container">
-                    <div class="question" id="questionText"></div>
+                    <div class="question-info">
+                        <div class="question" id="questionText"></div>
+                        <div class="difficulty-indicator" id="difficultyIndicator"></div>
+                    </div>
                     <div class="answers-grid" id="answersGrid"></div>
                     <div class="feedback hidden" id="feedback"></div>
                     <button class="next-button hidden" id="nextButton">Next Question</button>
@@ -700,34 +714,9 @@
 
             async loadStateQuestions() {
                 const files = [this.selectedState + '.json'];
-                
-                // Add neighboring states/provinces for variety
-                const neighbors = this.getNeighboringRegions(this.selectedState);
-                if (neighbors.length > 0) {
-                    const randomNeighbors = this.getRandomElements(neighbors, Math.min(2, neighbors.length));
-                    files.push(...randomNeighbors.map(neighbor => `${neighbor}.json`));
-                }
-                
                 await this.loadQuestionsFromFiles(files);
             }
-
-            getNeighboringRegions(region) {
-                const neighbors = {
-                    'california': ['nevada', 'arizona'],
-                    'texas': ['new_mexico', 'oklahoma', 'arkansas', 'louisiana'],
-                    'florida': ['georgia', 'alabama'],
-                    'new_york': ['pennsylvania', 'new_jersey', 'connecticut', 'massachusetts', 'vermont'],
-                    'illinois': ['wisconsin', 'indiana', 'iowa', 'missouri'],
-                    'ontario': ['quebec', 'manitoba'],
-                    'quebec': ['ontario', 'new_brunswick'],
-                    'british_columbia': ['alberta'],
-                    'alberta': ['british_columbia', 'saskatchewan'],
-                    // Add more as needed
-                };
-                
-                return neighbors[region] || [];
-            }
-
+            
             async loadQuestionsFromFiles(files) {
                 const loadedFiles = [];
                 
@@ -924,6 +913,7 @@
                 document.getElementById('questionCounter').textContent = 
                     `Question ${this.currentQuestion + 1} of ${this.totalQuestions}`;
                 document.getElementById('questionText').textContent = question.question;
+                document.getElementById('difficultyIndicator').textContent = `Difficulty: ${question.difficulty}/4`;
                 document.getElementById('progressFill').style.width = 
                     `${((this.currentQuestion) / this.totalQuestions) * 100}%`;
 
@@ -966,9 +956,8 @@
 
                 // Update score
                 if (isCorrect) {
-                    const points = parseInt(this.questions[this.currentQuestion].difficulty) || 1;
-                    this.score += points;
-                    this.showFeedback(true, `Correct! +${points} points`);
+                    this.score += 1;
+                    this.showFeedback(true, `Correct! +1 point`);
                     this.createCelebration();
                 } else {
                     this.showFeedback(false, `Incorrect. The answer is: ${correctAnswer}`);
@@ -1135,9 +1124,7 @@
                 document.getElementById('gameComplete').style.display = 'block';
                 
                 // Calculate maximum possible score
-                const maxScore = this.questions.slice(0, this.totalQuestions)
-                    .reduce((sum, q) => sum + (parseInt(q.difficulty) || 1), 0);
-                
+                const maxScore = this.totalQuestions;                
                 document.getElementById('finalScore').textContent = `${this.score} / ${maxScore}`;
                 document.getElementById('performanceMessage').textContent = 
                     this.getPerformanceMessage(this.score, maxScore);
