@@ -303,6 +303,8 @@ th {
         <option value="random">Random Colors</option>
         <option value="flag">Flag Colors</option>
       </select>
+      <label for="animationToggle" style="margin-left: 20px;">Animation:</label>
+      <input type="checkbox" id="animationToggle" checked style="margin-left: 5px;">
     </div>
 
     <label for="stateSelect">Choose a state, territory, or province:</label>
@@ -414,6 +416,23 @@ th {
     </div>
 
     <table id="result"></table>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+      <h3 style="margin-bottom: 15px;">Test Your Geography Knowledge!</h3>
+      <a href="trivia-game.html" style="
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: transform 0.2s ease;
+      " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        Play Geography Trivia Game
+      </a>
+    </div>
   </div>
   
   <script src="script.js"></script>
