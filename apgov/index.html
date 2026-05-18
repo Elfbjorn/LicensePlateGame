@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AP Gov Trivia</title>
+    <style>
+:root {
+  color-scheme: dark;
+  --bg: #12130f;
+  --panel: #1e2118;
+  --panel-2: #2b3024;
+  --line: rgba(255, 255, 255, 0.13);
+  --text: #fbfaf4;
+  --muted: #c5c8b4;
+  --accent: #ffca3a;
+  --accent-2: #73d2de;
+  --good: #5ce0a7;
+  --bad: #ff6b6b;
+  --rose: #ff9f7a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(145deg, rgba(115, 210, 222, 0.15), transparent 28rem),
+    linear-gradient(215deg, rgba(255, 202, 58, 0.14), transparent 30rem),
+    linear-gradient(180deg, #171811 0%, var(--bg) 100%);
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+.app {
+  width: min(1200px, calc(100vw - 28px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 18px;
+}
+
+.round-controls {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+
+.round-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.round-controls select {
+  min-height: 48px;
+  max-width: 210px;
+  padding: 0 36px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text);
+  font: inherit;
+  font-weight: 850;
+}
+
+.shelf-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.shelf-link:hover {
+  text-decoration: underline;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.3rem);
+  line-height: 0.94;
+}
+
+.primary-action {
+  min-height: 48px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #17130a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible,
+.shelf-link:focus-visible {
+  outline: 3px solid rgba(255, 202, 58, 0.42);
+  outline-offset: 3px;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 18px;
+  align-items: start;
+}
+
+.stage,
+.side-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(24, 32, 36, 0.86);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.28);
+}
+
+.stage {
+  min-height: 650px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.topic-strip span {
+  min-height: 42px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.topic-strip span:nth-child(1) {
+  color: var(--accent);
+}
+
+.topic-strip span:nth-child(2) {
+  color: var(--accent-2);
+}
+
+.topic-strip span:nth-child(3) {
+  color: var(--good);
+}
+
+.topic-strip span:nth-child(4) {
+  color: #ff9f7a;
+}
+
+.topic-strip span:nth-child(5) {
+  color: var(--rose);
+}
+
+.question-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  min-height: 120px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.8rem, 4.3vw, 3.7rem);
+  line-height: 1.03;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.answer {
+  min-height: 108px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.answer .letter {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--accent);
+  font-weight: 950;
+}
+
+.answer .text {
+  font-size: clamp(1.02rem, 2vw, 1.28rem);
+  font-weight: 850;
+  line-height: 1.22;
+}
+
+.answer.hidden-option {
+  opacity: 0.16;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.answer.correct {
+  border-color: rgba(92, 224, 167, 0.84);
+  background: rgba(92, 224, 167, 0.22);
+}
+
+.answer.wrong {
+  border-color: rgba(255, 107, 107, 0.72);
+  background: rgba(255, 107, 107, 0.18);
+}
+
+.timer-row {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr 58px;
+  gap: 12px;
+  align-items: center;
+}
+
+.timer-shell {
+  height: 18px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--good), var(--accent), #ff8f66);
+  transition: width 180ms linear;
+}
+
+#timeLeft {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.message {
+  min-height: 25px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.side-panel {
+  padding: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat {
+  min-height: 84px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(34, 44, 48, 0.78);
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.75rem;
+}
+
+.stat-wide {
+  grid-column: 1 / -1;
+  min-height: 70px;
+}
+
+.stat-wide strong {
+  font-size: 1.28rem;
+  letter-spacing: 0.08em;
+}
+
+.scoreboard {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.scoreboard ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.scoreboard ol {
+  min-height: 150px;
+  display: grid;
+  gap: 8px;
+}
+
+.scoreboard li {
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-weight: 750;
+}
+
+@media (max-width: 940px) {
+  .topbar,
+  .game-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .round-controls {
+    align-items: stretch;
+  }
+
+  .stage {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 620px) {
+  .app {
+    width: min(100vw - 16px, 640px);
+    padding: 12px 0;
+  }
+
+  .topic-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .round-controls {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .round-controls select {
+    max-width: none;
+    width: 100%;
+  }
+
+  h2 {
+    min-height: 118px;
+  }
+
+
+  .answers {
+    grid-template-columns: 1fr;
+  }
+
+  .answer {
+    min-height: 78px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .stat {
+    min-height: 68px;
+    padding: 9px 6px;
+  }
+
+  .stat strong {
+    font-size: 1.1rem;
+  }
+
+  .stat-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+      .round-controls label,
+      .round-controls select,
+      .shelf-link { display: none; }
+      h1 { max-width: 14ch; }
+    </style>
+  </head>
+  <body>
+    <main class="app" aria-label="AP Gov trivia game">
+      <header class="topbar">
+        <div>
+          <p id="pageEyebrow" class="eyebrow">AP Gov and Politics</p>
+          <h1 id="pageTitle">Review the republic.</h1>
+        </div>
+        <div class="round-controls">
+          <button id="startRound" class="primary-action" type="button">Start Round</button>
+        </div>
+      </header>
+      <section class="game-layout">
+        <section class="stage" aria-label="Trivia question">
+          <div id="topicStrip" class="topic-strip" aria-hidden="true"></div>
+          <div class="question-meta"><span id="topic">Ready</span><span id="questionCount">0/0</span></div>
+          <h2 id="question">Start a round when your team is ready.</h2>
+          <div id="answers" class="answers" aria-label="Answer options"></div>
+          <div class="timer-row" aria-label="Timer and score"><div class="timer-shell"><div id="timerBar" class="timer-bar"></div></div><strong id="timeLeft">30</strong></div>
+          <p id="message" class="message" aria-live="polite">15 questions. Each one starts at 1000 points.</p>
+        </section>
+        <aside class="side-panel" aria-label="Score and round details">
+          <section class="stats">
+            <div class="stat"><span>Question Value</span><strong id="questionValue">1000</strong></div>
+            <div class="stat"><span>Total Score</span><strong id="totalScore">0</strong></div>
+            <div class="stat"><span>Correct</span><strong id="correctCount">0</strong></div>
+            <div class="stat"><span>Streak</span><strong id="streak">0</strong></div>
+            <div class="stat stat-wide"><span>Round Seed</span><strong id="roundSeed">----</strong></div>
+          </section>
+          <section class="scoreboard" aria-label="Round log"><h3>Round Log</h3><ol id="roundLog"></ol></section>
+        </aside>
+      </section>
+    </main>
+    <script>
+
+const activePack = {"id":"ap-gov","title":"AP Gov and Politics","eyebrow":"AP Gov and Politics","heading":"Review the republic.","shelfTitle":"AP Gov","intro":"15 questions. Each one starts at 1000 points.","topicStrip":["Foundations","Branches","Rights","Ideology","Participation"],"audioQuestions":[],"textQuestions":[{"topic":"Foundations","question":"Which principle divides power between national and state governments?","options":["Federalism","Judicial review","Popular sovereignty","Pluralism"],"answer":0},{"topic":"Foundations","question":"Which principle divides power among legislative, executive, and judicial branches?","options":["Separation of powers","Federalism","Due process","Selective incorporation"],"answer":0},{"topic":"Foundations","question":"Which system lets each branch limit the actions of the others?","options":["Checks and balances","Block grants","Judicial activism","Pluralism"],"answer":0},{"topic":"Foundations","question":"Which document argued that a large republic could control the dangers of factions?","options":["Federalist No. 10","Brutus No. 1","Federalist No. 51","Letter from Birmingham Jail"],"answer":0},{"topic":"Foundations","question":"Which document warned that the proposed Constitution gave the national government too much power?","options":["Brutus No. 1","Federalist No. 70","Federalist No. 78","The Declaration of Independence"],"answer":0},{"topic":"Foundations","question":"Federalist No. 51 is most associated with which constitutional idea?","options":["Checks and balances","Natural rights","Participatory democracy","Civil disobedience"],"answer":0},{"topic":"Foundations","question":"Federalist No. 70 argues in favor of which feature?","options":["A unitary executive","A weak presidency","A large House of Representatives","Direct democracy"],"answer":0},{"topic":"Foundations","question":"Federalist No. 78 defends which institution?","options":["An independent judiciary","A national bank","A standing army","A two-party system"],"answer":0},{"topic":"Foundations","question":"The Declaration of Independence is most directly based on which idea?","options":["Natural rights","Judicial supremacy","Cooperative federalism","Executive privilege"],"answer":0},{"topic":"Foundations","question":"Which weakness of the Articles of Confederation made it hard for Congress to raise revenue?","options":["Congress lacked the power to tax directly","Congress controlled all state courts","The president could veto tax laws","The Supreme Court struck down taxes"],"answer":0},{"topic":"Foundations","question":"Shays' Rebellion helped convince many leaders that the country needed what?","options":["A stronger national government","A weaker legislature","No written constitution","A hereditary monarch"],"answer":0},{"topic":"Foundations","question":"The Great Compromise created which congressional structure?","options":["A bicameral legislature with different representation rules","A unicameral legislature with equal state votes","A parliamentary legislature","A national legislature chosen by governors"],"answer":0},{"topic":"Foundations","question":"The Electoral College was created mainly as part of the system for choosing whom?","options":["The president","Supreme Court justices","Senators","House committee chairs"],"answer":0},{"topic":"Foundations","question":"Which clause says federal law is the supreme law of the land?","options":["Supremacy Clause","Commerce Clause","Necessary and Proper Clause","Establishment Clause"],"answer":0},{"topic":"Foundations","question":"Which clause has often been used to justify implied powers of Congress?","options":["Necessary and Proper Clause","Full Faith and Credit Clause","Free Exercise Clause","Privileges and Immunities Clause"],"answer":0},{"topic":"Foundations","question":"McCulloch v. Maryland strengthened which constitutional concept?","options":["National supremacy and implied powers","State nullification","Separate but equal","One person, one vote"],"answer":0},{"topic":"Foundations","question":"United States v. Lopez limited Congress's use of which power?","options":["Commerce power","Treaty power","Pardon power","Appointment power"],"answer":0},{"topic":"Foundations","question":"Which type of federal grant gives states the most flexibility?","options":["Block grant","Categorical grant","Project grant with narrow rules","Formula grant with strict conditions"],"answer":0},{"topic":"Foundations","question":"Which type of federal grant is usually targeted for a specific purpose?","options":["Categorical grant","Block grant","Revenue-sharing grant","Unfunded grant"],"answer":0},{"topic":"Foundations","question":"An unfunded mandate requires states to do something without what?","options":["Full federal funding","Any state authority","A written law","Judicial review"],"answer":0},{"topic":"Foundations","question":"Which model of democracy emphasizes broad citizen involvement in politics?","options":["Participatory democracy","Elite democracy","Hyperpluralism","Bureaucratic democracy"],"answer":0},{"topic":"Foundations","question":"Which model of democracy emphasizes competition among organized groups?","options":["Pluralist democracy","Monarchy","Oligarchy","Direct autocracy"],"answer":0},{"topic":"Foundations","question":"Which model of democracy emphasizes limited participation and leadership by elected representatives?","options":["Elite democracy","Participatory democracy","Direct democracy","Anarchy"],"answer":0},{"topic":"Foundations","question":"Amending the Constitution requires proposal and what else?","options":["Ratification","Executive order","Judicial confirmation","Party nomination"],"answer":0},{"topic":"Foundations","question":"Which amendment reserved powers to the states or the people?","options":["Tenth Amendment","First Amendment","Fifth Amendment","Fourteenth Amendment"],"answer":0},{"topic":"Branches","question":"Which chamber of Congress has the power to initiate revenue bills?","options":["House of Representatives","Senate","Supreme Court","Cabinet"],"answer":0},{"topic":"Branches","question":"Which chamber confirms presidential appointments?","options":["Senate","House of Representatives","Federal Reserve","Electoral College"],"answer":0},{"topic":"Branches","question":"Which chamber conducts impeachment trials?","options":["Senate","House of Representatives","Supreme Court","Cabinet"],"answer":0},{"topic":"Branches","question":"Which chamber has the power to impeach federal officials?","options":["House of Representatives","Senate","Supreme Court","White House staff"],"answer":0},{"topic":"Branches","question":"Congressional oversight is mainly used to check which branch?","options":["Executive branch","Judicial branch only","State legislatures","Political parties"],"answer":0},{"topic":"Branches","question":"A committee made of House and Senate members that resolves differences in a bill is called what?","options":["Conference committee","Rules Committee","Standing committee","Select committee"],"answer":0},{"topic":"Branches","question":"Which House committee has major influence over how and when bills reach the floor?","options":["Rules Committee","Ways and Means Committee","Judiciary Committee","Appropriations Committee"],"answer":0},{"topic":"Branches","question":"A filibuster is most associated with which chamber?","options":["Senate","House of Representatives","Supreme Court","Cabinet"],"answer":0},{"topic":"Branches","question":"Cloture is used in the Senate to do what?","options":["End debate","Introduce a tax bill","Override a veto automatically","Confirm a justice without a vote"],"answer":0},{"topic":"Branches","question":"The trustee model of representation means lawmakers vote based on what?","options":["Their own judgment","Party leaders only","Public opinion polls only","Interest group ratings"],"answer":0},{"topic":"Branches","question":"The delegate model of representation means lawmakers vote based on what?","options":["Constituents' preferences","Their personal judgment only","The president's agenda only","Court precedents only"],"answer":0},{"topic":"Branches","question":"Which congressional power is an example of the power of the purse?","options":["Appropriating money","Issuing pardons","Nominating judges","Commanding troops directly"],"answer":0},{"topic":"Branches","question":"Which presidential power checks Congress directly?","options":["Veto","Judicial review","Senatorial courtesy","Cloture"],"answer":0},{"topic":"Branches","question":"A pocket veto can occur when Congress adjourns within how many days after sending a bill to the president?","options":["10 days","2 days","30 days","60 days"],"answer":0},{"topic":"Branches","question":"Which role makes the president responsible for the armed forces?","options":["Commander in chief","Chief legislator","Chief diplomat only","Party whip"],"answer":0},{"topic":"Branches","question":"Executive orders are directives issued by the president to whom?","options":["Executive branch agencies","State courts only","Political parties","Foreign voters"],"answer":0},{"topic":"Branches","question":"An executive agreement differs from a treaty because it usually does not require what?","options":["Senate ratification","Presidential approval","Diplomatic negotiation","Foreign policy authority"],"answer":0},{"topic":"Branches","question":"Which act attempted to limit the president's ability to commit troops without Congress?","options":["War Powers Resolution","Pendleton Act","Hatch Act","Budget and Impoundment Control Act"],"answer":0},{"topic":"Branches","question":"Which institution helps the president prepare the federal budget?","options":["Office of Management and Budget","Congressional Budget Office","Federal Election Commission","Supreme Court"],"answer":0},{"topic":"Branches","question":"The bureaucracy primarily does what?","options":["Implements laws and regulations","Writes Supreme Court opinions","Elects members of Congress","Ratifies constitutional amendments"],"answer":0},{"topic":"Branches","question":"Which reform created a merit-based civil service system?","options":["Pendleton Act","War Powers Resolution","Patriot Act","Voting Rights Act"],"answer":0},{"topic":"Branches","question":"Rulemaking by bureaucratic agencies is an example of what?","options":["Discretionary authority","Judicial supremacy","Impeachment","Realignment"],"answer":0},{"topic":"Branches","question":"Iron triangles usually involve agencies, congressional committees, and whom?","options":["Interest groups","Grand juries","Foreign governments","Electoral College members"],"answer":0},{"topic":"Branches","question":"The Supreme Court's power of judicial review was established in which case?","options":["Marbury v. Madison","McCulloch v. Maryland","Baker v. Carr","Schenck v. United States"],"answer":0},{"topic":"Branches","question":"A writ of certiorari is used by the Supreme Court to do what?","options":["Agree to hear a case","Override a veto","Approve a treaty","Remove a judge"],"answer":0},{"topic":"Branches","question":"Stare decisis means courts generally follow what?","options":["Precedent","Public opinion polls","Executive orders","Party platforms"],"answer":0},{"topic":"Branches","question":"Judicial restraint is the view that courts should usually do what?","options":["Defer to elected branches when possible","Rewrite statutes broadly","Avoid precedent entirely","Control party nominations"],"answer":0},{"topic":"Branches","question":"Judicial activism is the view that courts may do what?","options":["Play a more active role in shaping policy","Never overturn laws","Avoid constitutional questions","Eliminate judicial review"],"answer":0},{"topic":"Branches","question":"Federal judges generally serve for how long?","options":["During good behavior","Four-year terms","Six-year terms","Until the next presidential election"],"answer":0},{"topic":"Civil Liberties","question":"The Establishment Clause limits government action involving what?","options":["Religion","Searches","Jury trials","Quartering soldiers"],"answer":0},{"topic":"Civil Liberties","question":"The Free Exercise Clause protects what?","options":["Religious practice","Commercial advertising only","State taxation","Presidential pardons"],"answer":0},{"topic":"Civil Liberties","question":"Which amendment protects freedom of speech, religion, press, assembly, and petition?","options":["First Amendment","Second Amendment","Fourth Amendment","Eighth Amendment"],"answer":0},{"topic":"Civil Liberties","question":"Schenck v. United States created which free speech test?","options":["Clear and present danger","Strict scrutiny","Lemon test","Exclusionary rule"],"answer":0},{"topic":"Civil Liberties","question":"Tinker v. Des Moines protected student speech unless it did what?","options":["Substantially disrupted school operations","Criticized public policy","Used symbolic expression","Occurred on school property"],"answer":0},{"topic":"Civil Liberties","question":"New York Times Co. v. United States is most associated with limits on what?","options":["Prior restraint","Symbolic speech","Campaign spending","Religious establishment"],"answer":0},{"topic":"Civil Liberties","question":"Which amendment protects against unreasonable searches and seizures?","options":["Fourth Amendment","First Amendment","Fifth Amendment","Fourteenth Amendment"],"answer":0},{"topic":"Civil Liberties","question":"The exclusionary rule prevents prosecutors from using what?","options":["Illegally obtained evidence","Eyewitness testimony","Public records","Expert witnesses"],"answer":0},{"topic":"Civil Liberties","question":"Which case applied the exclusionary rule to the states?","options":["Mapp v. Ohio","Gideon v. Wainwright","Miranda v. Arizona","Engel v. Vitale"],"answer":0},{"topic":"Civil Liberties","question":"Gideon v. Wainwright strengthened the right to what?","options":["Counsel in criminal cases","Bear arms","Vote at age 18","Public education funding"],"answer":0},{"topic":"Civil Liberties","question":"Miranda v. Arizona protects suspects by requiring police to inform them of what?","options":["Rights during custodial interrogation","Voting registration deadlines","Civil lawsuit procedures","School speech rules"],"answer":0},{"topic":"Civil Liberties","question":"Selective incorporation applies parts of the Bill of Rights to states through which amendment?","options":["Fourteenth Amendment","Tenth Amendment","Eleventh Amendment","Twenty-Second Amendment"],"answer":0},{"topic":"Civil Liberties","question":"The Due Process Clause protects individuals from what?","options":["Government deprivation of life, liberty, or property without fair procedures","All taxation","Any private contract","All state police power"],"answer":0},{"topic":"Civil Liberties","question":"Which amendment protects the right to keep and bear arms?","options":["Second Amendment","Third Amendment","Fifth Amendment","Ninth Amendment"],"answer":0},{"topic":"Civil Liberties","question":"McDonald v. Chicago incorporated which right against the states?","options":["Right to keep and bear arms","Right to grand jury indictment","Right to avoid quartering soldiers","Right to vote in primaries"],"answer":0},{"topic":"Civil Rights","question":"The Equal Protection Clause is found in which amendment?","options":["Fourteenth Amendment","First Amendment","Fifth Amendment","Twenty-Sixth Amendment"],"answer":0},{"topic":"Civil Rights","question":"Brown v. Board of Education held that school segregation violated what?","options":["Equal Protection Clause","Commerce Clause","Free Exercise Clause","Necessary and Proper Clause"],"answer":0},{"topic":"Civil Rights","question":"Which case upheld racial segregation under the separate but equal doctrine?","options":["Plessy v. Ferguson","Brown v. Board of Education","Baker v. Carr","Shaw v. Reno"],"answer":0},{"topic":"Civil Rights","question":"The Civil Rights Act of 1964 banned discrimination in what area?","options":["Public accommodations and employment","Electoral College procedures only","Supreme Court nominations","State admission to the Union"],"answer":0},{"topic":"Civil Rights","question":"The Voting Rights Act of 1965 targeted barriers such as what?","options":["Literacy tests","Open primaries","Absentee ballots","Party conventions"],"answer":0},{"topic":"Civil Rights","question":"The Fifteenth Amendment prohibits denying the vote based on what?","options":["Race","Age over 18","Sex","Failure to pay poll tax"],"answer":0},{"topic":"Civil Rights","question":"The Nineteenth Amendment prohibits denying the vote based on what?","options":["Sex","Race","Age over 18","Income"],"answer":0},{"topic":"Civil Rights","question":"The Twenty-Fourth Amendment banned what in federal elections?","options":["Poll taxes","Secret ballots","Primary elections","Absentee voting"],"answer":0},{"topic":"Civil Rights","question":"The Twenty-Sixth Amendment lowered the voting age to what?","options":["18","16","21","25"],"answer":0},{"topic":"Civil Rights","question":"Baker v. Carr made which issue justiciable?","options":["Legislative apportionment","Executive privilege","Religious displays","Campaign spending"],"answer":0},{"topic":"Civil Rights","question":"Shaw v. Reno involved constitutional questions about what?","options":["Racial gerrymandering","Prior restraint","Student speech","Federal mandates"],"answer":0},{"topic":"Civil Rights","question":"Affirmative action policies are usually evaluated under which level of scrutiny when race is involved?","options":["Strict scrutiny","Rational basis","Intermediate scrutiny","No judicial review"],"answer":0},{"topic":"Civil Rights","question":"Strict scrutiny requires a law to be narrowly tailored to serve what?","options":["A compelling government interest","Any legitimate interest","A party platform","A popular opinion poll"],"answer":0},{"topic":"Civil Rights","question":"Intermediate scrutiny is often used for classifications based on what?","options":["Sex or gender","Race","Political party registration","Age under most circumstances"],"answer":0},{"topic":"Civil Rights","question":"The Americans with Disabilities Act is an example of what kind of policy?","options":["Civil rights legislation","Fiscal federalism","Foreign policy treaty","Campaign finance regulation"],"answer":0},{"topic":"Ideology","question":"Political socialization refers to the process by which people develop what?","options":["Political beliefs and values","Court jurisdiction","Congressional districts","Federal regulations"],"answer":0},{"topic":"Ideology","question":"Which influence is often considered the most important early agent of political socialization?","options":["Family","Supreme Court","Federal Reserve","Electoral College"],"answer":0},{"topic":"Ideology","question":"A public opinion poll's margin of error describes what?","options":["Expected sampling uncertainty","The number of undecided voters only","The pollster's party preference","The legal validity of the poll"],"answer":0},{"topic":"Ideology","question":"A random sample helps pollsters do what?","options":["Represent the larger population more accurately","Guarantee every prediction is correct","Avoid asking questions","Measure only elite opinion"],"answer":0},{"topic":"Ideology","question":"Tracking polls measure opinion how?","options":["Repeatedly over time","Only after elections","Only among elected officials","Only in one state"],"answer":0},{"topic":"Ideology","question":"A benchmark poll is usually taken when?","options":["At the beginning of a campaign","Only on Election Day","After a court decision","During a Senate filibuster"],"answer":0},{"topic":"Ideology","question":"A conservative economic ideology usually favors what?","options":["Lower taxes and less regulation","More nationalization of industries","Eliminating private property","A larger welfare state in every case"],"answer":0},{"topic":"Ideology","question":"A liberal economic ideology usually favors what?","options":["More government action to address inequality","No social programs","No workplace regulation","Abolishing federal taxes"],"answer":0},{"topic":"Ideology","question":"Libertarian ideology generally emphasizes what?","options":["Limited government in economic and personal life","Strong government control of markets and behavior","Abolishing elections","Rule by experts only"],"answer":0},{"topic":"Ideology","question":"Keynesian economics supports government action mainly to do what?","options":["Manage economic downturns through spending and demand","Eliminate monetary policy","Ban deficit spending in all cases","Remove all automatic stabilizers"],"answer":0},{"topic":"Ideology","question":"Supply-side economics argues that growth can be encouraged by what?","options":["Lowering taxes and reducing regulation","Raising tariffs only","Banning private investment","Ending all trade"],"answer":0},{"topic":"Ideology","question":"Monetary policy is mainly controlled by which institution?","options":["Federal Reserve","House Rules Committee","Supreme Court","Department of State"],"answer":0},{"topic":"Ideology","question":"Fiscal policy involves government decisions about what?","options":["Taxing and spending","Court precedent","Interest rates only","Party nominations"],"answer":0},{"topic":"Ideology","question":"The federal budget deficit is best described as what?","options":["Annual spending exceeding annual revenue","Total national debt","A balanced budget","Trade exports exceeding imports"],"answer":0},{"topic":"Ideology","question":"The national debt is best described as what?","options":["The accumulated total of past deficits minus surpluses","One year's tax revenue","Only state borrowing","The Federal Reserve's interest rate"],"answer":0},{"topic":"Participation","question":"Which amendment provides for direct election of senators?","options":["Seventeenth Amendment","Twelfth Amendment","Twenty-Second Amendment","Twenty-Fifth Amendment"],"answer":0},{"topic":"Participation","question":"Which amendment limits presidents to two elected terms?","options":["Twenty-Second Amendment","Seventeenth Amendment","Twentieth Amendment","Twenty-Sixth Amendment"],"answer":0},{"topic":"Participation","question":"Which amendment changed the presidential inauguration date to January 20?","options":["Twentieth Amendment","Twelfth Amendment","Twenty-First Amendment","Twenty-Fourth Amendment"],"answer":0},{"topic":"Participation","question":"Which amendment changed the Electoral College process after the election of 1800?","options":["Twelfth Amendment","Tenth Amendment","Fifteenth Amendment","Twenty-Second Amendment"],"answer":0},{"topic":"Participation","question":"A political party's main goal is usually to do what?","options":["Win elections and control government","Issue judicial opinions","Run federal agencies","Certify constitutional amendments"],"answer":0},{"topic":"Participation","question":"Party realignment refers to what?","options":["A major long-term shift in party coalitions","A temporary campaign slogan","A Supreme Court ruling on speech","A routine committee hearing"],"answer":0},{"topic":"Participation","question":"Divided government occurs when what happens?","options":["Different parties control the presidency and at least one chamber of Congress","The Supreme Court has nine justices","One party wins every election","Congress passes a unanimous law"],"answer":0},{"topic":"Participation","question":"A primary election is used mainly to choose what?","options":["A party's nominee","Supreme Court justices","Cabinet secretaries","Federal judges"],"answer":0},{"topic":"Participation","question":"A closed primary allows participation by whom?","options":["Registered party members","All voters regardless of party","Only independents","Only elected officials"],"answer":0},{"topic":"Participation","question":"An open primary allows participation by whom?","options":["Voters regardless of party registration rules in that state","Only registered party members","Only party delegates","Only campaign donors"],"answer":0},{"topic":"Participation","question":"The winner-take-all feature of many elections tends to support what kind of party system?","options":["Two-party system","One-party authoritarian system","No-party system","Pure multiparty proportional system"],"answer":0},{"topic":"Participation","question":"Which election system awards seats based on a party's share of the vote?","options":["Proportional representation","Single-member plurality","Electoral College","Gerrymandered districting"],"answer":0},{"topic":"Participation","question":"Gerrymandering is the practice of doing what?","options":["Drawing district lines for political advantage","Counting absentee ballots","Registering new voters","Holding a party convention"],"answer":0},{"topic":"Participation","question":"The census affects House representation because it is used for what?","options":["Apportionment","Judicial review","Cloture","Ratification"],"answer":0},{"topic":"Participation","question":"Redistricting refers to what?","options":["Redrawing electoral district boundaries","Counting electoral votes","Registering political parties","Rewriting court opinions"],"answer":0},{"topic":"Participation","question":"A political action committee mainly does what?","options":["Raises and spends money to influence elections","Appoints federal judges","Runs the military","Writes Supreme Court opinions"],"answer":0},{"topic":"Participation","question":"Super PACs may raise and spend unlimited independent expenditures, but they may not do what?","options":["Coordinate directly with candidates","Buy political ads","Support a candidate","Oppose a candidate"],"answer":0},{"topic":"Participation","question":"Citizens United v. FEC is most associated with which issue?","options":["Independent political spending by corporations and unions","School desegregation","Search warrants","Legislative apportionment"],"answer":0},{"topic":"Participation","question":"Which organization enforces federal campaign finance laws?","options":["Federal Election Commission","Federal Reserve","Congressional Budget Office","Office of Management and Budget"],"answer":0},{"topic":"Participation","question":"Interest groups differ from political parties because interest groups usually seek to do what?","options":["Influence policy rather than nominate candidates for office","Run all elections","Control the Electoral College","Write binding court opinions"],"answer":0},{"topic":"Participation","question":"Lobbying is best described as what?","options":["Attempting to influence government decisions","Counting votes at polling places","Drawing congressional districts","Selecting Supreme Court cases"],"answer":0},{"topic":"Participation","question":"Grassroots lobbying tries to influence policymakers by mobilizing whom?","options":["Ordinary citizens","Federal judges only","Foreign diplomats","Cabinet secretaries only"],"answer":0},{"topic":"Participation","question":"The free rider problem occurs when people benefit from a group's work without doing what?","options":["Contributing to the group","Voting twice","Running for president","Serving on a jury"],"answer":0},{"topic":"Participation","question":"Which form of participation usually has the highest rate among eligible citizens?","options":["Voting in presidential elections","Running for Congress","Attending party conventions","Donating the maximum legal amount"],"answer":0},{"topic":"Participation","question":"Midterm elections occur when?","options":["Halfway through a president's four-year term","Every presidential inauguration day","Only during Supreme Court vacancies","Only when Congress dissolves"],"answer":0},{"topic":"Participation","question":"The coattail effect refers to what?","options":["A popular candidate helping same-party candidates win","A court expanding civil liberties","A poll showing sampling error","A state refusing federal funds"],"answer":0},{"topic":"Participation","question":"Political efficacy means a person's belief that they can do what?","options":["Understand and influence politics","Bypass all laws","Serve unlimited presidential terms","Avoid paying taxes"],"answer":0},{"topic":"Participation","question":"Retrospective voting means voters evaluate candidates based on what?","options":["Past performance","Ballot order only","Random selection","Judicial precedent"],"answer":0},{"topic":"Participation","question":"Prospective voting means voters evaluate candidates based on what?","options":["Promises and future policies","Past performance only","Court seniority","District shape"],"answer":0},{"topic":"Participation","question":"A linkage institution connects citizens to what?","options":["Government","Only the judiciary","Foreign governments","The Federal Reserve's balance sheet"],"answer":0},{"topic":"Participation","question":"Which is an example of a linkage institution?","options":["Political parties","Supreme Court","Cabinet departments","Federal district courts"],"answer":0},{"topic":"Required Documents","question":"The U.S. Constitution replaced which earlier governing document?","options":["Articles of Confederation","Magna Carta","Mayflower Compact","Northwest Ordinance"],"answer":0},{"topic":"Required Documents","question":"Which required document argues that government must protect natural rights and consent of the governed?","options":["Declaration of Independence","Federalist No. 70","Brutus No. 1","Federalist No. 78"],"answer":0},{"topic":"Required Documents","question":"Which required document explains why factions are inevitable but controllable in a large republic?","options":["Federalist No. 10","Federalist No. 51","Brutus No. 1","Letter from Birmingham Jail"],"answer":0},{"topic":"Required Documents","question":"Which required document argues that ambition should be made to counteract ambition?","options":["Federalist No. 51","Federalist No. 10","Federalist No. 70","Articles of Confederation"],"answer":0},{"topic":"Required Documents","question":"Which required document argues that a single executive promotes energy, secrecy, and accountability?","options":["Federalist No. 70","Federalist No. 78","Brutus No. 1","Declaration of Independence"],"answer":0},{"topic":"Required Documents","question":"Which required document says the judiciary has neither force nor will, but merely judgment?","options":["Federalist No. 78","Federalist No. 51","Federalist No. 10","Letter from Birmingham Jail"],"answer":0},{"topic":"Required Documents","question":"Letter from Birmingham Jail defends which strategy?","options":["Civil disobedience against unjust laws","Judicial restraint in all cases","A stronger national bank","The Electoral College"],"answer":0},{"topic":"Required Cases","question":"Which required case established judicial review?","options":["Marbury v. Madison","McCulloch v. Maryland","Engel v. Vitale","Citizens United v. FEC"],"answer":0},{"topic":"Required Cases","question":"Which required case upheld implied powers and national supremacy?","options":["McCulloch v. Maryland","United States v. Lopez","Baker v. Carr","Tinker v. Des Moines"],"answer":0},{"topic":"Required Cases","question":"Which required case ruled that Congress exceeded its commerce power in a school-zone gun law?","options":["United States v. Lopez","McCulloch v. Maryland","Schenck v. United States","Brown v. Board of Education"],"answer":0},{"topic":"Required Cases","question":"Which required case banned school-sponsored prayer in public schools?","options":["Engel v. Vitale","Wisconsin v. Yoder","Tinker v. Des Moines","New York Times Co. v. United States"],"answer":0},{"topic":"Required Cases","question":"Which required case allowed Amish families to remove children from school after eighth grade?","options":["Wisconsin v. Yoder","Engel v. Vitale","Mapp v. Ohio","Gideon v. Wainwright"],"answer":0},{"topic":"Required Cases","question":"Which required case protected student symbolic speech with black armbands?","options":["Tinker v. Des Moines","Schenck v. United States","Shaw v. Reno","Baker v. Carr"],"answer":0},{"topic":"Required Cases","question":"Which required case involved the Pentagon Papers and prior restraint?","options":["New York Times Co. v. United States","Schenck v. United States","Citizens United v. FEC","McDonald v. Chicago"],"answer":0},{"topic":"Required Cases","question":"Which required case applied the Second Amendment to the states?","options":["McDonald v. Chicago","Mapp v. Ohio","Gideon v. Wainwright","Brown v. Board of Education"],"answer":0},{"topic":"Required Cases","question":"Which required case applied the exclusionary rule to the states?","options":["Mapp v. Ohio","Schenck v. United States","Engel v. Vitale","Shaw v. Reno"],"answer":0},{"topic":"Required Cases","question":"Which required case guaranteed counsel for felony defendants who cannot afford an attorney?","options":["Gideon v. Wainwright","Miranda v. Arizona","Mapp v. Ohio","Tinker v. Des Moines"],"answer":0},{"topic":"Required Cases","question":"Which required case created warnings for suspects before custodial interrogation?","options":["Miranda v. Arizona","Gideon v. Wainwright","McDonald v. Chicago","Baker v. Carr"],"answer":0},{"topic":"Required Cases","question":"Which required case ended de jure racial segregation in public schools?","options":["Brown v. Board of Education","Plessy v. Ferguson","Shaw v. Reno","United States v. Lopez"],"answer":0},{"topic":"Required Cases","question":"Which required case made legislative redistricting cases justiciable?","options":["Baker v. Carr","Shaw v. Reno","Brown v. Board of Education","Marbury v. Madison"],"answer":0},{"topic":"Required Cases","question":"Which required case concerned racial gerrymandering in congressional districts?","options":["Shaw v. Reno","Baker v. Carr","Citizens United v. FEC","Engel v. Vitale"],"answer":0},{"topic":"Required Cases","question":"Which required case held that corporate and union independent expenditures are protected political speech?","options":["Citizens United v. FEC","New York Times Co. v. United States","McDonald v. Chicago","United States v. Lopez"],"answer":0},{"topic":"Data and Skills","question":"A poll question that pushes respondents toward a particular answer is called what?","options":["Loaded question","Random sample","Benchmark poll","Margin of error"],"answer":0},{"topic":"Data and Skills","question":"If a poll has a margin of error of plus or minus 3 points, a 52% result could plausibly be as low as what?","options":["49%","46%","52%","55%"],"answer":0},{"topic":"Data and Skills","question":"Which type of chart is often best for showing change over time?","options":["Line graph","Pie chart","Map only","Word cloud"],"answer":0},{"topic":"Data and Skills","question":"Which type of chart is often best for comparing parts of a whole?","options":["Pie chart","Line graph","Scatterplot only","Timeline"],"answer":0},{"topic":"Data and Skills","question":"A correlation between two variables means what?","options":["They vary together, but one may not cause the other","One always causes the other","They are legally identical","They cannot be measured"],"answer":0},{"topic":"Data and Skills","question":"In an argument essay, evidence should be used mainly to do what?","options":["Support a defensible claim","Replace the thesis","Avoid reasoning","List unrelated facts"],"answer":0},{"topic":"Foundations","question":"Which democratic ideal means all government power comes from the consent of the people?","options":["Popular sovereignty","Judicial review","Executive privilege","Bicameralism"],"answer":0},{"topic":"Foundations","question":"Which democratic ideal means government power cannot be absolute?","options":["Limited government","Federal preemption","Political patronage","Cloture"],"answer":0},{"topic":"Foundations","question":"Which democratic ideal says people possess rights that cannot be taken away?","options":["Natural rights","Discretionary authority","Gerrymandering","Federal mandate"],"answer":0},{"topic":"Foundations","question":"Which ideal describes an implicit agreement among people to give up some freedoms to maintain social order?","options":["Social contract","Iron triangle","Judicial restraint","Party realignment"],"answer":0},{"topic":"Foundations","question":"Which constitutional principle is shown when voters choose representatives to make policy decisions?","options":["Republicanism","Fiscal federalism","Prior restraint","Critical election"],"answer":0},{"topic":"Foundations","question":"Which model of representative democracy is most visible when nongovernmental groups compete to influence policy?","options":["Pluralist democracy","Elite democracy only","Direct monarchy","Judicial supremacy"],"answer":0},{"topic":"Foundations","question":"Which model of democracy is most associated with broad participation in politics and civil society?","options":["Participatory democracy","Elite democracy","Unitary government","Bureaucratic democracy"],"answer":0},{"topic":"Foundations","question":"Which model of democracy is most associated with limited participation and filtered decision making by representatives?","options":["Elite democracy","Participatory democracy","Pluralist democracy","Direct democracy"],"answer":0},{"topic":"Foundations","question":"According to the course framework, the Constitution reflects tension between broad participation and what other kind of participation?","options":["Filtered participation","No participation","Mandatory participation","Judicial participation"],"answer":0},{"topic":"Foundations","question":"Which founding debate is best represented by Federalist No. 10 and Brutus No. 1?","options":["The proper size and power of a republic","The location of the national capital","The length of federal judicial terms","The use of executive agreements"],"answer":0},{"topic":"Foundations","question":"In Federalist No. 10, Madison argues that a large republic helps control factions by doing what?","options":["Delegating authority and dispersing power","Abolishing political parties by law","Giving states exclusive military power","Replacing elections with appointments"],"answer":0},{"topic":"Foundations","question":"In Brutus No. 1, the Anti-Federalist concern is mainly that a large centralized republic would threaten what?","options":["Personal liberty","State taxation power only","The slave trade compromise only","Judicial life tenure only"],"answer":0},{"topic":"Foundations","question":"Which Articles of Confederation weakness involved the national government being unable to enforce tax laws?","options":["Lack of an executive branch","Too many federal courts","Too much federal commerce power","A strong presidential veto"],"answer":0},{"topic":"Foundations","question":"Which Articles of Confederation weakness made it difficult to resolve disputes between states?","options":["Lack of a national court system","A powerful national judiciary","A national income tax","A standing federal bureaucracy"],"answer":0},{"topic":"Foundations","question":"Which Articles of Confederation weakness prevented Congress from controlling trade among the states?","options":["Lack of power to regulate interstate commerce","Lack of power to appoint ambassadors","Lack of a Bill of Rights","Lack of judicial review"],"answer":0},{"topic":"Foundations","question":"Which Articles of Confederation weakness meant states could issue or manage currency in conflicting ways?","options":["Lack of exclusive national power to coin money","Lack of state sovereignty","Too much congressional oversight","Too much executive enforcement"],"answer":0},{"topic":"Foundations","question":"Which compromise made representation in the House depend on population while representation in the Senate was equal by state?","options":["Great Compromise","Three-Fifths Compromise","Commerce and Slave Trade Compromise","Missouri Compromise"],"answer":0},{"topic":"Foundations","question":"Which compromise created a formula for counting enslaved persons for representation and taxation?","options":["Three-Fifths Compromise","Great Compromise","Bill of Rights Compromise","Electoral College Compromise"],"answer":0},{"topic":"Foundations","question":"Which ratification promise helped answer Anti-Federalist concerns about individual rights?","options":["Adding a Bill of Rights","Eliminating the Senate","Ending judicial review","Abolishing state governments"],"answer":0},{"topic":"Foundations","question":"Article V of the Constitution is most directly about what process?","options":["Amending the Constitution","Electing the president","Creating executive agencies","Confirming judges"],"answer":0},{"topic":"Federalism","question":"Which type of power is held only by one level of government?","options":["Exclusive power","Concurrent power","Reserved power","Shared power"],"answer":0},{"topic":"Federalism","question":"Which type of power is shared by national and state governments?","options":["Concurrent power","Exclusive power","Delegated power only","Denied power"],"answer":0},{"topic":"Federalism","question":"Which power is an example of a concurrent power?","options":["Collecting taxes","Declaring war","Coining money","Making treaties"],"answer":0},{"topic":"Federalism","question":"Which type of national funding has minimal restrictions and is generally preferred by states?","options":["Block grants","Categorical grants","Unfunded mandates","Project earmarks only"],"answer":0},{"topic":"Federalism","question":"Which type of national funding is restricted to specific categories and is generally preferred by the national government?","options":["Categorical grants","Block grants","Revenue sharing","Unrestricted donations"],"answer":0},{"topic":"Federalism","question":"Which form of national funding had almost no restrictions on state use and is described as the least used form?","options":["Revenue sharing","Categorical grants","Unfunded mandates","Pork-barrel spending"],"answer":0},{"topic":"Federalism","question":"Which constitutional clause gives Congress power to regulate trade across state lines?","options":["Commerce Clause","Establishment Clause","Due Process Clause","Privileges and Immunities Clause"],"answer":0},{"topic":"Federalism","question":"Which constitutional clause gives Congress authority to make laws needed to carry out enumerated powers?","options":["Necessary and Proper Clause","Free Exercise Clause","Full Faith and Credit Clause","Equal Protection Clause"],"answer":0},{"topic":"Federalism","question":"Which constitutional clause gives national laws general precedence over state laws?","options":["Supremacy Clause","Commerce Clause","Due Process Clause","Take Care Clause"],"answer":0},{"topic":"Federalism","question":"Which Fourteenth Amendment clauses give the national government power to enforce protections against the states?","options":["Due Process and Equal Protection Clauses","Establishment and Free Exercise Clauses","Commerce and Supremacy Clauses","Speech and Press Clauses"],"answer":0},{"topic":"Federalism","question":"According to the framework, the allocation of power between national and state governments creates what for stakeholders?","options":["Multiple access points","A single federal access point","No policy access points","Only judicial access points"],"answer":0},{"topic":"Federalism","question":"National policymaking can be constrained because national and state governments share what kind of powers?","options":["Concurrent powers","Pardon powers","Appointment powers","Treaty powers"],"answer":0},{"topic":"Congress","question":"Why is debate generally more formal in the House than in the Senate?","options":["The House has many more members","The House confirms nominations","The House has life-tenured members","The House is a continuous body"],"answer":0},{"topic":"Congress","question":"Which chamber is designed to represent states equally?","options":["Senate","House of Representatives","Cabinet","Federal district courts"],"answer":0},{"topic":"Congress","question":"Which chamber is designed to represent the people by population?","options":["House of Representatives","Senate","Supreme Court","Electoral College"],"answer":0},{"topic":"Congress","question":"How often are all members of the House elected?","options":["Every two years","Every four years","Every six years","Every eight years"],"answer":0},{"topic":"Congress","question":"Why is the Senate called a continuous legislative body?","options":["Only one-third of senators are elected every two years","All senators are appointed for life","The Senate never adjourns for recess","Senators serve two-year terms"],"answer":0},{"topic":"Congress","question":"Which congressional power allows Congress to determine how people become citizens?","options":["Naturalization power","Pardon power","Appointment power","Executive agreement power"],"answer":0},{"topic":"Congress","question":"What happens to most bills after introduction in either chamber?","options":["They are referred to committees","They automatically go to the president","They are immediately voted on by both chambers","They go directly to the Supreme Court"],"answer":0},{"topic":"Congress","question":"What do congressional committees do when they mark up a bill?","options":["Revise and add to the bill","Veto the bill","Ratify the bill","Declare the bill unconstitutional"],"answer":0},{"topic":"Congress","question":"In Congress, committee leadership is usually determined by what?","options":["The majority political party","The Supreme Court","The president alone","State governors"],"answer":0},{"topic":"Congress","question":"In the House, who presides over legislative work after being elected by a majority of members?","options":["Speaker of the House","Vice president","Senate majority leader","Chief justice"],"answer":0},{"topic":"Congress","question":"What can a House discharge petition do?","options":["Bring a bill to the floor for debate","End a Senate filibuster","Override a presidential veto","Confirm a nominee"],"answer":0},{"topic":"Congress","question":"What is a Senate hold used to do?","options":["Prevent a bill from getting to the floor for a vote","Force a House vote on revenue bills","Remove a federal judge","Create a conference committee"],"answer":0},{"topic":"Congress","question":"What does mandatory spending fund?","options":["Programs required by law such as Social Security, Medicare, and Medicaid","Only defense projects approved each year","Only presidential travel","Only congressional salaries"],"answer":0},{"topic":"Congress","question":"What does discretionary spending require?","options":["Annual approval","Automatic constitutional funding","Supreme Court review before passage","State ratification"],"answer":0},{"topic":"Congress","question":"Pork-barrel legislation is best described as what?","options":["Funding for a local project in a larger appropriation bill","Ending debate in the Senate","A Supreme Court interpretation of commerce","A presidential signing statement"],"answer":0},{"topic":"Congress","question":"Logrolling is best described as what?","options":["Legislators trading support to gain votes for legislation","States drawing district lines after the census","The president signing executive orders","Courts following precedent"],"answer":0},{"topic":"Congress","question":"When members vote based mostly on party affiliation, that behavior is called what?","options":["Partisan voting","Retrospective voting","Prospective voting","Straight-ticket voting by citizens"],"answer":0},{"topic":"Congress","question":"When ideological attitudes move toward extremes, the course framework calls this what?","options":["Polarization","Realignment","Incorporation","Cloture"],"answer":0},{"topic":"Congress","question":"What can gridlock prevent Congress from doing?","options":["Taking legislative action because consensus is lacking","Holding elections","Counting census data","Hearing court cases"],"answer":0},{"topic":"Congress","question":"Which representative role combines trustee and delegate approaches?","options":["Politico","Whip","Speaker","Bureaucrat"],"answer":0},{"topic":"Presidency","question":"Which presidential support structure includes White House staff and policy offices that help manage the presidency?","options":["Executive Office of the President","Conference committee","Federal district courts","House Rules Committee"],"answer":0},{"topic":"Presidency","question":"Which presidential action can be overridden by a two-thirds vote of Congress?","options":["Regular veto","Pocket veto","Executive agreement","Signing statement"],"answer":0},{"topic":"Presidency","question":"Which presidential action cannot be overridden because Congress has adjourned and the president does not sign the bill?","options":["Pocket veto","Regular veto","Executive order","Executive privilege"],"answer":0},{"topic":"Presidency","question":"Which informal presidential power uses media attention to shape the policy agenda?","options":["Bully pulpit","Treaty ratification","Judicial review","Cloture"],"answer":0},{"topic":"Presidency","question":"Which presidential tool gives the president a way to direct executive branch implementation?","options":["Executive order","Discharge petition","Writ of certiorari","Amicus brief"],"answer":0},{"topic":"Presidency","question":"Which informal message explains how a president interprets a law when approving it?","options":["Signing statement","Conference report","Cloture motion","Judicial opinion"],"answer":0},{"topic":"Presidency","question":"Which factor has increased the impact of presidential communication on the public?","options":["Advances in communication technology","Elimination of political parties","Life tenure for presidents","Abolition of the cabinet"],"answer":0},{"topic":"Presidency","question":"How does social media change presidential communication?","options":["It allows rapid responses to political issues","It replaces the veto power","It eliminates congressional oversight","It prevents agenda setting"],"answer":0},{"topic":"Presidency","question":"Which annual presidential message is used as a nationally broadcast agenda-setting tool?","options":["State of the Union","Writ of certiorari","Committee markup","Cloture petition"],"answer":0},{"topic":"Judiciary","question":"Which constitutional article provides the foundation for the judicial branch?","options":["Article III","Article I","Article II","Article V"],"answer":0},{"topic":"Judiciary","question":"Federalist No. 78 is most connected to which judicial principle?","options":["Judicial independence","Executive energy","Faction control","Participatory democracy"],"answer":0},{"topic":"Judiciary","question":"How does life tenure affect Supreme Court independence?","options":["It lets justices decide cases without immediate electoral pressure","It makes justices directly accountable to voters every two years","It allows Congress to remove justices for unpopular opinions","It prevents judicial review"],"answer":0},{"topic":"Judiciary","question":"What can happen when the Court issues controversial decisions because of its independence?","options":["Debate over the Court's power can increase","The Court automatically loses jurisdiction","The president must remove all justices","The Senate must rewrite Article III"],"answer":0},{"topic":"Judiciary","question":"Which view says courts should generally adhere to current constitutional and case precedent?","options":["Judicial restraint","Judicial activism","Executive privilege","Popular sovereignty"],"answer":0},{"topic":"Judiciary","question":"Which view says courts may overturn precedent or invalidate legislative or executive acts more actively?","options":["Judicial activism","Judicial restraint","Pluralist democracy","Federal patronage"],"answer":0},{"topic":"Judiciary","question":"Which action can Congress take to limit the Supreme Court's appellate jurisdiction?","options":["Pass legislation removing certain cases from appeal","Issue pardons to litigants","Refuse to seat elected representatives","Call a national referendum"],"answer":0},{"topic":"Judiciary","question":"Which action can change the constitutional impact of a Supreme Court decision?","options":["Ratifying a constitutional amendment","Issuing a campaign platform","Holding an exit poll","Creating a caucus"],"answer":0},{"topic":"Bureaucracy","question":"Which type of bureaucratic organization is headed by a secretary and has broad policy responsibilities?","options":["Cabinet department","Conference committee","Party caucus","Electoral college slate"],"answer":0},{"topic":"Bureaucracy","question":"Which bureaucracy function involves creating detailed rules to implement laws?","options":["Writing regulations","Ratifying amendments","Nominating candidates","Drawing district lines"],"answer":0},{"topic":"Bureaucracy","question":"Which bureaucracy function involves punishing violations of rules through penalties?","options":["Issuing fines","Declaring war","Granting pardons","Ending debate"],"answer":0},{"topic":"Bureaucracy","question":"When agency officials appear before congressional committees, they are doing what?","options":["Testifying before Congress","Casting electoral votes","Exercising judicial review","Calling cloture"],"answer":0},{"topic":"Bureaucracy","question":"Which term describes alliances among congressional committees, bureaucratic agencies, and interest groups in a policy area?","options":["Iron triangles","Caucuses","Exit polls","Standing orders"],"answer":0},{"topic":"Bureaucracy","question":"Which term describes temporary coalitions that form around a common issue or agenda?","options":["Issue networks","Pocket vetoes","Gerrymanders","Delegate models"],"answer":0},{"topic":"Bureaucracy","question":"Which system bases civil service hiring on professionalism, specialization, and neutrality?","options":["Merit system","Patronage system","Winner-take-all system","Caucus system"],"answer":0},{"topic":"Bureaucracy","question":"Which system fills government jobs based on political appointment or loyalty?","options":["Patronage","Merit selection","Judicial review","Incorporation"],"answer":0},{"topic":"Bureaucracy","question":"Which bureaucratic power lets agencies interpret and implement policy within limits set by Congress?","options":["Discretionary authority","Treaty authority","Appointment authority","Ratification authority"],"answer":0},{"topic":"Bureaucracy","question":"Which agency listed in the framework regulates elections and campaign finance?","options":["Federal Election Commission","Department of Veterans Affairs","Department of Transportation","Environmental Protection Agency"],"answer":0},{"topic":"Bureaucracy","question":"Which agency listed in the framework is an independent regulatory commission for securities markets?","options":["Securities and Exchange Commission","Department of Education","Department of Homeland Security","Office of Management and Budget"],"answer":0},{"topic":"Bureaucracy","question":"Which agency listed in the framework handles environmental regulation?","options":["Environmental Protection Agency","Federal Election Commission","Department of Veterans Affairs","Securities and Exchange Commission"],"answer":0},{"topic":"Bureaucracy","question":"How can Congress use the power of the purse to check bureaucratic agencies?","options":["Appropriate or withhold funds","Issue executive orders","Grant judicial life tenure","Call open primaries"],"answer":0},{"topic":"Bureaucracy","question":"What does compliance monitoring check?","options":["Whether funds are used properly and regulations are followed","Whether voters use straight-ticket ballots","Whether justices agree with precedent","Whether parties hold conventions"],"answer":0},{"topic":"Bureaucracy","question":"Why can compliance monitoring be challenging for policy implementation?","options":["It can be difficult to ensure rules and funds are followed across agencies and programs","It abolishes congressional oversight","It prevents the president from appointing officials","It eliminates bureaucratic discretion"],"answer":0},{"topic":"Civil Liberties","question":"Civil liberties primarily protect people against what?","options":["Arbitrary government interference","All private disagreement","All taxes","Every state election rule"],"answer":0},{"topic":"Civil Liberties","question":"Which part of the Constitution was specifically designed to protect individual liberties and rights?","options":["Bill of Rights","Preamble only","Article V only","Supremacy Clause only"],"answer":0},{"topic":"Civil Liberties","question":"Which First Amendment clause prevents government from favoring or establishing religion?","options":["Establishment Clause","Free Exercise Clause","Due Process Clause","Equal Protection Clause"],"answer":0},{"topic":"Civil Liberties","question":"Which First Amendment clause protects religious practice from many forms of government interference?","options":["Free Exercise Clause","Establishment Clause","Commerce Clause","Supremacy Clause"],"answer":0},{"topic":"Civil Liberties","question":"The Supreme Court's religion cases often balance government power to make law with what?","options":["Individual religious freedom","Mandatory voting","The power to coin money","Congressional seniority"],"answer":0},{"topic":"Civil Liberties","question":"Which term means nonverbal action that communicates an idea or belief?","options":["Symbolic speech","Prior restraint","Slander","Selective incorporation"],"answer":0},{"topic":"Civil Liberties","question":"Which speech regulation controls when, where, or how expression occurs without banning the message itself?","options":["Time, place, and manner regulation","Bill of attainder","Categorical grant","Executive agreement"],"answer":0},{"topic":"Civil Liberties","question":"Which term means written communication that harms a person's reputation?","options":["Libel","Slander","Cloture","Pork barrel"],"answer":0},{"topic":"Civil Liberties","question":"Which term means oral communication that harms a person's reputation?","options":["Slander","Libel","Mandamus","Certiorari"],"answer":0},{"topic":"Civil Liberties","question":"The press freedom framework includes a heavy presumption against what government action?","options":["Prior restraint","Exit polling","Interest group lobbying","Federal grants"],"answer":0},{"topic":"Civil Liberties","question":"The Eighth Amendment is most directly connected to debates over what?","options":["Cruel and unusual punishment","Search warrants","Religious establishment","Campaign finance"],"answer":0},{"topic":"Civil Liberties","question":"The Fourth Amendment is commonly balanced against public safety in debates over what?","options":["Searches and collection of information","Party nominations","Tax legislation","Naturalization"],"answer":0},{"topic":"Civil Liberties","question":"Which due process clause applies to the national government?","options":["Fifth Amendment Due Process Clause","Fourteenth Amendment Due Process Clause","First Amendment Press Clause","Tenth Amendment Reserved Powers Clause"],"answer":0},{"topic":"Civil Liberties","question":"Which due process clause applies to the states?","options":["Fourteenth Amendment Due Process Clause","Fifth Amendment Due Process Clause","Second Amendment Due Process Clause","Article V Due Process Clause"],"answer":0},{"topic":"Civil Liberties","question":"What does procedural due process require of government officials?","options":["Use non-arbitrary methods when affecting protected rights","Avoid enforcing any criminal law","Let states override all federal rights","Use party platforms as legal rules"],"answer":0},{"topic":"Civil Liberties","question":"Which rule requires accused persons to be told certain Fifth and Sixth Amendment protections before custodial interrogation?","options":["Miranda rule","Lemon test","Clear and present danger test","Rational basis test"],"answer":0},{"topic":"Civil Liberties","question":"Which exception can allow unwarned interrogation statements when immediate safety is at stake?","options":["Public safety exception","Commerce exception","Patronage exception","Convention exception"],"answer":0},{"topic":"Civil Liberties","question":"Which doctrine says illegally seized evidence cannot be used in a criminal prosecution?","options":["Exclusionary rule","Equal time rule","Unit rule","Winner-take-all rule"],"answer":0},{"topic":"Civil Liberties","question":"Which type of due process examines whether a law arbitrarily infringes individual rights?","options":["Substantive due process","Procedural due process","Fiscal due process","Legislative due process"],"answer":0},{"topic":"Civil Liberties","question":"Which amendment is often cited as support for unenumerated rights beyond those listed in the first eight amendments?","options":["Ninth Amendment","Second Amendment","Tenth Amendment","Twenty-Second Amendment"],"answer":0},{"topic":"Civil Rights","question":"Civil rights protect individuals from discrimination based on characteristics such as race, national origin, religion, and what else listed in the framework?","options":["Sex","Party registration","State residency only","Committee seniority"],"answer":0},{"topic":"Civil Rights","question":"Which movement is represented by Dr. Martin Luther King Jr.'s Letter from Birmingham Jail?","options":["Civil rights movement of the 1960s","Temperance movement","Progressive tax movement","Anti-Federalist movement"],"answer":0},{"topic":"Civil Rights","question":"Which organization is associated in the framework with the women's rights movement?","options":["National Organization for Women","Federal Election Commission","Office of Management and Budget","House Rules Committee"],"answer":0},{"topic":"Civil Rights","question":"Which policy banned sex discrimination in education programs receiving federal financial assistance?","options":["Title IX","Title II only","Pendleton Act","War Powers Resolution"],"answer":0},{"topic":"Civil Rights","question":"Which part of the Civil Rights Act of 1964 prohibited discrimination in employment?","options":["Title VII","Title IX","Article V","Section 230"],"answer":0},{"topic":"Civil Rights","question":"Which part of the Civil Rights Act of 1964 addressed equal treatment in public accommodations?","options":["Title II","Title IX","Article III","Twenty-Fourth Amendment"],"answer":0},{"topic":"Civil Rights","question":"Which Supreme Court doctrine once restricted minority rights by allowing segregation?","options":["Separate but equal","One person, one vote","Selective incorporation","Strict scrutiny"],"answer":0},{"topic":"Civil Rights","question":"According to the framework, affirmative action policies are intended to address disparities in workplaces and what else?","options":["Education","Electoral votes","Treaty ratification","Judicial salaries"],"answer":0},{"topic":"Civil Rights","question":"Supreme Court debate about affirmative action often focuses on which constitutional clause?","options":["Equal Protection Clause","Establishment Clause","Commerce Clause","Take Care Clause"],"answer":0},{"topic":"Ideology","question":"Which core value means every person, including public officials, must follow the same laws?","options":["Rule of law","Popular mandate","Executive privilege","Cloture"],"answer":0},{"topic":"Ideology","question":"Which core value means people should have an equal chance to compete?","options":["Equality of opportunity","Equality of outcome","Judicial supremacy","Party discipline"],"answer":0},{"topic":"Ideology","question":"Which core value means the market determines prices, products, and services?","options":["Free enterprise","Fiscal federalism","Selective incorporation","Bicameralism"],"answer":0},{"topic":"Ideology","question":"Which core value emphasizes that individuals can shape their lives through choices they make?","options":["Individualism","Collectivism only","Patronage","Sovereign immunity"],"answer":0},{"topic":"Ideology","question":"Which agents does the framework list as contributors to political socialization?","options":["Family, schools, peers, media, and social environments","Only courts and presidents","Only parties and PACs","Only state legislatures"],"answer":0},{"topic":"Ideology","question":"Which term refers to experiences shared by people of a common age?","options":["Generational effects","Life-cycle effects","Sampling effects","Coattail effects"],"answer":0},{"topic":"Ideology","question":"Which term refers to experiences a person encounters during different stages of life?","options":["Life-cycle effects","Generational effects","Margin effects","Agenda effects"],"answer":0},{"topic":"Ideology","question":"Major political events influence ideology through which broader process?","options":["Political socialization","Judicial review","Cloture","Apportionment"],"answer":0},{"topic":"Ideology","question":"Which poll type creates baseline views of a candidate?","options":["Benchmark poll","Exit poll","Tracking poll","Push poll"],"answer":0},{"topic":"Ideology","question":"Which poll type follows changes in views during a campaign?","options":["Tracking poll","Benchmark poll","Exit poll","Straw poll"],"answer":0},{"topic":"Ideology","question":"Which poll type collects data on why people voted the way they did?","options":["Exit poll","Benchmark poll","Tracking poll","Census poll"],"answer":0},{"topic":"Ideology","question":"Which polling practice improves precision by accounting for sampling uncertainty?","options":["Calculating a margin of error","Using loaded wording","Removing undecided respondents from the population","Polling only volunteers"],"answer":0},{"topic":"Ideology","question":"Which polling practice helps avoid bias in how a question is asked?","options":["Neutral framing","Horse-race framing","Push wording","Selective reporting"],"answer":0},{"topic":"Ideology","question":"Which party platform generally aligns more closely with liberal ideological positions?","options":["Democratic Party","Republican Party","Libertarian Party only","Green Party only"],"answer":0},{"topic":"Ideology","question":"Which party platform generally aligns more closely with conservative ideological positions?","options":["Republican Party","Democratic Party","Socialist Party only","Progressive Party only"],"answer":0},{"topic":"Ideology","question":"Which ideology generally favors fewer marketplace regulations?","options":["Conservative ideology","Liberal ideology","Progressive ideology only","Social democratic ideology only"],"answer":0},{"topic":"Ideology","question":"Which ideology generally favors little or no marketplace regulation beyond protecting property rights and voluntary trade?","options":["Libertarian ideology","Liberal ideology","Communitarian ideology","Populist ideology only"],"answer":0},{"topic":"Ideology","question":"Which government actors carry out fiscal policy according to the framework?","options":["Congress and the president","Federal Reserve only","Supreme Court only","State governors only"],"answer":0},{"topic":"Ideology","question":"Which institution carries out monetary policy?","options":["Federal Reserve","Congressional Budget Office","House Rules Committee","Supreme Court"],"answer":0},{"topic":"Ideology","question":"Which economic goals does the Federal Reserve seek to achieve?","options":["Maximum employment and price stability","Judicial independence and precedent","Party realignment and turnout","School desegregation and integration"],"answer":0},{"topic":"Ideology","question":"Which ideology generally favors more national government involvement in education and public health?","options":["Liberal ideology","Conservative ideology","Libertarian ideology","Anarchist ideology"],"answer":0},{"topic":"Ideology","question":"Which ideology generally favors less national government involvement and more state responsibility for some social issues?","options":["Conservative ideology","Liberal ideology","Socialist ideology","Progressive ideology only"],"answer":0},{"topic":"Ideology","question":"Which ideology generally favors little government involvement except to protect private property or individual liberty?","options":["Libertarian ideology","Liberal ideology","Conservative ideology only","Communitarian ideology"],"answer":0},{"topic":"Participation","question":"Which amendment granted citizenship to all persons born or naturalized in the United States?","options":["Fourteenth Amendment","Fifteenth Amendment","Seventeenth Amendment","Twenty-Sixth Amendment"],"answer":0},{"topic":"Participation","question":"Which voting model is based on what voters perceive to be in their own best interest?","options":["Rational choice voting","Retrospective voting","Prospective voting","Straight-ticket voting"],"answer":0},{"topic":"Participation","question":"Which voting model is based on whether the party or candidate in power should be reelected based on the recent past?","options":["Retrospective voting","Rational choice voting","Prospective voting","Straight-ticket voting"],"answer":0},{"topic":"Participation","question":"Which voting model is based on predictions about future performance?","options":["Prospective voting","Retrospective voting","Rational choice voting","Split-ticket voting"],"answer":0},{"topic":"Participation","question":"Which voting behavior means choosing all candidates from one party on a ballot?","options":["Straight-ticket voting","Retrospective voting","Rational choice voting","Crossover voting"],"answer":0},{"topic":"Participation","question":"Which factor usually produces higher turnout than midterm elections?","options":["Presidential elections","Local special elections only","Closed primaries only","Judicial appointments"],"answer":0},{"topic":"Participation","question":"Which state-controlled election rule can affect turnout by determining when voters may cast ballots?","options":["Polling hours","Judicial tenure","Committee seniority","Treaty ratification"],"answer":0},{"topic":"Participation","question":"Which voting method lets people vote before Election Day and can affect turnout?","options":["Early voting","Cloture voting","Judicial voting","Conference voting"],"answer":0},{"topic":"Participation","question":"Which registration procedure can affect turnout by reducing the steps needed to register?","options":["Automatic registration","Manual redistricting","Strict scrutiny","Executive privilege"],"answer":0},{"topic":"Participation","question":"Which voter characteristic means believing political participation can make a difference?","options":["Political efficacy","Political patronage","Political realignment","Political incorporation"],"answer":0},{"topic":"Participation","question":"Which factor is listed as influencing voter choice?","options":["Party identification","Court seniority","Agency rulemaking only","Committee jurisdiction only"],"answer":0},{"topic":"Participation","question":"Which linkage institution communicates citizens' preferences through campaign platforms and candidate recruitment?","options":["Political parties","Federal courts","Cabinet departments","The Federal Reserve"],"answer":0},{"topic":"Participation","question":"Which party function involves finding people to run for office?","options":["Candidate recruitment","Judicial review","Compliance monitoring","Amendment ratification"],"answer":0},{"topic":"Participation","question":"Which party function involves organizing fundraising and media strategy?","options":["Campaign management","Case selection","Rulemaking","Treaty negotiation"],"answer":0},{"topic":"Participation","question":"Which trend has weakened parties' role in nominations by focusing attention on individual candidates?","options":["Candidate-centered campaigns","Judicial activism","Federal mandates","Selective incorporation"],"answer":0},{"topic":"Participation","question":"Which election type can produce a realignment of party support among voters?","options":["Critical election","Closed primary only","Judicial retention election","Committee markup"],"answer":0},{"topic":"Participation","question":"Which technologies do parties use to clarify messages and mobilize voters?","options":["Communication technology and voter data management","Court writs and subpoenas only","Executive agreements only","Census enumeration only"],"answer":0},{"topic":"Participation","question":"Which structural feature advantages the U.S. two-party system over third parties?","options":["Winner-take-all voting districts","Proportional representation","Judicial life tenure","Block grants"],"answer":0},{"topic":"Participation","question":"How do major parties sometimes weaken third-party success?","options":["Incorporating third-party agendas into major-party platforms","Abolishing all primary elections","Letting third parties appoint judges","Removing all ballot access rules"],"answer":0},{"topic":"Participation","question":"Which interest group activity involves directly trying to persuade policymakers?","options":["Lobbying","Apportionment","Judicial review","Cloture"],"answer":0},{"topic":"Participation","question":"Which interest group resource can be used to pressure legislators through organized members?","options":["Mobilized membership","Judicial life tenure","Electoral votes","State sovereignty"],"answer":0},{"topic":"Participation","question":"Which type of group focuses on one policy concern?","options":["Single-issue group","Cabinet department","Conference committee","Electoral slate"],"answer":0},{"topic":"Participation","question":"Which political actors can influence the federal budget process at different stages?","options":["Interest groups, professional organizations, social movements, the military, and agencies","Only Supreme Court justices","Only state governors","Only presidential electors"],"answer":0},{"topic":"Participation","question":"Which advantage helps current officeholders in both presidential and congressional elections?","options":["Incumbency advantage","Selective incorporation","Strict scrutiny","Judicial restraint"],"answer":0},{"topic":"Participation","question":"Which party meeting selects candidates or decides policy through members gathering together?","options":["Caucus","Writ of certiorari","Conference committee","Iron triangle"],"answer":0},{"topic":"Participation","question":"Which gathering formally nominates a presidential candidate and presents party themes?","options":["Party convention","Supreme Court conference","Cabinet meeting","Agency hearing"],"answer":0},{"topic":"Participation","question":"Which Electoral College system do most states use to allocate electors?","options":["Winner-take-all","Strict proportional allocation","Judicial selection","Senate confirmation"],"answer":0},{"topic":"Participation","question":"Why does the Electoral College generate debate?","options":["Its result may differ from the national popular vote","It elects Supreme Court justices","It eliminates state roles in elections","It requires proportional representation in every state"],"answer":0},{"topic":"Participation","question":"Which modern campaign drawback is tied to the need for large amounts of money?","options":["Intensive fundraising efforts","Lower campaign costs","Shorter election cycles","Elimination of consultants"],"answer":0},{"topic":"Participation","question":"Which modern campaign feature involves reliance on experts for strategy, polling, and media?","options":["Dependence on professional consultants","Mandatory public financing","Abolition of campaign staff","Judicial supervision"],"answer":0},{"topic":"Participation","question":"Which campaign finance law attempted to ban soft money and reduce attack ads?","options":["Bipartisan Campaign Reform Act of 2002","Voting Rights Act of 1965","Pendleton Act","War Powers Resolution"],"answer":0},{"topic":"Participation","question":"Which provision requires candidates to identify themselves as approving their campaign advertisements?","options":["Stand by Your Ad","One person, one vote","Clear and present danger","Separate but equal"],"answer":0},{"topic":"Participation","question":"Campaign finance debates often balance free speech against what election value?","options":["Competitive and fair elections","Life tenure","Executive privilege","Reserved powers"],"answer":0},{"topic":"Media","question":"Which media role occurs when news outlets influence which issues citizens see as important?","options":["Agenda setting","Redistricting","Rulemaking","Incorporation"],"answer":0},{"topic":"Media","question":"Which kind of journalism investigates public issues and can shape political knowledge?","options":["Investigative journalism","Pork-barrel journalism","Cloture journalism","Mandate journalism"],"answer":0},{"topic":"Media","question":"Horse-race coverage tends to focus on what?","options":["Candidate popularity and standings","Detailed constitutional arguments only","Agency rule text only","Amendment ratification only"],"answer":0},{"topic":"Media","question":"Which media development can reinforce existing beliefs by giving people more ideologically aligned choices?","options":["Consumer-driven and ideologically oriented media","A single national newspaper requirement","Abolition of social media","Government licensing of all viewpoints"],"answer":0},{"topic":"Media","question":"Which problem has grown as media choices and communication outlets have expanded?","options":["Uncertainty over credibility of news sources","Elimination of agenda setting","No political commentary","End of election coverage"],"answer":0},{"topic":"Required Cases","question":"In Engel v. Vitale, the Court ruled that school-sponsored prayer violated which clause?","options":["Establishment Clause","Free Exercise Clause","Commerce Clause","Equal Protection Clause"],"answer":0},{"topic":"Required Cases","question":"In Wisconsin v. Yoder, the Court protected Amish families under which constitutional freedom?","options":["Free exercise of religion","Freedom of the press","Right to bear arms","Right to counsel"],"answer":0},{"topic":"Required Cases","question":"In Tinker v. Des Moines, students wore what form of symbolic speech?","options":["Black armbands","Campaign buttons","Religious medals","Party hats"],"answer":0},{"topic":"Required Cases","question":"In Schenck v. United States, the Court allowed speech restrictions when speech created what?","options":["A clear and present danger","A funding dispute","A redistricting controversy","A privacy penumbra"],"answer":0},{"topic":"Required Cases","question":"In New York Times Co. v. United States, the government tried to stop publication of what?","options":["Pentagon Papers","Census data","Campaign finance reports","State budgets"],"answer":0},{"topic":"Required Cases","question":"In Brown v. Board of Education, the Court rejected which earlier doctrine?","options":["Separate but equal","Clear and present danger","Strict scrutiny","Necessary and proper"],"answer":0},{"topic":"Required Cases","question":"In Baker v. Carr, the Court allowed federal courts to hear challenges about what?","options":["Legislative apportionment","School prayer","Campaign spending","Search warrants"],"answer":0},{"topic":"Required Cases","question":"In Citizens United v. FEC, the Court treated independent political spending as what?","options":["Protected speech","Cruel punishment","Religious exercise","Reserved power"],"answer":0},{"topic":"Data and Skills","question":"When evaluating public opinion data, why does question wording matter?","options":["Biased wording can distort responses","It replaces sampling methods","It eliminates margin of error","It makes all polls unconstitutional"],"answer":0},{"topic":"Data and Skills","question":"Why should claims based on public opinion data report conclusions clearly?","options":["Claims should be supported by the data","Polls are never used in policy debates","All polls have no uncertainty","Only courts can interpret polls"],"answer":0},{"topic":"Data and Skills","question":"Which limitation should a student consider when interpreting polling data?","options":["Whether the sample and wording are reliable","Whether the poll uses Article III","Whether the poll has a filibuster","Whether the poll creates a federal mandate"],"answer":0},{"topic":"Data and Skills","question":"What does a data trend show?","options":["A pattern of change across observations","A constitutional amendment by itself","A court holding only","A single unrelated fact"],"answer":0},{"topic":"Data and Skills","question":"In AP Gov source analysis, students should connect a source's argument to what?","options":["Political principles, institutions, processes, policies, or behaviors","Only page numbers","Only exam timing","Only administrative requirements"],"answer":0}],"sourceNotes":["Grounded in the AP U.S. Government and Politics Course and Exam Description framework, Course at a Glance topics, and required documents/cases listed in the local sources folder.","Questions avoid course administration and focus on curricular concepts, learning objectives, essential knowledge, required documents, required Supreme Court cases, and course skills."]};
+const totalSeconds = 30;
+const baseQuestionValue = 1000;
+const questionsPerRound = 15;
+const drops = [
+  { second: 4, points: 100, hide: false },
+  { second: 8, points: 150, hide: true },
+  { second: 12, points: 100, hide: false },
+  { second: 16, points: 150, hide: true },
+  { second: 20, points: 100, hide: false },
+  { second: 24, points: 100, hide: false },
+  { second: 28, points: 150, hide: true, reveal: true }
+];
+const startButton = document.querySelector('#startRound');
+const topicStripEl = document.querySelector('#topicStrip');
+const topicEl = document.querySelector('#topic');
+const questionCountEl = document.querySelector('#questionCount');
+const questionEl = document.querySelector('#question');
+const answersEl = document.querySelector('#answers');
+const timerBarEl = document.querySelector('#timerBar');
+const timeLeftEl = document.querySelector('#timeLeft');
+const messageEl = document.querySelector('#message');
+const questionValueEl = document.querySelector('#questionValue');
+const totalScoreEl = document.querySelector('#totalScore');
+const correctCountEl = document.querySelector('#correctCount');
+const streakEl = document.querySelector('#streak');
+const roundSeedEl = document.querySelector('#roundSeed');
+const roundLogEl = document.querySelector('#roundLog');
+let roundQuestions = [];
+let currentIndex = -1;
+let currentQuestion = null;
+let hiddenOptions = new Set();
+let appliedDrops = new Set();
+let timerId = null;
+let startedAt = 0;
+let elapsed = 0;
+let questionValue = baseQuestionValue;
+let totalScore = 0;
+let correctCount = 0;
+let streak = 0;
+let acceptingAnswers = false;
+let logItems = [];
+let roundSeed = '';
+let roundRandom = Math.random;
+function startRound() {
+  roundSeed = makeRoundSeed();
+  roundRandom = seededRandom(roundSeed);
+  roundQuestions = buildRoundQuestions();
+  currentIndex = -1;
+  totalScore = 0;
+  correctCount = 0;
+  streak = 0;
+  logItems = [];
+  startButton.textContent = 'Restart Round';
+  renderLog();
+  nextQuestion();
+}
+function buildRoundQuestions() {
+  const questions = normalizedQuestions(activePack.textQuestions);
+  const picked = shuffle(questions, roundRandom).slice(0, Math.min(questionsPerRound, questions.length));
+  const answerPositions = balancedAnswerPositions(picked.length, roundRandom);
+  return picked.map((item, index) => randomizeOptions(item, answerPositions[index], roundRandom));
+}
+function normalizedQuestions(items = []) {
+  return items.filter((item) => item && item.question && Array.isArray(item.options) && item.options.length === 4)
+    .map((item) => ({ ...item, answer: Number.isInteger(item.answer) ? item.answer : 0 }));
+}
+function nextQuestion() {
+  clearInterval(timerId);
+  currentIndex += 1;
+  if (currentIndex >= roundQuestions.length) {
+    finishRound();
+    return;
+  }
+  currentQuestion = roundQuestions[currentIndex];
+  hiddenOptions = new Set();
+  appliedDrops = new Set();
+  elapsed = 0;
+  questionValue = baseQuestionValue;
+  acceptingAnswers = true;
+  startedAt = Date.now();
+  renderQuestion();
+  updateStats();
+  showMessage('Go.');
+  timerId = setInterval(tick, 100);
+}
+function tick() {
+  elapsed = Math.min(totalSeconds, (Date.now() - startedAt) / 1000);
+  const wholeSecond = Math.floor(elapsed);
+  drops.forEach((drop) => {
+    if (elapsed >= drop.second && !appliedDrops.has(drop.second)) {
+      appliedDrops.add(drop.second);
+      questionValue = Math.max(0, questionValue - drop.points);
+      if (drop.hide) hideWrongOption(drop.reveal);
+      if (drop.reveal) revealFinalAnswer();
+    }
+  });
+  if (elapsed >= totalSeconds) {
+    answerQuestion(null);
+    return;
+  }
+  timeLeftEl.textContent = Math.max(0, totalSeconds - wholeSecond);
+  timerBarEl.style.width = Math.max(0, ((totalSeconds - elapsed) / totalSeconds) * 100) + '%';
+  updateStats();
+}
+function renderQuestion() {
+  topicEl.textContent = currentQuestion.topic;
+  questionCountEl.textContent = (currentIndex + 1) + '/' + roundQuestions.length;
+  questionEl.textContent = currentQuestion.question;
+  renderAnswers();
+}
+function renderAnswers() {
+  answersEl.innerHTML = '';
+  currentQuestion.options.forEach((option, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = answerClass(index);
+    button.dataset.index = index;
+    button.innerHTML = '<span class="letter">' + String.fromCharCode(65 + index) + '</span><span class="text"></span>';
+    button.querySelector('.text').textContent = option;
+    button.addEventListener('click', () => answerQuestion(index));
+    answersEl.append(button);
+  });
+}
+function answerClass(index) {
+  const classes = ['answer'];
+  if (hiddenOptions.has(index)) classes.push('hidden-option');
+  return classes.join(' ');
+}
+function answerQuestion(index) {
+  if (!acceptingAnswers) return;
+  acceptingAnswers = false;
+  clearInterval(timerId);
+  const correct = index === currentQuestion.answer;
+  if (correct) {
+    totalScore += questionValue;
+    correctCount += 1;
+    streak += 1;
+  } else {
+    streak = 0;
+  }
+  highlightAnswers(index);
+  logItems = [{ correct, topic: currentQuestion.topic, points: correct ? questionValue : 0, answer: currentQuestion.options[currentQuestion.answer] }, ...logItems].slice(0, 8);
+  renderLog();
+  updateStats();
+  if (index === null) {
+    showMessage('Time. Correct answer: ' + currentQuestion.options[currentQuestion.answer]);
+  } else if (correct) {
+    showMessage('Correct! +' + questionValue);
+  } else {
+    showMessage('Good try. Correct answer: ' + currentQuestion.options[currentQuestion.answer]);
+  }
+  setTimeout(nextQuestion, 1800);
+}
+function hideWrongOption(reveal) {
+  const choices = currentQuestion.options.map((_, index) => index).filter((index) => index !== currentQuestion.answer && !hiddenOptions.has(index));
+  if (!choices.length) return;
+  hiddenOptions.add(shuffle(choices, roundRandom)[0]);
+  renderAnswers();
+  if (reveal) highlightAnswers(null, true);
+}
+function revealFinalAnswer() {
+  highlightAnswers(null, true);
+  showMessage('Final clue: the correct answer is highlighted.');
+}
+function highlightAnswers(selectedIndex, revealOnly = false) {
+  [...answersEl.querySelectorAll('.answer')].forEach((button) => {
+    const index = Number(button.dataset.index);
+    button.className = answerClass(index);
+    if (index === currentQuestion.answer) {
+      button.classList.add('correct');
+    } else if (!revealOnly && selectedIndex === index) {
+      button.classList.add('wrong');
+    }
+  });
+}
+function finishRound() {
+  acceptingAnswers = false;
+  clearInterval(timerId);
+  topicEl.textContent = 'Round Complete';
+  questionCountEl.textContent = roundQuestions.length + '/' + roundQuestions.length;
+  questionEl.textContent = 'Final score: ' + totalScore;
+  answersEl.innerHTML = '';
+  timerBarEl.style.width = '0%';
+  timeLeftEl.textContent = '0';
+  questionValue = 0;
+  updateStats();
+  showMessage('You got ' + correctCount + ' of ' + roundQuestions.length + ' correct.');
+}
+function updateStats() {
+  questionValueEl.textContent = questionValue;
+  totalScoreEl.textContent = totalScore;
+  correctCountEl.textContent = correctCount;
+  streakEl.textContent = streak;
+  roundSeedEl.textContent = roundSeed || '----';
+}
+function renderLog() {
+  roundLogEl.innerHTML = '';
+  if (!logItems.length) {
+    const empty = document.createElement('li');
+    empty.textContent = 'No answers yet.';
+    roundLogEl.append(empty);
+    return;
+  }
+  logItems.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = (item.correct ? 'Correct' : 'Miss') + ' - ' + item.topic + ' - ' + item.points + ' pts';
+    roundLogEl.append(li);
+  });
+}
+function showMessage(text) {
+  messageEl.textContent = text;
+}
+function renderTopicStrip(topics = []) {
+  const labels = topics.length ? topics : ['Trivia', 'Fast', 'Facts', 'Quiz', 'Fun'];
+  topicStripEl.innerHTML = '';
+  labels.slice(0, 5).forEach((label) => {
+    const span = document.createElement('span');
+    span.textContent = label;
+    topicStripEl.append(span);
+  });
+}
+function shuffle(items, random = Math.random) {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
+function randomizeOptions(item, answerPosition, random) {
+  const originalAnswer = item.options[item.answer];
+  const wrongOptions = shuffle(item.options.filter((option) => option !== originalAnswer), random);
+  const options = [];
+  for (let index = 0; index < item.options.length; index += 1) {
+    options[index] = index === answerPosition ? originalAnswer : wrongOptions.shift();
+  }
+  return { ...item, options, answer: answerPosition };
+}
+function balancedAnswerPositions(count, random) {
+  const positions = [];
+  for (let index = 0; index < count; index += 1) positions.push(index % 4);
+  return shuffle(positions, random);
+}
+function makeRoundSeed() {
+  const cryptoApi = window.crypto || window.msCrypto;
+  if (cryptoApi && cryptoApi.getRandomValues) {
+    const values = new Uint32Array(1);
+    cryptoApi.getRandomValues(values);
+    return values[0].toString(36).toUpperCase().padStart(7, '0').slice(-7);
+  }
+  return Math.floor((Date.now() + Math.random() * 0xffffffff) >>> 0).toString(36).toUpperCase().padStart(7, '0').slice(-7);
+}
+function seededRandom(seed) {
+  let state = 2166136261;
+  for (let index = 0; index < seed.length; index += 1) {
+    state ^= seed.charCodeAt(index);
+    state = Math.imul(state, 16777619);
+  }
+  return () => {
+    state += 0x6d2b79f5;
+    let value = state;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+  };
+}
+startButton.addEventListener('click', startRound);
+renderTopicStrip(activePack.topicStrip);
+renderLog();
+updateStats();
+
+    </script>
+  </body>
+</html>
