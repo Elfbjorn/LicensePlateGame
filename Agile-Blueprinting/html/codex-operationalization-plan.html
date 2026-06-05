@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Operationalization Plan | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>Codex Operationalization Plan</h1>
+        <p>HTML rendering of CODEX-OPERATIONALIZATION-PLAN.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="codex-operationalization-plan">Codex Operationalization Plan</h1>
+<p>This artifact defines how Agile Blueprinting and Blueprint to Release should become simple, guided Codex skills and plugins.</p>
+<p>The goal is to remove process interpretation from the user. A user should not need to know what it means to create a PRD, initialize a delivery run, produce agent artifacts, or generate a SPOG. They should invoke the appropriate Codex workflow, answer guided questions, and receive the expected artifact output.</p>
+<h2 id="product-principle">Product Principle</h2>
+<p>Codex operationalization should make the methodology feel easy.</p>
+<p>The process may be deep under the hood, but the user experience should be guided, plain-language, and outcome-oriented. The user should not need to copy prompts, remember artifact contracts, know the full Blueprint to Release flow, or decide which template applies.</p>
+<h2 id="initial-skill-plugin-concept">Initial Skill / Plugin Concept</h2>
+<h3 id="plugin-architecture">Plugin Architecture</h3>
+<p>The working model is plugin plus skills.</p>
+<p>A plugin is the team-facing bundle. A skill is the individual guided workflow inside that bundle.</p>
+<p>Initial plugin bundles:</p>
+<ul>
+<li>Operations plugin: skills used by Support/Ops and operational teams.</li>
+<li>Product plugin: skills used by Product, Design, and BA-style discovery/blueprint work.</li>
+<li>Engineering plugin: skills used by Engineering, DevOps, QA, Security, and release execution.</li>
+</ul>
+<p>The bundles may become more granular later, but this is the initial organizing model. Users should be able to find workflows based on the team role they are operating in, not by memorizing the full methodology.</p>
+<h3 id="skill-naming-convention">Skill Naming Convention</h3>
+<p>Skill names should be short, descriptive, and usable inside their plugin bundle.</p>
+<p>The plugin provides the team context:</p>
+<ul>
+<li>Operations plugin</li>
+<li>Product plugin</li>
+<li>Engineering plugin</li>
+</ul>
+<p>The skill name should not need to repeat the plugin name, but it should be descriptive enough to remain clear if a user has more than one plugin installed.</p>
+<p>Preferred MVP skill names:</p>
+<ul>
+<li><code>prd-generator</code></li>
+<li><code>prd-readiness-review</code></li>
+<li><code>implementation-agent</code></li>
+<li><code>unit-test-agent</code></li>
+<li><code>e2e-test-agent</code></li>
+</ul>
+<p>Avoid overly generic names such as <code>generate</code>, <code>review</code>, <code>test</code>, or <code>run</code>, because those become ambiguous when multiple plugins are installed.</p>
+<h3 id="prd-generator">PRD Generator</h3>
+<p>Working name:</p>
+<ul>
+<li><code>prd-generator</code></li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li>Guide a user through creating a PRD/blueprint.</li>
+<li>Ask questions in a sequence that helps the user clarify the desired outcome, workflow, requirements, acceptance criteria, risks, assumptions, and open questions.</li>
+<li>Generate the best available PRD artifact from the answers provided.</li>
+<li>Allow some questions to remain unanswered when necessary, while clearly marking open questions or assumptions.</li>
+<li>Reduce the cognitive burden of &quot;what does it mean to create a PRD?&quot;</li>
+</ul>
+<p>Expected behavior:</p>
+<ol>
+<li>User invokes the skill/plugin.</li>
+<li>Codex asks guided questions.</li>
+<li>Codex generates the PRD/blueprint artifact.</li>
+<li>Codex identifies unanswered questions, assumptions, and readiness gaps.</li>
+<li>Codex indicates whether the PRD appears ready for review or needs more discovery.</li>
+</ol>
+<h2 id="candidate-workflow-surface">Candidate Workflow Surface</h2>
+<p>The operating model may need multiple skills/plugins across the full delivery gamut, including:</p>
+<ul>
+<li>PRD/blueprint generation</li>
+<li>PRD readiness scoring</li>
+<li>Run initialization</li>
+<li>Agent artifact generation</li>
+<li>Artifact review</li>
+<li>SPOG generation</li>
+<li>HITL review capture</li>
+<li>Amendment/re-scope review</li>
+<li>Release readiness review</li>
+</ul>
+<h2 id="session-state-and-knowledge-persistence">Session State and Knowledge Persistence</h2>
+<p>Guided workflow state should be persisted the same way this ideation workspace works:</p>
+<ul>
+<li>Emerging concepts, incomplete decisions, and draft thinking are written as ideas or notes.</li>
+<li>As ideas become fully baked, they are promoted into artifacts.</li>
+<li>Artifacts become the source of truth for repeatable workflows.</li>
+<li>Skills should read the relevant artifacts before acting so each session starts from persisted knowledge instead of relying on chat memory.</li>
+</ul>
+<p>For operational skill runs, each active workflow should also maintain a small run/status record so Codex can resume without rediscovering everything from scratch.</p>
+<p>Recommended state pattern:</p>
+<pre><code class="lang-text">&lt;topic&gt;/
+  ideas/                         # still-forming concepts
+  artifacts/                     # approved or mature process artifacts
+  artifacts/&lt;work-item-id&gt;/      # run-specific delivery artifacts, when applicable
+    00-run-metadata.md
+    workflow-state.md            # current step, answered questions, open questions, next action</code></pre>
+<p>The workflow state file should not replace the artifact. It is a resume aid. The final artifact remains the durable output.</p>
+<h2 id="frontmatter-and-structured-data">Frontmatter and Structured Data</h2>
+<p>Every artifact should eventually have YAML frontmatter for discoverability, ownership, status, and lifecycle management.</p>
+<p>The depth of frontmatter should depend on how the artifact is used:</p>
+<ul>
+<li>All artifacts get minimal frontmatter.</li>
+<li>MVP skill-generated artifacts get richer frontmatter now because they need to support repeatable workflows.</li>
+<li>Other artifacts get placeholder format decisions for now and should be revisited later.</li>
+<li>Add separate JSON only when another tool or automation needs stable machine-readable detail beyond what YAML frontmatter can reasonably hold.</li>
+</ul>
+<h3 id="mvp-skill-artifact-frontmatter">MVP Skill Artifact Frontmatter</h3>
+<p>These are the artifacts generated or directly used by the first MVP skills.</p>
+<h4 id="prd-blueprint">PRD / Blueprint</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: prd_blueprint
+topic: ai-vs-agile
+work_item_id:
+capability_name:
+status: draft
+readiness_status: not_ready
+owner_role: Product
+owner_name:
+customer_or_proxy:
+created_at:
+updated_at:
+source_inputs: []
+open_questions_count:
+assumptions_count:
+requires_customer_review: true
+requires_engineering_review: true
+---</code></pre>
+<h4 id="prd-readiness-review">PRD Readiness Review</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: prd_readiness_review
+topic: ai-vs-agile
+work_item_id:
+capability_name:
+prd_reference:
+reviewer_role: Engineering
+reviewer_name:
+created_at:
+updated_at:
+status: pending
+recommendation: needs_revision
+blocking_gap_count:
+warning_gap_count:
+open_questions_count:
+requires_customer_clarification: false
+requires_rescope_review: false
+---</code></pre>
+<h4 id="implementation-artifact">Implementation Artifact</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: implementation
+topic: ai-vs-agile
+work_item_id:
+run_id:
+capability_name:
+prd_reference:
+readiness_review_reference:
+repo_path:
+branch:
+pull_request:
+agent_name: implementation-agent
+created_at:
+updated_at:
+status: pending
+status_reason:
+tests_added_or_updated: false
+deviations_from_prd_count:
+open_questions_count:
+requires_human_review: true
+---</code></pre>
+<h4 id="unit-test-artifact">Unit Test Artifact</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: unit_test
+topic: ai-vs-agile
+work_item_id:
+run_id:
+capability_name:
+prd_reference:
+implementation_reference:
+repo_path:
+test_command:
+agent_name: unit-test-agent
+created_at:
+updated_at:
+status: pending
+tests_added_or_updated: false
+tests_run: false
+tests_passed:
+tests_failed:
+coverage_notes:
+requires_human_review: true
+---</code></pre>
+<h4 id="e2e-test-artifact">E2E Test Artifact</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: e2e_test
+topic: ai-vs-agile
+work_item_id:
+run_id:
+capability_name:
+prd_reference:
+implementation_reference:
+repo_path:
+app_start_command:
+test_command:
+test_environment:
+agent_name: e2e-test-agent
+created_at:
+updated_at:
+status: pending
+tests_added_or_updated: false
+tests_run: false
+tests_passed:
+tests_failed:
+evidence: []
+environment_blockers: []
+requires_human_review: true
+---</code></pre>
+<h4 id="workflow-state">Workflow State</h4>
+<p>Recommended format: Markdown plus structured YAML frontmatter.</p>
+<pre><code class="lang-yaml">---
+artifact_schema_version: 1
+artifact_type: workflow_state
+topic: ai-vs-agile
+work_item_id:
+run_id:
+workflow_name:
+current_step:
+next_action:
+status: active
+created_at:
+updated_at:
+answered_questions_count:
+open_questions_count:
+artifact_under_construction:
+---</code></pre>
+<h3 id="other-artifact-format-placeholders">Other Artifact Format Placeholders</h3>
+<p>These artifacts should also receive frontmatter, but their exact fields should be revisited after the MVP skill artifacts are validated.</p>
+<table>
+<thead>
+<tr>
+<th>Artifact Type</th>
+<th>Placeholder Format Decision</th>
+<th>Revisit Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run metadata</td>
+<td>Markdown plus structured YAML frontmatter</td>
+<td>Define exact fields when run initialization becomes an MVP skill.</td>
+</tr>
+<tr>
+<td>SPOG</td>
+<td>Markdown plus structured YAML frontmatter; optional JSON later</td>
+<td>Define status-card schema when SPOG generation is implemented.</td>
+</tr>
+<tr>
+<td>Artifact review</td>
+<td>Markdown plus structured YAML frontmatter</td>
+<td>Define parseable missing/failing/pending summary fields.</td>
+</tr>
+<tr>
+<td>HITL checkpoint matrix</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define governance/reference metadata fields.</td>
+</tr>
+<tr>
+<td>Amendment/re-scope flow</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define trigger/routing fields if automated routing becomes needed.</td>
+</tr>
+<tr>
+<td>Communications model</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define ownership/status metadata after communications work resumes.</td>
+</tr>
+<tr>
+<td>PRD template</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define template metadata fields.</td>
+</tr>
+<tr>
+<td>Agent prompts</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define prompt-library metadata or split prompts into skill files.</td>
+</tr>
+<tr>
+<td>Codex operationalization plan</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define planning artifact metadata.</td>
+</tr>
+<tr>
+<td>MVP skill specs</td>
+<td>Markdown plus lightweight YAML frontmatter</td>
+<td>Define skill-spec metadata before converting to actual skill files.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-design-questions">Open Design Questions</h2>
+<ul>
+<li>Which workflows belong in the Operations plugin, Product plugin, and Engineering plugin?</li>
+<li>What is the minimum useful set to build first?</li>
+<li>How should the workflows enforce the shared artifact contract without making users think about it?</li>
+</ul>
+</article>
+    </main>
+  </div>
+</body>
+</html>

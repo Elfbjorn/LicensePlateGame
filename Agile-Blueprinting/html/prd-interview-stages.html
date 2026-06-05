@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agile Blueprinting PRD Interview Stages | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>Agile Blueprinting PRD Interview Stages</h1>
+        <p>HTML rendering of PRD-INTERVIEW-STAGES.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="agile-blueprinting-prd-interview-stages">Agile Blueprinting PRD Interview Stages</h1>
+<h2 id="initial-prompt-cta">Initial Prompt / CTA</h2>
+<p>Use this prompt to start an LLM-driven PRD interview:</p>
+<pre><code class="lang-markdown">I want to create an Agile Blueprinting PRD for a software capability.
+
+Act as a product analyst, delivery architect, and AI implementation planner. Interview me step by step to understand what we are trying to build, why it matters, who it serves, how it should work, what rules and data are involved, and how we will know it is ready to ship.
+
+Do not ask me to write user stories. Instead, help me define the complete deliverable as a blueprint that can be handed to AI development, testing, security, packaging, and deployment agents.
+
+Ask one focused set of questions at a time. Prioritize the questions that most reduce ambiguity and implementation risk. Do not force every question if the answer is already known, irrelevant, or low value.
+
+After each stage, summarize what you heard, identify gaps or risks, and score readiness for that stage. When the interview is complete, generate all required outputs: the full PRD, executive summary, engineering handoff, agent handoff, customer-facing summary, open questions, risks, readiness rubric, and recommended delivery plan.
+
+Start by asking me what capability, page, workflow, or application slice I want to define.</code></pre>
+<h2 id="interview-principles">Interview Principles</h2>
+<ul>
+<li>Ask one stage at a time.</li>
+<li>Prefer plain-language questions over methodology jargon.</li>
+<li>Capture what the user means, not just what they literally say.</li>
+<li>Summarize after each stage and confirm before moving on.</li>
+<li>Separate confirmed facts from assumptions.</li>
+<li>Flag ambiguity, hidden complexity, and production risks.</li>
+<li>Keep the focus on complete deliverables, not isolated user stories.</li>
+<li>Generate all required output artifacts at the end.</li>
+<li>Prefer high-signal follow-up questions over exhaustive questionnaires.</li>
+<li>Explicitly identify when an answer is assumed, inferred, or missing.</li>
+<li>Stop interviewing when the PRD is ready enough for human review, not when every possible detail has been collected.</li>
+<li>If requirements change mid-interview, update the working summary and call out downstream impacts.</li>
+</ul>
+<h2 id="question-prioritization">Question Prioritization</h2>
+<p>The LLM should not ask every question mechanically. It should prioritize questions using this order:</p>
+<ol>
+<li>Blocking ambiguity: missing answers that prevent a coherent PRD.</li>
+<li>Delivery risk: answers that affect architecture, security, data, integrations, deployment, or cost.</li>
+<li>User value: answers that clarify who benefits and what outcome matters.</li>
+<li>Validation: answers that define how the team knows the capability works.</li>
+<li>Agent handoff: answers needed by development, QA, security, packaging, and deployment agents.</li>
+<li>Nice-to-have detail: useful context that can be deferred if the time box is tight.</li>
+</ol>
+<p>At each stage, ask only the highest-value unanswered questions. If a section is already clear, summarize it and move on.</p>
+<h2 id="stage-readiness-scoring">Stage Readiness Scoring</h2>
+<p>This score is not an effort estimate. Do not evaluate readiness through traditional agile estimation rituals or developer effort debates. The LLM is doing much of the implementation planning and artifact generation, so the score should measure whether the blueprint is clear enough, safe enough, and complete enough to hand off.</p>
+<p>After each stage, assign a readiness score:</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Missing: no usable information captured</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Vague: mostly ambiguous, assumed, or contradictory</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Incomplete: usable direction exists, but important decisions are missing</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Draft-ready: clear enough to write a PRD with marked assumptions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Handoff-ready: clear enough for agents to begin with bounded risk</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Validated: clear, reviewed, low ambiguity, and ready for implementation</td>
+</tr>
+</tbody>
+</table>
+<p>For each stage, include:</p>
+<ul>
+<li>Readiness score</li>
+<li>What is known</li>
+<li>What is assumed</li>
+<li>What is missing</li>
+<li>Main risk if work starts now</li>
+<li>Recommended follow-up questions, prioritized by risk reduction</li>
+</ul>
+<h2 id="interview-done-criteria">Interview Done Criteria</h2>
+<p>The interview is ready to generate a PRD when:</p>
+<ul>
+<li>Capability intent is clear.</li>
+<li>Primary users and roles are identified.</li>
+<li>Core workflow is understandable end to end.</li>
+<li>In-scope and out-of-scope boundaries are documented.</li>
+<li>Critical data, rules, and validations are known or explicitly marked as assumptions.</li>
+<li>Major integrations and dependencies are identified.</li>
+<li>Acceptance criteria can be written.</li>
+<li>Security, privacy, performance, and operational concerns are not ignored.</li>
+<li>Human review checkpoints are defined.</li>
+<li>Open questions are specific enough for a person to answer or approve as assumptions.</li>
+</ul>
+<p>The LLM should not wait for perfect information. It should generate a PRD with clear assumptions and open questions once the blueprint is good enough for human review.</p>
+<h2 id="definition-of-ready">Definition of Ready</h2>
+<p>A capability is ready for Agile Blueprinting delivery when the PRD is strong enough that Product, the business analyst, and the customer can stand behind it as the intended deliverable.</p>
+<p>Ready does not come from an estimation ritual. Ready means the homework has been done.</p>
+<p>Minimum readiness requirements:</p>
+<ul>
+<li>A Product Manager or Business Analyst owns the PRD.</li>
+<li>The owner has met with the customer or customer proxy.</li>
+<li>The customer need, business outcome, and expected deliverable are clear.</li>
+<li>The workflow has been walked through end to end.</li>
+<li>Low-fidelity mockups, wireframes, workflow diagrams, or equivalent visual aids have been reviewed when the capability has meaningful UX or process complexity.</li>
+<li>Major contingencies, alternate flows, exceptions, and edge cases have been considered.</li>
+<li>Required data, business rules, validations, integrations, and permissions are documented or explicitly marked as assumptions.</li>
+<li>Acceptance criteria are specific enough for QA and the customer to validate.</li>
+<li>Out-of-scope items are explicit.</li>
+<li>The Product Manager or Business Analyst has signed off that this is what the customer is asking to receive.</li>
+<li>The customer or customer proxy has reviewed and accepted the blueprint direction.</li>
+</ul>
+<p>Readiness sign-off should be treated seriously. The PRD is the commitment point for the requested deliverable. Changes can still happen, but material changes should be handled as amendments, follow-on requests, or new blueprints rather than silent scope drift.</p>
+<p>The reason this should not feel scary is the compressed delivery cycle. Agile Blueprinting is not asking customers to sign off and then wait four years. It is asking them to align on a known deliverable that can be built, reviewed, and adjusted in days or weeks.</p>
+<h2 id="stage-1-capability-intent">Stage 1: Capability Intent</h2>
+<p>Goal: Understand what the user wants to build and why it matters.</p>
+<p>Questions:</p>
+<ul>
+<li>What capability, page, workflow, or application slice are we defining?</li>
+<li>What problem does this solve?</li>
+<li>Why does this need to exist now?</li>
+<li>What should be true after this ships?</li>
+<li>What would make this valuable to the business or user?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Capability name</li>
+<li>Problem statement</li>
+<li>Desired outcome</li>
+<li>Initial success criteria</li>
+<li>Known constraints or urgency</li>
+</ul>
+<h2 id="stage-2-users-roles-and-permissions">Stage 2: Users, Roles, and Permissions</h2>
+<p>Goal: Identify who interacts with the capability and how their needs differ.</p>
+<p>Questions:</p>
+<ul>
+<li>Who are the primary users?</li>
+<li>Are there different roles or permission levels?</li>
+<li>What does each role need to accomplish?</li>
+<li>What should each role be allowed or prevented from doing?</li>
+<li>Are there internal users, external users, admins, auditors, or support teams involved?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Role table</li>
+<li>User goals</li>
+<li>Permission constraints</li>
+<li>Role-specific variations</li>
+</ul>
+<h2 id="stage-3-end-to-end-workflow">Stage 3: End-to-End Workflow</h2>
+<p>Goal: Capture the complete flow instead of fragmented user stories.</p>
+<p>Questions:</p>
+<ul>
+<li>Walk me through the ideal flow from start to finish.</li>
+<li>What happens before the user enters this capability?</li>
+<li>What does the user do first, next, and last?</li>
+<li>What does the system do in response?</li>
+<li>What happens after the workflow is complete?</li>
+<li>Are there alternate paths?</li>
+<li>What error or exception paths matter?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Primary workflow</li>
+<li>Alternate flows</li>
+<li>Error and exception flows</li>
+<li>Entry and exit points</li>
+</ul>
+<h2 id="stage-4-scope-boundaries">Stage 4: Scope Boundaries</h2>
+<p>Goal: Clarify what is included, excluded, assumed, or dependent.</p>
+<p>Questions:</p>
+<ul>
+<li>What must be included in this release?</li>
+<li>What should explicitly be out of scope?</li>
+<li>What can wait until later?</li>
+<li>What assumptions are we making?</li>
+<li>What dependencies could block delivery?</li>
+<li>What existing systems, APIs, data, or teams does this rely on?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>In-scope list</li>
+<li>Out-of-scope list</li>
+<li>Assumptions</li>
+<li>Dependencies</li>
+<li>Possible follow-on work</li>
+</ul>
+<h2 id="stage-5-data-and-state">Stage 5: Data and State</h2>
+<p>Goal: Define the objects, fields, mappings, and state changes needed for implementation.</p>
+<p>Questions:</p>
+<ul>
+<li>What records, objects, or entities are involved?</li>
+<li>What fields need to be captured, shown, calculated, or updated?</li>
+<li>Which fields are required, optional, or conditional?</li>
+<li>Where does each piece of data come from?</li>
+<li>Where should each piece of data be stored or sent?</li>
+<li>What state changes occur during the workflow?</li>
+<li>Are there audit, history, or versioning needs?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Object/entity list</li>
+<li>Field table</li>
+<li>Source and destination mappings</li>
+<li>State change table</li>
+<li>Audit/history requirements</li>
+</ul>
+<h2 id="stage-6-business-rules-and-validation">Stage 6: Business Rules and Validation</h2>
+<p>Goal: Extract the rules that determine correct behavior.</p>
+<p>Questions:</p>
+<ul>
+<li>What must always happen?</li>
+<li>What must never happen?</li>
+<li>What is conditionally required?</li>
+<li>What validations are needed?</li>
+<li>What calculations, thresholds, or eligibility rules apply?</li>
+<li>What messages should users see when something is invalid?</li>
+<li>Are there role-specific or data-specific rule differences?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Business rule table</li>
+<li>Required and conditional field rules</li>
+<li>Validation rules</li>
+<li>Error messages</li>
+<li>Edge cases</li>
+</ul>
+<h2 id="stage-7-user-experience-expectations">Stage 7: User Experience Expectations</h2>
+<p>Goal: Define the screens, states, and usability expectations.</p>
+<p>Questions:</p>
+<ul>
+<li>What screens, pages, modals, forms, or components are needed?</li>
+<li>What information should be visible first?</li>
+<li>What should the default, loading, empty, error, success, and read-only states look like?</li>
+<li>What should happen on desktop, tablet, and mobile?</li>
+<li>Are there accessibility requirements?</li>
+<li>Are there design system or branding constraints?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Screen/surface list</li>
+<li>UI states</li>
+<li>Responsive behavior</li>
+<li>Accessibility expectations</li>
+<li>Design constraints</li>
+</ul>
+<h2 id="stage-8-integrations-and-system-behavior">Stage 8: Integrations and System Behavior</h2>
+<p>Goal: Identify external systems, APIs, events, notifications, and background processes.</p>
+<p>Questions:</p>
+<ul>
+<li>What systems does this capability need to connect to?</li>
+<li>What data is sent or received?</li>
+<li>Is the integration synchronous, asynchronous, scheduled, or event-driven?</li>
+<li>What should happen if an integration fails?</li>
+<li>Are notifications, emails, webhooks, queues, or file exchanges involved?</li>
+<li>Are there authentication or authorization requirements?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Integration table</li>
+<li>Data exchanged</li>
+<li>Failure handling</li>
+<li>Auth requirements</li>
+<li>Background process requirements</li>
+</ul>
+<h2 id="stage-9-non-functional-requirements">Stage 9: Non-Functional Requirements</h2>
+<p>Goal: Capture production-quality expectations.</p>
+<p>Questions:</p>
+<ul>
+<li>How fast does this need to be?</li>
+<li>What security risks matter?</li>
+<li>What privacy, compliance, or data retention rules apply?</li>
+<li>What needs to be logged or audited?</li>
+<li>What reliability or availability expectations exist?</li>
+<li>What operational alerts or monitoring are needed?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Performance requirements</li>
+<li>Security requirements</li>
+<li>Privacy/compliance requirements</li>
+<li>Logging and audit requirements</li>
+<li>Reliability and monitoring expectations</li>
+</ul>
+<h2 id="stage-10-acceptance-and-test-strategy">Stage 10: Acceptance and Test Strategy</h2>
+<p>Goal: Define how the team will know the capability is ready.</p>
+<p>Questions:</p>
+<ul>
+<li>What must be demonstrably true before this can ship?</li>
+<li>What are the critical happy-path tests?</li>
+<li>What edge cases must be tested?</li>
+<li>What security tests are needed?</li>
+<li>What performance tests are needed?</li>
+<li>What regression risks should be covered?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Acceptance criteria</li>
+<li>Functional test list</li>
+<li>Edge case list</li>
+<li>Security test list</li>
+<li>Performance test list</li>
+<li>Regression concerns</li>
+</ul>
+<h2 id="stage-11-agent-handoff-planning">Stage 11: Agent Handoff Planning</h2>
+<p>Goal: Prepare the PRD for AI-assisted delivery across specialized agents.</p>
+<p>Questions:</p>
+<ul>
+<li>What should the development agent build?</li>
+<li>What should the testing agent validate?</li>
+<li>What should the security agent inspect?</li>
+<li>What packaging or deployment work is needed?</li>
+<li>What repo, environment, design, or infrastructure context will agents need?</li>
+<li>What outputs should each agent produce?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Agent handoff table</li>
+<li>Inputs required per agent</li>
+<li>Expected outputs per agent</li>
+<li>Review expectations</li>
+</ul>
+<h2 id="stage-12-human-review-and-delivery-time-box">Stage 12: Human Review and Delivery Time Box</h2>
+<p>Goal: Preserve agile feedback loops and human control.</p>
+<p>Questions:</p>
+<ul>
+<li>What is the target time box for delivery?</li>
+<li>Where should humans review the work?</li>
+<li>Who approves the PRD?</li>
+<li>Who approves implementation?</li>
+<li>Who approves QA/security results?</li>
+<li>Who makes the ship/hold decision?</li>
+<li>What would cause the work to be stopped, resized, or re-scoped?</li>
+</ul>
+<p>Output:</p>
+<ul>
+<li>Delivery time box</li>
+<li>Human review checkpoints</li>
+<li>Decision owners</li>
+<li>Exit criteria</li>
+<li>Re-scope triggers</li>
+</ul>
+<h2 id="final-output-generate-the-prd">Final Output: Generate the PRD</h2>
+<p>After completing the interview, the LLM should produce:</p>
+<ul>
+<li>Full PRD using <code>PRD-TEMPLATE.md</code></li>
+<li>Executive summary</li>
+<li>Engineering implementation brief</li>
+<li>Agent handoff plan</li>
+<li>QA and acceptance test brief</li>
+<li>Security review brief</li>
+<li>Packaging and deployment brief</li>
+<li>Customer-facing summary</li>
+<li>Assumptions list</li>
+<li>Open questions list</li>
+<li>Risk register</li>
+<li>PRD readiness rubric</li>
+<li>Recommended delivery time box</li>
+<li>Suggested human review checkpoints</li>
+<li>Change impact notes, if requirements shifted during the interview</li>
+</ul>
+<h2 id="output-1-full-prd">Output 1: Full PRD</h2>
+<p>Use the full Agile Blueprinting PRD Template. This is the source-of-truth artifact for build, review, testing, security, packaging, deployment, and release.</p>
+<h2 id="output-2-executive-summary">Output 2: Executive Summary</h2>
+<p>Create a concise summary for sponsors and stakeholders:</p>
+<ul>
+<li>What is being built</li>
+<li>Why it matters</li>
+<li>Expected outcome</li>
+<li>Scope boundaries</li>
+<li>Delivery time box</li>
+<li>Key risks</li>
+<li>Decisions needed</li>
+</ul>
+<h2 id="output-3-engineering-implementation-brief">Output 3: Engineering Implementation Brief</h2>
+<p>Create a build-focused handoff:</p>
+<ul>
+<li>Capability overview</li>
+<li>Required components</li>
+<li>Data model and mappings</li>
+<li>Business rules</li>
+<li>Integrations</li>
+<li>Edge cases</li>
+<li>Technical assumptions</li>
+<li>Suggested implementation sequence</li>
+</ul>
+<h2 id="output-4-agent-handoff-plan">Output 4: Agent Handoff Plan</h2>
+<p>Create a handoff table for specialist AI agents:</p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Mission</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>Human Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Development</td>
+<td>Build the capability</td>
+<td>PRD, repo context, design notes</td>
+<td>Implementation and PR</td>
+<td>Code review</td>
+</tr>
+<tr>
+<td>QA</td>
+<td>Validate behavior</td>
+<td>PRD, acceptance criteria</td>
+<td>Test plan and test results</td>
+<td>QA approval</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Identify and fix risks</td>
+<td>PRD, data/security requirements</td>
+<td>Security findings and mitigations</td>
+<td>Security approval</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>Prepare release artifact</td>
+<td>Build requirements</td>
+<td>Container/package assets</td>
+<td>Platform review</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Prepare runtime delivery</td>
+<td>Environment requirements</td>
+<td>Helm chart/config/deploy plan</td>
+<td>Release approval</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Explain usage and changes</td>
+<td>PRD, shipped behavior</td>
+<td>User/admin/release docs</td>
+<td>Product review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output-5-qa-and-acceptance-test-brief">Output 5: QA and Acceptance Test Brief</h2>
+<p>Create a test-focused artifact:</p>
+<ul>
+<li>Happy-path tests</li>
+<li>Role-based tests</li>
+<li>Validation tests</li>
+<li>Integration tests</li>
+<li>Edge cases</li>
+<li>Regression risks</li>
+<li>Acceptance criteria mapped to tests</li>
+</ul>
+<h2 id="output-6-security-review-brief">Output 6: Security Review Brief</h2>
+<p>Create a security-focused artifact:</p>
+<ul>
+<li>Sensitive data involved</li>
+<li>Authentication and authorization expectations</li>
+<li>Permission boundaries</li>
+<li>Input validation risks</li>
+<li>Integration risks</li>
+<li>Logging/audit needs</li>
+<li>Threats or abuse cases to inspect</li>
+</ul>
+<h2 id="output-7-packaging-and-deployment-brief">Output 7: Packaging and Deployment Brief</h2>
+<p>Create a deployment-focused artifact:</p>
+<ul>
+<li>Build/package requirements</li>
+<li>Container expectations</li>
+<li>Helm/Kubernetes requirements, if applicable</li>
+<li>Environment variables and secrets</li>
+<li>Database migration needs</li>
+<li>Rollback expectations</li>
+<li>Monitoring and alerting needs</li>
+</ul>
+<h2 id="output-8-customer-facing-summary">Output 8: Customer-Facing Summary</h2>
+<p>Create a plain-language summary for customer communication:</p>
+<ul>
+<li>What will be delivered</li>
+<li>What problem it solves</li>
+<li>What is included</li>
+<li>What is not included yet</li>
+<li>What the customer needs to review or provide</li>
+<li>Expected review or delivery timeline</li>
+</ul>
+<h2 id="output-9-prd-readiness-rubric">Output 9: PRD Readiness Rubric</h2>
+<p>Score each area from 0 to 5 using readiness, not effort.</p>
+<p>Important: this rubric is not an estimation mechanism. Do not use traditional agile estimation rituals or developer-effort debates to decide readiness. Agile Blueprinting cares whether the PRD is clear, bounded, testable, secure, deployable, and ready for AI-assisted delivery.</p>
+<p>Use this scoring scale:</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Missing</td>
+<td>Ask blocking questions before drafting</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Vague</td>
+<td>Clarify before PRD approval</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Incomplete</td>
+<td>Draft with explicit assumptions and follow-ups</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Draft-ready</td>
+<td>PRD can be reviewed by humans</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Handoff-ready</td>
+<td>Agents can begin with bounded risk</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Validated</td>
+<td>Ready for implementation/release workflow</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th style="text-align:right">Score</th>
+<th>What Good Looks Like</th>
+<th>Main Risk If Weak</th>
+<th>Follow-Up Needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capability intent</td>
+<td style="text-align:right"></td>
+<td>Outcome and problem are clear</td>
+<td>Agents build the wrong thing</td>
+<td></td>
+</tr>
+<tr>
+<td>Users and roles</td>
+<td style="text-align:right"></td>
+<td>Roles, goals, and permissions are clear</td>
+<td>Access or workflow behavior is wrong</td>
+<td></td>
+</tr>
+<tr>
+<td>Workflow</td>
+<td style="text-align:right"></td>
+<td>Primary, alternate, and error flows are understandable</td>
+<td>Implementation misses end-to-end behavior</td>
+<td></td>
+</tr>
+<tr>
+<td>Scope boundaries</td>
+<td style="text-align:right"></td>
+<td>In scope, out of scope, assumptions, and dependencies are explicit</td>
+<td>Scope expands mid-build</td>
+<td></td>
+</tr>
+<tr>
+<td>Data and state</td>
+<td style="text-align:right"></td>
+<td>Objects, fields, mappings, and state changes are known</td>
+<td>Data model or persistence is wrong</td>
+<td></td>
+</tr>
+<tr>
+<td>Business rules</td>
+<td style="text-align:right"></td>
+<td>Required, conditional, validation, and calculation rules are explicit</td>
+<td>Logic defects or rework</td>
+<td></td>
+</tr>
+<tr>
+<td>UX expectations</td>
+<td style="text-align:right"></td>
+<td>Screens, states, accessibility, and responsive behavior are defined</td>
+<td>Usability or design mismatch</td>
+<td></td>
+</tr>
+<tr>
+<td>Integrations</td>
+<td style="text-align:right"></td>
+<td>Systems, data exchanged, auth, and failure handling are known</td>
+<td>Broken system boundaries</td>
+<td></td>
+</tr>
+<tr>
+<td>Non-functional requirements</td>
+<td style="text-align:right"></td>
+<td>Performance, security, privacy, logging, reliability are addressed</td>
+<td>Production readiness gaps</td>
+<td></td>
+</tr>
+<tr>
+<td>Acceptance criteria</td>
+<td style="text-align:right"></td>
+<td>Tests can prove the capability works</td>
+<td>QA cannot verify done</td>
+<td></td>
+</tr>
+<tr>
+<td>Agent handoff</td>
+<td style="text-align:right"></td>
+<td>Agent missions, inputs, outputs, and reviews are defined</td>
+<td>Agents duplicate work or miss responsibilities</td>
+<td></td>
+</tr>
+<tr>
+<td>Human review plan</td>
+<td style="text-align:right"></td>
+<td>Approval points and decision owners are clear</td>
+<td>AI output bypasses governance</td>
+</tr>
+</tbody>
+</table>
+<p>Overall readiness:</p>
+<ul>
+<li>Ready for PRD review: Yes / No</li>
+<li>Ready for agent handoff: Yes / No</li>
+<li>Ready for implementation: Yes / No</li>
+<li>Ready for customer review: Yes / No</li>
+</ul>
+<p>Readiness decision rules:</p>
+<ul>
+<li>If any area is 0, the PRD is not ready for agent handoff.</li>
+<li>If any critical area is 1, the PRD needs human clarification before build.</li>
+<li>If most areas are 3 or higher, the PRD is ready for human PRD review.</li>
+<li>If all critical delivery areas are 4 or higher, the PRD is ready for agent handoff.</li>
+<li>A score of 5 should require explicit human validation, not just LLM confidence.</li>
+</ul>
+<p>Critical delivery areas:</p>
+<ul>
+<li>Capability intent</li>
+<li>Workflow</li>
+<li>Scope boundaries</li>
+<li>Data and state</li>
+<li>Business rules</li>
+<li>Acceptance criteria</li>
+<li>Agent handoff</li>
+<li>Human review plan</li>
+</ul>
+<h2 id="change-handling">Change Handling</h2>
+<p>If the user changes requirements during the interview, the LLM should:</p>
+<ol>
+<li>Restate the change.</li>
+<li>Identify which PRD sections are affected.</li>
+<li>Identify impacts to scope, time box, data, rules, tests, security, deployment, and customer communication.</li>
+<li>Ask whether the change replaces the prior requirement or becomes an alternate/future requirement.</li>
+<li>Update assumptions, risks, and open questions.</li>
+<li>Continue the interview from the most affected stage.</li>
+</ol>
+<h2 id="final-prompt-to-generate-the-prd">Final Prompt to Generate the PRD</h2>
+<pre><code class="lang-markdown">Using everything captured in this interview, generate a complete Agile Blueprinting PRD.
+
+Use the Agile Blueprinting PRD Template structure. Fill in every section with the best available information. Clearly mark assumptions. Put unresolved items in Open Questions. Make the document specific enough for AI development, testing, security, packaging, and deployment agents to act on it.
+
+Generate all required outputs:
+
+1. Full PRD
+2. Executive summary
+3. Engineering implementation brief
+4. Agent handoff plan
+5. QA and acceptance test brief
+6. Security review brief
+7. Packaging and deployment brief
+8. Customer-facing summary
+9. Assumptions list
+10. Open questions list
+11. Risk register
+12. PRD readiness rubric
+13. Recommended delivery time box
+14. Suggested human review checkpoints
+15. Recommended first implementation slice
+
+If any section is incomplete, do not hide it. Mark it as an assumption, risk, or open question.</code></pre>
+</article>
+    </main>
+  </div>
+</body>
+</html>

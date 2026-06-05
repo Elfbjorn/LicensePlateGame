@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPOG Sample | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell spog">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Single Pane of Glass prototype</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html" aria-current="page">SPOG Sample</a>
+          <a href="single-pane-of-glass.html">SPOG Artifact</a>
+          <a href="hitl-checkpoint-matrix.html">HITL Matrix</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="single-pane-of-glass.html">Open SPOG artifact</a>
+      </div>
+
+      <section class="hero">
+        <h1>Sample SPOG</h1>
+        <p>A static leadership prototype showing how Blueprint to Release evidence, agent outputs, HITL sign-offs, risk, testing, deployment, and closure status could roll up into one governed review surface.</p>
+        <div class="meta-row">
+          <span class="pill"><span class="status-dot yellow"></span>Overall: Ship with risk</span>
+          <span class="pill">Capability: Customer Access Amendment</span>
+          <span class="pill">Release Window: 2026-06-19</span>
+          <span class="pill">Prototype data</span>
+        </div>
+      </section>
+
+      <section class="spog-header">
+        <div class="panel">
+          <h2 class="card-title">Release Header</h2>
+          <table>
+            <tr><th>Field</th><th>Sample Value</th></tr>
+            <tr><td>Capability / Release Name</td><td>Customer Access Amendment</td></tr>
+            <tr><td>Intake Categorization</td><td>Amendment / operational support request</td></tr>
+            <tr><td>Delivery Lane</td><td>Amendment / Re-Scope</td></tr>
+            <tr><td>PRD / Blueprint</td><td><a href="prd-template.html">Sample PRD template</a></td></tr>
+            <tr><td>Pull Request</td><td>PR-1842, linked in evidence package</td></tr>
+            <tr><td>Final Recommendation</td><td>Ship with accepted documentation follow-up</td></tr>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h2 class="card-title">Status Legend</h2>
+          <table>
+            <tr><th>Indicator</th><th>Meaning</th></tr>
+            <tr><td><span class="status-dot green"></span>Green</td><td>Ready or approved</td></tr>
+            <tr><td><span class="status-dot yellow"></span>Yellow</td><td>Caution or accepted risk</td></tr>
+            <tr><td><span class="status-dot red"></span>Red</td><td>Blocked or rejected</td></tr>
+            <tr><td><span class="status-dot blue"></span>Blue</td><td>Informational or waiting</td></tr>
+            <tr><td><span class="status-dot gray"></span>Gray</td><td>Not applicable</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-label="Summary metrics">
+        <div class="metric"><span>Overall Readiness</span><strong>85%</strong></div>
+        <div class="metric"><span>Approved Gates</span><strong>16 / 21</strong></div>
+        <div class="metric"><span>Accepted Risks</span><strong>3</strong></div>
+        <div class="metric"><span>Blocking Issues</span><strong>0</strong></div>
+        <div class="metric"><span>Open Follow-Ups</span><strong>4</strong></div>
+      </section>
+
+      <section class="panel">
+        <h2 class="card-title">Phased KPI Review</h2>
+        <p>Each phase can collapse into a roll-up of the widgets inside it. Open a phase to inspect individual KPI widgets, then use drill-through to see evidence, reviewer, decision, sign-off metadata, and sample rationale.</p>
+        <div class="phase-stack" data-phase-stack></div>
+      </section>
+
+      <section class="panel">
+        <h2 class="card-title">Decision Log</h2>
+        <div class="decision-strip">
+          <div class="metric"><span>Current Decision</span><strong>Ship</strong></div>
+          <div class="metric"><span>Risk Posture</span><strong>Bounded</strong></div>
+          <div class="metric"><span>Closure Owner</span><strong>Product / Support</strong></div>
+        </div>
+        <table>
+          <tr><th>Date</th><th>Decision</th><th>Owner</th><th>Rationale</th></tr>
+          <tr><td>2026-06-05</td><td>Accept as amendment</td><td>Engineering</td><td>Course correction remains tied to original outcome.</td></tr>
+          <tr><td>2026-06-05</td><td>Proceed with discovery assumptions</td><td>Product leadership</td><td>Known unknowns are bounded and visible.</td></tr>
+          <tr><td>2026-06-05</td><td>Ship with documentation follow-up</td><td>Engineering leadership</td><td>No blocker remains; follow-up does not affect delivered behavior.</td></tr>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" data-modal aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h2 id="modal-title" data-modal-title>Widget detail</h2>
+        <button type="button" class="modal-close" data-modal-close>Close</button>
+      </header>
+      <div class="modal-body" data-modal-body></div>
+    </section>
+  </div>
+
+  <script src="spog.js"></script>
+</body>
+</html>

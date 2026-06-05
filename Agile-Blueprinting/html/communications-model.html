@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Communications Model | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>Communications Model</h1>
+        <p>HTML rendering of COMMUNICATIONS-MODEL.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="communications-model">Communications Model</h1>
+<p>This document defines the communications model for Agile Blueprinting and Blueprint to Release across the three IT pillars:</p>
+<ul>
+<li>Support / Operations</li>
+<li>Product / Design</li>
+<li>Engineering</li>
+</ul>
+<h2 id="base-rule-no-ticket-no-work">Base Rule: No Ticket, No Work</h2>
+<p>If a customer wants to engage IT, the request must become a Jira ticket.</p>
+<p>Customers can email, message, or discuss ideas informally, but until the request exists as a Jira ticket, it is not part of the official workflow.</p>
+<blockquote>
+<p>No ticket, no work. Until it is a ticket, it is a dream.</p>
+</blockquote>
+<h2 id="system-of-record">System of Record</h2>
+<p>Jira is the common ticketing system for all three pillars.</p>
+<p>Tickets can enter through Support/Ops or Product/Design. The entry point does not determine permanent ownership. Ownership is determined by categorization.</p>
+<h2 id="categorization-not-classification">Categorization, Not Classification</h2>
+<p>Use the word <code>categorized</code>, not <code>classified</code>.</p>
+<p><code>Classified</code> has a different meaning in this environment and should not be used for ticket routing/status language.</p>
+<h2 id="three-pillar-model">Three-Pillar Model</h2>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Primary Role</th>
+<th>Customer Comms</th>
+<th>Production Change Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support / Operations</td>
+<td>Triage, O&amp;M, defects, operational support</td>
+<td>Owns comms for support/O&amp;M/defect tickets</td>
+<td>Can use approved support/O&amp;M tools</td>
+</tr>
+<tr>
+<td>Product / Design</td>
+<td>Discovery, low-fi design, PRD/blueprint, feature ownership</td>
+<td>Owns comms for product/new request tickets</td>
+<td>No production implementation authority</td>
+</tr>
+<tr>
+<td>Engineering</td>
+<td>Implementation, tests, PR review, packaging, release</td>
+<td>Never communicates directly with customers</td>
+<td>Owns implementation and release work</td>
+</tr>
+</tbody>
+</table>
+<p>Security currently lives as a peer group under Ops. That may change, but the communications model should still treat security review as a required governance path when applicable.</p>
+<h2 id="ticket-ownership-rules">Ticket Ownership Rules</h2>
+<h3 id="support-owned-work">Support-Owned Work</h3>
+<p>Support owns communication when the ticket should be in the Support/Ops lane:</p>
+<ul>
+<li>Defect</li>
+<li>O&amp;M</li>
+<li>Operational task</li>
+<li>Support-resolvable issue</li>
+</ul>
+<p>If Support can fix the issue using approved tools, Support should fix it. Support must communicate what it did to Product and Engineering as appropriate.</p>
+<p>If the issue requires Engineering, Support creates a new blocking Engineering ticket and maintains customer-facing communication ownership unless ownership is formally transferred.</p>
+<h3 id="product-owned-work">Product-Owned Work</h3>
+<p>Product owns communication when the ticket should be in the Product/Design lane:</p>
+<ul>
+<li>New feature</li>
+<li>New application</li>
+<li>New workflow</li>
+<li>Planned sprint work</li>
+<li>Meaningful enhancement</li>
+</ul>
+<p>Product performs discovery and low-fidelity design work. Product may use Figma or equivalent design tools, but only for low-fi exploration and customer alignment. Product should not prototype production solutions or drift into Engineering&#39;s lane.</p>
+<p>Product does not implement production changes.</p>
+<p>Product transfers implementation work to Engineering and owns pre-release and post-release customer communications for work in its lane.</p>
+<h3 id="engineering-owned-work">Engineering-Owned Work</h3>
+<p>Engineering owns implementation and delivery quality:</p>
+<ul>
+<li>Code implementation</li>
+<li>Unit tests</li>
+<li>Integration tests</li>
+<li>End-to-end tests</li>
+<li>PR review</li>
+<li>Packaging</li>
+<li>Release</li>
+<li>DevOps work</li>
+</ul>
+<p>Engineering owns communication back to Product and/or Support. Engineering does not communicate directly with customers.</p>
+<p>Engineering must keep the owning customer-facing pillar informed, especially for blockers, clarifications, dev-complete handoffs, release readiness, and issues that affect expectations.</p>
+<h2 id="red-line-engineering-never-talks-directly-to-customers">Red Line: Engineering Never Talks Directly to Customers</h2>
+<p>Engineering should never be in the room with customers.</p>
+<p>Customer communication flows through Product or Support/Ops, depending on ticket ownership and category.</p>
+<p>Rationale:</p>
+<ul>
+<li>Prevents uncontrolled scope commitments.</li>
+<li>Keeps customer-facing communication consistent.</li>
+<li>Protects Engineering from ad hoc requirement negotiation.</li>
+<li>Keeps Product and Support accountable for their lanes.</li>
+<li>Avoids confusing technical discussion with customer commitment.</li>
+</ul>
+<h2 id="transfer-rules">Transfer Rules</h2>
+<p>Ownership should follow the nature of the ticket.</p>
+<table>
+<thead>
+<tr>
+<th>Starting Pillar</th>
+<th>If Ticket Is Actually...</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support</td>
+<td>New feature, new app, enhancement, sprint/planned work</td>
+<td>Transfer to Product</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Defect, O&amp;M, support issue, operational task</td>
+<td>Transfer to Support</td>
+</tr>
+<tr>
+<td>Support or Product</td>
+<td>Requires implementation</td>
+<td>Create/transfer/block Engineering ticket</td>
+</tr>
+<tr>
+<td>Engineering</td>
+<td>Needs customer clarification</td>
+<td>Ask Product/Support to obtain clarification</td>
+</tr>
+</tbody>
+</table>
+<p>State transfer requires explicit internal communication. The receiving pillar should not discover ownership changes passively.</p>
+<h2 id="three-amigos-categorization">Three Amigos Categorization</h2>
+<p>Ticket categorization should happen in a Three Amigos meeting with representation from:</p>
+<ul>
+<li>Support / Operations</li>
+<li>Product / Design</li>
+<li>Engineering</li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li>Categorize the ticket.</li>
+<li>Decide whether the juice is worth the squeeze.</li>
+<li>Select the delivery lane.</li>
+<li>Identify the owning customer-facing pillar.</li>
+<li>Identify whether Engineering work is required.</li>
+<li>Identify required HITL tollgates.</li>
+<li>Identify communications expectations.</li>
+</ul>
+<p>Possible ticket categories:</p>
+<ul>
+<li>Defect</li>
+<li>O&amp;M / operational task</li>
+<li>New request / feature / application</li>
+<li>Amendment / re-scope</li>
+<li>Security / risk</li>
+</ul>
+<h2 id="delivery-lane-communication-ownership">Delivery Lane Communication Ownership</h2>
+<table>
+<thead>
+<tr>
+<th>Delivery Lane</th>
+<th>Customer-Facing Owner</th>
+<th>Engineering Comms Owner</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kanban / O&amp;M</td>
+<td>Support / Operations</td>
+<td>Engineering communicates to Support</td>
+<td>Used for defects, support issues, O&amp;M</td>
+</tr>
+<tr>
+<td>Sprint / Planned Delivery</td>
+<td>Product / Design</td>
+<td>Engineering communicates to Product</td>
+<td>Used for new requests, features, new apps</td>
+</tr>
+<tr>
+<td>Expedited / Security-Led</td>
+<td>Support/Ops or designated risk owner</td>
+<td>Engineering communicates to owning pillar/security owner</td>
+<td>Audience may be restricted</td>
+</tr>
+<tr>
+<td>Amendment / Re-Scope</td>
+<td>Original owning pillar unless reassigned</td>
+<td>Engineering communicates to owning pillar</td>
+<td>Requires impact review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="customer-communication-triggers">Customer Communication Triggers</h2>
+<p>The owning customer-facing pillar should communicate at these moments:</p>
+<ul>
+<li>Ticket received / acknowledged</li>
+<li>Ticket categorized</li>
+<li>Discovery scheduled</li>
+<li>PRD/blueprint ready for review</li>
+<li>Customer/proxy sign-off requested</li>
+<li>Build started</li>
+<li>UAT requested</li>
+<li>Review ready</li>
+<li>48-hour release heads-up</li>
+<li>Release completed</li>
+<li>Ticket closure or acceptance requested</li>
+<li>Follow-up/amendment needed</li>
+</ul>
+<h2 id="internal-communication-triggers">Internal Communication Triggers</h2>
+<p>Internal communication is required at these moments:</p>
+<ul>
+<li>Ticket ownership transfer</li>
+<li>Ticket categorized in Three Amigos</li>
+<li>Engineering ticket created or linked as blocking work</li>
+<li>Clarification needed</li>
+<li>Blocker identified</li>
+<li>Scope/risk issue discovered</li>
+<li>Development complete</li>
+<li>QA work needed</li>
+<li>QA complete</li>
+<li>Security review needed or complete</li>
+<li>Packaging/deployment ready</li>
+<li>Release ready</li>
+<li>Release completed</li>
+<li>Post-release issue found</li>
+</ul>
+<h2 id="development-complete-handoff">Development Complete Handoff</h2>
+<p>When Engineering marks development complete:</p>
+<ul>
+<li>Engineering creates or transitions the appropriate QA ticket/work item.</li>
+<li>Engineering adds a Jira comment tagging the person or group that most immediately owned the ticket before Engineering, such as Product, Support/Ops, or a named requester from those teams.</li>
+<li>Engineering summarizes what was completed, what evidence exists, and what still needs review.</li>
+</ul>
+<h2 id="update-cadence-contracts">Update Cadence Contracts</h2>
+<p>The process should define standard update cadences by category and lane.</p>
+<p>Examples:</p>
+<ul>
+<li>Defects may require updates every defined number of minutes/hours.</li>
+<li>Features may require updates every defined number of days.</li>
+<li>Operational tasks may follow O&amp;M cadence.</li>
+<li>Security/risk items may require restricted and more frequent updates.</li>
+</ul>
+<p>Do not define exact cadence values in this document yet.</p>
+<p>Requesters may request a cadence override, such as more frequent updates or a specific format. Overrides are negotiation points, not automatic requirements.</p>
+<p>Once an override is agreed to, Engineering must comply with that communication contract through the owning customer-facing pillar.</p>
+<p>Cadence contracts are part of the broader SLA model and should not be fully defined here yet.</p>
+<h2 id="engineering-to-pillar-communication-contract">Engineering-to-Pillar Communication Contract</h2>
+<p>Engineering must communicate to Product and/or Support:</p>
+<ul>
+<li>Status changes</li>
+<li>Blockers</li>
+<li>Clarifications needed</li>
+<li>Test/review readiness</li>
+<li>Release readiness</li>
+<li>Risks or deviations from the PRD/ticket</li>
+<li>Any agreed cadence update</li>
+</ul>
+<p>Engineering does not communicate directly with customers. Product or Support translates Engineering updates into customer-facing communication.</p>
+<h2 id="tool-boundaries">Tool Boundaries</h2>
+<p>All pillars use Jira.</p>
+<p>Some tools intentionally differ by pillar:</p>
+<ul>
+<li>Figma is part of Product/Design&#39;s flow.</li>
+<li>Figma is not part of Support/Ops flow.</li>
+<li>Product uses low-fi design artifacts for discovery and alignment.</li>
+<li>Product should not prototype production solutions.</li>
+<li>Support should not design product solutions.</li>
+<li>Engineering should not negotiate requirements directly with customers.</li>
+</ul>
+<h2 id="ticket-closure-and-definitions-of-done">Ticket Closure and Definitions of Done</h2>
+<p>There are multiple definitions of done in Blueprint to Release. This is intentional.</p>
+<p>Different teams can be done with their portion of the work before the overall request is truly done. A ticket should not be closed simply because one pillar has completed its handoff.</p>
+<h3 id="engineering-done">Engineering Done</h3>
+<p>Engineering Done means Engineering has completed the work it owns and has no reason to believe more Engineering work is required before handoff.</p>
+<p>Engineering Done may include:</p>
+<ul>
+<li>Implementation complete.</li>
+<li>Required unit tests complete.</li>
+<li>Required integration tests complete.</li>
+<li>Required end-to-end tests complete, when applicable.</li>
+<li>Pull request created and reviewed according to policy.</li>
+<li>Required QA handoff created or triggered.</li>
+<li>Required security/package/deployment evidence generated or linked.</li>
+<li>Engineering notes added to Jira.</li>
+<li>Product, Support/Ops, QA, or the next owning group tagged in Jira.</li>
+<li>Known risks, assumptions, deviations, or follow-up items documented.</li>
+</ul>
+<p>Engineering Done does not mean the customer ticket is closed.</p>
+<p>Engineering Done means Engineering has completed its part and handed the work to the next owner in the chain.</p>
+<h3 id="product-done">Product Done</h3>
+<p>Product Done will be defined by Product/Design later.</p>
+<p>Likely considerations:</p>
+<ul>
+<li>Customer discovery complete.</li>
+<li>PRD/blueprint complete.</li>
+<li>Customer/proxy sign-off obtained.</li>
+<li>Low-fi artifacts reviewed.</li>
+<li>UAT or customer acceptance coordinated.</li>
+<li>Pre-release and post-release communications completed.</li>
+<li>Follow-on requests or amendments created when needed.</li>
+</ul>
+<h3 id="support-operations-done">Support / Operations Done</h3>
+<p>Support/Ops Done will be defined by Support/Operations later.</p>
+<p>Likely considerations:</p>
+<ul>
+<li>Triage complete.</li>
+<li>Customer updates complete.</li>
+<li>Support-resolvable fix applied, if applicable.</li>
+<li>Engineering escalation created, if needed.</li>
+<li>Operational validation complete.</li>
+<li>Customer-facing closure communication complete.</li>
+<li>Knowledge base/support notes updated, if needed.</li>
+</ul>
+<h3 id="done">Done</h3>
+<p>Done is the overarching definition of done.</p>
+<p>A request is Done only when the work has reached the target environment, all required HITL approvals have occurred, the owning customer-facing pillar agrees requirements have been met, and the ticket has the evidence needed for closure.</p>
+<p>Done means:</p>
+<ul>
+<li>The work is deployed or delivered to the intended target environment.</li>
+<li>Required QA/testing evidence is complete.</li>
+<li>Required security review is complete.</li>
+<li>Required packaging/deployment evidence is complete, when applicable.</li>
+<li>Required documentation/release notes are complete.</li>
+<li>Required HITL tollgates are signed off.</li>
+<li>Product or Support/Ops, depending on ownership, agrees the ticket outcome has been met.</li>
+<li>Customer/proxy acceptance is recorded when required.</li>
+<li>Open amendments or follow-on requests are separated from the closure decision.</li>
+<li>Closure note and evidence are attached to Jira.</li>
+</ul>
+<p>Done does not mean:</p>
+<ul>
+<li>&quot;It feels done.&quot;</li>
+<li>&quot;Engineering finished but it was not deployed.&quot;</li>
+<li>&quot;It passed one test but has not gone through the required tollgates.&quot;</li>
+<li>&quot;The implementation ticket is closed but the customer-facing outcome is unresolved.&quot;</li>
+<li>&quot;There are unresolved requirements hiding inside the original ticket.&quot;</li>
+</ul>
+<p>Tickets do not close until they are Done.</p>
+<h2 id="customer-non-response-policy">Customer Non-Response Policy</h2>
+<p>When customer input, sign-off, UAT/acceptance, or closure confirmation is required, customer non-response holds the work.</p>
+<p>Default rule:</p>
+<ul>
+<li>Before PRD/sign-off: hold until the customer or approved customer proxy responds.</li>
+<li>During UAT/acceptance: hold until the customer or approved customer proxy responds.</li>
+<li>At ticket closure: hold closure until the customer or approved customer proxy responds.</li>
+</ul>
+<p>The process should not move forward merely because the customer did not respond. If the customer has a required role in the workflow, the customer must do that job before the work advances.</p>
+<p>Escalation may be used to obtain the needed response, but escalation does not by itself replace the required customer/proxy response unless a formally authorized proxy decision is made.</p>
+<h2 id="closure-rules">Closure Rules</h2>
+<ul>
+<li>Any ticket opened in support of an initiative should remain open until the initiative reaches final verification and acceptance.</li>
+<li>Supporting tickets include QA tickets, Engineering tickets, Development tickets, DevOps tickets, Security tickets, Packaging/Deployment tickets, and any other linked work needed to deliver the initiative.</li>
+<li>Supporting tickets may move into states such as pending deployment, pending validation, blocked, ready for review, or equivalent workflow states, but they should not be closed before final approval.</li>
+<li>Closing a customer-facing ticket does not happen until all supporting tickets are verified, accepted, and ready for closure.</li>
+<li>Closing a supporting ticket does not happen until the complete initiative is verified and accepted by the final approval owner.</li>
+<li>Product-owned customer tickets close only when Product&#39;s definition of done and Done are met.</li>
+<li>Support-owned customer tickets close only when Support/Ops&#39; definition of done and Done are met.</li>
+<li>Material changes discovered near closure become amendments or follow-on requests, not silent scope drift.</li>
+<li>If the customer does not respond to an acceptance or closure request, the owning pillar holds the work and escalates as needed to obtain the required customer/proxy response.</li>
+<li>Every closure requires a closure note.</li>
+<li>Every closure requires evidence links or attachments.</li>
+</ul>
+<h2 id="final-approval-owner">Final Approval Owner</h2>
+<p>Final approval for initiative closure comes from whoever made the request.</p>
+<p>Rules:</p>
+<ul>
+<li>If the customer made the request, the customer is the final approval owner.</li>
+<li>If Product is proxying on behalf of the customer, Product still needs customer approval unless Product has been formally authorized as the customer proxy for that decision.</li>
+<li>If Product created the request for Product&#39;s own need, Product is the final approval owner.</li>
+<li>If Support/Ops created the request for an operational need, Support/Ops is the final approval owner.</li>
+<li>Engineering does not become the final approval owner merely because Engineering delivered the implementation.</li>
+</ul>
+<h2 id="closure-evidence">Closure Evidence</h2>
+<p>Closure evidence should not be overly prescriptive at this stage.</p>
+<p>The core closure evidence is confirmation from the requester or final approval owner that what was delivered is what they expected to be delivered.</p>
+<p>Supporting evidence should be linked or attached as needed, but the process should not require a heavy universal checklist before the teams have validated what evidence is truly useful.</p>
+<p>At minimum, the closure record should make clear:</p>
+<ul>
+<li>What was delivered.</li>
+<li>Who confirmed it matched expectations.</li>
+<li>When that confirmation occurred.</li>
+<li>Any known limitations, amendments, or follow-on requests that affect closure.</li>
+</ul>
+<h2 id="closure-note-template">Closure Note Template</h2>
+<pre><code class="lang-markdown">Closure summary:
+
+What was delivered:
+
+Target environment:
+
+Evidence reviewed:
+
+HITL approvals:
+
+Customer/proxy acceptance:
+
+Known limitations:
+
+Follow-on requests/amendments:
+
+Final closure decision:
+
+Closed by:
+
+Closed at:</code></pre>
+<h2 id="open-questions">Open Questions</h2>
+<ul>
+<li>Should Engineering always create a separate blocking ticket, or can it sometimes take ownership of a transferred ticket?</li>
+<li>Should Three Amigos be required for every ticket or only for ambiguous/high-impact work?</li>
+<li>What exact Jira statuses map to Blueprint to Release stages and each definition of done?</li>
+<li>What are the default update cadences by category?</li>
+<li>What is the format for negotiated cadence overrides?</li>
+<li>How should restricted security/risk communications be handled?</li>
+</ul>
+</article>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blueprint to Release | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>Blueprint to Release</h1>
+        <p>HTML rendering of BLUEPRINT-TO-RELEASE.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="blueprint-to-release">Blueprint to Release</h1>
+<p>Blueprint to Release is the operating flow for Agile Blueprinting. It moves work from classified customer or business need to governed AI-assisted delivery, human review, release, and feedback.</p>
+<p>This document intentionally excludes communications planning for now. Communications will be defined separately and then linked back into the process.</p>
+<h2 id="core-flow">Core Flow</h2>
+<pre><code class="lang-text">Intake
+  -&gt; HITL Classification Tollgate
+  -&gt; Delivery Lane Selection
+  -&gt; Discovery
+  -&gt; Blueprint / PRD Creation
+  -&gt; Definition of Ready
+  -&gt; Agent Planning
+  -&gt; Agent Execution
+  -&gt; Pull Request and Evidence Package
+  -&gt; HITL Review
+  -&gt; Release Decision
+  -&gt; Release
+  -&gt; Feedback / Amendment Loop</code></pre>
+<h2 id="stage-1-intake">Stage 1: Intake</h2>
+<p>Purpose: Capture the request clearly enough for humans to classify it.</p>
+<p>Inputs:</p>
+<ul>
+<li>Customer request</li>
+<li>Internal business request</li>
+<li>Defect report</li>
+<li>Support ticket</li>
+<li>Operational request</li>
+<li>Security/risk finding</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>Intake record</li>
+<li>Initial requester</li>
+<li>Affected customer/user group</li>
+<li>Problem statement</li>
+<li>Urgency signal</li>
+<li>Known evidence, screenshots, logs, examples, or reproduction steps</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Is the request understandable enough to classify?</li>
+<li>If not, return to requester for clarification.</li>
+</ul>
+<h2 id="stage-2-hitl-classification-tollgate">Stage 2: HITL Classification Tollgate</h2>
+<p>Purpose: Decide what type of work this is before choosing the delivery lane.</p>
+<p>Classification options:</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Typical Lane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defect</td>
+<td>Expected behavior is broken or regressed</td>
+<td>Kanban / O&amp;M</td>
+</tr>
+<tr>
+<td>New request</td>
+<td>New capability, enhancement, or workflow</td>
+<td>Sprint / planned delivery</td>
+</tr>
+<tr>
+<td>Amendment</td>
+<td>Change to an approved blueprint or in-flight deliverable</td>
+<td>Amendment / re-scope</td>
+</tr>
+<tr>
+<td>Operational task</td>
+<td>Configuration, deployment, data, support, or maintenance work</td>
+<td>Kanban / O&amp;M</td>
+</tr>
+<tr>
+<td>Security/risk issue</td>
+<td>Vulnerability, compliance, access, data, or risk item</td>
+<td>Expedited / security-led</td>
+</tr>
+</tbody>
+</table>
+<p>Required human decision:</p>
+<ul>
+<li>Classification</li>
+<li>Priority</li>
+<li>Delivery lane</li>
+<li>Required reviewers</li>
+<li>Whether a full PRD is required or a lighter blueprint is sufficient</li>
+</ul>
+<p>Exit criteria:</p>
+<ul>
+<li>Work type is classified.</li>
+<li>Delivery lane is selected.</li>
+<li>Required governance path is known.</li>
+</ul>
+<h2 id="stage-3-delivery-lane-selection">Stage 3: Delivery Lane Selection</h2>
+<p>Purpose: Route work into the right operating mode.</p>
+<h3 id="sprint-planned-delivery">Sprint / Planned Delivery</h3>
+<p>Use when:</p>
+<ul>
+<li>Work is a new request or meaningful enhancement.</li>
+<li>Customer discovery is needed.</li>
+<li>Scope and acceptance need to be agreed up front.</li>
+<li>Release can be planned into a time box.</li>
+</ul>
+<p>Expected artifacts:</p>
+<ul>
+<li>Discovery notes</li>
+<li>PRD / blueprint</li>
+<li>Readiness rubric</li>
+<li>Agent handoff plan</li>
+<li>Pull request and evidence package</li>
+</ul>
+<h3 id="kanban-o-m">Kanban / O&amp;M</h3>
+<p>Use when:</p>
+<ul>
+<li>Work is a defect, support item, operational task, or maintenance request.</li>
+<li>Flow-based handling is more appropriate than sprint planning.</li>
+<li>The request may need rapid triage and turnaround.</li>
+</ul>
+<p>Expected artifacts:</p>
+<ul>
+<li>Intake/ticket record</li>
+<li>Reproduction or operational evidence</li>
+<li>Lightweight blueprint or fix note</li>
+<li>Test evidence</li>
+<li>Pull request and evidence package, if code/config changes are made</li>
+</ul>
+<h3 id="expedited-security-led">Expedited / Security-Led</h3>
+<p>Use when:</p>
+<ul>
+<li>The work involves security, compliance, data exposure, access control, or urgent production risk.</li>
+<li>Normal sequencing may need to be compressed.</li>
+<li>Security or risk owner needs authority in the flow.</li>
+</ul>
+<p>Expected artifacts:</p>
+<ul>
+<li>Risk/security finding</li>
+<li>Mitigation plan</li>
+<li>Test/security evidence</li>
+<li>Approval record</li>
+<li>Pull request and evidence package</li>
+</ul>
+<h3 id="amendment-re-scope">Amendment / Re-Scope</h3>
+<p>Use when:</p>
+<ul>
+<li>A signed-off blueprint changes materially.</li>
+<li>A customer or stakeholder changes the intended deliverable.</li>
+<li>A discovered issue affects scope, workflow, data, rules, or acceptance.</li>
+</ul>
+<p>Expected artifacts:</p>
+<ul>
+<li>Amendment note</li>
+<li>Impact assessment</li>
+<li>Updated PRD or follow-on blueprint</li>
+<li>Revised readiness decision</li>
+</ul>
+<h2 id="stage-4-discovery">Stage 4: Discovery</h2>
+<p>Purpose: Ensure the Product Manager or Business Analyst has done the homework before the PRD is treated as ready.</p>
+<p>Activities:</p>
+<ul>
+<li>Meet with customer or customer proxy.</li>
+<li>Understand the customer need and business outcome.</li>
+<li>Walk the workflow end to end.</li>
+<li>Review low-fidelity mockups, wireframes, workflow diagrams, or equivalent aids when helpful.</li>
+<li>Identify contingencies, alternate paths, and exceptions.</li>
+<li>Identify data, rules, validations, integrations, and permissions.</li>
+<li>Capture in-scope and out-of-scope boundaries.</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>Discovery notes</li>
+<li>Workflow notes or diagram</li>
+<li>Mockups/wireframes, if applicable</li>
+<li>Initial assumptions</li>
+<li>Known risks</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Has enough homework been done to generate a PRD?</li>
+<li>If not, return to customer discovery.</li>
+</ul>
+<h2 id="stage-5-blueprint-prd-creation">Stage 5: Blueprint / PRD Creation</h2>
+<p>Purpose: Generate the full blueprint for the requested deliverable.</p>
+<p>Activities:</p>
+<ul>
+<li>Run the LLM-driven PRD interview.</li>
+<li>Generate the PRD.</li>
+<li>Generate supporting outputs:<ul>
+<li>Executive summary</li>
+<li>Engineering implementation brief</li>
+<li>Agent handoff plan</li>
+<li>QA and acceptance test brief</li>
+<li>Security review brief</li>
+<li>Packaging and deployment brief</li>
+<li>Customer-facing summary</li>
+<li>Assumptions</li>
+<li>Open questions</li>
+<li>Risk register</li>
+<li>Readiness rubric</li>
+</ul>
+</li>
+</ul>
+<p>Primary artifact:</p>
+<ul>
+<li>PRD / blueprint</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Is the PRD coherent enough for readiness review?</li>
+<li>If not, revise the PRD or return to discovery.</li>
+</ul>
+<h2 id="stage-6-definition-of-ready">Stage 6: Definition of Ready</h2>
+<p>Purpose: Confirm that the PRD is strong enough to govern agentic delivery.</p>
+<p>Ready means:</p>
+<ul>
+<li>Product/BA owner has done the homework.</li>
+<li>Customer or proxy has been engaged.</li>
+<li>Workflow and intended deliverable are clear.</li>
+<li>Scope boundaries are explicit.</li>
+<li>Major data, rules, validations, integrations, permissions, and acceptance criteria are documented or marked as assumptions.</li>
+<li>Out-of-scope items are explicit.</li>
+<li>The owner signs off that the PRD represents what the customer is asking to receive.</li>
+</ul>
+<p>Readiness is not an estimation ritual. It is a quality and governance gate.</p>
+<p>Outputs:</p>
+<ul>
+<li>Approved PRD or revision request</li>
+<li>Readiness rubric</li>
+<li>Sign-off record</li>
+<li>Amendment policy acknowledged</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Ready for agent handoff?</li>
+<li>Needs revision?</li>
+<li>Needs customer clarification?</li>
+<li>Should be reclassified?</li>
+</ul>
+<h2 id="stage-7-agent-planning">Stage 7: Agent Planning</h2>
+<p>Purpose: Convert the approved PRD into agent missions and rules.</p>
+<p>Activities:</p>
+<ul>
+<li>Define which agents are required.</li>
+<li>Define inputs and expected outputs per agent.</li>
+<li>Define rules each agent must follow.</li>
+<li>Define evidence required for human review.</li>
+<li>Define pull request expectations.</li>
+<li>Define escalation conditions.</li>
+</ul>
+<p>Standard agents:</p>
+<ul>
+<li>Implementation agent</li>
+<li>Quality/testing agent</li>
+<li>Security agent</li>
+<li>Documentation/comms agent</li>
+<li>Packaging agent</li>
+<li>Deployment/Helm agent</li>
+<li>Artifact review agent</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>Agent handoff plan</li>
+<li>Agent rules</li>
+<li>Required evidence checklist</li>
+<li>Review ownership matrix</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Are the agent missions and rules clear enough to execute?</li>
+<li>If not, revise the handoff plan before build begins.</li>
+</ul>
+<h2 id="stage-8-agent-execution">Stage 8: Agent Execution</h2>
+<p>Purpose: Have specialist agents produce work products and evidence.</p>
+<p>Agent outputs:</p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Work Product</th>
+<th>Evidence / Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Implementation</td>
+<td>Code changes, branch, pull request draft</td>
+<td>Implementation notes, changed files, design decisions</td>
+</tr>
+<tr>
+<td>Quality / Test</td>
+<td>Automated tests, test execution</td>
+<td>Test plan, test results, failures, coverage notes</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Security checks and mitigations</td>
+<td>Security report, risks, remediation notes</td>
+</tr>
+<tr>
+<td>Documentation / Comms</td>
+<td>Release notes, support docs, customer-facing drafts</td>
+<td>Documentation package and audience map</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>Docker/package assets</td>
+<td>Packaging manifest, build notes, runtime assumptions</td>
+</tr>
+<tr>
+<td>Deployment / Helm</td>
+<td>Helm charts/deployment config</td>
+<td>Deployment notes, env/secrets checklist, rollback notes</td>
+</tr>
+<tr>
+<td>Artifact Review</td>
+<td>Consolidated review package</td>
+<td>Single pane of glass</td>
+</tr>
+</tbody>
+</table>
+<p>Escalation triggers:</p>
+<ul>
+<li>PRD contradiction</li>
+<li>Missing rule needed for implementation</li>
+<li>Security risk</li>
+<li>Test failure that changes scope</li>
+<li>Deployment blocker</li>
+<li>Agent deviation from PRD</li>
+<li>Material customer-impacting ambiguity</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Continue execution?</li>
+<li>Pause for clarification?</li>
+<li>Return to PRD amendment?</li>
+<li>Reject agent output?</li>
+</ul>
+<h2 id="stage-9-pull-request-and-evidence-package">Stage 9: Pull Request and Evidence Package</h2>
+<p>Purpose: Package AI-generated work into a normal engineering review path.</p>
+<p>Agents can:</p>
+<ul>
+<li>Create a branch.</li>
+<li>Commit changes.</li>
+<li>Open a pull request.</li>
+<li>Add implementation notes.</li>
+<li>Attach generated evidence.</li>
+<li>Respond to review comments with proposed fixes.</li>
+</ul>
+<p>Agents cannot:</p>
+<ul>
+<li>Approve their own pull request.</li>
+<li>Merge without human approval.</li>
+<li>Override required checks.</li>
+<li>Declare customer acceptance.</li>
+<li>Waive security, QA, or release gates.</li>
+<li>Change governing rules without human approval.</li>
+</ul>
+<p>Required PR contents:</p>
+<ul>
+<li>PRD link</li>
+<li>Summary of implementation</li>
+<li>Changed files/components</li>
+<li>Test evidence</li>
+<li>Security evidence</li>
+<li>Packaging/deployment evidence, if applicable</li>
+<li>Known assumptions</li>
+<li>Known deviations from PRD</li>
+<li>Open questions</li>
+<li>Human approvals required</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Is the PR complete enough to enter review?</li>
+<li>If not, return to agents for missing evidence.</li>
+</ul>
+<h2 id="stage-10-hitl-review">Stage 10: HITL Review</h2>
+<p>Purpose: Validate that all rules were followed and that generated evidence is sufficient.</p>
+<p>Review surfaces:</p>
+<ul>
+<li>Pull request</li>
+<li>Single pane of glass</li>
+<li>Test report</li>
+<li>Security report</li>
+<li>Packaging/deployment notes</li>
+<li>Documentation package</li>
+<li>PRD readiness record</li>
+</ul>
+<p>Possible decisions:</p>
+<ul>
+<li>Approve</li>
+<li>Request changes</li>
+<li>Reject</li>
+<li>Hold for customer clarification</li>
+<li>Return to agent execution</li>
+<li>Amend PRD</li>
+<li>Reclassify work</li>
+</ul>
+<p>Required principle:</p>
+<ul>
+<li>Humans define the rules.</li>
+<li>Agents execute and produce evidence.</li>
+<li>Humans validate that evidence and approve or reject.</li>
+</ul>
+<h2 id="stage-11-release-decision">Stage 11: Release Decision</h2>
+<p>Purpose: Decide whether the approved work should ship.</p>
+<p>Inputs:</p>
+<ul>
+<li>Approved pull request</li>
+<li>Passing required checks</li>
+<li>QA approval</li>
+<li>Security approval</li>
+<li>Packaging/deployment readiness</li>
+<li>Known risks</li>
+<li>Rollback plan, if applicable</li>
+</ul>
+<p>Possible decisions:</p>
+<ul>
+<li>Ship</li>
+<li>Hold</li>
+<li>Ship with accepted risk</li>
+<li>Return for fixes</li>
+<li>Split release</li>
+<li>Convert remaining work to amendment/follow-on request</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Final ship/hold decision.</li>
+</ul>
+<h2 id="stage-12-release">Stage 12: Release</h2>
+<p>Purpose: Deploy or deliver the approved change.</p>
+<p>Activities:</p>
+<ul>
+<li>Merge approved PR.</li>
+<li>Build/package release artifact.</li>
+<li>Deploy through approved path.</li>
+<li>Confirm release health.</li>
+<li>Confirm rollback path if needed.</li>
+<li>Record release outcome.</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>Release artifact</li>
+<li>Deployment record</li>
+<li>Release status</li>
+<li>Known issues</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Is release complete and stable?</li>
+<li>If not, invoke rollback, hotfix, or follow-on process.</li>
+</ul>
+<h2 id="stage-13-feedback-amendment-loop">Stage 13: Feedback / Amendment Loop</h2>
+<p>Purpose: Capture learning and handle change without silent scope drift.</p>
+<p>Activities:</p>
+<ul>
+<li>Validate customer or user outcome.</li>
+<li>Capture defects or follow-on needs.</li>
+<li>Identify amendments to the original blueprint.</li>
+<li>Decide whether feedback is a defect, new request, amendment, operational task, or security/risk item.</li>
+<li>Route back through intake classification.</li>
+</ul>
+<p>Outputs:</p>
+<ul>
+<li>Feedback notes</li>
+<li>Acceptance record</li>
+<li>Amendment request, if needed</li>
+<li>New intake record, if needed</li>
+</ul>
+<p>HITL decision:</p>
+<ul>
+<li>Accepted as delivered?</li>
+<li>Needs amendment?</li>
+<li>New request?</li>
+<li>Defect?</li>
+</ul>
+<h2 id="tollgate-summary">Tollgate Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Tollgate</th>
+<th>Human Decision</th>
+<th>Possible Outcomes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intake Classification</td>
+<td>What kind of work is this?</td>
+<td>Defect, new request, amendment, O&amp;M, security/risk</td>
+</tr>
+<tr>
+<td>Discovery Readiness</td>
+<td>Is there enough understanding to write a PRD?</td>
+<td>Continue, clarify, stop</td>
+</tr>
+<tr>
+<td>PRD Review</td>
+<td>Is the blueprint coherent?</td>
+<td>Revise, approve for readiness review</td>
+</tr>
+<tr>
+<td>Definition of Ready</td>
+<td>Is the PRD strong enough for agent handoff?</td>
+<td>Ready, revise, clarify, reclassify</td>
+</tr>
+<tr>
+<td>Agent Planning Review</td>
+<td>Are agent missions/rules clear?</td>
+<td>Execute, revise handoff</td>
+</tr>
+<tr>
+<td>Execution Escalation</td>
+<td>Did agents hit ambiguity or risk?</td>
+<td>Continue, pause, amend, reject output</td>
+</tr>
+<tr>
+<td>PR Entry Review</td>
+<td>Is evidence complete enough for review?</td>
+<td>Enter review, return to agents</td>
+</tr>
+<tr>
+<td>HITL Review</td>
+<td>Did the work meet the rules?</td>
+<td>Approve, request changes, reject, hold</td>
+</tr>
+<tr>
+<td>Release Decision</td>
+<td>Should this ship?</td>
+<td>Ship, hold, accepted risk, split, fix</td>
+</tr>
+<tr>
+<td>Feedback Classification</td>
+<td>What is the post-release feedback?</td>
+<td>Accept, defect, amendment, new request</td>
+</tr>
+</tbody>
+</table>
+<h2 id="artifact-summary">Artifact Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Produced By</th>
+<th>Used By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intake record</td>
+<td>Requester / Product / BA</td>
+<td>Intake tollgate</td>
+</tr>
+<tr>
+<td>Discovery notes</td>
+<td>Product / BA</td>
+<td>PRD generation</td>
+</tr>
+<tr>
+<td>Workflow/mockup artifacts</td>
+<td>Product / BA / Customer</td>
+<td>PRD and readiness review</td>
+</tr>
+<tr>
+<td>PRD / blueprint</td>
+<td>LLM + Product / BA</td>
+<td>Agents and reviewers</td>
+</tr>
+<tr>
+<td>Readiness rubric</td>
+<td>LLM + HITL</td>
+<td>PRD approval</td>
+</tr>
+<tr>
+<td>Sign-off record</td>
+<td>Product / BA / Customer proxy</td>
+<td>Agent handoff</td>
+</tr>
+<tr>
+<td>Agent handoff plan</td>
+<td>LLM / delivery owner</td>
+<td>Specialist agents</td>
+</tr>
+<tr>
+<td>Agent evidence</td>
+<td>Specialist agents</td>
+<td>PR and HITL review</td>
+</tr>
+<tr>
+<td>Pull request</td>
+<td>Implementation agent</td>
+<td>Engineering review</td>
+</tr>
+<tr>
+<td>Test report</td>
+<td>QA/test agent</td>
+<td>QA and HITL review</td>
+</tr>
+<tr>
+<td>Security report</td>
+<td>Security agent</td>
+<td>Security and HITL review</td>
+</tr>
+<tr>
+<td>Packaging/deployment notes</td>
+<td>Packaging/deployment agents</td>
+<td>Release review</td>
+</tr>
+<tr>
+<td>Single pane of glass</td>
+<td>Artifact review agent</td>
+<td>HITL final review</td>
+</tr>
+<tr>
+<td>Release record</td>
+<td>Release owner / deployment agent</td>
+<td>Feedback and audit</td>
+</tr>
+<tr>
+<td>Feedback/amendment record</td>
+<td>Product / BA / Customer</td>
+<td>Intake classification</td>
+</tr>
+</tbody>
+</table>
+<h2 id="communications-placeholder">Communications Placeholder</h2>
+<p>Communications are intentionally not defined in this version. A separate communications model should define:</p>
+<ul>
+<li>Who gets notified by classification and lane</li>
+<li>Customer vs internal communications</li>
+<li>Release notes</li>
+<li>Incident/defect communications</li>
+<li>Review and sign-off communications</li>
+<li>Post-release feedback communications</li>
+</ul>
+</article>
+    </main>
+  </div>
+</body>
+</html>

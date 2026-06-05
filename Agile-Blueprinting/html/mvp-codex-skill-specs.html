@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MVP Codex Skill Specs | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>MVP Codex Skill Specs</h1>
+        <p>HTML rendering of MVP-CODEX-SKILL-SPECS.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="mvp-codex-skill-specs">MVP Codex Skill Specs</h1>
+<p>This artifact defines the first useful set of Codex skills for Agile Blueprinting / Blueprint to Release.</p>
+<p>The goal is not to operationalize the full methodology at once. The goal is to create a minimal, useful workflow that helps teams generate better PRDs, assess readiness before build, implement code, and produce test evidence.</p>
+<h2 id="mvp-skill-set">MVP Skill Set</h2>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Plugin Bundle</th>
+<th>Primary User</th>
+<th>Primary Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prd-generator</code></td>
+<td>Product plugin</td>
+<td>Product / BA</td>
+<td>PRD / blueprint artifact</td>
+</tr>
+<tr>
+<td><code>prd-readiness-review</code></td>
+<td>Product plugin, shared with Engineering</td>
+<td>Product / Engineering</td>
+<td>Readiness review with gaps, risks, and recommendation</td>
+</tr>
+<tr>
+<td><code>implementation-agent</code></td>
+<td>Engineering plugin</td>
+<td>Engineering</td>
+<td>Code changes plus implementation artifact</td>
+</tr>
+<tr>
+<td><code>unit-test-agent</code></td>
+<td>Engineering plugin</td>
+<td>Engineering / QA</td>
+<td>Unit test changes plus test evidence</td>
+</tr>
+<tr>
+<td><code>e2e-test-agent</code></td>
+<td>Engineering plugin</td>
+<td>Engineering / QA</td>
+<td>E2E test plan/results plus test evidence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shared-skill-behavior">Shared Skill Behavior</h2>
+<p>Every MVP skill should:</p>
+<ul>
+<li>Use plain-language guided prompts.</li>
+<li>Keep the user from needing to remember the full methodology.</li>
+<li>Write predictable Markdown artifacts.</li>
+<li>Distinguish facts, assumptions, risks, open questions, and deviations.</li>
+<li>Make HITL review points visible without making the user manage the full governance model manually.</li>
+<li>Prefer progress over ceremony while preserving enough structure to reduce rework.</li>
+</ul>
+<p>Unless otherwise specified, MVP generated artifacts should be Markdown first. Structured YAML frontmatter may be included where needed for future SPOG/artifact review compatibility.</p>
+<h2 id="skill-prd-generator-">Skill: <code>prd-generator</code></h2>
+<p>Plugin bundle:</p>
+<ul>
+<li>Product plugin</li>
+</ul>
+<p>Purpose:</p>
+<p>Guide Product, Design, or BA-style users through the creation of a PRD/blueprint without requiring them to know the PRD structure in advance.</p>
+<p>Primary outcome:</p>
+<ul>
+<li>A PRD/blueprint artifact that is clear enough for Product review, customer/proxy direction review, and Engineering readiness review.</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>Capability name</li>
+<li>Work item or ticket ID, if available</li>
+<li>Customer/requester context</li>
+<li>Problem statement</li>
+<li>Desired outcome</li>
+<li>Discovery notes, if available</li>
+<li>Workflow notes, sketches, wireframes, screenshots, or examples, if available</li>
+<li>Known constraints, assumptions, dependencies, and risks</li>
+</ul>
+<p>Guided interview areas:</p>
+<ol>
+<li>What problem are we solving?</li>
+<li>Who is affected?</li>
+<li>What should be true when this ships?</li>
+<li>What is in scope?</li>
+<li>What is explicitly out of scope?</li>
+<li>What is the end-to-end workflow?</li>
+<li>What alternate, error, or exception flows matter?</li>
+<li>What data, entities, fields, state changes, or database records are involved?</li>
+<li>What business rules and validations apply?</li>
+<li>What screens, surfaces, states, and accessibility expectations matter?</li>
+<li>What integrations or external systems are involved?</li>
+<li>What security, privacy, logging, audit, reliability, or performance expectations apply?</li>
+<li>What acceptance criteria prove the work is done?</li>
+<li>What tests should exist?</li>
+<li>What open questions remain?</li>
+</ol>
+<p>Expected output:</p>
+<ul>
+<li>PRD/blueprint Markdown document using <code>PRD-TEMPLATE.md</code> as the source structure.</li>
+<li>Open questions section.</li>
+<li>Assumptions section.</li>
+<li>Readiness checklist with checked, unchecked, or unknown items.</li>
+<li>Recommendation: <code>ready_for_review</code>, <code>needs_discovery</code>, or <code>not_ready</code>.</li>
+</ul>
+<p>Success criteria:</p>
+<ul>
+<li>The user can produce a credible first PRD without knowing the template.</li>
+<li>Missing answers are captured as open questions rather than silently ignored.</li>
+<li>The PRD is detailed enough for <code>prd-readiness-review</code> to evaluate.</li>
+</ul>
+<p>Failure / stop conditions:</p>
+<ul>
+<li>The user cannot identify the problem or desired outcome.</li>
+<li>Scope is too unclear to distinguish in-scope from out-of-scope.</li>
+<li>The request is actually an amendment, support task, defect, or operational task and should be routed elsewhere.</li>
+</ul>
+<h2 id="skill-prd-readiness-review-">Skill: <code>prd-readiness-review</code></h2>
+<p>Plugin bundle:</p>
+<ul>
+<li>Product plugin initially</li>
+<li>Shared with Engineering for review/approval support</li>
+</ul>
+<p>Purpose:</p>
+<p>Assess whether a PRD/blueprint is actionable enough for Engineering or Codex-assisted implementation.</p>
+<p>Primary outcome:</p>
+<ul>
+<li>A readiness review that identifies whether the PRD is ready for agent handoff, needs revision, needs customer clarification, or should be re-scoped.</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>PRD/blueprint artifact</li>
+<li>Discovery notes, if available</li>
+<li>Customer/proxy direction evidence, if available</li>
+<li>Applicable HITL checkpoint expectations</li>
+<li>Amendment/re-scope trigger rules</li>
+</ul>
+<p>Review areas:</p>
+<ol>
+<li>Outcome and problem clarity</li>
+<li>Scope boundaries</li>
+<li>Workflow completeness</li>
+<li>Alternate and exception flows</li>
+<li>Data, state, validation, and business rules</li>
+<li>UX surfaces and states</li>
+<li>Integrations and dependencies</li>
+<li>Security, privacy, logging, and audit expectations</li>
+<li>Acceptance criteria quality</li>
+<li>Testability</li>
+<li>Assumptions and open questions</li>
+<li>Amendment/re-scope risk</li>
+</ol>
+<p>Expected output:</p>
+<ul>
+<li>Readiness review Markdown artifact.</li>
+<li>Summary recommendation:<ul>
+<li><code>ready_for_agent_handoff</code></li>
+<li><code>ready_with_assumptions</code></li>
+<li><code>needs_revision</code></li>
+<li><code>needs_customer_clarification</code></li>
+<li><code>re_scope_recommended</code></li>
+</ul>
+</li>
+<li>Gap list grouped by severity.</li>
+<li>Suggested clarifying questions.</li>
+<li>Engineering concerns, if any.</li>
+<li>HITL note identifying who needs to review next.</li>
+</ul>
+<p>Success criteria:</p>
+<ul>
+<li>Engineering can tell quickly whether implementation can begin.</li>
+<li>Product gets specific, actionable revision guidance.</li>
+<li>The review prevents implementation from becoming the first discovery of PRD gaps.</li>
+</ul>
+<p>Failure / stop conditions:</p>
+<ul>
+<li>PRD is missing entirely.</li>
+<li>PRD contradicts itself.</li>
+<li>Acceptance criteria are absent or untestable.</li>
+<li>Required customer/proxy direction is missing for a customer-facing change.</li>
+</ul>
+<h2 id="skill-implementation-agent-">Skill: <code>implementation-agent</code></h2>
+<p>Plugin bundle:</p>
+<ul>
+<li>Engineering plugin</li>
+</ul>
+<p>Purpose:</p>
+<p>Implement the approved PRD/blueprint in the target codebase and produce evidence that maps implementation work back to the PRD.</p>
+<p>Primary outcome:</p>
+<ul>
+<li>Code changes, branch/PR-ready implementation, and an implementation artifact.</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>Approved PRD/blueprint</li>
+<li>Readiness review, if available</li>
+<li>Repository path</li>
+<li>Branch/PR expectations</li>
+<li>Existing codebase conventions</li>
+<li>Build/run/test commands, if known</li>
+<li>Amendment/re-scope rules</li>
+</ul>
+<p>Guided prompts:</p>
+<ol>
+<li>What repo should be used?</li>
+<li>What branch or worktree should be used?</li>
+<li>What PRD/blueprint should govern the work?</li>
+<li>What build/test commands are expected?</li>
+<li>Are there files, modules, or components likely to be in scope?</li>
+<li>Are there implementation constraints, coding standards, or forbidden approaches?</li>
+<li>Should a PR be opened, or should the output remain local/PR-ready?</li>
+</ol>
+<p>Expected behavior:</p>
+<ul>
+<li>Read the codebase before editing.</li>
+<li>Follow existing patterns.</li>
+<li>Implement only the approved scope.</li>
+<li>Identify any material scope or behavior change that may require amendment/re-scope review.</li>
+<li>Add or update tests when appropriate.</li>
+<li>Produce an implementation artifact compatible with <code>02-implementation.md</code>.</li>
+</ul>
+<p>Expected output:</p>
+<ul>
+<li>Code changes.</li>
+<li>Build/run notes.</li>
+<li>Files changed summary.</li>
+<li>PRD requirement mapping.</li>
+<li>Tests added or updated.</li>
+<li>Known deviations from PRD.</li>
+<li>Risks and open questions.</li>
+<li>Required human review note.</li>
+</ul>
+<p>Success criteria:</p>
+<ul>
+<li>Implementation maps clearly to approved PRD requirements.</li>
+<li>Local build/test evidence exists when available.</li>
+<li>Deviations, assumptions, and risks are documented.</li>
+<li>Work is ready for Engineering review or PR review.</li>
+</ul>
+<p>Failure / stop conditions:</p>
+<ul>
+<li>PRD is not approved or actionable enough.</li>
+<li>Required repository context is unavailable.</li>
+<li>Implementation would materially change scope without amendment/re-scope approval.</li>
+<li>Build/test failures cannot be resolved or explained.</li>
+</ul>
+<h2 id="skill-unit-test-agent-">Skill: <code>unit-test-agent</code></h2>
+<p>Plugin bundle:</p>
+<ul>
+<li>Engineering plugin</li>
+</ul>
+<p>Purpose:</p>
+<p>Create, update, or run unit tests for the implemented capability and produce test evidence mapped to the PRD and implementation.</p>
+<p>Primary outcome:</p>
+<ul>
+<li>Unit test changes and a test evidence artifact.</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>PRD/blueprint</li>
+<li>Implementation artifact or branch</li>
+<li>Repository path</li>
+<li>Existing test conventions</li>
+<li>Unit test command, if known</li>
+<li>Acceptance criteria</li>
+</ul>
+<p>Guided prompts:</p>
+<ol>
+<li>What repo/branch should be tested?</li>
+<li>What PRD/acceptance criteria should tests map to?</li>
+<li>What unit test command should be used?</li>
+<li>Are there specific components, services, functions, or rules that require coverage?</li>
+<li>Should the skill add missing tests, run existing tests, or both?</li>
+</ol>
+<p>Expected behavior:</p>
+<ul>
+<li>Inspect existing unit test patterns.</li>
+<li>Add or update focused unit tests for business rules, edge cases, validations, and component logic.</li>
+<li>Run unit tests when possible.</li>
+<li>Report pass/fail/pending clearly.</li>
+<li>Avoid claiming coverage that does not exist.</li>
+</ul>
+<p>Expected output:</p>
+<ul>
+<li>Unit tests added or updated.</li>
+<li>Unit test command/results.</li>
+<li>Acceptance criteria mapping.</li>
+<li>Coverage notes.</li>
+<li>Failed tests and likely causes.</li>
+<li>Gaps or recommended follow-up.</li>
+</ul>
+<p>Success criteria:</p>
+<ul>
+<li>Unit tests exercise meaningful implementation behavior.</li>
+<li>Results are reproducible or clearly documented.</li>
+<li>Gaps are visible before PR/merge review.</li>
+</ul>
+<p>Failure / stop conditions:</p>
+<ul>
+<li>Test environment cannot run.</li>
+<li>Existing test framework is missing or unclear.</li>
+<li>Implementation is unavailable.</li>
+<li>Tests reveal a blocking defect.</li>
+</ul>
+<h2 id="skill-e2e-test-agent-">Skill: <code>e2e-test-agent</code></h2>
+<p>Plugin bundle:</p>
+<ul>
+<li>Engineering plugin</li>
+</ul>
+<p>Purpose:</p>
+<p>Create, update, run, or recommend end-to-end tests that validate the implemented user/system workflow against PRD acceptance criteria.</p>
+<p>Primary outcome:</p>
+<ul>
+<li>E2E test plan/results and evidence mapped to the PRD.</li>
+</ul>
+<p>Inputs:</p>
+<ul>
+<li>PRD/blueprint</li>
+<li>Implementation artifact or branch</li>
+<li>Repository path</li>
+<li>App run instructions</li>
+<li>E2E test framework and command, if known</li>
+<li>Test data and environment details</li>
+<li>Acceptance criteria</li>
+</ul>
+<p>Guided prompts:</p>
+<ol>
+<li>What workflow needs E2E validation?</li>
+<li>What app/environment should be used?</li>
+<li>What command starts the app?</li>
+<li>What command runs E2E tests?</li>
+<li>What test data, accounts, roles, or permissions are needed?</li>
+<li>Which acceptance criteria are must-cover for MVP?</li>
+<li>Should the skill add missing E2E tests, run existing tests, or both?</li>
+</ol>
+<p>Expected behavior:</p>
+<ul>
+<li>Identify the critical user/system path.</li>
+<li>Map E2E coverage to acceptance criteria.</li>
+<li>Add or update E2E tests where practical.</li>
+<li>Run tests when the environment is available.</li>
+<li>Capture screenshots, logs, traces, or other evidence where useful.</li>
+<li>Mark environment or data blockers explicitly.</li>
+</ul>
+<p>Expected output:</p>
+<ul>
+<li>E2E test plan.</li>
+<li>E2E tests added or updated, if applicable.</li>
+<li>Test command/results.</li>
+<li>Acceptance criteria mapping.</li>
+<li>Evidence paths, screenshots, logs, or traces.</li>
+<li>Environment/test data notes.</li>
+<li>Failed tests and blocking issues.</li>
+<li>Recommended follow-up.</li>
+</ul>
+<p>Success criteria:</p>
+<ul>
+<li>Critical workflow is validated or clearly blocked.</li>
+<li>Acceptance coverage is visible.</li>
+<li>The result is usable by QA and Engineering review.</li>
+</ul>
+<p>Failure / stop conditions:</p>
+<ul>
+<li>App cannot run.</li>
+<li>E2E environment is unavailable.</li>
+<li>Required credentials/test data are unavailable.</li>
+<li>E2E tests reveal a blocking workflow failure.</li>
+</ul>
+<h2 id="mvp-rollout-notes">MVP Rollout Notes</h2>
+<p>These five skills are enough to prove the operating model without introducing the entire Blueprint to Release process.</p>
+<p>Recommended first rollout sequence:</p>
+<ol>
+<li><code>prd-generator</code></li>
+<li><code>prd-readiness-review</code></li>
+<li><code>implementation-agent</code></li>
+<li><code>unit-test-agent</code></li>
+<li><code>e2e-test-agent</code></li>
+</ol>
+<p>The rollout should not require the full HITL matrix, SPOG, packaging, deployment, communications, security, or amendment flow on day one. Those can be layered in after the first skills prove useful and teams begin building consistent habits.</p>
+</article>
+    </main>
+  </div>
+</body>
+</html>

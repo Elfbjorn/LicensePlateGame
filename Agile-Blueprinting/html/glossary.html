@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary | Agile Blueprinting</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">Agile Blueprinting</div>
+          <div class="brand-kicker">Blueprint to Release briefing package</div>
+        </div>
+        <nav class="topnav" aria-label="Primary">
+          <a href="index.html">Index</a>
+          <a href="spog-sample.html">SPOG Sample</a>
+          <a href="visual-infographic-outline.html">Visuals</a>
+          <a href="glossary.html">Glossary</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page-nav">
+        <a href="index.html">Back to index</a>
+        <a href="spog-sample.html">View SPOG sample</a>
+      </div>
+      <section class="hero">
+        <h1>Glossary</h1>
+        <p>HTML rendering of GLOSSARY.md from the ai-vs-agile artifact set.</p>
+      </section>
+      <article class="content"><h1 id="glossary">Glossary</h1>
+<p>This glossary defines the core terms used in Agile Blueprinting and Blueprint to Release.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#agent-evidence">Agent Evidence</a></li>
+<li><a href="#agile-blueprinting">Agile Blueprinting</a></li>
+<li><a href="#amendment">Amendment</a></li>
+<li><a href="#artifact">Artifact</a></li>
+<li><a href="#blueprint">Blueprint</a></li>
+<li><a href="#blueprint-to-release">Blueprint to Release</a></li>
+<li><a href="#categorized">Categorized</a></li>
+<li><a href="#codex-plugin">Codex Plugin</a></li>
+<li><a href="#codex-skill">Codex Skill</a></li>
+<li><a href="#customer-proxy">Customer Proxy</a></li>
+<li><a href="#definition-of-ready">Definition of Ready</a></li>
+<li><a href="#delivery-lane">Delivery Lane</a></li>
+<li><a href="#done">Done</a></li>
+<li><a href="#engineering-done">Engineering Done</a></li>
+<li><a href="#final-approval-owner">Final Approval Owner</a></li>
+<li><a href="#hitl">HITL</a></li>
+<li><a href="#hitl-checkpoint">HITL Checkpoint</a></li>
+<li><a href="#new-request">New Request</a></li>
+<li><a href="#prd--blueprint">PRD / Blueprint</a></li>
+<li><a href="#prd-generator">PRD Generator</a></li>
+<li><a href="#prd-readiness-review">PRD Readiness Review</a></li>
+<li><a href="#product-done">Product Done</a></li>
+<li><a href="#ready">Ready</a></li>
+<li><a href="#re-scope">Re-Scope</a></li>
+<li><a href="#spog">SPOG</a></li>
+<li><a href="#support--operations-done">Support / Operations Done</a></li>
+</ul>
+<h2 id="agent-evidence">Agent Evidence</h2>
+<p>The output an AI/Codex agent or skill produces to show what it did, what it reviewed, what it found, and what requires human attention.</p>
+<p>Agent evidence may include summaries, files changed, test results, screenshots, logs, risks, open questions, deviations from the PRD, and recommended follow-up.</p>
+<h2 id="agile-blueprinting">Agile Blueprinting</h2>
+<p>A delivery model for AI-assisted software work that combines waterfall&#39;s clarity, agile&#39;s cadence, and AI&#39;s delivery compression.</p>
+<p>Agile Blueprinting starts with a clear blueprint of the whole deliverable before implementation begins. It keeps agile&#39;s feedback loops and human review points, but avoids fragmenting larger work into thin user stories that lack enough context for AI-assisted delivery.</p>
+<h2 id="amendment">Amendment</h2>
+<p>A course correction to approved work that remains connected to the same customer/business need and intended outcome.</p>
+<p>Accepted amendments become part of the current release scope and should be captured as related linked tickets, not silent edits to the original requirement.</p>
+<h2 id="artifact">Artifact</h2>
+<p>A durable Markdown output created by the process.</p>
+<p>Artifacts may be process references, PRDs, readiness reviews, implementation summaries, test evidence, HITL matrices, communication models, or skill specs. Mature artifacts become the source of truth for repeatable workflows.</p>
+<h2 id="blueprint">Blueprint</h2>
+<p>The source-of-truth description of the deliverable.</p>
+<p>A blueprint explains what is being built, why it matters, who it serves, how it should behave, what data and rules apply, what is in and out of scope, and how the result will be validated.</p>
+<p>In this model, a PRD is the primary blueprint artifact.</p>
+<h2 id="blueprint-to-release">Blueprint to Release</h2>
+<p>The operating flow for Agile Blueprinting.</p>
+<p>Blueprint to Release describes how work moves from intake to categorization, discovery, PRD/blueprint creation, readiness review, implementation, testing, human approval, release, and closure.</p>
+<h2 id="categorized">Categorized</h2>
+<p>The preferred term for routing a ticket or request into a work type.</p>
+<p>Use <code>categorized</code>, not <code>classified</code>, because <code>classified</code> has a different meaning in the operating environment.</p>
+<p>Typical categories include defect, O&amp;M / operational task, new request / feature / application, amendment / re-scope, and security / risk.</p>
+<h2 id="codex-plugin">Codex Plugin</h2>
+<p>A team-facing bundle of related Codex skills.</p>
+<p>The initial plugin model uses Product, Engineering, and Operations plugins. Each plugin contains the skills relevant to that team or operating role.</p>
+<h2 id="codex-skill">Codex Skill</h2>
+<p>A guided workflow that helps a user complete a specific job, such as generating a PRD, reviewing readiness, implementing code, or producing test evidence.</p>
+<p>Skills should hide process complexity, ask useful questions, read relevant artifacts, and generate predictable outputs.</p>
+<h2 id="customer-proxy">Customer Proxy</h2>
+<p>A person or group authorized to represent the customer for discovery, direction, sign-off, acceptance, or closure.</p>
+<p>Product may coordinate customer communication, but Product is not automatically the customer proxy unless formally authorized for that decision.</p>
+<h2 id="definition-of-ready">Definition of Ready</h2>
+<p>The review standard for deciding whether a PRD/blueprint is ready for agent or Engineering handoff.</p>
+<p>Definition of Ready asks whether the customer need, outcome, workflow, scope, data, rules, acceptance criteria, assumptions, open questions, and sign-offs are clear enough to govern delivery.</p>
+<h2 id="delivery-lane">Delivery Lane</h2>
+<p>The operating path selected after a request is categorized.</p>
+<p>Examples include Sprint / Planned Delivery, Kanban / O&amp;M, Expedited / Security-Led, and Amendment / Re-Scope.</p>
+<h2 id="done">Done</h2>
+<p>The overall closure standard for a request or initiative.</p>
+<p>Done means the work has reached the target environment, required reviews are complete, the requester or final approval owner confirms that what was delivered matches expectations, and supporting tickets are ready for closure.</p>
+<h2 id="engineering-done">Engineering Done</h2>
+<p>The point where Engineering has completed the work it owns and has no reason to believe more Engineering work is required before handoff.</p>
+<p>Engineering Done can include implementation, tests, PR review, build/run notes, deployment handoff, risk notes, and tagging the next owner. Engineering Done does not mean the overall customer-facing request is closed.</p>
+<h2 id="final-approval-owner">Final Approval Owner</h2>
+<p>The person or group who made the request and confirms that what was delivered matches expectations.</p>
+<p>If the customer made the request, the customer is the final approval owner. If Product made the request for Product&#39;s own need, Product is the final approval owner. Engineering does not become final approval owner merely because it delivered the implementation.</p>
+<h2 id="hitl">HITL</h2>
+<p>Human-in-the-loop.</p>
+<p>HITL means humans make the important decisions at the right checkpoints. AI or Codex skills may generate work, evidence, recommendations, and summaries, but humans remain accountable for scope, readiness, risk acceptance, release, and final approval.</p>
+<h2 id="hitl-checkpoint">HITL Checkpoint</h2>
+<p>A human review point where an authorized person or group approves, rejects, requests revision, accepts risk, or redirects work.</p>
+<p>Examples include PRD/blueprint review, Definition of Ready, implementation review, testing review, security/risk review, release decision, and closure approval.</p>
+<h2 id="new-request">New Request</h2>
+<p>A separate body of work created when a proposed change refutes the original understanding, is unrelated to the initial request, changes the intended business outcome, or introduces a materially different capability, workflow, audience, or system behavior.</p>
+<p>New requests do not block the current release unless separately prioritized and approved.</p>
+<h2 id="prd-blueprint">PRD / Blueprint</h2>
+<p>The product requirements document used as the governing artifact for AI-assisted delivery.</p>
+<p>It should be clear enough for Product, the customer or customer proxy, Engineering, QA, DevOps, and Codex skills/agents to understand the intended outcome and produce work against it.</p>
+<h2 id="prd-generator">PRD Generator</h2>
+<p>The MVP Product skill that guides a user through creating a PRD/blueprint.</p>
+<p>Its job is to ask plain-language questions, generate the best available PRD, and preserve unknowns as assumptions or open questions.</p>
+<h2 id="prd-readiness-review">PRD Readiness Review</h2>
+<p>The MVP review skill that evaluates whether a PRD/blueprint is actionable enough for Engineering or Codex-assisted implementation.</p>
+<p>It identifies gaps, risks, open questions, and whether the PRD is ready for agent handoff, ready with assumptions, needs revision, needs customer clarification, or should be re-scoped.</p>
+<h2 id="product-done">Product Done</h2>
+<p>A Product-owned definition of done that should be finalized by Product/Design.</p>
+<p>In broad terms, Product Done concerns discovery, PRD/blueprint quality, customer/proxy alignment, acceptance coordination, and follow-on or amendment handling. The exact definition is deferred until Product/Design owns and approves it.</p>
+<h2 id="ready">Ready</h2>
+<p>A state where the PRD/blueprint is clear enough to move to the next stage with bounded risk.</p>
+<p>Ready does not mean perfect. It means the known gaps, assumptions, scope, acceptance criteria, and risks are explicit enough that humans can decide whether work should proceed.</p>
+<h2 id="re-scope">Re-Scope</h2>
+<p>A review path used when proposed changes materially affect scope, workflow, data, implementation effort, risk, or release expectations.</p>
+<p>Engineering owns the final decision on whether a change requires amendment/re-scope review.</p>
+<h2 id="spog">SPOG</h2>
+<p>Single Pane of Glass.</p>
+<p>The SPOG is the final review dashboard for a Blueprint to Release run. It consolidates agent evidence, human review status, risks, open questions, and release readiness into one review surface.</p>
+<h2 id="support-operations-done">Support / Operations Done</h2>
+<p>A Support/Ops-owned definition of done that should be finalized by Support/Operations.</p>
+<p>In broad terms, Support/Ops Done concerns triage, customer updates, support-resolvable fixes, operational validation, escalation, and customer-facing closure communication. The exact definition is deferred until Support/Operations owns and approves it.</p>
+</article>
+    </main>
+  </div>
+</body>
+</html>
